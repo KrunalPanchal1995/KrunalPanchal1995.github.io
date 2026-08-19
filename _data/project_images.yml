@@ -1,0 +1,442 @@
+mosiac:
+- index: 1
+  caption: MOSIAC launcher — tile gallery of every tool
+  topic: gui-walkthrough
+  src_800: assets/img/projects/mosiac/001_01_mso_studio_launcher-800.png
+  src_1600: assets/img/projects/mosiac/001_01_mso_studio_launcher-1600.png
+- index: 2
+  caption: Opening the Nominal Simulation tool
+  topic: gui-walkthrough
+  src_800: assets/img/projects/mosiac/002_02_after_click_nominal_tile-800.png
+  src_1600: assets/img/projects/mosiac/002_02_after_click_nominal_tile-1600.png
+- index: 3
+  caption: Nominal simulation setup page
+  topic: gui-walkthrough
+  src_800: assets/img/projects/mosiac/003_03_nominal_sim_page-800.png
+  src_1600: assets/img/projects/mosiac/003_03_nominal_sim_page-1600.png
+- index: 4
+  caption: Run configured and labelled
+  topic: gui-walkthrough
+  src_800: assets/img/projects/mosiac/004_04_run_label_filled-800.png
+  src_1600: assets/img/projects/mosiac/004_04_run_label_filled-1600.png
+- index: 5
+  caption: A run stopped mid-flight — interruptible long jobs
+  topic: gui-walkthrough
+  src_800: assets/img/projects/mosiac/005_05_stopped_errant_run-800.png
+  src_1600: assets/img/projects/mosiac/005_05_stopped_errant_run-1600.png
+- index: 7
+  caption: Explosion-limit crossover locus
+  topic: h2o2-validation
+  src_800: assets/img/projects/mosiac/007_01_crossover_locus-800.png
+  src_1600: assets/img/projects/mosiac/007_01_crossover_locus-1600.png
+- index: 8
+  caption: Ignitability map (3D)
+  topic: h2o2-validation
+  src_800: assets/img/projects/mosiac/008_02b_ignitability_3d_map-800.png
+  src_1600: assets/img/projects/mosiac/008_02b_ignitability_3d_map-1600.png
+- index: 9
+  caption: Stiffness map across conditions
+  topic: h2o2-validation
+  src_800: assets/img/projects/mosiac/009_02c_stiffness_3d_map-800.png
+  src_1600: assets/img/projects/mosiac/009_02c_stiffness_3d_map-1600.png
+- index: 10
+  caption: Ignition-delay grid, Ar dilution
+  topic: h2o2-validation
+  src_800: assets/img/projects/mosiac/010_03_idt_grid_AR-800.png
+  src_1600: assets/img/projects/mosiac/010_03_idt_grid_AR-1600.png
+- index: 11
+  caption: Laminar flame speed validation
+  topic: h2o2-validation
+  src_800: assets/img/projects/mosiac/011_05_flame_speed-800.png
+  src_1600: assets/img/projects/mosiac/011_05_flame_speed-1600.png
+- index: 12
+  caption: Extinction strain rate
+  topic: h2o2-validation
+  src_800: assets/img/projects/mosiac/012_06_extinction_strain-800.png
+  src_1600: assets/img/projects/mosiac/012_06_extinction_strain-1600.png
+- index: 13
+  caption: JSR S-curve, Ar dilution
+  topic: h2o2-validation
+  src_800: assets/img/projects/mosiac/013_07_jsr_scurve_AR-800.png
+  src_1600: assets/img/projects/mosiac/013_07_jsr_scurve_AR-1600.png
+- index: 14
+  caption: Rate-of-production spectra
+  topic: h2o2-validation
+  src_800: assets/img/projects/mosiac/014_09_rop_spectra-800.png
+  src_1600: assets/img/projects/mosiac/014_09_rop_spectra-1600.png
+- index: 15
+  caption: Species profile, case 50
+  topic: h2o2-validation
+  src_800: assets/img/projects/mosiac/015_04_species_profile_case-50-800.png
+  src_1600: assets/img/projects/mosiac/015_04_species_profile_case-50-1600.png
+- index: 16
+  caption: Generated wallpaper — flame field
+  topic: hero
+  src_800: assets/img/projects/mosiac/016_flame-field-800.png
+  src_1600: assets/img/projects/mosiac/016_flame-field-1600.png
+- index: 17
+  caption: Generated wallpaper — reaction network
+  topic: hero
+  src_800: assets/img/projects/mosiac/017_reaction-network-800.png
+  src_1600: assets/img/projects/mosiac/017_reaction-network-1600.png
+- index: 18
+  caption: Generated wallpaper — Arrhenius mesh
+  topic: hero
+  src_800: assets/img/projects/mosiac/018_arrhenius-mesh-800.png
+  src_1600: assets/img/projects/mosiac/018_arrhenius-mesh-1600.png
+mso-objectives:
+- index: 1
+  caption: WMRE vs power-mean objective, all fuels
+  topic: powermean
+  src_800: assets/img/projects/mso-objectives/001_wmre_vs_powermean-800.png
+  src_1600: assets/img/projects/mso-objectives/001_wmre_vs_powermean-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/wmre_vs_powermean.pdf
+- index: 2
+  caption: Hyperparameter sweep heatmap — n-heptane
+  topic: powermean
+  src_800: assets/img/projects/mso-objectives/002_heatmap_n_heptane-800.png
+  src_1600: assets/img/projects/mso-objectives/002_heatmap_n_heptane-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/heatmap_n_heptane.pdf
+- index: 3
+  caption: Hyperparameter sweep heatmap — methyl butanoate
+  topic: powermean
+  src_800: assets/img/projects/mso-objectives/003_heatmap_mb-800.png
+  src_1600: assets/img/projects/mso-objectives/003_heatmap_mb-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/heatmap_mb.pdf
+- index: 4
+  caption: Hyperparameter sweep heatmap — 1,3-butadiene
+  topic: powermean
+  src_800: assets/img/projects/mso-objectives/004_heatmap_butadiene-800.png
+  src_1600: assets/img/projects/mso-objectives/004_heatmap_butadiene-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/heatmap_butadiene.pdf
+- index: 5
+  caption: Cost comparison — multi-stage vs single-stage (butadiene)
+  topic: multi-stage
+  src_800: assets/img/projects/mso-objectives/005_cost_comparison_plot_v2-800.png
+  src_1600: assets/img/projects/mso-objectives/005_cost_comparison_plot_v2-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/cost_comparison_plot_v2.pdf
+- index: 6
+  caption: Full-PRS fit — methyl butanoate HTC
+  topic: p-prs
+  src_800: assets/img/projects/mso-objectives/006_MB_HTC_FULL_PRS_1A-800.png
+  src_1600: assets/img/projects/mso-objectives/006_MB_HTC_FULL_PRS_1A-1600.png
+- index: 7
+  caption: Partial-PRS fit — methyl butanoate HTC (side-by-side with full)
+  topic: p-prs
+  src_800: assets/img/projects/mso-objectives/007_MB_HTC_PARTIAL_PRS_1B-800.png
+  src_1600: assets/img/projects/mso-objectives/007_MB_HTC_PARTIAL_PRS_1B-1600.png
+- index: 8
+  caption: All optimization stages combined — n-heptane
+  topic: multi-stage
+  src_800: assets/img/projects/mso-objectives/008_combined_all_stages-800.png
+  src_1600: assets/img/projects/mso-objectives/008_combined_all_stages-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/combined_all_stages.pdf
+- index: 9
+  caption: GA vs SLSQP solver comparison — n-heptane
+  topic: solver-comparison
+  src_800: assets/img/projects/mso-objectives/009_nheptane_phi1_GAvsSLSQP-800.png
+  src_1600: assets/img/projects/mso-objectives/009_nheptane_phi1_GAvsSLSQP-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/nheptane_phi1_GAvsSLSQP.pdf
+- index: 10
+  caption: All-stage comparison at phi=1.0 — butadiene HTC
+  topic: multi-stage
+  src_800: assets/img/projects/mso-objectives/010_comparison_plot_all_stages_phi_1_0_HTC-800.png
+  src_1600: assets/img/projects/mso-objectives/010_comparison_plot_all_stages_phi_1_0_HTC-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/comparison_plot_all_stages_phi_1_0_HTC.pdf
+- index: 11
+  caption: Ellipsoid-containment theory figure
+  topic: theory
+  src_800: assets/img/projects/mso-objectives/011_fig1_ellipsoid_containment-800.png
+  src_1600: assets/img/projects/mso-objectives/011_fig1_ellipsoid_containment-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/fig1_ellipsoid_containment.pdf
+- index: 12
+  caption: 'Adaptive resampling (PAAR): before vs after'
+  topic: paar
+  src_800: assets/img/projects/mso-objectives/012_before_after_paar_comparison-800.png
+  src_1600: assets/img/projects/mso-objectives/012_before_after_paar_comparison-1600.png
+- index: 13
+  caption: Geometric-onset curve-capturing technique (co-author work)
+  topic: curve-capturing
+  src_800: assets/img/projects/mso-objectives/013_Geometric_Onset-800.png
+  src_1600: assets/img/projects/mso-objectives/013_Geometric_Onset-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/Geometric_Onset.pdf
+muq-sac:
+- index: 1
+  caption: Ellipsoid containment (sampling validity)
+  topic: theory
+  src_800: assets/img/projects/muq-sac/001_fig1_ellipsoid_containment-800.png
+  src_1600: assets/img/projects/muq-sac/001_fig1_ellipsoid_containment-1600.png
+- index: 2
+  caption: Projection onto reduced parameter space
+  topic: theory
+  src_800: assets/img/projects/muq-sac/002_fig2_projection-800.png
+  src_1600: assets/img/projects/muq-sac/002_fig2_projection-1600.png
+- index: 3
+  caption: Sampling validity check
+  topic: theory
+  src_800: assets/img/projects/muq-sac/003_fig3_sampling_validity-800.png
+  src_1600: assets/img/projects/muq-sac/003_fig3_sampling_validity-1600.png
+- index: 4
+  caption: A-factor correlation heatmap
+  topic: correlation
+  src_800: assets/img/projects/muq-sac/004_correlation_heatmap_A-800.png
+  src_1600: assets/img/projects/muq-sac/004_correlation_heatmap_A-1600.png
+- index: 5
+  caption: n-exponent correlation heatmap
+  topic: correlation
+  src_800: assets/img/projects/muq-sac/005_correlation_heatmap_n-800.png
+  src_1600: assets/img/projects/muq-sac/005_correlation_heatmap_n-1600.png
+- index: 6
+  caption: Ea correlation heatmap
+  topic: correlation
+  src_800: assets/img/projects/muq-sac/006_correlation_heatmap_Ea-800.png
+  src_1600: assets/img/projects/muq-sac/006_correlation_heatmap_Ea-1600.png
+- index: 7
+  caption: Gaussian-process surrogate parity plot
+  topic: surrogate
+  src_800: assets/img/projects/muq-sac/007_parity_v2_GP-800.png
+  src_1600: assets/img/projects/muq-sac/007_parity_v2_GP-1600.png
+- index: 8
+  caption: Sampling-method comparison
+  topic: sampling
+  src_800: assets/img/projects/muq-sac/008_sampling_methods_comparison-800.png
+  src_1600: assets/img/projects/muq-sac/008_sampling_methods_comparison-1600.png
+  original_pdf: assets/pdf/projects/muq-sac/sampling_methods_comparison.pdf
+- index: 9
+  caption: Arrhenius-curve sampling animation (10x speed), sample 5
+  topic: animation
+  src_800: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-800.png
+  src_1600: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-1600.png
+  video: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x.gif
+- index: 10
+  caption: Arrhenius-curve sampling animation (10x speed), sample 2
+  topic: animation
+  src_800: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-800.png
+  src_1600: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-1600.png
+  video: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x.gif
+sciml:
+- index: 1
+  caption: 115-run seed-noise floor — bootstrapped ranking
+  topic: audit
+  src_800: assets/img/projects/sciml/001_fig1_noise_floor-800.png
+  src_1600: assets/img/projects/sciml/001_fig1_noise_floor-1600.png
+- index: 2
+  caption: 17-factor sensitivity matrix (z-scores)
+  topic: audit
+  src_800: assets/img/projects/sciml/002_fig2_sensitivity_matrix-800.png
+  src_1600: assets/img/projects/sciml/002_fig2_sensitivity_matrix-1600.png
+- index: 3
+  caption: Error-vs-magnitude scaling law across 115 runs
+  topic: audit
+  src_800: assets/img/projects/sciml/003_fig4_scaling_law-800.png
+  src_1600: assets/img/projects/sciml/003_fig4_scaling_law-1600.png
+- index: 4
+  caption: Stiffness evolution during training
+  topic: journey
+  src_800: assets/img/projects/sciml/004_D2_stiffness_evolution-800.png
+  src_1600: assets/img/projects/sciml/004_D2_stiffness_evolution-1600.png
+- index: 5
+  caption: Predicted vs true ignition delays
+  topic: journey
+  src_800: assets/img/projects/sciml/005_F3_ignition_delays-800.png
+  src_1600: assets/img/projects/sciml/005_F3_ignition_delays-1600.png
+- index: 6
+  caption: Learned arc-length 'clock' vs ground truth
+  topic: journey
+  src_800: assets/img/projects/sciml/006_clock_T1050-800.png
+  src_1600: assets/img/projects/sciml/006_clock_T1050-1600.png
+- index: 7
+  caption: Champion model — species prediction grid
+  topic: champion
+  src_800: assets/img/projects/sciml/007_species_grid_T1248-800.png
+  src_1600: assets/img/projects/sciml/007_species_grid_T1248-1600.png
+- index: 8
+  caption: Champion model — ignition-delay comparison
+  topic: champion
+  src_800: assets/img/projects/sciml/008_idt_comparison-800.png
+  src_1600: assets/img/projects/sciml/008_idt_comparison-1600.png
+- index: 9
+  caption: Where it started — first Neural ODE attempt
+  topic: journey
+  src_800: assets/img/projects/sciml/009_neural_ode_results-800.png
+  src_1600: assets/img/projects/sciml/009_neural_ode_results-1600.png
+- index: 10
+  caption: Learned latent manifold
+  topic: journey
+  src_800: assets/img/projects/sciml/010_fig_latent_manifold-800.png
+  src_1600: assets/img/projects/sciml/010_fig_latent_manifold-1600.png
+cfdcore:
+- index: 1
+  caption: Method-of-manufactured-solutions convergence
+  topic: credibility
+  src_800: assets/img/projects/cfdcore/001_04_mms_convergence-800.png
+  src_1600: assets/img/projects/cfdcore/001_04_mms_convergence-1600.png
+- index: 2
+  caption: Numerical stability regions
+  topic: credibility
+  src_800: assets/img/projects/cfdcore/002_03_stability_regions-800.png
+  src_1600: assets/img/projects/cfdcore/002_03_stability_regions-1600.png
+- index: 3
+  caption: SDF-kernel revolved nozzle
+  topic: geometry
+  src_800: assets/img/projects/cfdcore/003_sdf_revolved_nozzle-800.png
+  src_1600: assets/img/projects/cfdcore/003_sdf_revolved_nozzle-1600.png
+- index: 4
+  caption: Gmsh-kernel revolved nozzle (cross-engine check)
+  topic: geometry
+  src_800: assets/img/projects/cfdcore/004_gmsh_revolved_nozzle-800.png
+  src_1600: assets/img/projects/cfdcore/004_gmsh_revolved_nozzle-1600.png
+- index: 5
+  caption: Turbine fluid-structure interaction result
+  topic: validation
+  src_800: assets/img/projects/cfdcore/005_turbine_fsi_result-800.png
+  src_1600: assets/img/projects/cfdcore/005_turbine_fsi_result-1600.png
+- index: 6
+  caption: Conjugate heat transfer validation
+  topic: validation
+  src_800: assets/img/projects/cfdcore/006_cht_result-800.png
+  src_1600: assets/img/projects/cfdcore/006_cht_result-1600.png
+- index: 7
+  caption: Boiling curve validation
+  topic: validation
+  src_800: assets/img/projects/cfdcore/007_boiling_curve-800.png
+  src_1600: assets/img/projects/cfdcore/007_boiling_curve-1600.png
+- index: 8
+  caption: 3D reacting-flow ignition transient
+  topic: flagship
+  src_800: assets/img/projects/cfdcore/008_rf_ignition_transient-800.png
+  src_1600: assets/img/projects/cfdcore/008_rf_ignition_transient-1600.png
+- index: 9
+  caption: Microfluidics outlet-purity heatmap
+  topic: microfluidics
+  src_800: assets/img/projects/cfdcore/009_outlet_purity_heatmap-800.png
+  src_1600: assets/img/projects/cfdcore/009_outlet_purity_heatmap-1600.png
+- index: 10
+  caption: Particle-separation resolution sweep
+  topic: microfluidics
+  src_800: assets/img/projects/cfdcore/010_separation_resolution-800.png
+  src_1600: assets/img/projects/cfdcore/010_separation_resolution-1600.png
+- index: 11
+  caption: Ornstein-Uhlenbeck sample paths
+  topic: stochastic
+  src_800: assets/img/projects/cfdcore/011_S1_01_ou_paths-800.png
+  src_1600: assets/img/projects/cfdcore/011_S1_01_ou_paths-1600.png
+flame-processor:
+- index: 1
+  caption: Calibration GUI in use
+  topic: gui
+  src_800: assets/img/projects/flame-processor/001_Flame_Calibrator_-_MVI_8025_screenshot_01.07.2026-800.png
+  src_1600: assets/img/projects/flame-processor/001_Flame_Calibrator_-_MVI_8025_screenshot_01.07.2026-1600.png
+- index: 2
+  caption: Raw pool-fire frame (input)
+  topic: raw
+  src_800: assets/img/projects/flame-processor/002_pool_fire_frame_example-800.png
+  src_1600: assets/img/projects/flame-processor/002_pool_fire_frame_example-1600.png
+- index: 3
+  caption: Ruler-based automatic scale calibration
+  topic: gui
+  src_800: assets/img/projects/flame-processor/003_scale_with_the_ruler-800.png
+  src_1600: assets/img/projects/flame-processor/003_scale_with_the_ruler-1600.png
+vaporizer-rigs:
+- index: 1
+  caption: Counterflow burner rig — general arrangement
+  topic: engineering
+  src_800: assets/img/projects/vaporizer-rigs/001_rig01_001_general_arrangement-1-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/001_rig01_001_general_arrangement-1-1600.png
+- index: 2
+  caption: Burner assembly, section view
+  topic: engineering
+  src_800: assets/img/projects/vaporizer-rigs/002_rig01_006_burner_assembly_section-1-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/002_rig01_006_burner_assembly_section-1-1600.png
+- index: 3
+  caption: Piping & instrumentation diagram
+  topic: engineering
+  src_800: assets/img/projects/vaporizer-rigs/003_rig01_pid_001-1-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/003_rig01_pid_001-1-1600.png
+- index: 4
+  caption: Pressure-drop sweep vs tube diameter
+  topic: analysis
+  src_800: assets/img/projects/vaporizer-rigs/004_pressure_drop_vs_diameter-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/004_pressure_drop_vs_diameter-1600.png
+- index: 5
+  caption: Design-space heatmap (diameter x heater zoning)
+  topic: analysis
+  src_800: assets/img/projects/vaporizer-rigs/005_single_zone_heatmap_DxK-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/005_single_zone_heatmap_DxK-1600.png
+- index: 6
+  caption: System schematic overview
+  topic: engineering
+  src_800: assets/img/projects/vaporizer-rigs/006_schematic_pid_overview-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/006_schematic_pid_overview-1600.png
+- index: 7
+  caption: Burner concept sketch
+  topic: engineering
+  src_800: assets/img/projects/vaporizer-rigs/007_burner_sketch-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/007_burner_sketch-1600.png
+pysr-rate-rules:
+- index: 1
+  caption: Evans-Polanyi relation, rediscovered by symbolic regression
+  topic: physics
+  src_800: assets/img/projects/pysr-rate-rules/001_04_EP_recovery-800.png
+  src_1600: assets/img/projects/pysr-rate-rules/001_04_EP_recovery-1600.png
+- index: 2
+  caption: Leave-one-class-out transferability test
+  topic: generalization
+  src_800: assets/img/projects/pysr-rate-rules/002_05_LOCO-800.png
+  src_1600: assets/img/projects/pysr-rate-rules/002_05_LOCO-1600.png
+- index: 3
+  caption: Plain vs uncertainty-weighted symbolic regression
+  topic: method
+  src_800: assets/img/projects/pysr-rate-rules/003_06_model_comparison-800.png
+  src_1600: assets/img/projects/pysr-rate-rules/003_06_model_comparison-1600.png
+- index: 4
+  caption: Feature collinearity / VIF check
+  topic: method
+  src_800: assets/img/projects/pysr-rate-rules/004_01_collinearity-800.png
+  src_1600: assets/img/projects/pysr-rate-rules/004_01_collinearity-1600.png
+gasification:
+- index: 1
+  caption: H2 yield vs steam-to-biomass ratio (non-monotonic finding)
+  topic: headline
+  src_800: assets/img/projects/gasification/001_02_h2_vs_sbr-800.png
+  src_1600: assets/img/projects/gasification/001_02_h2_vs_sbr-1600.png
+- index: 2
+  caption: Cold-gas efficiency vs steam-to-biomass ratio
+  topic: headline
+  src_800: assets/img/projects/gasification/002_05_cge_vs_sbr-800.png
+  src_1600: assets/img/projects/gasification/002_05_cge_vs_sbr-1600.png
+- index: 3
+  caption: Mass-balance Sankey diagram
+  topic: rigor
+  src_800: assets/img/projects/gasification/003_15_mass_balance_sankey-800.png
+  src_1600: assets/img/projects/gasification/003_15_mass_balance_sankey-1600.png
+- index: 4
+  caption: Operating map across all 14 runs
+  topic: rigor
+  src_800: assets/img/projects/gasification/004_18_operating_map-800.png
+  src_1600: assets/img/projects/gasification/004_18_operating_map-1600.png
+- index: 5
+  caption: Combustion-zone temperature explains the H2 non-monotonicity
+  topic: headline
+  src_800: assets/img/projects/gasification/005_25_tcomb_vs_sbr_energy_balance-800.png
+  src_1600: assets/img/projects/gasification/005_25_tcomb_vs_sbr_energy_balance-1600.png
+- index: 6
+  caption: Equilibrium-model vs measured parity
+  topic: rigor
+  src_800: assets/img/projects/gasification/006_21_equilibrium_vs_measured_parity-800.png
+  src_1600: assets/img/projects/gasification/006_21_equilibrium_vs_measured_parity-1600.png
+- index: 7
+  caption: Producer-gas flame from the rig
+  topic: experiment
+  src_800: assets/img/projects/gasification/007_Flame-800.png
+  src_1600: assets/img/projects/gasification/007_Flame-1600.png
+- index: 8
+  caption: Downdraft gasifier rig, campaign run
+  topic: experiment
+  src_800: assets/img/projects/gasification/008_IMG_20180510_105528-800.png
+  src_1600: assets/img/projects/gasification/008_IMG_20180510_105528-1600.png
+- index: 9
+  caption: Gas chromatography setup
+  topic: experiment
+  src_800: assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-800.png
+  src_1600: assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-1600.png

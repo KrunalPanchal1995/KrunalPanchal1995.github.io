@@ -1,0 +1,58 @@
+/*******************************************************************************
+ * LOCAL OVERRIDE of al_folio_core's _sass/_variables.scss (editorial skin).
+ * Full-file shadow per docs/ARCHITECTURE.md "Local overrides: your site vs.
+ * this repo" -- every original variable name is kept so nothing downstream
+ * breaks; only the swatch VALUES change, to a warm-paper / ink / vermilion
+ * editorial palette instead of the stock white / purple / cyan theme.
+ * Tracked in .al-folio-overrides.yml (`bundle exec al-folio upgrade
+ * overrides audit`). See DESIGN_SYSTEM.md for the rationale.
+ ******************************************************************************/
+
+@use "sass:color";
+
+// Colors -- left mostly stock; only the ones that actually anchor the
+// editorial palette are changed below.
+$red-color: #ff3636 !default;
+$red-color-dark: #7a2a10 !default; // deep vermilion-red: --global-highlight-color
+$orange-color: #f29105 !default;
+$blue-color: #0076df !default;
+$blue-color-dark: #00369f !default;
+$cyan-color: #e2793a !default; // repurposed as the dark-mode accent: warm amber
+$light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
+$green-color: #00ab37 !default;
+$green-color-lime: #b7d12a !default;
+$green-color-dark: #009f06 !default;
+$green-color-light: #ddffdd !default;
+$green-color-bright: #11d68b !default;
+$purple-color: #a83c1a !default; // repurposed as the light-mode accent: deep vermilion
+$light-purple-color: color.adjust($purple-color, $lightness: 25%);
+$pink-color: #f92080 !default;
+$pink-color-light: #ffdddd !default;
+$yellow-color: #efcc00 !default;
+
+$grey-color: #6e6357 !default; // warm mid grey: secondary text
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark: #211c15; // warm near-black: light-mode footer band AND dark-mode page bg
+$grey-900: #2b241b; // warm charcoal: dark-mode card background
+
+$white-color: #faf7f1 !default; // warm paper, not stark white
+$black-color: #1a1611 !default; // warm ink, not pure black
+
+// Theme colors
+
+$code-bg-color-light: rgba($purple-color, 0.05);
+$code-bg-color-dark: #241f18 !default;
+
+// Font awesome location
+$fa-font-path: "../webfonts";
+
+// Back To Top button config
+$back-to-top-z-index: 10;
+$back-to-top-bottom: 30px;
+$back-to-top-right: 30px;
+$back-to-top-diameter: 40px;
+$back-to-top-height: $back-to-top-diameter;
+$back-to-top-width: $back-to-top-diameter;
+
+// Max width default -- slightly wider than stock for editorial figure bleed
+$max-content-width: 980px !default;

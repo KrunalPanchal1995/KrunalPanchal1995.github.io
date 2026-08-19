@@ -1,0 +1,27 @@
+{% comment %}
+  Renders every promoted image/video for one project as a responsive grid.
+  Usage: {% include project_gallery.liquid project="mosiac" %}
+  Data comes from _data/project_images.yml, written by scripts/promote_selected.py
+  -- nothing appears here that wasn't explicitly approved by the owner.
+{% endcomment %}
+{% assign items = site.data.project_images[include.project] %}
+{% if items %}
+<div class="row row-cols-1 row-cols-md-2 g-3 mt-2 mb-4">
+  {% for item in items %}
+  <div class="col">
+    <figure style="margin: 0;">
+      {% if item.video %}
+        <video src="{{ item.video | relative_url }}" autoplay loop muted playsinline class="img-fluid rounded z-depth-1" style="width: 100%;"></video>
+      {% else %}
+        <a href="{{ item.src_1600 | relative_url }}" target="_blank" rel="noopener">
+          <img src="{{ item.src_800 | relative_url }}" alt="{{ item.caption }}" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;">
+        </a>
+      {% endif %}
+      {% if item.caption and item.caption != "" %}
+      <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">{{ item.caption }}{% if item.original_pdf %} &middot; <a href="{{ item.original_pdf | relative_url }}" target="_blank" rel="noopener">original PDF</a>{% endif %}</figcaption>
+      {% endif %}
+    </figure>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

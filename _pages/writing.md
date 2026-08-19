@@ -1,0 +1,30 @@
+---
+layout: page
+title: writing
+permalink: /writing/
+description: Research notes, essays, and things I haven't stopped thinking about.
+nav: true
+nav_order: 2
+---
+
+I write about the research as I do it, not just after it's published — and occasionally about questions that don't fit inside a paper at all.
+
+## Research Notes
+
+Technical explanations of methods and problems from the research itself.
+
+## Essays
+
+Longer pieces about science, computation and how models relate to the systems they describe.
+
+## Food for Thought
+
+<p><em>Questions, reflections and things that stayed with me.</em></p>
+
+## Journal
+
+Shorter, more personal observations.
+
+---
+
+<a href="/blog/">All posts, in order &rarr;</a>
