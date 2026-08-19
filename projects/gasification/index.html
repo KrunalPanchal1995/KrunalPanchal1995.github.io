@@ -1,0 +1,213 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Steam-catalytic downdraft gasification | Krunal Panchal </title> <meta name="author" content="Krunal R. Panchal"> <meta name="description" content="M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier"> <meta name="keywords" content="Krunal Panchal, combustion kinetics, chemical kinetic mechanism optimization, uncertainty quantification, scientific machine learning, mechanical engineering, IIT Madras, postdoctoral researcher"> <meta property="og:site_name" content="Krunal Panchal"> <meta property="og:type" content="website"> <meta property="og:title" content="Krunal Panchal | Steam-catalytic downdraft gasification"> <meta property="og:url" content="https://krunalpanchal1995.github.io/projects/gasification/"> <meta property="og:description" content="M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Steam-catalytic downdraft gasification"> <meta name="twitter:description" content="M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Krunal R. Panchal"
+        },
+        "url": "https://krunalpanchal1995.github.io/projects/gasification/",
+        "@type": "WebSite",
+        "description": "M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier",
+        "headline": "Steam-catalytic downdraft gasification",
+        
+        "sameAs": ["https://orcid.org/0000-0003-2595-8824","https://github.com/KrunalPanchal1995","https://www.linkedin.com/in/Krunal-panchal-phd","https://www.researchgate.net/profile/Krunal-Panchal"],
+        
+        "name": "Krunal R. Panchal",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 980px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Newsreader:400,500,600,700&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%94%A5&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://krunalpanchal1995.github.io/projects/gasification/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Krunal Panchal </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">home </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">research </a> </li> <li class="nav-item "> <a class="nav-link" href="/writing/">writing </a> </li> <li class="nav-item "> <a class="nav-link" href="/beyond-research/">beyond research </a> </li> <li class="nav-item "> <a class="nav-link" href="/about/">about </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Steam-catalytic downdraft gasification</h1> <p class="post-description">M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier</p> </header> <article> <div class="row row-cols-1 row-cols-md-2 g-3 mt-2 mb-4"> <div class="col"> <figure style="margin: 0;"> <a href="/assets/img/projects/gasification/001_02_h2_vs_sbr-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/gasification/001_02_h2_vs_sbr-800.png" alt="H2 yield vs steam-to-biomass ratio (non-monotonic finding)" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">H2 yield vs steam-to-biomass ratio (non-monotonic finding)</figcaption> </figure> </div> <div class="col"> <figure style="margin: 0;"> <a href="/assets/img/projects/gasification/002_05_cge_vs_sbr-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/gasification/002_05_cge_vs_sbr-800.png" alt="Cold-gas efficiency vs steam-to-biomass ratio" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">Cold-gas efficiency vs steam-to-biomass ratio</figcaption> </figure> </div> <div class="col"> <figure style="margin: 0;"> <a href="/assets/img/projects/gasification/003_15_mass_balance_sankey-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/gasification/003_15_mass_balance_sankey-800.png" alt="Mass-balance Sankey diagram" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">Mass-balance Sankey diagram</figcaption> </figure> </div> <div class="col"> <figure style="margin: 0;"> <a href="/assets/img/projects/gasification/004_18_operating_map-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/gasification/004_18_operating_map-800.png" alt="Operating map across all 14 runs" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">Operating map across all 14 runs</figcaption> </figure> </div> <div class="col"> <figure style="margin: 0;"> <a href="/assets/img/projects/gasification/005_25_tcomb_vs_sbr_energy_balance-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/gasification/005_25_tcomb_vs_sbr_energy_balance-800.png" alt="Combustion-zone temperature explains the H2 non-monotonicity" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">Combustion-zone temperature explains the H2 non-monotonicity</figcaption> </figure> </div> <div class="col"> <figure style="margin: 0;"> <a href="/assets/img/projects/gasification/006_21_equilibrium_vs_measured_parity-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/gasification/006_21_equilibrium_vs_measured_parity-800.png" alt="Equilibrium-model vs measured parity" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">Equilibrium-model vs measured parity</figcaption> </figure> </div> <div class="col"> <figure style="margin: 0;"> <a href="/assets/img/projects/gasification/007_Flame-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/gasification/007_Flame-800.png" alt="Producer-gas flame from the rig" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">Producer-gas flame from the rig</figcaption> </figure> </div> <div class="col"> <figure style="margin: 0;"> <a href="/assets/img/projects/gasification/008_IMG_20180510_105528-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/gasification/008_IMG_20180510_105528-800.png" alt="Downdraft gasifier rig, campaign run" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">Downdraft gasifier rig, campaign run</figcaption> </figure> </div> <div class="col"> <figure style="margin: 0;"> <a href="/assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-800.png" alt="Gas chromatography setup" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption class="text-muted" style="font-size: 0.85rem; margin-top: 0.3rem;">Gas chromatography setup</figcaption> </figure> </div> </div> <h2 id="problem">Problem</h2> <p>Steam gasification of low-rank lignite coal, with and without a catalyst, was studied to understand how steam-to-biomass ratio (SBR) and a magnesium-carbonate catalyst affect syngas quality — but the resulting hydrogen yield behaved in a way no simple model predicted.</p> <h2 id="approach">Approach</h2> <p>A pilot-scale downdraft fixed-bed gasifier (525 mm ID, 2.165 m tall, mild steel) was instrumented with four K-type thermocouples across the drying/pyrolysis/combustion/reduction zones and a gas chromatograph for H<sub>2</sub>, CO, CO<sub>2</sub>, CH<sub>4</sub>, N<sub>2</sub>. Fourteen runs spanned seven steam-to-biomass ratios (0–0.47 kg/kg) with and without a 7 wt% MgCO<sub>3</sub> catalyst.</p> <h2 id="results">Results</h2> <p>Published, <a class="citation" href="#upadhyay2020airsteam">(Upadhyay et al., 2020)</a>, <a class="citation" href="#upadhyay2019equivalence">(Upadhyay et al., 2019)</a>, <a class="citation" href="#sakhiya2019elemental">(Sakhiya et al., 2019)</a>, <a class="citation" href="#upadhyay2018thermodynamic">(Upadhyay et al., 2018)</a>.</p> <p>The catalyst raised hydrogen yield from 24.1–32.6% to 23.2–34.7%, cold-gas efficiency from 62.2–75.2% to 68.1–86.9%, and lower heating value from 4.48–5.19 to 4.67–6.65 MJ/Nm<sup>3</sup>. The headline finding was a <strong>non-monotonic hydrogen response</strong>: with the catalyst, H<sub>2</sub> climbed to a 34.7% peak around SBR ≈ 0.26 and then <em>collapsed</em> to 23.2% by SBR ≈ 0.47 — falling below the no-catalyst case — moving in lockstep with cold-gas efficiency and heating value.</p> <p>A later re-analysis (2026) found the mechanism: combustion-zone temperature is itself non-monotonic across the same SBR sweep, and hydrogen yield tracks that temperature (Pearson r = 0.80 pooled, r = 0.96 in the catalytic case) far more closely than it tracks SBR directly (r = 0.10). This re-analysis is ongoing exploratory work, reported here qualitatively; the original 2018 experimental results and their equilibrium-model comparison are the validated, published record.</p> <h2 id="validation">Validation</h2> <p>Mass-balance closure between 0.920 and 0.995 across all fourteen runs.</p> <h2 id="my-contribution">My contribution</h2> <p>Experimental design, rig operation, and primary analysis, under the supervision of Prof. D. S. Upadhyay and Prof. R. N. Patel at Nirma University. Awarded the ISTE National Award for Best M.Tech Thesis 2018 (First Prize).</p> <h2 id="publications">Publications</h2> <p><a class="citation" href="#upadhyay2020airsteam">(Upadhyay et al., 2020)</a> <a class="citation" href="#upadhyay2019equivalence">(Upadhyay et al., 2019)</a> <a class="citation" href="#sakhiya2019elemental">(Sakhiya et al., 2019)</a> <a class="citation" href="#upadhyay2018thermodynamic">(Upadhyay et al., 2018)</a></p> <h2 id="what-this-enables">What this enables</h2> <p>A rare downdraft-gasification dataset where the “obvious” steam-ratio-controls-hydrogen story turns out to be incomplete — and a reminder that a null or reversing trend is often more informative than a monotonic one.</p> </article> <h2>References</h2> <div class="publications"> <h2 class="bibliography">2020</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> </div> <div id="upadhyay2020airsteam" class="col-sm-8"> <div class="title">Air-Steam gasification of lignite in a fixed bed gasifier: Influence of steam to lignite ratio on performance of downdraft gasifier</div> <div class="author"> D. S. Upadhyay, Krunal R. Panchal, A. K. V. Sakhiya, and <span class="more-authors" title="click to view 1 more author" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '1 more author' ? 'R. N. Patel' : '1 more author'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">1 more author</span> </div> <div class="periodical"> <em>Energy</em>, 2020 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1016/j.energy.2020.118187" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li></ol> <h2 class="bibliography">2019</h2> <ol class="bibliography"> <li> <div class="row"> <div class="col col-sm-2 abbr"> </div> <div id="upadhyay2019equivalence" class="col-sm-8"> <div class="title">Effect of equivalence ratio on the performance of the downdraft gasifier – An experimental and modelling approach</div> <div class="author"> D. S. Upadhyay, A. K. Sakhiya, Krunal Panchal, and <span class="more-authors" title="click to view 2 more authors" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '2 more authors' ? 'A. H. Patel, R. N. Patel' : '2 more authors'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">2 more authors</span> </div> <div class="periodical"> <em>Energy</em>, 2019 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.1016/j.energy.2018.11.133" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> <li> <div class="row"> <div class="col col-sm-2 abbr"> </div> <div id="sakhiya2019elemental" class="col-sm-8"> <div class="title">Elemental and heat loss analysis of different feedstock in downdraft gasifier</div> <div class="author"> A. K. Sakhiya, A. Chaturvedi, V. Barasara, and <span class="more-authors" title="click to view 3 more authors" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '3 more authors' ? 'Krunal Panchal, D. S. Upadhyay, R. N. Patel' : '3 more authors'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">3 more authors</span> </div> <div class="periodical"> <em>Journal of Energy and Environmental Sustainability</em>, 2019 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.47469/jees.2019.v07.100070" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li> </ol> <h2 class="bibliography">2018</h2> <ol class="bibliography"><li> <div class="row"> <div class="col col-sm-2 abbr"> </div> <div id="upadhyay2018thermodynamic" class="col-sm-8"> <div class="title">Thermodynamic analysis of lignite gasification in the downdraft gasifier</div> <div class="author"> D. S. Upadhyay, A. K. V. Sakhiya, Krunal R. Panchal, and <span class="more-authors" title="click to view 1 more author" onclick=" var element=this; element.setAttribute('title', ''); var more_authors_text=element.textContent == '1 more author' ? 'R. N. Patel' : '1 more author'; var cursorPosition=0; var textAdder=setInterval(function(){ element.innerHTML = more_authors_text.substring(0, cursorPosition + 1); if (++cursorPosition == more_authors_text.length){ clearInterval(textAdder); } }, '10'); ">1 more author</span> </div> <div class="periodical"> <em>Journal of Energy and Environmental Sustainability</em>, 2018 </div> <div class="periodical"> </div> <div class="links"> <a href="https://doi.org/10.47469/jees.2018.v05.100058" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">DOI</a> </div> </div> </div> </li></ol> </div> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Krunal R. Panchal. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-home",
+    title: "home",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-research",
+          title: "research",
+          description: "Optimization, uncertainty quantification, combustion kinetics, and scientific machine learning.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
+          },
+        },{id: "nav-writing",
+          title: "writing",
+          description: "Research notes, essays, and things I haven&#39;t stopped thinking about.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/writing/";
+          },
+        },{id: "nav-beyond-research",
+          title: "beyond research",
+          description: "Research is what I do. It isn&#39;t all of who I am.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/beyond-research/";
+          },
+        },{id: "nav-about",
+          title: "about",
+          description: "Who I am, how I think about research, and where I&#39;m headed.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/about/";
+          },
+        },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        
+          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
+          
+        },
+      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
+        
+          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+          
+        },
+      },{id: "news-phd-degree-conferred-by-iit-madras",
+          title: 'PhD degree conferred by IIT Madras.',
+          description: "",
+          section: "News",},{id: "news-three-abstracts-accepted-for-presentation-at-the-64th-symposium-japanese-on-combustion-fukuoka-4-6-nov-2026-including-the-power-mean-objective-function-work-panchal-amp-amp-narayanaswamy-2026",
+          title: 'Three abstracts accepted for presentation at the 64th Symposium (Japanese) on Combustion, Fukuoka,...',
+          description: "",
+          section: "News",},{id: "projects-cfdcore-jl-in-house-cfd-amp-multiphysics-solver",
+          title: 'CFDCore.jl — in-house CFD &amp;amp; multiphysics solver',
+          description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and cross-engine geometry kernel",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cfdcore/";
+            },},{id: "projects-flame-processor",
+          title: 'Flame Processor',
+          description: "A GUI to automatically detect burners and post-process combustion experiment video, replacing four brittle MATLAB scripts",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/flame-processor/";
+            },},{id: "projects-steam-catalytic-downdraft-gasification",
+          title: 'Steam-catalytic downdraft gasification',
+          description: "M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/gasification/";
+            },},{id: "projects-mosiac",
+          title: 'MOSIAC',
+          description: "An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mosiac/";
+            },},{id: "projects-mso-objective-functions-amp-multi-stage-optimization",
+          title: 'MSO objective functions &amp;amp; multi-stage optimization',
+          description: "Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mso-objectives/";
+            },},{id: "projects-muq-sac-joint-arrhenius-uncertainty-quantification",
+          title: 'MUQ-SAC — joint Arrhenius uncertainty quantification',
+          description: "A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/muq-sac/";
+            },},{id: "projects-symbolic-regression-for-universal-rate-rules",
+          title: 'Symbolic regression for universal rate rules',
+          description: "Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pysr-rate-rules/";
+            },},{id: "projects-scientific-ml-for-stiff-kinetics",
+          title: 'Scientific ML for stiff kinetics',
+          description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sciml/";
+            },},{id: "projects-vaporizer-amp-combustion-rig-design",
+          title: 'Vaporizer &amp;amp; combustion rig design',
+          description: "Fabrication-grade design of a fuel vaporizer and five combustion experiment rigs",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vaporizer-rigs/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6B%72%75%6E%61%6C%70%61%6E%63%68%61%6C%31%39%39%35@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0003-2595-8824", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/KrunalPanchal1995", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/Krunal-panchal-phd", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Krunal-Panchal", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> <script defer src="/assets/al_email_protect/js/email-protect.js"></script> </body> </html>
