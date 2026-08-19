@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: blog
+title: Writing Archive
 nav: false
 pagination:
   enabled: true

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: beyond research
+title: Beyond Research
 permalink: /beyond-research/
 description: Research is what I do. It isn't all of who I am.
 nav: true

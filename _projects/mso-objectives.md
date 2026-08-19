@@ -20,6 +20,16 @@ Combustion mechanism calibration usually optimizes against many experimental dat
 
 **A power-mean (Hölder) objective function** replaces the classical weighted-mean relative error (WMRE) to prevent any single dataset from dominating a joint, multi-fuel calibration.
 
+## Full vs. reduced-parameterization surrogate: a direct comparison
+
+The two "surrogate comparison" images in the gallery above are the same methyl-butanoate high-temperature-chemistry dataset, fit twice: once with a response surface built over the full parameter set, and once with a deliberately reduced parameterization. Looking at them side by side:
+
+- **Fit quality** — the reduced-parameterization surface tracks the full surface closely across the sampled range; the visible deviation between the two is concentrated at the edges of the parameter space, where the full surface has more explicit sampling to draw on.
+- **What's traded away** — the reduced fit is built from a fraction of the sample points the full fit needs, so the accuracy-per-sample-point is substantially higher, at the cost of that edge-region looseness.
+- **Why it matters** — this is the practical justification for using a reduced parameterization inside the multi-stage optimization loop at all: it needs to be re-fit many times over the course of a search, and the full-parameterization cost would make that prohibitive at the same sampling budget.
+
+The theory behind *which* parameters to keep in the reduced set is still unpublished (thesis work in preparation) and isn't detailed here — this comparison is limited to what the two images themselves show.
+
 ## Results
 
 *(Published results only — see [Disclosure Policy](https://github.com/KrunalPanchal1995) for why some numbers below are omitted.)*

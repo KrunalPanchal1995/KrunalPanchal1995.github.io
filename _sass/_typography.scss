@@ -27,8 +27,63 @@ h4,
 h5,
 h6 {
   font-family: $font-serif-display;
-  font-weight: 600;
   letter-spacing: -0.01em;
+}
+
+// Deliberate type scale -- each level visually unmistakable from its
+// neighbors, not just a fraction of a rem apart. h2 = major section
+// (Problem/Approach/Results...), h3 = subsection within it, h4 = a small
+// functional label (e.g. an image-gallery topic group), never confused
+// for a real heading.
+h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 1.85rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2.6rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--global-divider-color);
+}
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 1.6rem;
+  color: var(--global-theme-color);
+}
+
+h4 {
+  font-family: $font-sans-body;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  margin-top: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+h5,
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+// Component-internal headings (project cards, etc.) opt out of the h2/h3
+// section treatment above -- they're labels inside a card, not page sections.
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+  color: var(--global-text-color);
 }
 
 // Data labels, figure captions, and source paths read as monospace --

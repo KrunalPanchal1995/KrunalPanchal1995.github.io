@@ -1,6 +1,6 @@
 ---
 layout: page
-title: about
+title: About
 permalink: /about/
 description: Who I am, how I think about research, and where I'm headed.
 nav: true

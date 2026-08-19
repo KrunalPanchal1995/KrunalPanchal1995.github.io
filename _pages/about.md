@@ -1,6 +1,6 @@
 ---
 layout: about
-title: home
+title: Home
 permalink: /
 subtitle: PhD, Mechanical Engineering, IIT Madras &middot; Optimization &middot; Uncertainty Quantification &middot; Combustion &middot; Scientific ML
 

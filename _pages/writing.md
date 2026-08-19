@@ -1,6 +1,6 @@
 ---
 layout: page
-title: writing
+title: Writing
 permalink: /writing/
 description: Research notes, essays, and things I haven't stopped thinking about.
 nav: true

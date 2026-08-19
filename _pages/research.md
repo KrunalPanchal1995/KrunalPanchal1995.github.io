@@ -1,6 +1,6 @@
 ---
 layout: page
-title: research
+title: Research
 permalink: /research/
 description: Optimization, uncertainty quantification, combustion kinetics, and scientific machine learning.
 nav: true
