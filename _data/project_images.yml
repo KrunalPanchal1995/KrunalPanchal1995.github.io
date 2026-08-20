@@ -371,6 +371,75 @@ sciml:
     before this line of work moved toward a different representation entirely.
   src_800: assets/img/projects/sciml/010_fig_latent_manifold-800.png
   src_1600: assets/img/projects/sciml/010_fig_latent_manifold-1600.png
+- index: 11
+  caption: Training curves, an earlier neural-operator checkpoint
+  topic: journey
+  description: Fit and Sobolev (derivative-matching) loss over 12,000 epochs for an
+    earlier checkpoint in this line of work, redrawn from its own logged loss history
+    — architecture withheld pending publication, same as the champion-model figures
+    above.
+  src_800: assets/img/projects/sciml/011_loss_curves_neutral-800.png
+  src_1600: assets/img/projects/sciml/011_loss_curves_neutral-1600.png
+- index: 12
+  caption: Ignition-timing accuracy, same earlier checkpoint
+  topic: journey
+  description: Predicted vs. true ignition-timing proxy (composition at OH-peak) across
+    a temperature sweep, for the same earlier checkpoint as the training-curve figure
+    above.
+  src_800: assets/img/projects/sciml/012_idt_comparison-800.png
+  src_1600: assets/img/projects/sciml/012_idt_comparison-1600.png
+- index: 13
+  caption: Species-prediction grid, same earlier checkpoint (1147K)
+  topic: journey
+  description: Predicted vs. true species mass fractions for the same earlier checkpoint
+    at one representative initial temperature — most species track well; H2O2 and
+    the high-enthalpy-drift case (see the 1502K panel) show where it still struggles.
+  src_800: assets/img/projects/sciml/013_species_grid_T1147_neutral-800.png
+  src_1600: assets/img/projects/sciml/013_species_grid_T1147_neutral-1600.png
+- index: 14
+  caption: Species-prediction grid, same earlier checkpoint (1502K)
+  topic: journey
+  description: The same comparison at a higher initial temperature, kept alongside
+    the 1147K panel deliberately — not every condition in the sweep is this checkpoint's
+    best case, and the record should show both.
+  src_800: assets/img/projects/sciml/014_species_grid_T1502_neutral-800.png
+  src_1600: assets/img/projects/sciml/014_species_grid_T1502_neutral-1600.png
+- index: 15
+  caption: First-layer saturation across a 16-version normalization ablation
+  topic: diagnostics
+  description: 'Whether the network''s first tanh layer saturates (a classic vanishing-gradient
+    failure mode), swept across sixteen single-variable versions of the same architecture.
+    Every version training directly in raw physical units (red titles) saturates fully;
+    the three versions built on a per-channel [0,1] normalization (green titles: v1.3,
+    v1.14, v1.15) never fully saturate — a normalization choice with a large, mechanistic
+    effect on trainability, found by instrumenting the training loop itself rather
+    than only watching the loss curve.'
+  src_800: assets/img/projects/sciml/015_saturation_curve_grid_L1-800.png
+  src_1600: assets/img/projects/sciml/015_saturation_curve_grid_L1-1600.png
+- index: 16
+  caption: PC-NODE replication — predicted vs. Cantera ground truth
+  topic: replication
+  description: A replication of Kumar, Kumar & Pal (2025, Combustion Theory and Modelling
+    29(3); arXiv:2312.00038) — a physics-constrained neural ODE for stiff H2/air autoignition
+    — reproducing the paper's network, loss and training-grid specification exactly
+    (see the project README's own component-by-component comparison table). At the
+    checkpoints saved so far (33 epochs for the baseline NODE, 3 for PC-NODE), neither
+    model has converged onto the ignition trajectory yet — both traces sit flat near
+    the initial condition while Cantera's true trajectory ignites — logged honestly
+    rather than only shown once it works.
+  src_800: assets/img/projects/sciml/016_trajectories-800.png
+  src_1600: assets/img/projects/sciml/016_trajectories-1600.png
+- index: 17
+  caption: PC-NODE replication — elemental mass-conservation drift
+  topic: replication
+  description: 'The paper''s own headline comparison: elemental mass-conservation
+    drift over time for the physics-constrained model (PCNODE) against the unconstrained
+    baseline (NODE). At these early checkpoints the result is partial, not a clean
+    win — PCNODE drifts less than NODE for the H element, consistent with the paper''s
+    claim, but not yet for O — a nuance worth keeping rather than rounding off to
+    "it worked."'
+  src_800: assets/img/projects/sciml/017_elemental_conservation-800.png
+  src_1600: assets/img/projects/sciml/017_elemental_conservation-1600.png
 cfdcore:
 - index: 1
   caption: Method-of-manufactured-solutions convergence
