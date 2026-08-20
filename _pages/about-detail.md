@@ -9,7 +9,7 @@ nav_order: 4
 
 ## Who I am
 
-I'm Krunal Panchal, a PhD researcher in Mechanical Engineering at IIT Madras (thesis submitted Oct 2025, degree conferred Jul 2026), advised by Prof. Krithika Narayanaswamy. My PhD work is a fast, robust, kinetics-based optimization framework for combustion kinetic models — built into the open-source **MOSIAC** workbench. Alongside the computational work, I've done hands-on experimental research: designing and commissioning a pool-flame characterization rig (jointly with Gagan Verma) and, earlier, an M.Tech project on steam/catalyst-assisted downdraft gasification.
+I'm Krunal Panchal. I hold a PhD in Mechanical Engineering from IIT Madras (thesis submitted Oct 2025, degree conferred Jul 2026, advised by Prof. Krithika Narayanaswamy) and am currently a Project Associate in the same department through 30 November 2026. My PhD work is a fast, robust, kinetics-based optimization framework for combustion kinetic models — built into the open-source **MOSIAC** workbench. Alongside the computational work, I've done hands-on experimental research: pool-flame characterization of n-heptane, designed and commissioned jointly with Gagan Verma, with an eye toward extending it to Methanol-to-Gasoline surrogate fuels, and, earlier, an M.Tech project on steam/catalyst-assisted downdraft gasification. I'm also building experience in quantum-chemical calculations (Gaussian) for reaction-rate estimation — an area I'm actively working to strengthen further.
 
 ## Research philosophy
 
