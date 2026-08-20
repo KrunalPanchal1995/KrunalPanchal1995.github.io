@@ -30,6 +30,6 @@ Python, OpenCV, a Tkinter interactive calibration GUI (draggable burner box, rul
 
 Developed by me, replacing my own earlier MATLAB workflow.
 
-## What this enables
+## Where this is going
 
 Pointing the tool at a new pool-fire recording and getting calibrated, annotated frames out — without re-deriving pixel coordinates by hand every time the camera moves.

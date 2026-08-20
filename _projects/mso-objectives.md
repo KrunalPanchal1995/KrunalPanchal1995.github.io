@@ -69,6 +69,6 @@ Developed and led by me: the multi-stage decomposition and the power-mean object
 {% cite panchal2026mso_pprs %}
 {% cite singh2026thermoabstract %}
 
-## What this enables
+## Where this is going
 
 A mechanism calibrated jointly across several fuels and datasets, without any one dataset silently winning the fit — and at a fraction of the solver budget a naive full-range optimization would need.

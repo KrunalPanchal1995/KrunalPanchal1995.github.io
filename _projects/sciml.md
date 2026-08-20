@@ -48,6 +48,6 @@ Every architecture generation was checked against a Cantera ground truth across 
 
 Sole researcher on this line of work; developed from scratch, including the custom transforms, physics-constraint formulations, and the statistical audit methodology itself. The PC-NODE replication is my own independent reproduction of Kumar, Kumar & Pal's published method — not a co-authored or adapted codebase.
 
-## What this enables
+## Where this is going
 
 Two forthcoming NeurIPS 2027 submissions, and — more durably — a working discipline for telling a real improvement apart from noise before publishing it.

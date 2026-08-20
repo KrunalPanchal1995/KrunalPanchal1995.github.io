@@ -53,6 +53,6 @@ The MOSIAC software paper is in preparation, targeting the *Journal of Open Sour
 
 Repository: [github.com/KrunalPanchal1995](https://github.com/KrunalPanchal1995) *(currently under review before public release — link will go live at that point)*.
 
-## What this enables
+## Where this is going
 
 A researcher can go from a raw CHEMKIN mechanism and a folder of digitized experimental plots to a calibrated, uncertainty-bounded mechanism with a publication-ready report — without hand-writing the glue between each step, and without losing track of how sure they should be about the result.

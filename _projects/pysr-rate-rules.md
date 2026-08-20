@@ -30,6 +30,6 @@ Exploratory, unpublished work. The symbolic regression front shows the expected 
 
 Developed by me: the database curation and provenance pipeline, the physics-informed feature engineering, the uncertainty-weighted model formulation, and both validation protocols. PySR itself (Miles Cranmer) is the external symbolic-regression engine.
 
-## What this enables
+## Where this is going
 
 A rate rule that's a formula, not a black box — one that can be checked against known physical chemistry and used with some confidence outside the exact reactions it was trained on.

@@ -9,6 +9,9 @@ nav_order: 2
 
 I write about the research as I do it, not just after it's published — and occasionally about questions that don't fit inside a paper at all.
 
+> This page is under construction — the four sections below are the planned shape of it; posts are still being written.
+{: .block-tip }
+
 ## Research Notes
 
 Technical explanations of methods and problems from the research itself.

@@ -41,6 +41,6 @@ Experimental design, rig operation, and primary analysis, under the supervision 
 {% cite sakhiya2019elemental %}
 {% cite upadhyay2018thermodynamic %}
 
-## What this enables
+## Where this is going
 
 A rare downdraft-gasification dataset where the "obvious" steam-ratio-controls-hydrogen story turns out to be incomplete — and a reminder that a null or reversing trend is often more informative than a monotonic one.

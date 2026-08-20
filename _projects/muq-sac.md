@@ -40,6 +40,6 @@ Developed by me as lead author, in collaboration with Vaisakh Vasudavan, Sivaram
 
 {% cite panchal2024muqsac %}
 
-## What this enables
+## Where this is going
 
 Rate-constant uncertainty that is sampled and reported honestly, correlation and all — the foundation MOSIAC's optimization and forward-UQ stages build on.
