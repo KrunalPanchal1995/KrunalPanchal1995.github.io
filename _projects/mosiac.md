@@ -30,9 +30,6 @@ MOSIAC (formerly named RMIP, now retired) unifies the full workflow behind one c
 
 ## Step-by-step: running an optimization campaign
 
-<!-- [CONTENT_REVIEW] Screenshots below to be inserted from review/mosiac.html gui-walkthrough
-     topic (01_mso_studio_launcher.png -> 04_run_label_filled.png) once selected. -->
-
 1. **Launch** the MOSIAC Studio integrator — a tile gallery grouped by workflow stage (prepare · explore · quantify · optimize · compare).
 2. **Prepare** — convert a CHEMKIN mechanism to Cantera YAML, run the health-check/auto-repair pass, and curate experimental targets (a plot-digitizer → ReSpecTh-XML converter with round-trip verification).
 3. **Explore** — run a nominal simulation, then a brute-force or graph-based sensitivity analysis to find which reactions actually matter.

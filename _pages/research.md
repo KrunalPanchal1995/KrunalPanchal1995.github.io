@@ -11,6 +11,11 @@ nav_order: 1
 
 I develop optimization, uncertainty-quantification and scientific-ML methods for expensive, stiff physical simulations — using combustion chemical kinetics as a primary proving ground, and reaching into CFD, propulsion and quantum chemistry as the same methods generalize. My PhD work produced **MOSIAC**, an open-source workbench for uncertainty-aware combustion mechanism optimization, alongside hands-on experimental characterization of pool flames and a downdraft gasifier.
 
+<figure class="loop-media">
+  <img src="/assets/img/projects/muq-sac/009_classC_ls_sample_005_10x.gif" alt="Arrhenius-curve uncertainty sampling animation, tightening in real time" loading="lazy" />
+  <figcaption>MUQ-SAC in motion: each frame is one sampled Arrhenius curve tightening the joint uncertainty band for an n-heptane reaction (10&times; real speed) — see <a href="/projects/muq-sac/">MUQ-SAC</a>.</figcaption>
+</figure>
+
 ## Research themes
 
 <div class="row row-cols-1 row-cols-md-2">
