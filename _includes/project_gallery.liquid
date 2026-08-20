@@ -3,11 +3,18 @@
   a visible group label (h4) and a full descriptive caption under each item
   -- not just a filename-derived one-liner.
   Usage: {% include project_gallery.liquid project="mosiac" %}
+  Optional: pass topic="some-topic" to render only that one topic (no h4
+  label in that case, since the caller already knows which topic it asked
+  for) -- lets a page place one topic's images at a specific point in its
+  own narrative instead of dumping every topic in one block at the top.
   Data comes from _data/project_images.yml, written by scripts/promote_selected.py
   from scripts/candidates.py -- nothing appears here that wasn't explicitly
   approved by the owner.
 {% endcomment %}
 {% assign items = site.data.project_images[include.project] %}
+{% if include.topic %}
+  {% assign items = items | where: "topic", include.topic %}
+{% endif %}
 {% if items %}
 <div class="project-gallery">
   {% assign topics = "" | split: "" %}
@@ -18,7 +25,9 @@
   {% endfor %}
   {% for topic in topics %}
     {% assign topic_items = items | where: "topic", topic %}
-    <h4>{{ topic | replace: "-", " " }}</h4>
+    {% unless include.topic %}
+      <h4>{{ topic | replace: "-", " " }}</h4>
+    {% endunless %}
     <div class="row row-cols-1 row-cols-md-2 g-3 mb-4">
       {% for item in topic_items %}
       <div class="col">

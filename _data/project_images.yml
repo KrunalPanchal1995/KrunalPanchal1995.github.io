@@ -1,44 +1,4 @@
 mosiac:
-- index: 1
-  caption: MOSIAC launcher — tile gallery of every tool
-  topic: gui-walkthrough
-  description: 'Step 1: The MOSIAC Studio launcher. Tools are grouped by workflow
-    stage — Prepare, Explore, Quantify, Optimize, Compare, Utilities — each a clickable
-    tile (e.g. CHEMKIN Mechanism Converter, Mechanism Health-Check, Brute-Force Sensitivity
-    Analysis, Forward UQ).'
-  src_800: assets/img/projects/mosiac/001_01_mso_studio_launcher-800.png
-  src_1600: assets/img/projects/mosiac/001_01_mso_studio_launcher-1600.png
-- index: 2
-  caption: Opening the Nominal Simulation tool
-  topic: gui-walkthrough
-  description: 'Step 2: Clicking the "Nominal Simulation" tile from the launcher opens
-    its dedicated page — the same grid stays visible behind it for quick navigation
-    back to another tool.'
-  src_800: assets/img/projects/mosiac/002_02_after_click_nominal_tile-800.png
-  src_1600: assets/img/projects/mosiac/002_02_after_click_nominal_tile-1600.png
-- index: 3
-  caption: Nominal simulation setup page
-  topic: gui-walkthrough
-  description: 'Step 3: The Nominal Simulation configuration form — run label, mechanism
-    file, experimental target file, thermo/transport files, and target count (52 in
-    this run), with an "Advanced" section collapsed below and a Run button.'
-  src_800: assets/img/projects/mosiac/003_03_nominal_sim_page-800.png
-  src_1600: assets/img/projects/mosiac/003_03_nominal_sim_page-1600.png
-- index: 4
-  caption: Run configured and labelled
-  topic: gui-walkthrough
-  description: 'Step 4: The same form with a run label entered ("nominal_htc") — every
-    run is named before launch so it can be found again later in the run history.'
-  src_800: assets/img/projects/mosiac/004_04_run_label_filled-800.png
-  src_1600: assets/img/projects/mosiac/004_04_run_label_filled-1600.png
-- index: 5
-  caption: A run stopped mid-flight — interruptible long jobs
-  topic: gui-walkthrough
-  description: The launcher's status bar reads "Stopped Nominal Simulation" — long-running
-    campaigns can be interrupted cleanly at any point rather than having to be killed
-    at the process level.
-  src_800: assets/img/projects/mosiac/005_05_stopped_errant_run-800.png
-  src_1600: assets/img/projects/mosiac/005_05_stopped_errant_run-1600.png
 - index: 7
   caption: Ignitability map (3D)
   topic: h2o2-validation
@@ -129,6 +89,88 @@ mosiac:
     a simulation result.'
   src_800: assets/img/projects/mosiac/017_arrhenius-mesh-800.png
   src_1600: assets/img/projects/mosiac/017_arrhenius-mesh-1600.png
+- index: 18
+  caption: Step 1 — MOSIAC Studio launcher
+  topic: wt-1-launcher
+  description: The launcher's tile gallery, grouped by workflow stage (Prepare/Explore/Quantify/Optimise/Compare/Utilities)
+    — 20 tools total. Status bar confirms every backend is healthy (repository, .venv-gui/PySide6,
+    Science python, Cantera, Modules, disk space) before starting.
+  src_800: assets/img/projects/mosiac/018_01_launcher-800.png
+  src_1600: assets/img/projects/mosiac/018_01_launcher-1600.png
+- index: 19
+  caption: Step 2 — Nominal Simulation, configured for H2/O2
+  topic: wt-2-nominal-config
+  description: 'The Nominal Simulation form filled with the real bundled H2/O2 case:
+    the h2o2_he.yaml mechanism (29 reactions), its thermo and transport files, and
+    the 426-target experimental target file (426 total targets; 52 run here for a
+    fast demo pass).'
+  src_800: assets/img/projects/mosiac/019_02_nominal_filled-800.png
+  src_1600: assets/img/projects/mosiac/019_02_nominal_filled-1600.png
+- index: 20
+  caption: Step 3 — running (GUI stays responsive)
+  topic: wt-3-nominal-running
+  description: The run in progress. Nominal Simulation runs on a background thread
+    specifically so the window doesn't lock up — the Run button becomes Stop, live
+    in the log strip below the form.
+  src_800: assets/img/projects/mosiac/020_03_nominal_running-800.png
+  src_1600: assets/img/projects/mosiac/020_03_nominal_running-1600.png
+- index: 21
+  caption: 'Step 4 — done: 52 result tables in 23.5 seconds'
+  topic: wt-4-nominal-done
+  description: 'Completion state: "nominal_htc — done, Wall time: 23.5s · 52 table(s)."
+    The Tables tab shows real per-target predicted-vs-observed rows (here, dataset
+    TIG_0001 at 1000K); the full run wrote 52 case directories with time-history CSVs,
+    a mechanism copy, and solver logs under SIM_RUNS/nominal_htc/.'
+  src_800: assets/img/projects/mosiac/021_04_nominal_done-800.png
+  src_1600: assets/img/projects/mosiac/021_04_nominal_done-1600.png
+- index: 22
+  caption: Step 5 — Ignition-Delay Sensitivity, configured
+  topic: wt-5-idt-config
+  description: 'A second, self-contained tool: ignition-delay sensitivity d ln(tau)/d
+    ln(k) for one condition (H2 fuel, T=1200K, P=13.5atm, phi=1.0, constant-volume
+    reactor, brute-force method, top 20 reactions) — same mechanism, a different diagnostic
+    question.'
+  src_800: assets/img/projects/mosiac/022_05_idt_filled-800.png
+  src_1600: assets/img/projects/mosiac/022_05_idt_filled-1600.png
+- index: 23
+  caption: Step 6 — done in 2.4 seconds
+  topic: wt-6-idt-done
+  description: 'The completed run, writing a JSON of normalized sensitivity coefficients
+    for all 29 reactions. The top result is physically exactly right: H + O2 <=> O
+    + OH (the dominant chain-branching step) has the largest-magnitude coefficient
+    (-1.62), and H + O2 + N2 <=> HO2 + N2 (a chain-terminating three-body step) is
+    next, with the opposite sign (+0.79) -- faster branching shortens ignition delay,
+    faster termination lengthens it.'
+  src_800: assets/img/projects/mosiac/023_06_idt_done-800.png
+  src_1600: assets/img/projects/mosiac/023_06_idt_done-1600.png
+- index: 24
+  caption: The 30-target design space for the optimization attempt
+  topic: wt-7-design-space
+  description: Temperature/pressure/equivalence-ratio coverage of the reduced 30-target
+    subset used for the optimization run below, generated automatically as the first
+    step of that pipeline before any fitting starts.
+  src_800: assets/img/projects/mosiac/024_09_tpphi_space-800.png
+  src_1600: assets/img/projects/mosiac/024_09_tpphi_space-1600.png
+- index: 25
+  caption: Step 7 — Optimization, running
+  topic: wt-8-opt-running
+  description: The Optimization tool, pointed at a copy of the bundled H2 project
+    config with generations cut from 20,000 to 5 and targets from 426 to 30 for a
+    demo-length run (the real setting would take hours) -- everything else (mechanism,
+    solver, targets) is the same real H2/O2 case.
+  src_800: assets/img/projects/mosiac/025_07_opt_filled_running-800.png
+  src_1600: assets/img/projects/mosiac/025_07_opt_filled_running-1600.png
+- index: 26
+  caption: Step 8 — a real limitation, shown rather than hidden
+  topic: wt-9-opt-error
+  description: 'The optimizer got through target export, the design-space plot above,
+    and parsing the joint-uncertainty data (3 reactions) before failing: its sensitivity-analysis
+    sub-step expects a nominal-simulation case directory at a specific relative path
+    (nominal/case-7) that this standalone run hadn''t produced yet. A real dependency
+    between two of the GUI''s own tools, caught by actually running them back to back
+    rather than reading the source.'
+  src_800: assets/img/projects/mosiac/026_08_opt_error-800.png
+  src_1600: assets/img/projects/mosiac/026_08_opt_error-1600.png
 mso-objectives:
 - index: 1
   caption: WMRE vs power-mean objective, all fuels
