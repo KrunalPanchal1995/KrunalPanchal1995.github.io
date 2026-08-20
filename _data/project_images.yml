@@ -672,6 +672,41 @@ flame-processor:
     pixel distances to real-world units automatically.
   src_800: assets/img/projects/flame-processor/003_scale_with_the_ruler-800.png
   src_1600: assets/img/projects/flame-processor/003_scale_with_the_ruler-1600.png
+- index: 4
+  caption: Automatic detection on real footage (color)
+  topic: run
+  description: 'A frame from a full run on the 22 s calibration recording (MVI_8025.MP4,
+    533 frames): the bright-rim detector finds the burner rim automatically and the
+    tool draws the reference bracket from it — no hand-set pixel coordinates. Full
+    run: 75 sampled frames, 0 stale detections, 5 camera jerks correctly re-anchored,
+    avg. detection confidence 0.69.'
+  src_800: assets/img/projects/flame-processor/004_run_color_crop-800.png
+  src_1600: assets/img/projects/flame-processor/004_run_color_crop-1600.png
+- index: 5
+  caption: Automatic detection on real footage (grayscale)
+  topic: run
+  description: The same frame and detection, grayscale output — the tool writes color
+    and grayscale side by side from a single pass, both driven from the same detected
+    geometry.
+  src_800: assets/img/projects/flame-processor/005_run_gray_crop-800.png
+  src_1600: assets/img/projects/flame-processor/005_run_gray_crop-1600.png
+- index: 6
+  caption: Reference-line tracking across the calibration recording
+  topic: run
+  description: All 75 sampled frames from the MVI_8025.MP4 run, showing the detected
+    burner rim and reference bracket holding steady across the recording, including
+    through the camera jerks the run log recorded.
+  src_800: assets/img/projects/flame-processor/006_burner_tracking-800.png
+  src_1600: assets/img/projects/flame-processor/006_burner_tracking-1600.png
+- index: 7
+  caption: The actual pool flame this tool processes (raw frame)
+  topic: raw
+  description: 'An unprocessed frame from MVI_8036.MP4, the pool-fire experiment recording
+    — this is the subject the tool is built for. Running the same pipeline on this
+    recording (a different, uncalibrated rig, no ruler in frame) is where the honest
+    limitation showed up: see Validation for the numbers.'
+  src_800: assets/img/projects/flame-processor/007_raw_flame_frame-800.png
+  src_1600: assets/img/projects/flame-processor/007_raw_flame_frame-1600.png
 vaporizer-rigs:
 - index: 4
   caption: Pressure-drop sweep vs tube diameter
@@ -816,3 +851,77 @@ gasification:
     (H2, CO, CO2, CH4, N2) for every run in the experimental campaign.
   src_800: assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-800.png
   src_1600: assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-1600.png
+decarbonisation-tuyeres:
+- index: 1
+  caption: Base-case 15mm axisymmetric geometry
+  topic: geometry
+  description: 'The 2D axisymmetric base-case geometry (15mm lance): air inlet, lance
+    wall, coal inlet and the downstream reactor domain, with the dimensions used for
+    the pulverised-coal-injection (PCI) reacting-flow study.'
+  src_800: assets/img/projects/decarbonisation-tuyeres/001_slide_7-07_crop-800.png
+  src_1600: assets/img/projects/decarbonisation-tuyeres/001_slide_7-07_crop-1600.png
+- index: 2
+  caption: 25mm lance variant of the same geometry
+  topic: geometry
+  description: The same base-case layout re-drawn with a 25mm lance -- the two lance
+    diameters were compared to see how far downstream devolatilisation of the coal
+    starts.
+  src_800: assets/img/projects/decarbonisation-tuyeres/002_slide_8-08_crop-800.png
+  src_1600: assets/img/projects/decarbonisation-tuyeres/002_slide_8-08_crop-1600.png
+- index: 3
+  caption: 2D mesh used for the grid-convergence study
+  topic: mesh
+  description: The structured 2D mesh (ANSYS) used to check grid-convergence along
+    several probe lines before running the reacting-flow cases.
+  src_800: assets/img/projects/decarbonisation-tuyeres/003_slide_11-11_crop-800.png
+  src_1600: assets/img/projects/decarbonisation-tuyeres/003_slide_11-11_crop-1600.png
+- index: 4
+  caption: 50mm co-injection geometry -- coal + hydrogen
+  topic: geometry
+  description: 'The co-injection geometry: a separate hydrogen inlet added alongside
+    the coal inlet, air inlet and twin lance walls, used for the H2/CH4 substitution
+    cases.'
+  src_800: assets/img/projects/decarbonisation-tuyeres/004_slide_13-13_crop-800.png
+  src_1600: assets/img/projects/decarbonisation-tuyeres/004_slide_13-13_crop-1600.png
+- index: 5
+  caption: The real PCI rig this model represents
+  topic: experimental-rig
+  description: 'The SolidWorks model of the original pulverised-coal-injection rig
+    taken as the basis for the CFD geometry: lance, ceramic-honeycomb flow straightener,
+    preheating section and combustor.'
+  src_800: assets/img/projects/decarbonisation-tuyeres/005_slide_23-23_crop-800.png
+  src_1600: assets/img/projects/decarbonisation-tuyeres/005_slide_23-23_crop-1600.png
+- index: 6
+  caption: PCI 30mm 3D geometry and honeycomb detail
+  topic: geometry
+  description: The 3D geometry used for the cold-flow study, plus the ceramic-honeycomb
+    flow-straightener detail (60mm OD, 10mm ID, 5mm hexagonal cell size) fitted just
+    ahead of the combustor.
+  src_800: assets/img/projects/decarbonisation-tuyeres/006_slide_25-25_crop-800.png
+  src_1600: assets/img/projects/decarbonisation-tuyeres/006_slide_25-25_crop-1600.png
+- index: 7
+  caption: 3D tetrahedral mesh with the honeycomb detail
+  topic: mesh
+  description: The 3D tetrahedral mesh built around the bend and honeycomb section
+    -- meshing this honeycomb geometry proved difficult enough that the flame-anchoring
+    study was dropped in favour of the cold-flow case alone.
+  src_800: assets/img/projects/decarbonisation-tuyeres/007_slide_26-26_crop-800.png
+  src_1600: assets/img/projects/decarbonisation-tuyeres/007_slide_26-26_crop-1600.png
+- index: 8
+  caption: CO2 intensity vs. substitution level
+  topic: decarbonisation-results
+  description: 'Tuyere CO2 intensity per kJ of heat released, computed from the deck''s
+    own stoichiometry: 0.121 gCO2/kJ for coal alone, falling to 0.091 at 80% (by power
+    rating) CH4 substitution and 0.067 at 80% H2 substitution -- a 45% reduction on
+    hydrogen.'
+  src_800: assets/img/projects/decarbonisation-tuyeres/008_co2_intensity-800.png
+  src_1600: assets/img/projects/decarbonisation-tuyeres/008_co2_intensity-1600.png
+- index: 9
+  caption: Peak temperature vs. the 2400K tuyere material limit
+  topic: decarbonisation-results
+  description: Peak flame temperature for every case the deck reports, against the
+    2400K allowable limit for tuyere materials. Hydrogen combusts almost instantaneously
+    at the lance and drives peak temperature well past the limit even at low substitution
+    (4500K at 10% H2); the real constraint this study surfaced is materials, not chemistry.
+  src_800: assets/img/projects/decarbonisation-tuyeres/009_peak_temperature-800.png
+  src_1600: assets/img/projects/decarbonisation-tuyeres/009_peak_temperature-1600.png

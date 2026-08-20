@@ -1,0 +1,135 @@
+---
+layout: default
+---
+<!--
+  LOCAL FORK of al_folio_core's _layouts/about.liquid (v1.0.15).
+
+  Why forked instead of styled from _sass/ like the rest of this site's
+  overrides: the gem emits page.profile.more_info as one raw HTML blob inside
+  a monospace .more-info div, and _components.scss forces every <p> inside it
+  to display: inline-block -- so a multi-line affiliation block collapses onto
+  one run-on line no matter what markup about.md passes in. There is no CSS-only
+  fix that doesn't fight that rule's specificity (components loads after
+  typography in main.scss). See review_2.md and _pages/about.md's `profile:`
+  front matter for the structured fields this expects: degree, institute,
+  degree_year, research_areas, current_role, address.
+
+  Diff from upstream: hero credentials line under the name; profile.more_info
+  replaced by a structured credentials-card (research tags / current role /
+  institute address) instead of raw <p> HTML; the three hardcoded lowercase
+  section headings ("news", "latest posts", "selected publications") are
+  capitalized directly here instead of via the site's former CSS-selector hack.
+-->
+<div class="post">
+  <header class="post-header hero-header">
+    <h1 class="post-title">
+      {% if site.title == 'blank' %}
+        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+        {{ site.last_name }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </h1>
+    {% if page.profile.degree %}
+      <p class="hero-credentials">
+        {{ page.profile.degree }}{% if page.profile.institute %} &middot; {{ page.profile.institute }}{% endif %}{% if page.profile.degree_year %} &middot; {{ page.profile.degree_year }}{% endif %}
+      </p>
+    {% endif %}
+    <p class="desc">{{ page.subtitle }}</p>
+  </header>
+
+  <article>
+    {% if page.profile %}
+      <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+        {% if page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid z-depth-1
+      rounded' %}
+          {% endif %}
+          {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
+      30vw, 95vw"{% endcapture %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            cache_bust=true
+          %}
+        {% endif %}
+
+        {% if page.profile.research_areas or page.profile.current_role or page.profile.address %}
+          <div class="credentials-card">
+            {% if page.profile.research_areas %}
+              <div class="credentials-block">
+                <span class="credentials-label">Research</span>
+                <ul class="research-tags">
+                  {% for area in page.profile.research_areas %}
+                    <li>{{ area }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+            {% if page.profile.current_role %}
+              <div class="credentials-block">
+                <span class="credentials-label">Now</span>
+                <p>
+                  {{ page.profile.current_role.title }}{% if page.profile.current_role.org %}, {{ page.profile.current_role.org }}{% endif %}
+                  {% if page.profile.current_role.until %}<br />through {{ page.profile.current_role.until }}{% endif %}
+                </p>
+              </div>
+            {% endif %}
+            {% if page.profile.address %}
+              <div class="credentials-block">
+                <span class="credentials-label">Institute</span>
+                <p>{{ page.profile.address }}</p>
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="clearfix">{{ content }}</div>
+
+    <!-- News -->
+    {% if page.announcements and page.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Latest posts -->
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">Latest Posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% social_links %}</div>
+
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+
+    {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+      {% if site.plugins contains 'al_newsletter' %}
+        {% include plugins/al_newsletter_form_center_margin.liquid %}
+      {% else %}
+        {% include newsletter.liquid center=true %}
+      {% endif %}
+    {% endif %}
+  </article>
+</div>

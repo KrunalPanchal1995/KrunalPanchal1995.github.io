@@ -1,15 +1,18 @@
 cv:
-  name: Krunal R. Panchal
+  name: Dr. Krunal R. Panchal
   label: PhD, Mechanical Engineering — Computational Methods for Complex Physical Systems
   email: krunalpanchal1995@gmail.com
   location: Chennai, India
   image: ""
   summary: >
-    I develop optimization, uncertainty-quantification and scientific-ML methods
-    for expensive, stiff physical simulations, using combustion chemical kinetics
-    as a primary proving ground. My PhD produced MOSIAC, an open-source workbench
-    for uncertainty-aware combustion mechanism optimization, alongside hands-on
-    experimental work on pool-flame characterization and downdraft gasification.
+    I develop fair multi-objective optimization, uncertainty-quantification and
+    reduced-order/scientific-ML methods for expensive, stiff physical simulations,
+    using combustion chemical kinetics and mechanism reduction as a primary
+    proving ground. My PhD produced MOSIAC, an open-source workbench for
+    uncertainty-aware combustion mechanism optimization, alongside hands-on
+    experimental and numerical combustion work: pool-flame characterization
+    (with computer-vision-driven video post-processing), downdraft gasification,
+    and CFD.
 
   social_networks:
     - network: GitHub
@@ -95,6 +98,8 @@ cv:
         highlights:
           - "Led design of the MUQ-SAC joint-Arrhenius uncertainty-quantification methodology (Combustion Theory and Modelling, 2024)"
           - "Joint pool-flame characterization work with Gagan Verma (rig: design → outsourced fabrication → commissioning → operation)"
+          - "Decarbonisation Technology course project (Aug–Dec 2022, team of six): ANSYS Fluent study of H2/CH4 co-injection with pulverised coal in blast-furnace tuyeres — CO2 intensity fell from 0.121 to 0.067 g/kJ at 80% H2 substitution"
+          - "Built Flame Processor, a computer-vision tool for automatic burner detection and post-processing of pool-flame video, replacing hand-edited MATLAB scripts; run against real footage (88/88 tests passing)"
 
       - company: Nirma University
         position: Graduate Research Assistant (M.Tech)
@@ -205,7 +210,7 @@ cv:
         summary: "Conference paper. Author position 1 of 3."
 
     Skills:
-      - name: Optimization
+      - name: Fair Multi-Objective Optimization
         level: ""
         icon: fa-solid fa-arrows-to-dot
         keywords: "Genetic algorithms, CMA-ES, gradient/NLLS (Levenberg-Marquardt, trust-region), Bayesian & GP optimization, surrogate/response-surface optimization"
@@ -215,15 +220,15 @@ cv:
         icon: fa-solid fa-chart-area
         keywords: "Correlated-parameter UQ, local & Sobol global sensitivity analysis, Latin hypercube / Sobol / Monte Carlo sampling"
 
-      - name: Scientific Machine Learning
+      - name: Reduced-Order Modelling & Scientific ML
         level: ""
         icon: fa-solid fa-diagram-project
-        keywords: "Physics-informed neural networks, neural ODEs, ANN/response-surface surrogates, PyTorch, scikit-learn"
+        keywords: "Physics-informed neural networks, neural ODEs, ANN/response-surface surrogate and reduced-order models, PyTorch, scikit-learn"
 
-      - name: Simulation & Chemical Kinetics
+      - name: Simulation, Chemical Kinetics & Mechanism Reduction
         level: ""
         icon: fa-solid fa-fire
-        keywords: "Cantera, ANSYS CHEMKIN-PRO, FlameMaster, OpenFOAM, ANSYS Fluent/Workbench"
+        keywords: "Cantera, ANSYS CHEMKIN-PRO, FlameMaster, OpenFOAM, ANSYS Fluent/Workbench, kinetic mechanism reduction"
 
       - name: Programming
         level: ""
@@ -236,17 +241,29 @@ cv:
         keywords: "Avogadro, Gaussian — geometry optimization, frequencies, partition functions, rate constants"
 
     Interests:
-      - name: Combustion Kinetics
+      - name: Combustion Kinetics & Mechanism Reduction
         icon: fa-solid fa-fire
         keywords: "Chemical kinetic mechanism development, mechanism reduction, ignition-delay and flame-speed validation"
 
-      - name: Optimization & Uncertainty
+      - name: Fair Multi-Objective Optimization & Uncertainty
         icon: fa-solid fa-arrows-to-dot
         keywords: "Multi-objective and multi-stage optimization, Bayesian uncertainty quantification"
 
-      - name: Scientific Machine Learning
+      - name: Reduced-Order Modelling & Scientific ML
         icon: fa-solid fa-diagram-project
-        keywords: "Neural surrogates for stiff dynamical systems"
+        keywords: "Neural and response-surface surrogates for stiff dynamical systems"
+
+      - name: Experimental & Numerical Combustion
+        icon: fa-solid fa-fire-flame-curved
+        keywords: "Pool-flame characterization, computer-vision video post-processing, CFD and chemical-kinetics simulation of the same systems"
+
+      - name: Gasification
+        icon: fa-solid fa-industry
+        keywords: "Steam/catalyst-assisted downdraft fixed-bed gasification, rig commissioning, syngas analysis"
+
+      - name: CFD
+        icon: fa-solid fa-wind
+        keywords: "In-house CFD/multiphysics solver, reacting-flow and rig-design studies"
 
     Projects:
       - name: MOSIAC

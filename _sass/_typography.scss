@@ -50,20 +50,6 @@ h2 {
   border-bottom: 2px solid var(--global-divider-color);
 }
 
-// al_folio_core's about.liquid layout hardcodes its three home-page section
-// headings lowercase ("news", "latest posts", "selected publications") --
-// that file is gem-owned, so it can't be edited directly (see
-// docs/ARCHITECTURE.md's local-override rule: shadow by filename, don't fork
-// a whole layout for three words). Each heading's only content is an <a>
-// linking to /news/, /blog/ or /publications/, and no other layout in the
-// gem produces an h2 with those hrefs -- so target by href, not by a
-// wrapper class that doesn't actually exist around these headings.
-h2 a[href$="/news/"],
-h2 a[href$="/blog/"],
-h2 a[href$="/publications/"] {
-  text-transform: capitalize;
-}
-
 h3 {
   font-size: 1.3rem;
   font-weight: 600;
@@ -136,6 +122,70 @@ html[data-theme="dark"] .post a,
 html[data-theme="dark"] .card-text a,
 html[data-theme="dark"] .publications a {
   text-decoration-color: rgba(226, 121, 58, 0.45); // dark-mode theme color, dimmed
+}
+
+// About-page hero, styled from the local _layouts/about.liquid fork (see that
+// file's header comment for why it's forked). Two defects this fixes:
+// (1) `.desc` -- the about-page subtitle -- had no rule anywhere, gem or
+// site, so it fell back to plain body text; (2) al_folio_core's `.more-info`
+// forces every child <p> to display: inline-block, which collapsed a
+// multi-line affiliation block onto one run-on line -- the fork replaces
+// that raw-HTML blob with real markup (a definition-list-style card), styled
+// here instead.
+.hero-credentials {
+  font-family: $font-sans-body;
+  font-size: 1.05rem;
+  color: var(--global-text-color-light);
+  margin: 0.15rem 0 0.6rem;
+}
+
+.desc {
+  font-family: $font-sans-body;
+  font-size: 1.05rem;
+  color: var(--global-text-color-light);
+  margin-bottom: 1rem;
+  max-width: 42rem;
+}
+
+.credentials-card {
+  margin-top: 0.85rem;
+  font-family: $font-sans-body;
+  font-size: 0.88rem;
+}
+
+.credentials-block {
+  margin-bottom: 0.75rem;
+
+  p {
+    margin: 0.15rem 0 0;
+    line-height: 1.4;
+  }
+}
+
+.credentials-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.research-tags {
+  list-style: none;
+  margin: 0.2rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  li {
+    font-size: 0.78rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 4px;
+    padding: 0.1rem 0.5rem;
+    color: var(--global-text-color);
+  }
 }
 
 // Call-to-action rows (e.g. "Explore Research · CV · Contact") -- rendered
