@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Steam-catalytic downdraft gasification
+title: Steam-Catalytic Downdraft Gasification
 description: M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier
 img: assets/img/projects/gasification/001_02_h2_vs_sbr-800.png
 importance: 6

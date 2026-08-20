@@ -62,11 +62,11 @@ cv:
 
     Experience:
       - company: Indian Institute of Technology Madras
-        position: Project Associate — Shell-funded project
+        position: Project Associate, Department of Mechanical Engineering
         location: Chennai, India
         start_date: 2026-06
-        end_date: present
-        summary: "PIs: Prof. V. Raghavan and Prof. Krithika Narayanaswamy."
+        end_date: 2026-11
+        summary: "Shell-funded combustion project (PIs: Prof. V. Raghavan and Prof. Krithika Narayanaswamy), through 30 November 2026."
 
       - company: Indian Institute of Technology Madras
         position: Project Associate — AI/ML for chess game analysis
@@ -140,7 +140,7 @@ cv:
       - title: "A fast uncertainty quantification methodology and sampling technique for joint probability distribution of the Arrhenius rate expression: a case study applied to H2/CO kinetic mechanism"
         authors:
           - Krunal Panchal
-          - Vishnu Vasudevan
+          - Vaisakh Vasudavan
           - Sivaram Ambikasaran
           - Krithika Narayanaswamy
         publisher: "Combustion Theory and Modelling, 28(4):411–440"
@@ -198,7 +198,7 @@ cv:
       - title: "A multi-stage kinetic reaction optimization strategy applied to n-heptane combustion mechanism"
         authors:
           - Krunal Panchal
-          - Vaisakh V.
+          - Vaisakh Vasudavan
           - Krithika Narayanaswamy
         publisher: "14th Asia-Pacific Conference on Combustion (ASPACC), 2023"
         releaseDate: 2023-01-01

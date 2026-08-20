@@ -2,13 +2,14 @@
 layout: about
 title: Home
 permalink: /
-subtitle: PhD, Mechanical Engineering, IIT Madras &middot; Optimization &middot; Uncertainty Quantification &middot; Combustion &middot; Scientific ML
+subtitle: Project Associate, Dept. of Mechanical Engineering, IIT Madras &middot; PhD 2026 &middot; Optimization &middot; Uncertainty Quantification &middot; Combustion &middot; Scientific ML
 
 profile:
   align: right
   image: prof_pic.jpg # [CONTENT_REVIEW] placeholder until a headshot is selected from krunal_2026_photo.jpeg / KRUNAL.png
   image_circular: false # crops the image to make it circular
   more_info: >
+    <p>Project Associate (till 30 Nov 2026)</p>
     <p>Dept. of Mechanical Engineering</p>
     <p>IIT Madras, Chennai 600036, India</p>
 
@@ -26,9 +27,15 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I develop optimization, uncertainty-quantification and scientific-ML methods for expensive, stiff physical simulations, using combustion chemical kinetics as a primary proving ground. My PhD work produced [MOSIAC](/projects/mosiac/), an open-source workbench for uncertainty-aware combustion mechanism optimization, alongside hands-on experimental work on pool-flame characterization and downdraft gasification.
+My research focuses on combustion kinetics, kinetic-mechanism development, uncertainty quantification, and optimization, with an emphasis on developing computational methods that connect detailed chemical models with practical combustion applications. During my PhD, I developed [MOSIAC](/projects/mosiac/), an open-source multi-objective optimization framework for combustion kinetic-mechanism development, integrating automated mechanism generation, Bayesian uncertainty quantification, multi-stage kinetics-informed calibration, and machine-learning-accelerated surrogate modelling.
 
-**[Explore Research](/research/) &middot; [CV](/cv/) &middot; [Contact](/about/#contact)**
+Alongside this methodological work, I have hands-on experience in combustion experimentation, including [pool-flame characterization](/projects/vaporizer-rigs/) of n-heptane as a benchmark fuel, with extension toward Methanol-to-Gasoline (MtG) surrogate fuels, as well as experience with [steam/catalyst-assisted downdraft fixed-bed gasification](/projects/gasification/) during my M.Tech. I have also been developing experience in quantum-chemical calculations using Gaussian for reaction-rate estimation, which I aim to further strengthen.
+
+<div class="cta-row">
+  <a class="btn-cta btn-cta-primary" href="/research/">Explore Research &rarr;</a>
+  <a class="btn-cta btn-cta-secondary" href="/cv/">CV</a>
+  <a class="btn-cta btn-cta-secondary" href="/about/#contact">Contact</a>
+</div>
 
 ### Research at a glance
 

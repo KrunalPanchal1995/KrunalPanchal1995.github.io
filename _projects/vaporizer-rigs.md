@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vaporizer & combustion rig design
+title: Vaporizer & Combustion Rig Design
 description: Fabrication-grade design of a fuel vaporizer and five combustion experiment rigs
 img: assets/img/projects/vaporizer-rigs/001_rig01_001_general_arrangement-1-800.png
 importance: 8

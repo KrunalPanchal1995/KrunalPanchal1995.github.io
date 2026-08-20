@@ -27,7 +27,7 @@ Full details on the [CV](/cv/).
 
 **2016–2018** — M.Tech at Nirma University: experimental gasification research, first hands-on rig work.
 **2018–2026** — PhD at IIT Madras: MUQ-SAC joint-Arrhenius uncertainty quantification (published, *Combustion Theory and Modelling*, 2024); multi-stage optimization strategy (ASPACC 2023); the MOSIAC workbench; pool-flame characterization.
-**2026 →** — Project Associate on a Shell-funded combustion project at IIT Madras, while preparing the MOSIAC software paper and extending the multi-dataset objective-function work to journal form.
+**2026 (till 30 Nov)** — Project Associate, Department of Mechanical Engineering, IIT Madras, on a Shell-funded combustion project, while preparing the MOSIAC software paper and extending the multi-dataset objective-function work to journal form.
 
 ## Questions I'm exploring
 

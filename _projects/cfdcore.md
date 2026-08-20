@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CFDCore.jl — in-house CFD & multiphysics solver
+title: CFDCore.jl — In-House CFD & Multiphysics Solver
 description: A from-scratch Julia CFD/multiphysics library, with a Python frontend and cross-engine geometry kernel
 img: assets/img/projects/cfdcore/001_04_mms_convergence-800.png
 importance: 5

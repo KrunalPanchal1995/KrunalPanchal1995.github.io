@@ -42,8 +42,8 @@ The strongest single thread: **MOSIAC**, the optimization workbench built during
 
 Smaller, self-contained studies that show how I work, not just what I've published:
 
-- **[Scientific ML for stiff kinetics](/projects/sciml/)** — a documented, 50-generation journey from an untrainable neural ODE to a working surrogate, closing with a 115-run statistical audit of my own results.
-- **[Symbolic regression for rate rules](/projects/pysr-rate-rules/)** — using SR to rediscover the Evans–Polanyi relation from data, with a leave-one-class-out generalization check.
+- **[Scientific ML for Stiff Kinetics](/projects/sciml/)** — a documented, 50-generation journey from an untrainable neural ODE to a working surrogate, closing with a 115-run statistical audit of my own results.
+- **[Symbolic Regression for Rate Rules](/projects/pysr-rate-rules/)** — using SR to rediscover the Evans–Polanyi relation from data, with a leave-one-class-out generalization check.
 - **[Flame Processor](/projects/flame-processor/)** — a GUI under active development to post-process pool-fire video, replacing four brittle MATLAB scripts.
 
 ## Methods & tools

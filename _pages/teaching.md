@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: Course materials, schedules, and resources for classes taught.
+description: Teaching assistantships and lab demonstrator roles held at IIT Madras.
 nav: false
 ---
 

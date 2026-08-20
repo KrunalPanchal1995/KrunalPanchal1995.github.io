@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Scientific ML for stiff kinetics
+title: Scientific ML for Stiff Kinetics
 description: A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results
 img: assets/img/projects/sciml/001_fig1_noise_floor-800.png
 importance: 4

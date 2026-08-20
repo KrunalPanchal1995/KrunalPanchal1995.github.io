@@ -42,12 +42,26 @@ h1 {
 }
 
 h2 {
-  font-size: 1.85rem;
+  font-size: 2.05rem;
   font-weight: 700;
   line-height: 1.25;
   margin-top: 2.6rem;
   padding-bottom: 0.4rem;
   border-bottom: 2px solid var(--global-divider-color);
+}
+
+// al_folio_core's about.liquid layout hardcodes its three home-page section
+// headings lowercase ("news", "latest posts", "selected publications") --
+// that file is gem-owned, so it can't be edited directly (see
+// docs/ARCHITECTURE.md's local-override rule: shadow by filename, don't fork
+// a whole layout for three words). Each heading's only content is an <a>
+// linking to /news/, /blog/ or /publications/, and no other layout in the
+// gem produces an h2 with those hrefs -- so target by href, not by a
+// wrapper class that doesn't actually exist around these headings.
+h2 a[href$="/news/"],
+h2 a[href$="/blog/"],
+h2 a[href$="/publications/"] {
+  text-transform: capitalize;
 }
 
 h3 {
@@ -93,6 +107,82 @@ figcaption,
 .post-meta,
 code {
   font-family: $font-mono-data;
+}
+
+// ---------------------------------------------------------------------------
+// Obvious links -- the theme color on warm paper reads as body text at a
+// glance (no underline until hover is too subtle a signal on this palette).
+// Scoped to prose containers only, so nav links, the footer, social icons,
+// and card/tag chips -- which have their own affordances -- are untouched.
+// ---------------------------------------------------------------------------
+article a,
+.post a,
+.card-text a,
+.publications a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-color: rgba(168, 60, 26, 0.4); // light-mode theme color, dimmed
+  text-decoration-thickness: 1px;
+
+  &:hover {
+    text-decoration-color: currentColor;
+  }
+}
+
+// Dark-mode selector matches this codebase's existing convention in
+// _themes.scss (html[data-theme="dark"], set by the gem's theme.js).
+html[data-theme="dark"] article a,
+html[data-theme="dark"] .post a,
+html[data-theme="dark"] .card-text a,
+html[data-theme="dark"] .publications a {
+  text-decoration-color: rgba(226, 121, 58, 0.45); // dark-mode theme color, dimmed
+}
+
+// Call-to-action rows (e.g. "Explore Research · CV · Contact") -- rendered
+// as explicit buttons instead of a bolded, dot-separated sentence, so they
+// read as navigation rather than prose. `.btn-cta` links opt out of the
+// underline-by-default rule above via their own always-visible outline/fill.
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-family: $font-sans-body;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none !important;
+  border: 1.5px solid var(--global-theme-color);
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+
+  &.btn-cta-primary {
+    background: var(--global-theme-color);
+    color: var(--global-bg-color);
+
+    &:hover {
+      background: transparent;
+      color: var(--global-theme-color);
+    }
+  }
+
+  &.btn-cta-secondary {
+    background: transparent;
+    color: var(--global-theme-color);
+
+    &:hover {
+      background: var(--global-theme-color);
+      color: var(--global-bg-color);
+    }
+  }
 }
 
 // ---------------------------------------------------------------------------

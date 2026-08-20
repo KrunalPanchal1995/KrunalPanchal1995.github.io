@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Symbolic regression for universal rate rules
+title: Symbolic Regression for Universal Rate Rules
 description: Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions
-img: assets/img/projects/pysr-rate-rules/001_04_EP_recovery-800.png
+img: assets/img/projects/pysr-rate-rules/004_01_collinearity-800.png
 importance: 9
 category: [sciml, combustion]
 related_publications: false

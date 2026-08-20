@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MUQ-SAC — joint Arrhenius uncertainty quantification
+title: MUQ-SAC — Joint Arrhenius Uncertainty Quantification
 description: A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression
 img: assets/img/projects/muq-sac/001_fig1_ellipsoid_containment-800.png
 importance: 3
@@ -28,7 +28,7 @@ The sampling methodology is benchmarked across multiple curve-generation classes
 
 ## My contribution
 
-Developed by me as lead author, in collaboration with Vishnu Vasudevan, Sivaram Ambikasaran, and my advisor Prof. Krithika Narayanaswamy — conceptualization, methodology, software and the primary formal analysis.
+Developed by me as lead author, in collaboration with Vaisakh Vasudavan, Sivaram Ambikasaran, and my advisor Prof. Krithika Narayanaswamy — conceptualization, methodology, software and the primary formal analysis.
 
 ## Publications
 

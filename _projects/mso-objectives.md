@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MSO objective functions & multi-stage optimization
+title: MSO Objective Functions & Multi-Stage Optimization
 description: Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration
 img: assets/img/projects/mso-objectives/001_wmre_vs_powermean-800.png
 importance: 2
