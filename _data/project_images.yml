@@ -562,30 +562,6 @@ flame-processor:
   src_800: assets/img/projects/flame-processor/003_scale_with_the_ruler-800.png
   src_1600: assets/img/projects/flame-processor/003_scale_with_the_ruler-1600.png
 vaporizer-rigs:
-- index: 1
-  caption: Counterflow burner rig — general arrangement
-  topic: engineering
-  description: The general-arrangement engineering drawing for the counterflow burner
-    rig — overall layout and major components, generated directly from the parametric
-    design source.
-  src_800: assets/img/projects/vaporizer-rigs/001_rig01_001_general_arrangement-1-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/001_rig01_001_general_arrangement-1-1600.png
-- index: 2
-  caption: Burner assembly, section view
-  topic: engineering
-  description: A cross-sectional engineering drawing through the burner assembly,
-    showing internal flow passages and component fit-up that aren't visible from the
-    outside.
-  src_800: assets/img/projects/vaporizer-rigs/002_rig01_006_burner_assembly_section-1-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/002_rig01_006_burner_assembly_section-1-1600.png
-- index: 3
-  caption: Piping & instrumentation diagram
-  topic: engineering
-  description: The piping and instrumentation diagram (P&ID) for the rig — every valve,
-    sensor, and flow line, the standard reference drawing for building and operating
-    the physical system safely.
-  src_800: assets/img/projects/vaporizer-rigs/003_rig01_pid_001-1-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/003_rig01_pid_001-1-1600.png
 - index: 4
   caption: Pressure-drop sweep vs tube diameter
   topic: analysis
@@ -602,21 +578,48 @@ vaporizer-rigs:
     for the vaporizer.
   src_800: assets/img/projects/vaporizer-rigs/005_single_zone_heatmap_DxK-800.png
   src_1600: assets/img/projects/vaporizer-rigs/005_single_zone_heatmap_DxK-1600.png
-- index: 6
-  caption: System schematic overview
-  topic: engineering
-  description: A simplified schematic overview of the full vaporizer-plus-burner system,
-    showing how the major subsystems connect — a higher-level view than the detailed
-    P&ID.
-  src_800: assets/img/projects/vaporizer-rigs/006_schematic_pid_overview-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/006_schematic_pid_overview-1600.png
-- index: 7
-  caption: Burner concept sketch
-  topic: engineering
-  description: An early concept sketch of the burner design, from the initial design-note
-    stage before the fabrication-grade drawings were generated.
-  src_800: assets/img/projects/vaporizer-rigs/007_burner_sketch-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/007_burner_sketch-1600.png
+- index: 8
+  caption: Thermal length vs. strain rate, all 14 catalogue tubes
+  topic: tube-sizing
+  description: Required thermal length vs. counterflow strain rate for all 14 catalogue
+    tube options — the 6mm-ID/8mm-OD tube (dark blue) sits near the low end of the
+    required-length pack, one input into the bore choice report_final.pdf's own sensitivity
+    study (Sec. 5.2.2) settles on the same tube for.
+  src_800: assets/img/projects/vaporizer-rigs/008_length_comparison-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/008_length_comparison-1600.png
+- index: 9
+  caption: Axial temperature profile, 6mm ID, low strain rate (20 s⁻¹)
+  topic: tube-sizing
+  description: Axial wall/sheath/fluid-core temperature through the same four-stage
+    march (Preheat → Boil → Mist → Superheat) as the built coil, for the 6mm-ID/8mm-OD
+    tube at the low end of a counterflow strain-rate sweep.
+  src_800: assets/img/projects/vaporizer-rigs/009_Tprofile_a20-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/009_Tprofile_a20-1600.png
+- index: 10
+  caption: Axial temperature profile, 6mm ID, mid strain rate (48 s⁻¹)
+  topic: tube-sizing
+  description: The same axial profile at a mid-range strain rate — inner wall tracks
+    the 180°C ceiling through Boil and Mist, then the superheat zone carries fluid
+    core and inner wall up together to the outlet, never crossing the cap.
+  src_800: assets/img/projects/vaporizer-rigs/010_Tprofile_a48-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/010_Tprofile_a48-1600.png
+- index: 11
+  caption: Axial temperature profile, 6mm ID, high strain rate (70 s⁻¹)
+  topic: tube-sizing
+  description: The same tube at the top of its swept strain-rate range — the stage
+    structure holds, confirming the design isn't only valid at the low-flow end of
+    the envelope.
+  src_800: assets/img/projects/vaporizer-rigs/011_Tprofile_a70-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/011_Tprofile_a70-1600.png
+- index: 12
+  caption: Radial temperature profile through the tube wall, by zone
+  topic: tube-sizing
+  description: Radial temperature from the fluid core out through the inner wall (r=3mm)
+    to the outer sheath (r=4mm), one panel per zone — the companion cross-sectional
+    view to the axial profiles above, confirming the wall's own conduction resistance
+    is small next to the fluid-side film resistance in every zone.
+  src_800: assets/img/projects/vaporizer-rigs/012_radial_a48-800.png
+  src_1600: assets/img/projects/vaporizer-rigs/012_radial_a48-1600.png
 pysr-rate-rules:
 - index: 4
   caption: Feature collinearity / VIF check
