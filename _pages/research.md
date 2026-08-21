@@ -39,7 +39,9 @@ I develop fair multi-objective optimization, uncertainty-quantification and redu
 
 ## Featured projects
 
-<a href="/projects/">Browse the full, filterable project list &rarr;</a>
+<div class="cta-row">
+  <a class="btn-cta btn-cta-secondary" href="/projects/">Browse the full, filterable project list &rarr;</a>
+</div>
 
 The strongest single thread: **MOSIAC**, the optimization workbench built during the PhD — see its [step-by-step guide](/projects/mosiac/) — feeding into the [MSO objective-function work](/projects/mso-objectives/) and the published [MUQ-SAC uncertainty quantification method](/projects/muq-sac/).
 
@@ -63,10 +65,14 @@ Every tool below links to a project that actually used it — no skill bars.
 
 ## Publications
 
-<a href="/publications/">Full publication list &rarr;</a>
+<div class="cta-row">
+  <a class="btn-cta btn-cta-secondary" href="/publications/">Full publication list &rarr;</a>
+</div>
 
 5 refereed journal articles, 1 published conference paper, 1 manuscript under review, and 3 accepted conference abstracts (64th Symposium (Japanese) on Combustion, Fukuoka, Nov 2026).
 
 ## CV
 
-<a href="/cv/">View the full CV &rarr;</a>
+<div class="cta-row">
+  <a class="btn-cta btn-cta-secondary" href="/cv/">View the full CV &rarr;</a>
+</div>

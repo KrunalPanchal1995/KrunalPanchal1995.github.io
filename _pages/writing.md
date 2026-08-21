@@ -30,4 +30,6 @@ Shorter, more personal observations.
 
 ---
 
-<a href="/blog/">All posts, in order &rarr;</a>
+<div class="cta-row">
+  <a class="btn-cta btn-cta-secondary" href="/blog/">All posts, in order &rarr;</a>
+</div>
