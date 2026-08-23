@@ -38,9 +38,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-My research focuses on combustion kinetics, kinetic-mechanism development, uncertainty quantification, and optimization, with an emphasis on developing computational methods that connect detailed chemical models with practical combustion applications. During my PhD, I developed [MOSIAC](/projects/mosiac/), an open-source multi-objective optimization framework for combustion kinetic-mechanism development, integrating automated mechanism generation, Bayesian uncertainty quantification, multi-stage kinetics-informed calibration, and machine-learning-accelerated surrogate modelling.
+{% include hero-value-flow.liquid %}
 
-Alongside this methodological work, I have hands-on experience in combustion experimentation, including [pool-flame characterization](/projects/vaporizer-rigs/) of n-heptane as a benchmark fuel, with extension toward Methanol-to-Gasoline (MtG) surrogate fuels, as well as experience with [steam/catalyst-assisted downdraft fixed-bed gasification](/projects/gasification/) during my M.Tech. I have also been developing experience in quantum-chemical calculations using Gaussian for reaction-rate estimation, which I aim to further strengthen.
+I build computational methods that connect detailed chemical models with practical combustion applications — kinetics, mechanism reduction, fair multi-objective optimization, uncertainty quantification, and scientific ML, treated as one connected problem rather than separate tools. [The full story &rarr;](/about/)
 
 <div class="cta-row">
   <a class="btn-cta btn-cta-primary" href="/research/">Explore Research &rarr;</a>
@@ -51,8 +51,22 @@ Alongside this methodological work, I have hands-on experience in combustion exp
 ### Research at a glance
 
 - **Combustion Kinetics & Mechanism Reduction** — mechanism development, validation, and reduction of detailed kinetic models to tractable, simulation-ready form
-- **Experimental & Numerical Combustion** — pool-flame characterization and downdraft gasification alongside CFD and chemical-kinetics simulation of the same systems
-- **Fair Multi-Objective Optimization & Uncertainty Quantification** — multi-stage, multi-dataset calibration of Arrhenius parameters with correlated-parameter Bayesian UQ
+- **Experimental & Numerical Combustion** — [pool-flame characterization](/projects/vaporizer-rigs/) and downdraft gasification alongside CFD and chemical-kinetics simulation of the same systems
+- **Fair Multi-Objective Optimization & Uncertainty Quantification** — multi-stage, multi-dataset calibration of Arrhenius parameters with correlated-parameter Bayesian UQ, built around [MOSIAC](/projects/mosiac/), my open-source optimization framework
 - **Reduced-Order Modelling & Scientific ML** — neural and response-surface surrogates that stand in for expensive stiff simulations
-- **Gasification** — steam/catalyst-assisted downdraft fixed-bed gasification, from rig commissioning to syngas analysis
+- **[Gasification](/projects/gasification/)** — steam/catalyst-assisted downdraft fixed-bed gasification, from rig commissioning to syngas analysis
 - **CFD** — an in-house CFD/multiphysics solver, and reacting-flow and rig-design studies built on top of it
+
+### Selected results
+
+<figure class="loop-media">
+  <a href="/projects/flame-processor/">
+    <img src="/assets/img/projects/flame-processor/006_burner_tracking-800.png" alt="Automatic burner detection tracking a pool-fire flame -- static preview, click through for the live animated tracking" loading="lazy" />
+  </a>
+  <figcaption>Automatic burner tracking on real pool-fire footage, replacing four brittle MATLAB scripts — static preview here (the 1.8&nbsp;MB animated version is on the project page, not the home page); see <a href="/projects/flame-processor/">Flame Processor</a> for it live.</figcaption>
+</figure>
+
+<figure class="loop-media">
+  <img src="/assets/img/projects/muq-sac/010_classC_ls_sample_002_10x.gif" alt="A second Arrhenius-curve uncertainty sampling animation, tightening in real time" loading="lazy" />
+  <figcaption>MUQ-SAC sampling a second class-C reaction's joint uncertainty band (10&times; real speed) — see <a href="/projects/muq-sac/">MUQ-SAC</a>.</figcaption>
+</figure>
