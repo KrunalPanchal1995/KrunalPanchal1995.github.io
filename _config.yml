@@ -128,6 +128,14 @@ analytics:
   cloudflare: # your Cloudflare Web Analytics beacon token (32 hex characters)
 enable_simple_analytics: false # Simple Analytics identifies a site by its domain, so it has no ID to set above
 
+# B2 (GOAL_SCORECARD.md, session 4): GoatCounter isn't one of al_analytics' supported providers
+# (google/cronitor/pirsch/openpanel/cloudflare above), so this is a locally-owned key read by
+# _includes/goatcounter.liquid (called from the locally-shadowed scripts.liquid), not the gem.
+# Blank by default -- the include emits nothing until a real code is set here. Sign up at
+# https://www.goatcounter.com (free tier), pick a site code (yours becomes
+# https://<code>.goatcounter.com), and put just that code below.
+goatcounter_code: # your GoatCounter site code, e.g. "krunalpanchal1995" -- blank = feature is off
+
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
 google_site_verification: # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
