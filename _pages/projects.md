@@ -2,12 +2,12 @@
 layout: page
 title: Research Projects
 permalink: /projects/
-description: Optimization, uncertainty quantification, combustion kinetics, scientific ML and computational engineering — ten projects, filterable by theme.
+description: Optimization, uncertainty quantification, combustion kinetics, scientific ML and computational engineering — eleven projects, filterable by theme.
 nav: false
 ---
 
 <div class="filter-bar" role="group" aria-label="Filter projects by theme">
-  <button type="button" class="filter-btn active" data-filter="all">All (10)</button>
+  <button type="button" class="filter-btn active" data-filter="all">All (11)</button>
   {% assign cat_counts = "" | split: "" %}
   {% assign all_cats = "combustion,optimization,uq,sciml,cfd,experimental" | split: "," %}
   {% for cat in all_cats %}
