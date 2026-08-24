@@ -25,7 +25,136 @@
   window.alFolio = {
     compatBootstrap: false
   };
-</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+</script> <script>
+  window.__hoverPreviews = {
+    
+      "/404.html": {
+        title: "Page not found",
+        description: "Looks like there has been a mistake. Nothing exists here."
+      },
+    
+      "/about/": {
+        title: "About",
+        description: "Who I am, how I think about research, and where I'm headed."
+      },
+    
+      "/beyond-research/": {
+        title: "Beyond Research",
+        description: "Research is what I do. It isn't all of who I am."
+      },
+    
+      "/books/": {
+        title: "Bookshelf",
+        description: ""
+      },
+    
+      "/cv/": {
+        title: "CV",
+        description: "Curriculum vitae, generated from _data/cv.yml."
+      },
+    
+      "/news/": {
+        title: "News",
+        description: ""
+      },
+    
+      "/projects/": {
+        title: "Research Projects",
+        description: "Optimization, uncertainty quantification, combustion kinetics, scientific ML and computational engineering — eleven projects, filterable by theme."
+      },
+    
+      "/publications/": {
+        title: "Publications",
+        description: "Journal articles, conference papers and work in preparation, by category, most recent first."
+      },
+    
+      "/research/": {
+        title: "Research",
+        description: "Combustion kinetics and mechanism reduction, fair multi-objective optimization and uncertainty quantification, reduced-order and scientific machine learning."
+      },
+    
+      "/teaching/": {
+        title: "Teaching",
+        description: "Teaching assistantships and lab demonstrator roles held at IIT Madras."
+      },
+    
+      "/writing/": {
+        title: "Writing",
+        description: "Research notes, essays, and things I haven't stopped thinking about."
+      },
+    
+      "/blog/index.html": {
+        title: "Writing Archive",
+        description: ""
+      },
+    
+      "/projects/cfdcore/": {
+        title: "CFDCore.jl — In-House CFD \u0026 Multiphysics Solver",
+        description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning"
+      },
+    
+      "/projects/decarbonisation-tuyeres/": {
+        title: "H₂/CH₄ Co-injection in Blast-Furnace Tuyeres",
+        description: "A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you"
+      },
+    
+      "/projects/flame-processor/": {
+        title: "Flame Processor",
+        description: "GUI-driven computer vision for combustion experiments — automatic burner detection and post-processing for pool-fire video, replacing four brittle MATLAB scripts"
+      },
+    
+      "/projects/gasification/": {
+        title: "Steam-Catalytic Downdraft Gasification",
+        description: "M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier"
+      },
+    
+      "/projects/mosiac/": {
+        title: "MOSIAC",
+        description: "An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization"
+      },
+    
+      "/projects/mso-objectives/": {
+        title: "MSO Objective Functions \u0026 Multi-Stage Optimization",
+        description: "Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration"
+      },
+    
+      "/projects/muq-sac/": {
+        title: "MUQ-SAC — Joint Arrhenius Uncertainty Quantification",
+        description: "A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression"
+      },
+    
+      "/projects/neural-ode-playground/": {
+        title: "vZero — A Neural ODE Research Playground",
+        description: "An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum"
+      },
+    
+      "/projects/pysr-rate-rules/": {
+        title: "Symbolic Regression for Universal Rate Rules",
+        description: "Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions"
+      },
+    
+      "/projects/sciml/": {
+        title: "Scientific ML for Stiff Kinetics",
+        description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results"
+      },
+    
+      "/projects/vaporizer-rigs/": {
+        title: "Vaporizer \u0026 Combustion Rig Design",
+        description: "An induction-heated tube vaporizer for MtG/ethanol surrogate fuel, sized against boiling glide, critical heat flux and flow instability, plus a fabrication-grade combustion-rig drawing package"
+      },
+    
+      "/news/2026-07-16-phd-conferred/": {
+        title: "Phd Conferred",
+        description: ""
+      },
+    
+      "/news/2026-08-07-fukuoka-accepted/": {
+        title: "Fukuoka Accepted",
+        description: ""
+      }
+    
+  };
+</script> <script defer src="/assets/js/hover-previews.js"></script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
     addBackToTop();
   </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
 // get the ninja-keys element
