@@ -39,6 +39,7 @@ latest_posts:
 ---
 
 {% include hero-value-flow.liquid %}
+{% include hero-flow-field.liquid %}
 
 I build computational methods that connect detailed chemical models with practical combustion applications — kinetics, mechanism reduction, fair multi-objective optimization, uncertainty quantification, and scientific ML, treated as one connected problem rather than separate tools. [The full story &rarr;](/about/)
 

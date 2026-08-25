@@ -17,6 +17,13 @@ pagination:
 
 <div class="post">
 
+{% if site.posts.size == 0 %}
+
+<blockquote class="block-tip">
+  <p>This page is under construction — no posts yet. See <a href="{{ '/writing/' | relative_url }}">/writing/</a> for the planned shape of it.</p>
+</blockquote>
+{% endif %}
+
 {% assign blog_name_size = site.blog_name | size %}
 {% assign blog_description_size = site.blog_description | size %}
 

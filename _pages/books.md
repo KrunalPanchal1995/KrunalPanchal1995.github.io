@@ -10,4 +10,7 @@ collection: books
 >
 > -- Carl Sagan, Cosmos, Part 11: The Persistence of Memory (1980)
 
+> This page is under construction — no entries yet.
+> {: .block-tip }
+
 ## Books that I am reading, have read, or will read

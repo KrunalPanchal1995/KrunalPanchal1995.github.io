@@ -1,7 +1,7 @@
 ---
 layout: page
 title: vZero — A Neural ODE Research Playground
-description: An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum
+description: An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, RL-as-a-trainer, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum
 img: assets/img/projects/neural-ode-playground/001_optimizer_race-800.png
 importance: 5
 category: [sciml, optimization]
@@ -20,13 +20,18 @@ related_publications: false
 - **Architecture as a set of composable slots, not a fixed network.** A custom decoder head, a hard mass-conservation constraint on the predicted state, and a dependency-free graph-convolution front layer built over the real reaction-coupling structure of the Cantera mechanism — every slot defaults to the original architecture exactly, verified byte-identical.
 - **A peer model family that isn't a neural network at all.** [PySR](https://github.com/MilesCranmer/PySR) symbolic regression, sharing the same data/loss pipeline as the Neural ODE path, so a discovered closed-form right-hand side is directly comparable to a learned network's test loss.
 - **PINN benchmarks, method-of-lines style.** A PDE (Raissi's viscous Burgers equation) semi-discretized in space becomes an ODE state that fits the existing trajectory machinery exactly, scored against a real [DeepXDE](https://github.com/lululxvi/deepxde) physics-informed-neural-network baseline on the same fine-grid reference solution.
-- **An executed, not exported, curriculum.** [d2l.ai](https://d2l.ai)'s optimization and gradient-flow curriculum, run for real against this codebase's own 12-optimizer registry and gradient instrumentation rather than transcribed from the book.
+- **An executed, not exported, curriculum.** [d2l.ai](https://d2l.ai)'s optimization and gradient-flow curriculum, run for real against this codebase's own 12-optimizer registry and gradient instrumentation, rendered directly inside the playground's own Learn view (not only exported as a download).
+- **An open plugin registry, not a closed enum.** Drop a `.py` file defining a custom activation, regularizer, gradient transform, or ODE-solver time-reparameterization; it's auto-discovered at startup and shows up in the GUI's own dropdowns next to the built-ins — the same schema-derives-from-the-real-registry discipline the optimizer list already used, extended to let a user add to it without touching this codebase.
+- **Reinforcement learning as a third training strategy**, alongside the gradient path and the gradient-free black-box search: a PPO policy (Stable-Baselines3) that treats the loss landscape itself as the environment and a bounded weight perturbation as the action — reachable from the same GUI form as every other training mode, not a separate tool.
+- **A five-view instrument shell**, not one long scrolling form: a working Instrument view (edit the network, watch the decision surface and flow field update live, before you even press Run), a narrated Atlas of every visualization technique, a Lab for optimizer races/hyperparameter search/config exports, the Learn curriculum, and a Data view with a real pre-processing pipeline (channel selection, rescaling, resampling, outlier clipping, live before/after) over whatever dataset is currently loaded.
 
 ## Results
 
 The optimizer race above is one representative real result, not a curated highlight: all 12 gradient optimizers trained from scratch on the same tiny synthetic problem (a Van der Pol oscillator, this project's non-chemistry test family), same seed, same budget. Nadam reached the lowest final loss; L-BFGS, Adadelta, and plain SGD were still an order of magnitude worse after 80 epochs on this particular problem — reported as-is, including the optimizers that didn't do well here.
 
 A gradient-free CMA-ES run, driven entirely through the black-box `Trainer` interface with zero `.backward()` calls anywhere, reduced a fairness-weighted residual objective from 108,204 to 6,410 over 612 evaluations — beating an equal-budget Adam/MSE run's own report on the same metric (7,385). On the PINN-vs-Neural-ODE comparison, at matched (session-time-bounded) training budgets, the method-of-lines Neural ODE reached a tighter L2 fit against a shared fine-grid reference than a from-scratch PINN (0.126 vs. 0.439) — neither fully converged, and that qualification is reported alongside the number rather than left out.
+
+The flow-field view above (the demo embedded on the home page) is the newest of these: a Neural ODE's learned right-hand side dy/dt = f(y) genuinely _is_ a vector field, so the playground animates it directly — particles advecting through the model's own learned dynamics, with the known true right-hand side overlaid whenever one exists (the Van der Pol system, μ=1). On a short, bounded training run, the learned-vs-true RMS error over that field measurably shrinks with training, checked directly rather than assumed — the concrete claim the feature makes, not just "the picture looks reasonable."
 
 ## The optimizer-race notebook, executed
 
@@ -44,4 +49,4 @@ Sole author of the original 44 training-script versions this project unifies, an
 
 ## Where this is going
 
-A held-out gap, reported rather than hidden: the fairness-objective library's outlier-robustness clamp is calibrated for chemistry-scale residuals and doesn't yet rescale correctly for the much larger residual magnitudes a PDE-based problem family produces — logged as open, not silently worked around. Next: TensorFlow-Playground-style 2D toy datasets and a live decision-surface view, and a read-only uncertainty-quantification panel over the MUQ-SAC optimization suite's own output artifacts.
+Held-out gaps, reported rather than hidden: the fairness-objective library's outlier-robustness clamp is calibrated for chemistry-scale residuals and doesn't yet rescale correctly for the much larger residual magnitudes a PDE-based problem family produces; the reinforcement-learning trainer ships as a real, tested capability but without ConvNetJS's own `rldemo.html`-style live interactive canvas view of an agent stepping; and the pre-processing panel is an exploration tool over an already-generated dataset, not yet a way to commit a chosen pipeline back into a real training run. None of these are silently worked around — each is a stated, scoped-out follow-up.
