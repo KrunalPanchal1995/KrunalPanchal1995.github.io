@@ -1,0 +1,351 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> flamelab | Dr. Krunal Panchal </title> <meta name="author" content="Krunal R. Panchal"> <meta name="description" content="A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods"> <meta name="keywords" content="Krunal Panchal, combustion kinetics, chemical kinetic mechanism optimization, mechanism reduction, reduced-order modelling, uncertainty quantification, scientific machine learning, gasification, computational fluid dynamics, mechanical engineering, IIT Madras, postdoctoral researcher"> <meta property="og:site_name" content="Dr. Krunal Panchal"> <meta property="og:type" content="website"> <meta property="og:title" content="Dr. Krunal Panchal | flamelab"> <meta property="og:url" content="https://krunalpanchal1995.github.io/projects/flamelab/"> <meta property="og:description" content="A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods"> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="flamelab"> <meta name="twitter:description" content="A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods"> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Krunal R. Panchal"
+        },
+        "url": "https://krunalpanchal1995.github.io/projects/flamelab/",
+        "@type": "WebSite",
+        "description": "A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods",
+        "headline": "flamelab",
+        
+        "sameAs": ["https://orcid.org/0000-0003-2595-8824","https://github.com/KrunalPanchal1995","https://www.linkedin.com/in/Krunal-panchal-phd","https://www.researchgate.net/profile/Krunal-Panchal"],
+        
+        "name": "Krunal R. Panchal",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 980px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Newsreader:400,500,600,700&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%94%A5&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://krunalpanchal1995.github.io/projects/flamelab/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Dr. Krunal Panchal </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">Home </a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">Research </a> </li> <li class="nav-item "> <a class="nav-link" href="/playground/">Playground </a> </li> <li class="nav-item "> <a class="nav-link" href="/writing/">Writing </a> </li> <li class="nav-item "> <a class="nav-link" href="/beyond-research/">Beyond Research </a> </li> <li class="nav-item "> <a class="nav-link" href="/about/">About </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">flamelab</h1> <p class="post-description">A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods</p> </header> <article> <div class="project-gallery"> <h4>campaign</h4> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/001_ensemble-frame-matrix-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/001_ensemble-frame-matrix-800.png" alt="Flame development across eight runs" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> Eight repeat n-heptane pool-flame runs, ignition-aligned: each column is the same time after that run's own ignition, and every cell is the same physical field of view (150 mm x 70 mm) so rows compare directly. </figcaption> </figure> </div> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/002_ensemble-frame-matrix-full-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/002_ensemble-frame-matrix-full-800.png" alt="Full-development matrix (0-240 s)" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The long-run subset of the frame matrix over the full 0-240 s development, 20 s per column. </figcaption> </figure> </div> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/003_ensemble-aligned-height-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/003_ensemble-aligned-height-800.png" alt="Ensemble flame height, ignition-aligned" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> Cross-run median flame height with IQR, 95% envelope and the GUM combined-uncertainty band - one trustworthy trace from eight repeat experiments. </figcaption> </figure> </div> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/004_ensemble-phase-cycle-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/004_ensemble-phase-cycle-800.png" alt="Phase-averaged puff cycle" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The reconstructed puffing cycle, conditional-averaged by phase across every run - cycle shape recovered even where the absolute frequency sits at the camera's Nyquist limit. </figcaption> </figure> </div> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/005_violin-height-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/005_violin-height-800.png" alt="Height distributions by run" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> Per-run flame-height distributions over the developed window - the run-to-run spread the ensemble statistics quantify. </figcaption> </figure> </div> </div> <h4>fluctuation</h4> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/006_MVI8036-corner-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/006_MVI8036-corner-800.png" alt="Tip and width fluctuation (seismograph)" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The flame tip tracked as a moving point in a scrolling window with steady axes - height on top, width on the right in the rotated vertical configuration. </figcaption> </figure> </div> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/007_MVI8036-method-figure-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/007_MVI8036-method-figure-800.png" alt="Sampled frames to measured fluctuation" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> How the charts are built: sampled video frames connected by leader lines to their points on the separated height and width fluctuation charts. </figcaption> </figure> </div> <div class="col"> <figure class="gallery-figure"> <video src="/assets/img/projects/flamelab/014_MVI8036-seismograph-onset.mp4" autoplay="" loop="" muted="" playsinline="" class="img-fluid rounded z-depth-1" style="width: 100%;"></video> <figcaption> The scrolling seismograph strips (height top, width right) tracked in real time alongside the flame footage through the flickering onset. </figcaption> </figure> </div> </div> <h4>measurement</h4> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/008_MVI8036-timeseries-height-width-regimes-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/008_MVI8036-timeseries-height-width-regimes-800.png" alt="Height and width with regime bands" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> Flame height and width over time with the Hopf-sequence regime bands (Ignition Transient, Steady Laminar, Flickering Onset, Periodic Flickering) behind them. </figcaption> </figure> </div> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/009_MVI8036-onset-kymograph-plain-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/009_MVI8036-onset-kymograph-plain-800.png" alt="Kymograph over the flickering-onset window" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The space-time edge diagram: local flame width vs time, the diagonal stripe structure carrying the convection velocity. </figcaption> </figure> </div> </div> <h4>methods</h4> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/010_MVI8036-pod-dmd-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/010_MVI8036-pod-dmd-800.png" alt="Windowed POD/DMD modes" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> Mean field, leading POD mode and leading DMD mode of the windowed pixel field - coherent structures recovered from full-frame video. </figcaption> </figure> </div> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/flamelab/011_MVI8036-hht-emd-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/flamelab/011_MVI8036-hht-emd-800.png" alt="Hilbert-Huang spectrum" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> Empirical mode decomposition of the height series and the Hilbert-Huang spectrum - the adaptive, non-Fourier decomposition of the non-stationary onset. </figcaption> </figure> </div> </div> <h4>run</h4> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <video src="/assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition.mp4" autoplay="" loop="" muted="" playsinline="" class="img-fluid rounded z-depth-1" style="width: 100%;"></video> <figcaption> 15 s of the flickering-onset transition with the measured contour, centerline and tip burned onto the real frames. </figcaption> </figure> </div> <div class="col"> <figure class="gallery-figure"> <video src="/assets/img/projects/flamelab/013_MVI8036-periodic-flickering.mp4" autoplay="" loop="" muted="" playsinline="" class="img-fluid rounded z-depth-1" style="width: 100%;"></video> <figcaption> 15 s of the developed periodic-flickering regime with the measurement overlay. </figcaption> </figure> </div> </div> </div> <style>
+  .project-gallery figcaption {
+    font-family: "Roboto Mono", "SF Mono", monospace;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--global-text-color-light);
+    margin-top: 0.5rem;
+  }
+  .project-gallery .original-link { white-space: nowrap; }
+</style> <h2 id="agenda">Agenda</h2> <p>flamelab is a <strong>measurement instrument</strong>, not a video editor: it turns 4K pool-fire footage into per-frame flame geometry (length, width, tip position) <strong>in millimetres with propagated uncertainty</strong>, classifies the flame’s dynamical regime through its Hopf-bifurcation sequence, and aggregates repeat experiments into ensemble statistics with defensible error bars. Every number carries units, uncertainty and provenance — and where the footage cannot support a trustworthy number (e.g. a frequency near the camera’s Nyquist limit), the pipeline refuses and says so rather than guessing.</p> <h2 id="problem">Problem</h2> <p>Combustion dynamics are usually measured with a ruler and a stopwatch — or with diagnostics (laser sheet imaging, chemiluminescence filters, intensified cameras) that a small lab cannot run on every experiment. A consumer 4K camera is cheap, but its footage is hard to quantify honestly: veiling glare inflates the apparent flame boundary, 4:2:0 chroma subsampling and unknown ISP processing corrupt colour-based diagnostics, and the 23.976 fps frame rate aliases the flicker frequencies that matter most. flamelab is built around those exact limits: correct the glare, propagate the segmentation uncertainty, and never report an aliased frequency as if it were physical.</p> <h2 id="approach">Approach</h2> <ul> <li> <strong>Sub-pixel, glare-corrected contour</strong> — veiling-glare correction followed by a multi-gate flame-component selector (brightness, area, rim-anchoring, axis overlap), anchored to the burner rim measured once per video. On the full 13,127-frame reference recording, dropout frames went from 5.1% to <strong>0.0%</strong>, and the detected rim agrees with an independent measurement to 0.45 px.</li> <li> <strong>Physical quantities with uncertainty</strong> — length, width, area, rugosity, tip angle and pinch-off events in mm (ruler-photo calibrated, honesty-flagged as not caliper-confirmed), each with systematic (segmentation) and statistical uncertainty separated.</li> <li> <strong>Regime classification</strong> — a hidden-Markov classifier over sliding-window spectral features labels every frame with the literature Hopf sequence: Ignition Transient → Steady Laminar → Flickering Onset → Periodic Flickering.</li> <li> <strong>Ensemble statistics across repeat runs</strong> — eight repeat n-heptane pool-flame recordings (the same experiment repeated), aggregated with bootstrap confidence intervals, ICC variance decomposition, ANOVA/Levene tests, GUM-combined uncertainty, and an ignition-aligned frame matrix.</li> <li> <strong>Thirteen analysis methods wired to figures and CSV data</strong> — continuous wavelet transform, skeleton/pinch-off precursors, phase-averaged puff-cycle reconstruction, onion-peeling Abel inversion, correlation dimension and largest Lyapunov exponent (each with an explicit reliability flag), Hilbert–Huang/EMD, TV-L1 optical flow cross-checked against kymograph convection velocity, active contours, windowed full-frame POD/DMD, growth-rate fitting at onset, change-point onset detection, and the literature-standard 50%-intermittency height.</li> </ul> <h2 id="implementation">Implementation</h2> <p>Python with OpenCV, NumPy/SciPy and scikit-image; a ~300-test suite; and three reproducible drivers — one per run (<code class="language-plaintext highlighter-rouge">run-analysis.py</code>), one for the cross-run ensemble (<code class="language-plaintext highlighter-rouge">run-ensemble.py</code>), and one for the methods (<code class="language-plaintext highlighter-rouge">run-methods.py</code>). Outputs are data-first: per-frame HDF5/CSV tables, a CSV next to every figure containing the exact plotted columns, and standalone plotting scripts so any figure can be edited and re-plotted without the pipeline.</p> <h2 id="results">Results</h2> <p>The campaign is eight repeat n-heptane pool-flame runs from one recording session. Detection is successful on <strong>96.8–99.8%</strong> of frames per run. The headline measurements, with their honesty caveats on record:</p> <ul> <li> <strong>Ensemble flame height</strong> — <strong>110.1 mm</strong> (bootstrap 95% CI [75.0, 124.5] across the 8-run campaign; GUM-combined uncertainty ±12.7 mm). Restricting to the three runs with a validated burner-rim anchor gives <strong>117.2 mm [107.9, 123.7]</strong> — the two reference-frame definitions are kept separate on purpose.</li> <li> <strong>Ensemble width</strong> — <strong>16.3 mm [14.6, 18.2]</strong> across all runs; <strong>13.7 mm [12.3, 14.4]</strong> for the anchored subset (width at one burner diameter above the rim — a different physical quantity than the unanchored fallback, documented, not pooled silently).</li> <li> <strong>Run-to-run structure</strong> — variance decomposition: ICC 0.42 (height) / 0.52 (width) — real between-run differences exist on top of within-run flicker, and ANOVA confirms the run means differ.</li> <li> <strong>Puffing frequency</strong> — <strong>0.40 Hz [0.29, 0.52]</strong>, consistent across all runs, ~35× below the classical pool-fire correlation’s ~13.9 Hz prediction. Two honest candidate explanations are on record: a genuinely different flow regime at this small scale, or aliasing of a true 10–15 Hz oscillation against the 11.99 Hz Nyquist limit. Resolving this needs higher-frame-rate re-acquisition — flagged, not spun.</li> <li> <strong>Regime sequence</strong> — every run follows the same Ignition → Steady → Flickering Onset → Periodic sequence, with the onset time located to a bootstrap confidence interval per run, and positive oscillation growth rates (0.004–0.047 s⁻¹) across all runs at onset — the supercritical-Hopf signature.</li> </ul> <p>The gallery above shows the ignition-aligned frame matrix (same physical field of view in every cell), the seismograph-style tip and width fluctuation charts, the ensemble traces with uncertainty bands, kymographs, POD/DMD modes, and the per-regime overlay videos with the detected contour burned onto the real footage. A sample of the live measurement:</p> <figure class="loop-media"> <img src="/assets/img/projects/flamelab/015_onset_tracking.gif" alt="The measured contour, centerline and tip tracking the flame through the flickering-onset transition" loading="lazy"> <figcaption>The flickering-onset transition with the measurement burned onto the real frames — green: measured boundary, cyan: centerline, red cross: tip, blue: burner axis (full-resolution overlay videos are in the gallery).</figcaption> </figure> <h2 id="validation">Validation</h2> <p>Every method is validated against synthetic truth before touching real footage: the forward-model oracle (rolling shutter, exposure, noise, H.264 round-trip), known-answer nonlinear diagnostics (Lyapunov on the logistic map, Abel round-trip on Gaussian profiles, aliasing fold-back algebra), and real-data cross-checks that don’t share an assumption (50%-intermittency height vs. time-averaged length; TV-L1 flow vs. kymograph convection velocity; rim anchor vs. modal observed base). The full suite passes — currently <strong>299 tests</strong> (plus the newer regression tests, run for this page, not quoted from memory).</p> <h2 id="my-contribution">My contribution</h2> <p>The instrument is mine: the measurement pipeline, the uncertainty and refusal policy, the regime classifier, the ensemble statistics and every figure in the gallery. The experimental rig (tube burner, pool-fire configuration) was designed and commissioned jointly with Gagan Verma.</p> <h2 id="where-this-is-going">Where this is going</h2> <ul> <li> <strong>High-frame-rate re-acquisition (≥240 fps)</strong> — the single highest-value next step: it removes the Nyquist ambiguity outright, and the pipeline accepts it unchanged.</li> <li> <strong>Multi-fuel campaign</strong> — the same instrument applied to Methanol-to-Gasoline (MtG) surrogate and ethanol blends, where the fuel-dependent sooting behaviour is itself a measurable.</li> <li> <strong>Bifurcation analysis</strong> — the growth-rate fit at onset is the seed of a supercritical/subcritical Hopf classification, the strongest publishable claim this footage can support.</li> <li> <strong>Physics-informed boundary dynamics</strong> — a PINN-consistent surrogate for the boundary dynamics, once the calibrated multi-fuel dataset exists.</li> </ul> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Krunal R. Panchal. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script>
+  window.__hoverPreviews = {
+    
+      "/404.html": {
+        title: "Page not found",
+        description: "Looks like there has been a mistake. Nothing exists here."
+      },
+    
+      "/about/": {
+        title: "About",
+        description: "Who I am, how I think about research, and where I'm headed."
+      },
+    
+      "/beyond-research/": {
+        title: "Beyond Research",
+        description: "Research is what I do. It isn't all of who I am."
+      },
+    
+      "/books/": {
+        title: "Bookshelf",
+        description: ""
+      },
+    
+      "/cv/": {
+        title: "CV",
+        description: "Curriculum vitae, generated from _data/cv.yml."
+      },
+    
+      "/news/": {
+        title: "News",
+        description: ""
+      },
+    
+      "/playground/": {
+        title: "Playground",
+        description: "A public, server-free Neural ODE playground -- pick a dataset, edit the network, and watch a real model train live in your browser."
+      },
+    
+      "/projects/": {
+        title: "Research Projects",
+        description: "Optimization, uncertainty quantification, combustion kinetics, scientific ML and computational engineering — eleven projects, filterable by theme."
+      },
+    
+      "/publications/": {
+        title: "Publications",
+        description: "Journal articles, conference papers and work in preparation, by category, most recent first."
+      },
+    
+      "/research/": {
+        title: "Research",
+        description: "Combustion kinetics and mechanism reduction, fair multi-objective optimization and uncertainty quantification, reduced-order and scientific machine learning."
+      },
+    
+      "/teaching/": {
+        title: "Teaching",
+        description: "Teaching assistantships and lab demonstrator roles held at IIT Madras."
+      },
+    
+      "/writing/": {
+        title: "Writing",
+        description: "Research notes, essays, and things I haven't stopped thinking about."
+      },
+    
+      "/blog/index.html": {
+        title: "Writing Archive",
+        description: ""
+      },
+    
+      "/projects/cfdcore/": {
+        title: "CFDCore.jl — In-House CFD \u0026 Multiphysics Solver",
+        description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning"
+      },
+    
+      "/projects/decarbonisation-tuyeres/": {
+        title: "H₂/CH₄ Co-injection in Blast-Furnace Tuyeres",
+        description: "A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you"
+      },
+    
+      "/projects/flamelab/": {
+        title: "flamelab",
+        description: "A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods"
+      },
+    
+      "/projects/gasification/": {
+        title: "Steam-Catalytic Downdraft Gasification",
+        description: "M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier"
+      },
+    
+      "/projects/mosiac/": {
+        title: "MOSIAC",
+        description: "An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization"
+      },
+    
+      "/projects/mso-objectives/": {
+        title: "MSO Objective Functions \u0026 Multi-Stage Optimization",
+        description: "Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration"
+      },
+    
+      "/projects/muq-sac/": {
+        title: "MUQ-SAC — Joint Arrhenius Uncertainty Quantification",
+        description: "A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression"
+      },
+    
+      "/projects/neural-ode-playground/": {
+        title: "vZero — A Neural ODE Research Playground",
+        description: "An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, RL-as-a-trainer, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum"
+      },
+    
+      "/projects/pysr-rate-rules/": {
+        title: "Symbolic Regression for Universal Rate Rules",
+        description: "Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions"
+      },
+    
+      "/projects/sciml/": {
+        title: "Scientific ML for Stiff Kinetics",
+        description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results"
+      },
+    
+      "/projects/vaporizer-rigs/": {
+        title: "Vaporizer \u0026 Combustion Rig Design",
+        description: "An induction-heated tube vaporizer for MtG/ethanol surrogate fuel, sized against boiling glide, critical heat flux and flow instability, plus a fabrication-grade combustion-rig drawing package"
+      },
+    
+      "/news/2026-07-16-phd-conferred/": {
+        title: "Phd Conferred",
+        description: ""
+      },
+    
+      "/news/2026-08-07-fukuoka-accepted/": {
+        title: "Fukuoka Accepted",
+        description: ""
+      }
+    
+  };
+</script> <script defer src="/assets/js/hover-previews.js"></script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-home",
+    title: "Home",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-research",
+          title: "Research",
+          description: "Combustion kinetics and mechanism reduction, fair multi-objective optimization and uncertainty quantification, reduced-order and scientific machine learning.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
+          },
+        },{id: "nav-playground",
+          title: "Playground",
+          description: "A public, server-free Neural ODE playground -- pick a dataset, edit the network, and watch a real model train live in your browser.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/playground/";
+          },
+        },{id: "nav-writing",
+          title: "Writing",
+          description: "Research notes, essays, and things I haven&#39;t stopped thinking about.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/writing/";
+          },
+        },{id: "nav-beyond-research",
+          title: "Beyond Research",
+          description: "Research is what I do. It isn&#39;t all of who I am.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/beyond-research/";
+          },
+        },{id: "nav-about",
+          title: "About",
+          description: "Who I am, how I think about research, and where I&#39;m headed.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/about/";
+          },
+        },{id: "news-phd-degree-conferred-by-iit-madras",
+          title: 'PhD degree conferred by IIT Madras.',
+          description: "",
+          section: "News",},{id: "news-three-abstracts-accepted-for-presentation-at-the-64th-symposium-japanese-on-combustion-fukuoka-4-6-nov-2026-including-the-power-mean-objective-function-work-panchal-amp-amp-narayanaswamy-2026",
+          title: 'Three abstracts accepted for presentation at the 64th Symposium (Japanese) on Combustion, Fukuoka,...',
+          description: "",
+          section: "News",},{id: "projects-cfdcore-jl-in-house-cfd-amp-multiphysics-solver",
+          title: 'CFDCore.jl — In-House CFD &amp;amp; Multiphysics Solver',
+          description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cfdcore/";
+            },},{id: "projects-h-ch-co-injection-in-blast-furnace-tuyeres",
+          title: 'H₂/CH₄ Co-injection in Blast-Furnace Tuyeres',
+          description: "A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/decarbonisation-tuyeres/";
+            },},{id: "projects-flamelab",
+          title: 'flamelab',
+          description: "A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/flamelab/";
+            },},{id: "projects-steam-catalytic-downdraft-gasification",
+          title: 'Steam-Catalytic Downdraft Gasification',
+          description: "M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/gasification/";
+            },},{id: "projects-mosiac",
+          title: 'MOSIAC',
+          description: "An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mosiac/";
+            },},{id: "projects-mso-objective-functions-amp-multi-stage-optimization",
+          title: 'MSO Objective Functions &amp;amp; Multi-Stage Optimization',
+          description: "Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mso-objectives/";
+            },},{id: "projects-muq-sac-joint-arrhenius-uncertainty-quantification",
+          title: 'MUQ-SAC — Joint Arrhenius Uncertainty Quantification',
+          description: "A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/muq-sac/";
+            },},{id: "projects-vzero-a-neural-ode-research-playground",
+          title: 'vZero — A Neural ODE Research Playground',
+          description: "An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, RL-as-a-trainer, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/neural-ode-playground/";
+            },},{id: "projects-symbolic-regression-for-universal-rate-rules",
+          title: 'Symbolic Regression for Universal Rate Rules',
+          description: "Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pysr-rate-rules/";
+            },},{id: "projects-scientific-ml-for-stiff-kinetics",
+          title: 'Scientific ML for Stiff Kinetics',
+          description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sciml/";
+            },},{id: "projects-vaporizer-amp-combustion-rig-design",
+          title: 'Vaporizer &amp;amp; Combustion Rig Design',
+          description: "An induction-heated tube vaporizer for MtG/ethanol surrogate fuel, sized against boiling glide, critical heat flux and flow instability, plus a fabrication-grade combustion-rig drawing package",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vaporizer-rigs/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6B%72%75%6E%61%6C%70%61%6E%63%68%61%6C%31%39%39%35@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0003-2595-8824", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/KrunalPanchal1995", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/Krunal-panchal-phd", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Krunal-Panchal", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> <script defer src="/assets/al_email_protect/js/email-protect.js"></script> </body> </html>
