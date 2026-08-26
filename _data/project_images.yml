@@ -345,7 +345,6 @@ muq-sac:
       band.
     src_800: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-800.png
     src_1600: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-1600.png
-    video: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x.mp4
   - index: 10
     caption: Arrhenius-curve sampling animation (10x speed), sample 2
     topic: animation
@@ -354,7 +353,6 @@ muq-sac:
       converges on a consistent uncertainty band rather than one lucky draw.
     src_800: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-800.png
     src_1600: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-1600.png
-    video: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x.mp4
 sciml:
   - index: 1
     caption: 115-run seed-noise floor — bootstrapped ranking

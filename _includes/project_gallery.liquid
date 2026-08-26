@@ -123,4 +123,20 @@
       border-radius: 4px;
     }
   </style>
+  <script>
+    // Muted-loop gallery videos should never depend on the autoplay
+    // attribute alone -- some browsers/environments withhold it even for
+    // muted media. Kick each one explicitly once the DOM is ready; the
+    // poster remains if playback is blocked, and prefers-reduced-motion is
+    // honoured by not starting them at all.
+    document.addEventListener('DOMContentLoaded', function () {
+      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduced) return;
+      var videos = document.querySelectorAll('.project-gallery video');
+      for (var i = 0; i < videos.length; i++) {
+        var play = videos[i].play();
+        if (play && play.catch) play.catch(function () {});
+      }
+    });
+  </script>
 {% endif %}
