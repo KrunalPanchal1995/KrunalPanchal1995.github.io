@@ -1,972 +1,1001 @@
 mosiac:
-- index: 7
-  caption: Ignitability map (3D)
-  topic: h2o2-validation
-  description: A 3D scatter of ignitable vs. non-ignitable points across temperature,
-    pressure and equivalence ratio (0.3-6, step 0.3, 10s ignition-time bound). The
-    small clustered region on the surface is the entire condition range a reference
-    NeuralODE was trained on — the coloured field around it is everywhere this sweep
-    additionally tests.
-  src_800: assets/img/projects/mosiac/007_02b_ignitability_3d_map-800.png
-  src_1600: assets/img/projects/mosiac/007_02b_ignitability_3d_map-1600.png
-- index: 8
-  caption: Stiffness map across conditions
-  topic: h2o2-validation
-  description: Chemical stiffness ratio (log scale, colour-mapped) across the same
-    temperature/pressure/equivalence-ratio grid as the ignitability map — showing
-    how numerically stiff the kinetics get far outside the small region a reference
-    NeuralODE was trained on.
-  src_800: assets/img/projects/mosiac/008_02c_stiffness_3d_map-800.png
-  src_1600: assets/img/projects/mosiac/008_02c_stiffness_3d_map-1600.png
-- index: 9
-  caption: Ignition-delay grid, Ar dilution
-  topic: h2o2-validation
-  description: Ignition-delay time vs. 1000/T at three pressures (0.1, ~3.2, 100 atm)
-    with argon dilution, each panel overlaying multiple equivalence ratios — the classic
-    Arrhenius-plot validation view for autoignition chemistry.
-  src_800: assets/img/projects/mosiac/009_03_idt_grid_AR-800.png
-  src_1600: assets/img/projects/mosiac/009_03_idt_grid_AR-1600.png
-- index: 10
-  caption: Laminar flame speed validation
-  topic: h2o2-validation
-  description: Laminar flame speed vs. equivalence ratio for Ar, He and N2 dilution
-    (each at 50% dilution) — the characteristic flame-speed bell curve, peaking near
-    stoichiometric-to-slightly-rich conditions.
-  src_800: assets/img/projects/mosiac/010_05_flame_speed-800.png
-  src_1600: assets/img/projects/mosiac/010_05_flame_speed-1600.png
-- index: 11
-  caption: Extinction strain rate
-  topic: h2o2-validation
-  description: Twin premixed counterflow-flame extinction strain rate vs. equivalence
-    ratio, for Ar, He and N2 dilution — the strain rate at which the flame can no
-    longer be sustained.
-  src_800: assets/img/projects/mosiac/011_06_extinction_strain-800.png
-  src_1600: assets/img/projects/mosiac/011_06_extinction_strain-1600.png
-- index: 12
-  caption: JSR S-curve, Ar dilution
-  topic: h2o2-validation
-  description: Jet-stirred-reactor ignition S-curve (residence time vs. temperature)
-    at three pressures with argon dilution — the characteristic S-shaped multi-valued
-    ignition boundary of a stirred reactor.
-  src_800: assets/img/projects/mosiac/012_07_jsr_scurve_AR-800.png
-  src_1600: assets/img/projects/mosiac/012_07_jsr_scurve_AR-1600.png
-- index: 13
-  caption: Rate-of-production spectra
-  topic: h2o2-validation
-  description: A 3x3 grid of rate-of-production spectra (which reactions produce/consume
-    each species, and by how much) across nine representative conditions — a diagnostic
-    for identifying which reactions actually control the chemistry at each condition.
-  src_800: assets/img/projects/mosiac/013_09_rop_spectra-800.png
-  src_1600: assets/img/projects/mosiac/013_09_rop_spectra-1600.png
-- index: 14
-  caption: Species profile, case 50
-  topic: h2o2-validation
-  description: H2/O2/N2 mole-fraction time histories at one representative ignition
-    condition (phi=6, T=1000K, P=100atm) — the raw species-concentration trace an
-    ignition-delay or NeuralODE prediction is checked against.
-  src_800: assets/img/projects/mosiac/014_04_species_profile_case-50-800.png
-  src_1600: assets/img/projects/mosiac/014_04_species_profile_case-50-1600.png
-- index: 15
-  caption: Generated wallpaper — flame field
-  topic: hero
-  description: 'MOSIAC''s generated brand wallpaper: an abstract flame-field pattern,
-    part of the suite''s own visual identity assets, not a simulation result.'
-  src_800: assets/img/projects/mosiac/015_flame-field-800.png
-  src_1600: assets/img/projects/mosiac/015_flame-field-1600.png
-- index: 16
-  caption: Generated wallpaper — reaction network
-  topic: hero
-  description: 'MOSIAC''s generated brand wallpaper: an abstract reaction-network
-    graph pattern, part of the suite''s own visual identity assets, not a simulation
-    result.'
-  src_800: assets/img/projects/mosiac/016_reaction-network-800.png
-  src_1600: assets/img/projects/mosiac/016_reaction-network-1600.png
-- index: 17
-  caption: Generated wallpaper — Arrhenius mesh
-  topic: hero
-  description: 'MOSIAC''s generated brand wallpaper: an abstract mesh pattern echoing
-    Arrhenius-curve geometry, part of the suite''s own visual identity assets, not
-    a simulation result.'
-  src_800: assets/img/projects/mosiac/017_arrhenius-mesh-800.png
-  src_1600: assets/img/projects/mosiac/017_arrhenius-mesh-1600.png
-- index: 18
-  caption: Step 1 — MOSIAC Studio launcher
-  topic: wt-1-launcher
-  description: The launcher's tile gallery, grouped by workflow stage (Prepare/Explore/Quantify/Optimise/Compare/Utilities)
-    — 20 tools total. Status bar confirms every backend is healthy (repository, .venv-gui/PySide6,
-    Science python, Cantera, Modules, disk space) before starting.
-  src_800: assets/img/projects/mosiac/018_01_launcher-800.png
-  src_1600: assets/img/projects/mosiac/018_01_launcher-1600.png
-- index: 19
-  caption: Step 2 — Nominal Simulation, configured for H2/O2
-  topic: wt-2-nominal-config
-  description: 'The Nominal Simulation form filled with the real bundled H2/O2 case:
-    the h2o2_he.yaml mechanism (29 reactions), its thermo and transport files, and
-    the 426-target experimental target file (426 total targets; 52 run here for a
-    fast demo pass).'
-  src_800: assets/img/projects/mosiac/019_02_nominal_filled-800.png
-  src_1600: assets/img/projects/mosiac/019_02_nominal_filled-1600.png
-- index: 20
-  caption: Step 3 — running (GUI stays responsive)
-  topic: wt-3-nominal-running
-  description: The run in progress. Nominal Simulation runs on a background thread
-    specifically so the window doesn't lock up — the Run button becomes Stop, live
-    in the log strip below the form.
-  src_800: assets/img/projects/mosiac/020_03_nominal_running-800.png
-  src_1600: assets/img/projects/mosiac/020_03_nominal_running-1600.png
-- index: 21
-  caption: 'Step 4 — done: 52 result tables in 23.5 seconds'
-  topic: wt-4-nominal-done
-  description: 'Completion state: "nominal_htc — done, Wall time: 23.5s · 52 table(s)."
-    The Tables tab shows real per-target predicted-vs-observed rows (here, dataset
-    TIG_0001 at 1000K); the full run wrote 52 case directories with time-history CSVs,
-    a mechanism copy, and solver logs under SIM_RUNS/nominal_htc/.'
-  src_800: assets/img/projects/mosiac/021_04_nominal_done-800.png
-  src_1600: assets/img/projects/mosiac/021_04_nominal_done-1600.png
-- index: 22
-  caption: Step 5 — Ignition-Delay Sensitivity, configured
-  topic: wt-5-idt-config
-  description: 'A second, self-contained tool: ignition-delay sensitivity d ln(tau)/d
-    ln(k) for one condition (H2 fuel, T=1200K, P=13.5atm, phi=1.0, constant-volume
-    reactor, brute-force method, top 20 reactions) — same mechanism, a different diagnostic
-    question.'
-  src_800: assets/img/projects/mosiac/022_05_idt_filled-800.png
-  src_1600: assets/img/projects/mosiac/022_05_idt_filled-1600.png
-- index: 23
-  caption: Step 6 — done in 2.4 seconds
-  topic: wt-6-idt-done
-  description: 'The completed run, writing a JSON of normalized sensitivity coefficients
-    for all 29 reactions. The top result is physically exactly right: H + O2 <=> O
-    + OH (the dominant chain-branching step) has the largest-magnitude coefficient
-    (-1.62), and H + O2 + N2 <=> HO2 + N2 (a chain-terminating three-body step) is
-    next, with the opposite sign (+0.79) -- faster branching shortens ignition delay,
-    faster termination lengthens it.'
-  src_800: assets/img/projects/mosiac/023_06_idt_done-800.png
-  src_1600: assets/img/projects/mosiac/023_06_idt_done-1600.png
-- index: 24
-  caption: The 30-target design space for the optimization attempt
-  topic: wt-7-design-space
-  description: Temperature/pressure/equivalence-ratio coverage of the reduced 30-target
-    subset used for the optimization run below, generated automatically as the first
-    step of that pipeline before any fitting starts.
-  src_800: assets/img/projects/mosiac/024_09_tpphi_space-800.png
-  src_1600: assets/img/projects/mosiac/024_09_tpphi_space-1600.png
-- index: 25
-  caption: Step 7 — Optimization, running
-  topic: wt-8-opt-running
-  description: The Optimization tool, pointed at a copy of the bundled H2 project
-    config with generations cut from 20,000 to 5 and targets from 426 to 30 for a
-    demo-length run (the real setting would take hours) -- everything else (mechanism,
-    solver, targets) is the same real H2/O2 case.
-  src_800: assets/img/projects/mosiac/025_07_opt_filled_running-800.png
-  src_1600: assets/img/projects/mosiac/025_07_opt_filled_running-1600.png
-- index: 26
-  caption: Step 8 — a real limitation, shown rather than hidden
-  topic: wt-9-opt-error
-  description: 'The optimizer got through target export, the design-space plot above,
-    and parsing the joint-uncertainty data (3 reactions) before failing: its sensitivity-analysis
-    sub-step expects a nominal-simulation case directory at a specific relative path
-    (nominal/case-7) that this standalone run hadn''t produced yet. A real dependency
-    between two of the GUI''s own tools, caught by actually running them back to back
-    rather than reading the source.'
-  src_800: assets/img/projects/mosiac/026_08_opt_error-800.png
-  src_1600: assets/img/projects/mosiac/026_08_opt_error-1600.png
+  - index: 7
+    caption: Ignitability map (3D)
+    topic: h2o2-validation
+    description: A 3D scatter of ignitable vs. non-ignitable points across temperature,
+      pressure and equivalence ratio (0.3-6, step 0.3, 10s ignition-time bound). The
+      small clustered region on the surface is the entire condition range a reference
+      NeuralODE was trained on — the coloured field around it is everywhere this sweep
+      additionally tests.
+    src_800: assets/img/projects/mosiac/007_02b_ignitability_3d_map-800.png
+    src_1600: assets/img/projects/mosiac/007_02b_ignitability_3d_map-1600.png
+  - index: 8
+    caption: Stiffness map across conditions
+    topic: h2o2-validation
+    description: Chemical stiffness ratio (log scale, colour-mapped) across the same
+      temperature/pressure/equivalence-ratio grid as the ignitability map — showing
+      how numerically stiff the kinetics get far outside the small region a reference
+      NeuralODE was trained on.
+    src_800: assets/img/projects/mosiac/008_02c_stiffness_3d_map-800.png
+    src_1600: assets/img/projects/mosiac/008_02c_stiffness_3d_map-1600.png
+  - index: 9
+    caption: Ignition-delay grid, Ar dilution
+    topic: h2o2-validation
+    description: Ignition-delay time vs. 1000/T at three pressures (0.1, ~3.2, 100 atm)
+      with argon dilution, each panel overlaying multiple equivalence ratios — the classic
+      Arrhenius-plot validation view for autoignition chemistry.
+    src_800: assets/img/projects/mosiac/009_03_idt_grid_AR-800.png
+    src_1600: assets/img/projects/mosiac/009_03_idt_grid_AR-1600.png
+  - index: 10
+    caption: Laminar flame speed validation
+    topic: h2o2-validation
+    description: Laminar flame speed vs. equivalence ratio for Ar, He and N2 dilution
+      (each at 50% dilution) — the characteristic flame-speed bell curve, peaking near
+      stoichiometric-to-slightly-rich conditions.
+    src_800: assets/img/projects/mosiac/010_05_flame_speed-800.png
+    src_1600: assets/img/projects/mosiac/010_05_flame_speed-1600.png
+  - index: 11
+    caption: Extinction strain rate
+    topic: h2o2-validation
+    description: Twin premixed counterflow-flame extinction strain rate vs. equivalence
+      ratio, for Ar, He and N2 dilution — the strain rate at which the flame can no
+      longer be sustained.
+    src_800: assets/img/projects/mosiac/011_06_extinction_strain-800.png
+    src_1600: assets/img/projects/mosiac/011_06_extinction_strain-1600.png
+  - index: 12
+    caption: JSR S-curve, Ar dilution
+    topic: h2o2-validation
+    description: Jet-stirred-reactor ignition S-curve (residence time vs. temperature)
+      at three pressures with argon dilution — the characteristic S-shaped multi-valued
+      ignition boundary of a stirred reactor.
+    src_800: assets/img/projects/mosiac/012_07_jsr_scurve_AR-800.png
+    src_1600: assets/img/projects/mosiac/012_07_jsr_scurve_AR-1600.png
+  - index: 13
+    caption: Rate-of-production spectra
+    topic: h2o2-validation
+    description: A 3x3 grid of rate-of-production spectra (which reactions produce/consume
+      each species, and by how much) across nine representative conditions — a diagnostic
+      for identifying which reactions actually control the chemistry at each condition.
+    src_800: assets/img/projects/mosiac/013_09_rop_spectra-800.png
+    src_1600: assets/img/projects/mosiac/013_09_rop_spectra-1600.png
+  - index: 14
+    caption: Species profile, case 50
+    topic: h2o2-validation
+    description: H2/O2/N2 mole-fraction time histories at one representative ignition
+      condition (phi=6, T=1000K, P=100atm) — the raw species-concentration trace an
+      ignition-delay or NeuralODE prediction is checked against.
+    src_800: assets/img/projects/mosiac/014_04_species_profile_case-50-800.png
+    src_1600: assets/img/projects/mosiac/014_04_species_profile_case-50-1600.png
+  - index: 15
+    caption: Generated wallpaper — flame field
+    topic: hero
+    description: "MOSIAC's generated brand wallpaper: an abstract flame-field pattern,
+      part of the suite's own visual identity assets, not a simulation result."
+    src_800: assets/img/projects/mosiac/015_flame-field-800.png
+    src_1600: assets/img/projects/mosiac/015_flame-field-1600.png
+  - index: 16
+    caption: Generated wallpaper — reaction network
+    topic: hero
+    description: "MOSIAC's generated brand wallpaper: an abstract reaction-network
+      graph pattern, part of the suite's own visual identity assets, not a simulation
+      result."
+    src_800: assets/img/projects/mosiac/016_reaction-network-800.png
+    src_1600: assets/img/projects/mosiac/016_reaction-network-1600.png
+  - index: 17
+    caption: Generated wallpaper — Arrhenius mesh
+    topic: hero
+    description: "MOSIAC's generated brand wallpaper: an abstract mesh pattern echoing
+      Arrhenius-curve geometry, part of the suite's own visual identity assets, not
+      a simulation result."
+    src_800: assets/img/projects/mosiac/017_arrhenius-mesh-800.png
+    src_1600: assets/img/projects/mosiac/017_arrhenius-mesh-1600.png
+  - index: 18
+    caption: Step 1 — MOSIAC Studio launcher
+    topic: wt-1-launcher
+    description: The launcher's tile gallery, grouped by workflow stage (Prepare/Explore/Quantify/Optimise/Compare/Utilities)
+      — 20 tools total. Status bar confirms every backend is healthy (repository, .venv-gui/PySide6,
+      Science python, Cantera, Modules, disk space) before starting.
+    src_800: assets/img/projects/mosiac/018_01_launcher-800.png
+    src_1600: assets/img/projects/mosiac/018_01_launcher-1600.png
+  - index: 19
+    caption: Step 2 — Nominal Simulation, configured for H2/O2
+    topic: wt-2-nominal-config
+    description: "The Nominal Simulation form filled with the real bundled H2/O2 case:
+      the h2o2_he.yaml mechanism (29 reactions), its thermo and transport files, and
+      the 426-target experimental target file (426 total targets; 52 run here for a
+      fast demo pass)."
+    src_800: assets/img/projects/mosiac/019_02_nominal_filled-800.png
+    src_1600: assets/img/projects/mosiac/019_02_nominal_filled-1600.png
+  - index: 20
+    caption: Step 3 — running (GUI stays responsive)
+    topic: wt-3-nominal-running
+    description: The run in progress. Nominal Simulation runs on a background thread
+      specifically so the window doesn't lock up — the Run button becomes Stop, live
+      in the log strip below the form.
+    src_800: assets/img/projects/mosiac/020_03_nominal_running-800.png
+    src_1600: assets/img/projects/mosiac/020_03_nominal_running-1600.png
+  - index: 21
+    caption: "Step 4 — done: 52 result tables in 23.5 seconds"
+    topic: wt-4-nominal-done
+    description: 'Completion state: "nominal_htc — done, Wall time: 23.5s · 52 table(s)."
+      The Tables tab shows real per-target predicted-vs-observed rows (here, dataset
+      TIG_0001 at 1000K); the full run wrote 52 case directories with time-history CSVs,
+      a mechanism copy, and solver logs under SIM_RUNS/nominal_htc/.'
+    src_800: assets/img/projects/mosiac/021_04_nominal_done-800.png
+    src_1600: assets/img/projects/mosiac/021_04_nominal_done-1600.png
+  - index: 22
+    caption: Step 5 — Ignition-Delay Sensitivity, configured
+    topic: wt-5-idt-config
+    description: "A second, self-contained tool: ignition-delay sensitivity d ln(tau)/d
+      ln(k) for one condition (H2 fuel, T=1200K, P=13.5atm, phi=1.0, constant-volume
+      reactor, brute-force method, top 20 reactions) — same mechanism, a different diagnostic
+      question."
+    src_800: assets/img/projects/mosiac/022_05_idt_filled-800.png
+    src_1600: assets/img/projects/mosiac/022_05_idt_filled-1600.png
+  - index: 23
+    caption: Step 6 — done in 2.4 seconds
+    topic: wt-6-idt-done
+    description: "The completed run, writing a JSON of normalized sensitivity coefficients
+      for all 29 reactions. The top result is physically exactly right: H + O2 <=> O
+      + OH (the dominant chain-branching step) has the largest-magnitude coefficient
+      (-1.62), and H + O2 + N2 <=> HO2 + N2 (a chain-terminating three-body step) is
+      next, with the opposite sign (+0.79) -- faster branching shortens ignition delay,
+      faster termination lengthens it."
+    src_800: assets/img/projects/mosiac/023_06_idt_done-800.png
+    src_1600: assets/img/projects/mosiac/023_06_idt_done-1600.png
+  - index: 24
+    caption: The 30-target design space for the optimization attempt
+    topic: wt-7-design-space
+    description: Temperature/pressure/equivalence-ratio coverage of the reduced 30-target
+      subset used for the optimization run below, generated automatically as the first
+      step of that pipeline before any fitting starts.
+    src_800: assets/img/projects/mosiac/024_09_tpphi_space-800.png
+    src_1600: assets/img/projects/mosiac/024_09_tpphi_space-1600.png
+  - index: 25
+    caption: Step 7 — Optimization, running
+    topic: wt-8-opt-running
+    description: The Optimization tool, pointed at a copy of the bundled H2 project
+      config with generations cut from 20,000 to 5 and targets from 426 to 30 for a
+      demo-length run (the real setting would take hours) -- everything else (mechanism,
+      solver, targets) is the same real H2/O2 case.
+    src_800: assets/img/projects/mosiac/025_07_opt_filled_running-800.png
+    src_1600: assets/img/projects/mosiac/025_07_opt_filled_running-1600.png
+  - index: 26
+    caption: Step 8 — a real limitation, shown rather than hidden
+    topic: wt-9-opt-error
+    description: "The optimizer got through target export, the design-space plot above,
+      and parsing the joint-uncertainty data (3 reactions) before failing: its sensitivity-analysis
+      sub-step expects a nominal-simulation case directory at a specific relative path
+      (nominal/case-7) that this standalone run hadn't produced yet. A real dependency
+      between two of the GUI's own tools, caught by actually running them back to back
+      rather than reading the source."
+    src_800: assets/img/projects/mosiac/026_08_opt_error-800.png
+    src_1600: assets/img/projects/mosiac/026_08_opt_error-1600.png
 mso-objectives:
-- index: 1
-  caption: WMRE vs power-mean objective, all fuels
-  topic: powermean
-  description: 'Bar comparison of nominal, classical WMRE, and the tuned power-mean
-    objective''s mean error, side by side for n-heptane, methyl butanoate and 1,3-butadiene
-    — the headline result of the accepted Fukuoka abstract: the power-mean objective
-    consistently lands closest to zero.'
-  src_800: assets/img/projects/mso-objectives/001_wmre_vs_powermean-800.png
-  src_1600: assets/img/projects/mso-objectives/001_wmre_vs_powermean-1600.png
-  original_pdf: assets/pdf/projects/mso-objectives/wmre_vs_powermean.pdf
-- index: 2
-  caption: Hyperparameter sweep heatmap — n-heptane
-  topic: powermean
-  description: A heatmap sweeping the power-mean objective's hyperparameters for n-heptane,
-    showing which settings minimize error — generated from the accompanying sweep_summary.json.
-  src_800: assets/img/projects/mso-objectives/002_heatmap_n_heptane-800.png
-  src_1600: assets/img/projects/mso-objectives/002_heatmap_n_heptane-1600.png
-  original_pdf: assets/pdf/projects/mso-objectives/heatmap_n_heptane.pdf
-- index: 3
-  caption: Hyperparameter sweep heatmap — methyl butanoate
-  topic: powermean
-  description: The same hyperparameter sweep as the n-heptane heatmap, run for methyl
-    butanoate — used to confirm the chosen settings generalize across fuels rather
-    than being tuned to one dataset.
-  src_800: assets/img/projects/mso-objectives/003_heatmap_mb-800.png
-  src_1600: assets/img/projects/mso-objectives/003_heatmap_mb-1600.png
-  original_pdf: assets/pdf/projects/mso-objectives/heatmap_mb.pdf
-- index: 4
-  caption: Hyperparameter sweep heatmap — 1,3-butadiene
-  topic: powermean
-  description: The same hyperparameter sweep again for 1,3-butadiene — the third fuel
-    in the cross-fuel consistency check behind the accepted abstract's headline number.
-  src_800: assets/img/projects/mso-objectives/004_heatmap_butadiene-800.png
-  src_1600: assets/img/projects/mso-objectives/004_heatmap_butadiene-1600.png
-  original_pdf: assets/pdf/projects/mso-objectives/heatmap_butadiene.pdf
-- index: 6
-  caption: Full-parameterization surrogate fit — methyl butanoate HTC
-  topic: surrogate-comparison
-  description: 'A response-surface surrogate fit to methyl-butanoate high-temperature-chemistry
-    data using the full parameter set — every parameter sampled explicitly. Compare
-    directly against the reduced-parameterization fit alongside it: see the comparison
-    note below the gallery for what changes between the two.'
-  src_800: assets/img/projects/mso-objectives/006_MB_HTC_FULL_PRS_1A-800.png
-  src_1600: assets/img/projects/mso-objectives/006_MB_HTC_FULL_PRS_1A-1600.png
-- index: 7
-  caption: Reduced-parameterization surrogate fit — methyl butanoate HTC (side-by-side
-    with full)
-  topic: surrogate-comparison
-  description: The same methyl-butanoate HTC data fit with a reduced-parameterization
-    surrogate — built to match the full fit's accuracy at a fraction of the sampling
-    cost. See the comparison note below the gallery.
-  src_800: assets/img/projects/mso-objectives/007_MB_HTC_PARTIAL_PRS_1B-800.png
-  src_1600: assets/img/projects/mso-objectives/007_MB_HTC_PARTIAL_PRS_1B-1600.png
-- index: 8
-  caption: All optimization stages combined — n-heptane
-  topic: multi-stage
-  description: The full multi-stage optimization trajectory for n-heptane with every
-    HTC/LTC stage overlaid on one plot, showing how the fit tightens stage by stage.
-  src_800: assets/img/projects/mso-objectives/008_combined_all_stages-800.png
-  src_1600: assets/img/projects/mso-objectives/008_combined_all_stages-1600.png
-  original_pdf: assets/pdf/projects/mso-objectives/combined_all_stages.pdf
-- index: 9
-  caption: GA vs SLSQP solver comparison — n-heptane
-  topic: solver-comparison
-  description: n-heptane optimization at phi=1, comparing a genetic-algorithm (global,
-    derivative-free) solver against gradient-based SLSQP — checking that both solvers
-    converge to the same physically consistent answer rather than one finding an artifact
-    of its own search method.
-  src_800: assets/img/projects/mso-objectives/009_nheptane_phi1_GAvsSLSQP-800.png
-  src_1600: assets/img/projects/mso-objectives/009_nheptane_phi1_GAvsSLSQP-1600.png
-  original_pdf: assets/pdf/projects/mso-objectives/nheptane_phi1_GAvsSLSQP.pdf
-- index: 10
-  caption: All-stage comparison at phi=1.0 — butadiene HTC
-  topic: multi-stage
-  description: 1,3-butadiene high-temperature-chemistry fit quality at equivalence
-    ratio 1.0, compared across every optimization stage — one specific operating condition
-    pulled out of the combined multi-stage trajectory.
-  src_800: assets/img/projects/mso-objectives/010_comparison_plot_all_stages_phi_1_0_HTC-800.png
-  src_1600: assets/img/projects/mso-objectives/010_comparison_plot_all_stages_phi_1_0_HTC-1600.png
-  original_pdf: assets/pdf/projects/mso-objectives/comparison_plot_all_stages_phi_1_0_HTC.pdf
-- index: 11
-  caption: Ellipsoid-containment theory figure
-  topic: theory
-  description: A geometric illustration of how the physically valid region of joint
-    Arrhenius-parameter space is represented and checked for containment — the theoretical
-    figure behind the sampling-validity concept used throughout this line of work.
-  src_800: assets/img/projects/mso-objectives/011_fig1_ellipsoid_containment-800.png
-  src_1600: assets/img/projects/mso-objectives/011_fig1_ellipsoid_containment-1600.png
-  original_pdf: assets/pdf/projects/mso-objectives/fig1_ellipsoid_containment.pdf
-- index: 13
-  caption: Geometric-onset curve-capturing technique (co-author work)
-  topic: curve-capturing
-  description: A collaborative technique (led by Gautam Srikanth) for automatically
-    detecting where a shock-tube species-concentration curve "turns on" — used to
-    fit response surfaces against real experimental curve shapes rather than single-point
-    targets.
-  src_800: assets/img/projects/mso-objectives/013_Geometric_Onset-800.png
-  src_1600: assets/img/projects/mso-objectives/013_Geometric_Onset-1600.png
-  original_pdf: assets/pdf/projects/mso-objectives/Geometric_Onset.pdf
+  - index: 1
+    caption: WMRE vs power-mean objective, all fuels
+    topic: powermean
+    description: "Bar comparison of nominal, classical WMRE, and the tuned power-mean
+      objective's mean error, side by side for n-heptane, methyl butanoate and 1,3-butadiene
+      — the headline result of the accepted Fukuoka abstract: the power-mean objective
+      consistently lands closest to zero."
+    src_800: assets/img/projects/mso-objectives/001_wmre_vs_powermean-800.png
+    src_1600: assets/img/projects/mso-objectives/001_wmre_vs_powermean-1600.png
+    original_pdf: assets/pdf/projects/mso-objectives/wmre_vs_powermean.pdf
+  - index: 2
+    caption: Hyperparameter sweep heatmap — n-heptane
+    topic: powermean
+    description: A heatmap sweeping the power-mean objective's hyperparameters for n-heptane,
+      showing which settings minimize error — generated from the accompanying sweep_summary.json.
+    src_800: assets/img/projects/mso-objectives/002_heatmap_n_heptane-800.png
+    src_1600: assets/img/projects/mso-objectives/002_heatmap_n_heptane-1600.png
+    original_pdf: assets/pdf/projects/mso-objectives/heatmap_n_heptane.pdf
+  - index: 3
+    caption: Hyperparameter sweep heatmap — methyl butanoate
+    topic: powermean
+    description: The same hyperparameter sweep as the n-heptane heatmap, run for methyl
+      butanoate — used to confirm the chosen settings generalize across fuels rather
+      than being tuned to one dataset.
+    src_800: assets/img/projects/mso-objectives/003_heatmap_mb-800.png
+    src_1600: assets/img/projects/mso-objectives/003_heatmap_mb-1600.png
+    original_pdf: assets/pdf/projects/mso-objectives/heatmap_mb.pdf
+  - index: 4
+    caption: Hyperparameter sweep heatmap — 1,3-butadiene
+    topic: powermean
+    description: The same hyperparameter sweep again for 1,3-butadiene — the third fuel
+      in the cross-fuel consistency check behind the accepted abstract's headline number.
+    src_800: assets/img/projects/mso-objectives/004_heatmap_butadiene-800.png
+    src_1600: assets/img/projects/mso-objectives/004_heatmap_butadiene-1600.png
+    original_pdf: assets/pdf/projects/mso-objectives/heatmap_butadiene.pdf
+  - index: 6
+    caption: Full-parameterization surrogate fit — methyl butanoate HTC
+    topic: surrogate-comparison
+    description: "A response-surface surrogate fit to methyl-butanoate high-temperature-chemistry
+      data using the full parameter set — every parameter sampled explicitly. Compare
+      directly against the reduced-parameterization fit alongside it: see the comparison
+      note below the gallery for what changes between the two."
+    src_800: assets/img/projects/mso-objectives/006_MB_HTC_FULL_PRS_1A-800.png
+    src_1600: assets/img/projects/mso-objectives/006_MB_HTC_FULL_PRS_1A-1600.png
+  - index: 7
+    caption: Reduced-parameterization surrogate fit — methyl butanoate HTC (side-by-side
+      with full)
+    topic: surrogate-comparison
+    description: The same methyl-butanoate HTC data fit with a reduced-parameterization
+      surrogate — built to match the full fit's accuracy at a fraction of the sampling
+      cost. See the comparison note below the gallery.
+    src_800: assets/img/projects/mso-objectives/007_MB_HTC_PARTIAL_PRS_1B-800.png
+    src_1600: assets/img/projects/mso-objectives/007_MB_HTC_PARTIAL_PRS_1B-1600.png
+  - index: 8
+    caption: All optimization stages combined — n-heptane
+    topic: multi-stage
+    description: The full multi-stage optimization trajectory for n-heptane with every
+      HTC/LTC stage overlaid on one plot, showing how the fit tightens stage by stage.
+    src_800: assets/img/projects/mso-objectives/008_combined_all_stages-800.png
+    src_1600: assets/img/projects/mso-objectives/008_combined_all_stages-1600.png
+    original_pdf: assets/pdf/projects/mso-objectives/combined_all_stages.pdf
+  - index: 9
+    caption: GA vs SLSQP solver comparison — n-heptane
+    topic: solver-comparison
+    description: n-heptane optimization at phi=1, comparing a genetic-algorithm (global,
+      derivative-free) solver against gradient-based SLSQP — checking that both solvers
+      converge to the same physically consistent answer rather than one finding an artifact
+      of its own search method.
+    src_800: assets/img/projects/mso-objectives/009_nheptane_phi1_GAvsSLSQP-800.png
+    src_1600: assets/img/projects/mso-objectives/009_nheptane_phi1_GAvsSLSQP-1600.png
+    original_pdf: assets/pdf/projects/mso-objectives/nheptane_phi1_GAvsSLSQP.pdf
+  - index: 10
+    caption: All-stage comparison at phi=1.0 — butadiene HTC
+    topic: multi-stage
+    description: 1,3-butadiene high-temperature-chemistry fit quality at equivalence
+      ratio 1.0, compared across every optimization stage — one specific operating condition
+      pulled out of the combined multi-stage trajectory.
+    src_800: assets/img/projects/mso-objectives/010_comparison_plot_all_stages_phi_1_0_HTC-800.png
+    src_1600: assets/img/projects/mso-objectives/010_comparison_plot_all_stages_phi_1_0_HTC-1600.png
+    original_pdf: assets/pdf/projects/mso-objectives/comparison_plot_all_stages_phi_1_0_HTC.pdf
+  - index: 11
+    caption: Ellipsoid-containment theory figure
+    topic: theory
+    description: A geometric illustration of how the physically valid region of joint
+      Arrhenius-parameter space is represented and checked for containment — the theoretical
+      figure behind the sampling-validity concept used throughout this line of work.
+    src_800: assets/img/projects/mso-objectives/011_fig1_ellipsoid_containment-800.png
+    src_1600: assets/img/projects/mso-objectives/011_fig1_ellipsoid_containment-1600.png
+    original_pdf: assets/pdf/projects/mso-objectives/fig1_ellipsoid_containment.pdf
+  - index: 13
+    caption: Geometric-onset curve-capturing technique (co-author work)
+    topic: curve-capturing
+    description: A collaborative technique (led by Gautam Srikanth) for automatically
+      detecting where a shock-tube species-concentration curve "turns on" — used to
+      fit response surfaces against real experimental curve shapes rather than single-point
+      targets.
+    src_800: assets/img/projects/mso-objectives/013_Geometric_Onset-800.png
+    src_1600: assets/img/projects/mso-objectives/013_Geometric_Onset-1600.png
+    original_pdf: assets/pdf/projects/mso-objectives/Geometric_Onset.pdf
 muq-sac:
-- index: 1
-  caption: Ellipsoid containment (sampling validity)
-  topic: theory
-  description: The joint (A, n, Ea) uncertainty region represented as an ellipsoid
-    and checked for containment within the physically valid parameter space — the
-    geometric core of MUQ-SAC's sampling approach.
-  src_800: assets/img/projects/muq-sac/001_fig1_ellipsoid_containment-800.png
-  src_1600: assets/img/projects/muq-sac/001_fig1_ellipsoid_containment-1600.png
-- index: 2
-  caption: Projection onto reduced parameter space
-  topic: theory
-  description: The same ellipsoid projected down onto a lower-dimensional parameter
-    subspace — showing how a full joint-uncertainty region reduces to a 2D slice that
-    can actually be visualized and sampled.
-  src_800: assets/img/projects/muq-sac/002_fig2_projection-800.png
-  src_1600: assets/img/projects/muq-sac/002_fig2_projection-1600.png
-- index: 3
-  caption: Sampling validity check
-  topic: theory
-  description: A check confirming every sampled parameter set falls inside the physically
-    valid ellipsoid region rather than in territory the underlying chemistry model
-    can't support.
-  src_800: assets/img/projects/muq-sac/003_fig3_sampling_validity-800.png
-  src_1600: assets/img/projects/muq-sac/003_fig3_sampling_validity-1600.png
-- index: 4
-  caption: A-factor correlation heatmap
-  topic: correlation
-  description: A heatmap of pairwise correlations between reactions' pre-exponential
-    factors (A), estimated from sensitivity analysis — reactions with strongly correlated
-    A-factors need to be treated jointly, not independently, during optimization.
-  src_800: assets/img/projects/muq-sac/004_correlation_heatmap_A-800.png
-  src_1600: assets/img/projects/muq-sac/004_correlation_heatmap_A-1600.png
-- index: 5
-  caption: n-exponent correlation heatmap
-  topic: correlation
-  description: The same pairwise-correlation heatmap for the temperature-exponent
-    parameter (n) instead of A — part of the same three-parameter correlation-structure
-    analysis.
-  src_800: assets/img/projects/muq-sac/005_correlation_heatmap_n-800.png
-  src_1600: assets/img/projects/muq-sac/005_correlation_heatmap_n-1600.png
-- index: 6
-  caption: Ea correlation heatmap
-  topic: correlation
-  description: The same pairwise-correlation heatmap for activation energy (Ea) —
-    completing the three-parameter (A, n, Ea) correlation-structure picture.
-  src_800: assets/img/projects/muq-sac/006_correlation_heatmap_Ea-800.png
-  src_1600: assets/img/projects/muq-sac/006_correlation_heatmap_Ea-1600.png
-- index: 7
-  caption: Gaussian-process surrogate parity plot
-  topic: surrogate
-  description: Predicted-vs-actual parity plot for a Gaussian-process response-surface
-    surrogate fit to methyl-butanoate data — one of three surrogate types (polynomial,
-    GP, RBF) compared for how well each reproduces the underlying simulation.
-  src_800: assets/img/projects/muq-sac/007_parity_v2_GP-800.png
-  src_1600: assets/img/projects/muq-sac/007_parity_v2_GP-1600.png
-- index: 8
-  caption: Sampling-method comparison
-  topic: sampling
-  description: A comparison of different design-of-experiments sampling strategies
-    (e.g. Latin hypercube vs. structured grids) for building the response-surface
-    training set — which method covers the parameter space most efficiently.
-  src_800: assets/img/projects/muq-sac/008_sampling_methods_comparison-800.png
-  src_1600: assets/img/projects/muq-sac/008_sampling_methods_comparison-1600.png
-  original_pdf: assets/pdf/projects/muq-sac/sampling_methods_comparison.pdf
-- index: 9
-  caption: Arrhenius-curve sampling animation (10x speed), sample 5
-  topic: animation
-  description: An animation (10x real speed) of Arrhenius-curve sampling in the (A,
-    n) subplane for one n-heptane reaction (nC7H16 + H -> C7H15-3 + H2), using a least-squares
-    sampling strategy — each frame is one sampled curve tightening the uncertainty
-    band.
-  src_800: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-800.png
-  src_1600: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-1600.png
-  video: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x.mp4
-- index: 10
-  caption: Arrhenius-curve sampling animation (10x speed), sample 2
-  topic: animation
-  description: A second, independent sampling run of the same reaction and method
-    as the sample-5 animation — shown together to demonstrate that repeated sampling
-    converges on a consistent uncertainty band rather than one lucky draw.
-  src_800: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-800.png
-  src_1600: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-1600.png
-  video: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x.mp4
+  - index: 1
+    caption: Ellipsoid containment (sampling validity)
+    topic: theory
+    description: The joint (A, n, Ea) uncertainty region represented as an ellipsoid
+      and checked for containment within the physically valid parameter space — the
+      geometric core of MUQ-SAC's sampling approach.
+    src_800: assets/img/projects/muq-sac/001_fig1_ellipsoid_containment-800.png
+    src_1600: assets/img/projects/muq-sac/001_fig1_ellipsoid_containment-1600.png
+  - index: 2
+    caption: Projection onto reduced parameter space
+    topic: theory
+    description: The same ellipsoid projected down onto a lower-dimensional parameter
+      subspace — showing how a full joint-uncertainty region reduces to a 2D slice that
+      can actually be visualized and sampled.
+    src_800: assets/img/projects/muq-sac/002_fig2_projection-800.png
+    src_1600: assets/img/projects/muq-sac/002_fig2_projection-1600.png
+  - index: 3
+    caption: Sampling validity check
+    topic: theory
+    description: A check confirming every sampled parameter set falls inside the physically
+      valid ellipsoid region rather than in territory the underlying chemistry model
+      can't support.
+    src_800: assets/img/projects/muq-sac/003_fig3_sampling_validity-800.png
+    src_1600: assets/img/projects/muq-sac/003_fig3_sampling_validity-1600.png
+  - index: 4
+    caption: A-factor correlation heatmap
+    topic: correlation
+    description: A heatmap of pairwise correlations between reactions' pre-exponential
+      factors (A), estimated from sensitivity analysis — reactions with strongly correlated
+      A-factors need to be treated jointly, not independently, during optimization.
+    src_800: assets/img/projects/muq-sac/004_correlation_heatmap_A-800.png
+    src_1600: assets/img/projects/muq-sac/004_correlation_heatmap_A-1600.png
+  - index: 5
+    caption: n-exponent correlation heatmap
+    topic: correlation
+    description: The same pairwise-correlation heatmap for the temperature-exponent
+      parameter (n) instead of A — part of the same three-parameter correlation-structure
+      analysis.
+    src_800: assets/img/projects/muq-sac/005_correlation_heatmap_n-800.png
+    src_1600: assets/img/projects/muq-sac/005_correlation_heatmap_n-1600.png
+  - index: 6
+    caption: Ea correlation heatmap
+    topic: correlation
+    description: The same pairwise-correlation heatmap for activation energy (Ea) —
+      completing the three-parameter (A, n, Ea) correlation-structure picture.
+    src_800: assets/img/projects/muq-sac/006_correlation_heatmap_Ea-800.png
+    src_1600: assets/img/projects/muq-sac/006_correlation_heatmap_Ea-1600.png
+  - index: 7
+    caption: Gaussian-process surrogate parity plot
+    topic: surrogate
+    description: Predicted-vs-actual parity plot for a Gaussian-process response-surface
+      surrogate fit to methyl-butanoate data — one of three surrogate types (polynomial,
+      GP, RBF) compared for how well each reproduces the underlying simulation.
+    src_800: assets/img/projects/muq-sac/007_parity_v2_GP-800.png
+    src_1600: assets/img/projects/muq-sac/007_parity_v2_GP-1600.png
+  - index: 8
+    caption: Sampling-method comparison
+    topic: sampling
+    description: A comparison of different design-of-experiments sampling strategies
+      (e.g. Latin hypercube vs. structured grids) for building the response-surface
+      training set — which method covers the parameter space most efficiently.
+    src_800: assets/img/projects/muq-sac/008_sampling_methods_comparison-800.png
+    src_1600: assets/img/projects/muq-sac/008_sampling_methods_comparison-1600.png
+    original_pdf: assets/pdf/projects/muq-sac/sampling_methods_comparison.pdf
+  - index: 9
+    caption: Arrhenius-curve sampling animation (10x speed), sample 5
+    topic: animation
+    description: An animation (10x real speed) of Arrhenius-curve sampling in the (A,
+      n) subplane for one n-heptane reaction (nC7H16 + H -> C7H15-3 + H2), using a least-squares
+      sampling strategy — each frame is one sampled curve tightening the uncertainty
+      band.
+    src_800: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-800.png
+    src_1600: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-1600.png
+    video: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x.mp4
+  - index: 10
+    caption: Arrhenius-curve sampling animation (10x speed), sample 2
+    topic: animation
+    description: A second, independent sampling run of the same reaction and method
+      as the sample-5 animation — shown together to demonstrate that repeated sampling
+      converges on a consistent uncertainty band rather than one lucky draw.
+    src_800: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-800.png
+    src_1600: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-1600.png
+    video: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x.mp4
 sciml:
-- index: 1
-  caption: 115-run seed-noise floor — bootstrapped ranking
-  topic: audit
-  description: A bootstrapped ranking of 115 training runs by final error, with a
-    shaded seed-noise band — the figure behind the statistical-audit finding that
-    most apparent hyperparameter effects are indistinguishable from ordinary seed-to-seed
-    variation.
-  src_800: assets/img/projects/sciml/001_fig1_noise_floor-800.png
-  src_1600: assets/img/projects/sciml/001_fig1_noise_floor-1600.png
-- index: 3
-  caption: Error-vs-magnitude scaling law across 115 runs
-  topic: audit
-  description: Log-log relationship between a species' true concentration magnitude
-    and its prediction error, pooled across all 115 runs, 80 conditions and 8 species
-    — showing error grows predictably as concentrations get smaller.
-  src_800: assets/img/projects/sciml/003_fig4_scaling_law-800.png
-  src_1600: assets/img/projects/sciml/003_fig4_scaling_law-1600.png
-- index: 4
-  caption: Stiffness evolution during training
-  topic: journey
-  description: How the effective numerical stiffness of the learned dynamics changes
-    over the course of training — an early diagnostic used to understand why direct
-    time-domain training struggles on this problem.
-  src_800: assets/img/projects/sciml/004_D2_stiffness_evolution-800.png
-  src_1600: assets/img/projects/sciml/004_D2_stiffness_evolution-1600.png
-- index: 5
-  caption: Predicted vs true ignition delays
-  topic: journey
-  description: Predicted ignition-delay times plotted against ground-truth Cantera
-    values for an early physics-constrained architecture — a check on whether the
-    model captures the single most important scalar outcome of the whole simulation.
-  src_800: assets/img/projects/sciml/005_F3_ignition_delays-800.png
-  src_1600: assets/img/projects/sciml/005_F3_ignition_delays-1600.png
-- index: 8
-  caption: Champion model — ignition-delay comparison
-  topic: champion
-  description: Predicted vs. true ignition-delay times for the same champion model,
-    across the held-out condition set — architecture and exact results withheld pending
-    publication.
-  src_800: assets/img/projects/sciml/008_idt_comparison-800.png
-  src_1600: assets/img/projects/sciml/008_idt_comparison-1600.png
-- index: 9
-  caption: Where it started — first Neural ODE attempt
-  topic: journey
-  description: The very first neural-ODE attempt in this project, on a simplified
-    stiff toy problem — kept in the record as the honest starting point of a fifty-generation
-    architecture search.
-  src_800: assets/img/projects/sciml/009_neural_ode_results-800.png
-  src_1600: assets/img/projects/sciml/009_neural_ode_results-1600.png
-- index: 10
-  caption: Learned latent manifold
-  topic: journey
-  description: A visualization of the low-dimensional latent space learned by a graph-neural-ODE
-    variant — showing how the model organizes different chemical states internally,
-    before this line of work moved toward a different representation entirely.
-  src_800: assets/img/projects/sciml/010_fig_latent_manifold-800.png
-  src_1600: assets/img/projects/sciml/010_fig_latent_manifold-1600.png
-- index: 11
-  caption: Training curves, an earlier neural-operator checkpoint
-  topic: journey
-  description: Fit and Sobolev (derivative-matching) loss over 12,000 epochs for an
-    earlier checkpoint in this line of work, redrawn from its own logged loss history
-    — architecture withheld pending publication, same as the champion-model figures
-    above.
-  src_800: assets/img/projects/sciml/011_loss_curves_neutral-800.png
-  src_1600: assets/img/projects/sciml/011_loss_curves_neutral-1600.png
-- index: 12
-  caption: Ignition-timing accuracy, same earlier checkpoint
-  topic: journey
-  description: Predicted vs. true ignition-timing proxy (composition at OH-peak) across
-    a temperature sweep, for the same earlier checkpoint as the training-curve figure
-    above.
-  src_800: assets/img/projects/sciml/012_idt_comparison-800.png
-  src_1600: assets/img/projects/sciml/012_idt_comparison-1600.png
-- index: 13
-  caption: Species-prediction grid, same earlier checkpoint (1147K)
-  topic: journey
-  description: Predicted vs. true species mass fractions for the same earlier checkpoint
-    at one representative initial temperature — most species track well; H2O2 and
-    the high-enthalpy-drift case (see the 1502K panel) show where it still struggles.
-  src_800: assets/img/projects/sciml/013_species_grid_T1147_neutral-800.png
-  src_1600: assets/img/projects/sciml/013_species_grid_T1147_neutral-1600.png
-- index: 14
-  caption: Species-prediction grid, same earlier checkpoint (1502K)
-  topic: journey
-  description: The same comparison at a higher initial temperature, kept alongside
-    the 1147K panel deliberately — not every condition in the sweep is this checkpoint's
-    best case, and the record should show both.
-  src_800: assets/img/projects/sciml/014_species_grid_T1502_neutral-800.png
-  src_1600: assets/img/projects/sciml/014_species_grid_T1502_neutral-1600.png
-- index: 15
-  caption: First-layer saturation across a 16-version normalization ablation
-  topic: diagnostics
-  description: 'Whether the network''s first tanh layer saturates (a classic vanishing-gradient
-    failure mode), swept across sixteen single-variable versions of the same architecture.
-    Every version training directly in raw physical units (red titles) saturates fully;
-    the three versions built on a per-channel [0,1] normalization (green titles: v1.3,
-    v1.14, v1.15) never fully saturate — a normalization choice with a large, mechanistic
-    effect on trainability, found by instrumenting the training loop itself rather
-    than only watching the loss curve.'
-  src_800: assets/img/projects/sciml/015_saturation_curve_grid_L1-800.png
-  src_1600: assets/img/projects/sciml/015_saturation_curve_grid_L1-1600.png
-- index: 16
-  caption: PC-NODE replication — predicted vs. Cantera ground truth
-  topic: replication
-  description: A replication of Kumar, Kumar & Pal (2025, Combustion Theory and Modelling
-    29(3); arXiv:2312.00038) — a physics-constrained neural ODE for stiff H2/air autoignition
-    — reproducing the paper's network, loss and training-grid specification exactly
-    (see the project README's own component-by-component comparison table). At the
-    checkpoints saved so far (33 epochs for the baseline NODE, 3 for PC-NODE), neither
-    model has converged onto the ignition trajectory yet — both traces sit flat near
-    the initial condition while Cantera's true trajectory ignites — logged honestly
-    rather than only shown once it works.
-  src_800: assets/img/projects/sciml/016_trajectories-800.png
-  src_1600: assets/img/projects/sciml/016_trajectories-1600.png
-- index: 17
-  caption: PC-NODE replication — elemental mass-conservation drift
-  topic: replication
-  description: 'The paper''s own headline comparison: elemental mass-conservation
-    drift over time for the physics-constrained model (PCNODE) against the unconstrained
-    baseline (NODE). At these early checkpoints the result is partial, not a clean
-    win — PCNODE drifts less than NODE for the H element, consistent with the paper''s
-    claim, but not yet for O — a nuance worth keeping rather than rounding off to
-    "it worked."'
-  src_800: assets/img/projects/sciml/017_elemental_conservation-800.png
-  src_1600: assets/img/projects/sciml/017_elemental_conservation-1600.png
+  - index: 1
+    caption: 115-run seed-noise floor — bootstrapped ranking
+    topic: audit
+    description: A bootstrapped ranking of 115 training runs by final error, with a
+      shaded seed-noise band — the figure behind the statistical-audit finding that
+      most apparent hyperparameter effects are indistinguishable from ordinary seed-to-seed
+      variation.
+    src_800: assets/img/projects/sciml/001_fig1_noise_floor-800.png
+    src_1600: assets/img/projects/sciml/001_fig1_noise_floor-1600.png
+  - index: 3
+    caption: Error-vs-magnitude scaling law across 115 runs
+    topic: audit
+    description: Log-log relationship between a species' true concentration magnitude
+      and its prediction error, pooled across all 115 runs, 80 conditions and 8 species
+      — showing error grows predictably as concentrations get smaller.
+    src_800: assets/img/projects/sciml/003_fig4_scaling_law-800.png
+    src_1600: assets/img/projects/sciml/003_fig4_scaling_law-1600.png
+  - index: 4
+    caption: Stiffness evolution during training
+    topic: journey
+    description: How the effective numerical stiffness of the learned dynamics changes
+      over the course of training — an early diagnostic used to understand why direct
+      time-domain training struggles on this problem.
+    src_800: assets/img/projects/sciml/004_D2_stiffness_evolution-800.png
+    src_1600: assets/img/projects/sciml/004_D2_stiffness_evolution-1600.png
+  - index: 5
+    caption: Predicted vs true ignition delays
+    topic: journey
+    description: Predicted ignition-delay times plotted against ground-truth Cantera
+      values for an early physics-constrained architecture — a check on whether the
+      model captures the single most important scalar outcome of the whole simulation.
+    src_800: assets/img/projects/sciml/005_F3_ignition_delays-800.png
+    src_1600: assets/img/projects/sciml/005_F3_ignition_delays-1600.png
+  - index: 8
+    caption: Champion model — ignition-delay comparison
+    topic: champion
+    description: Predicted vs. true ignition-delay times for the same champion model,
+      across the held-out condition set — architecture and exact results withheld pending
+      publication.
+    src_800: assets/img/projects/sciml/008_idt_comparison-800.png
+    src_1600: assets/img/projects/sciml/008_idt_comparison-1600.png
+  - index: 9
+    caption: Where it started — first Neural ODE attempt
+    topic: journey
+    description: The very first neural-ODE attempt in this project, on a simplified
+      stiff toy problem — kept in the record as the honest starting point of a fifty-generation
+      architecture search.
+    src_800: assets/img/projects/sciml/009_neural_ode_results-800.png
+    src_1600: assets/img/projects/sciml/009_neural_ode_results-1600.png
+  - index: 10
+    caption: Learned latent manifold
+    topic: journey
+    description: A visualization of the low-dimensional latent space learned by a graph-neural-ODE
+      variant — showing how the model organizes different chemical states internally,
+      before this line of work moved toward a different representation entirely.
+    src_800: assets/img/projects/sciml/010_fig_latent_manifold-800.png
+    src_1600: assets/img/projects/sciml/010_fig_latent_manifold-1600.png
+  - index: 11
+    caption: Training curves, an earlier neural-operator checkpoint
+    topic: journey
+    description: Fit and Sobolev (derivative-matching) loss over 12,000 epochs for an
+      earlier checkpoint in this line of work, redrawn from its own logged loss history
+      — architecture withheld pending publication, same as the champion-model figures
+      above.
+    src_800: assets/img/projects/sciml/011_loss_curves_neutral-800.png
+    src_1600: assets/img/projects/sciml/011_loss_curves_neutral-1600.png
+  - index: 12
+    caption: Ignition-timing accuracy, same earlier checkpoint
+    topic: journey
+    description: Predicted vs. true ignition-timing proxy (composition at OH-peak) across
+      a temperature sweep, for the same earlier checkpoint as the training-curve figure
+      above.
+    src_800: assets/img/projects/sciml/012_idt_comparison-800.png
+    src_1600: assets/img/projects/sciml/012_idt_comparison-1600.png
+  - index: 13
+    caption: Species-prediction grid, same earlier checkpoint (1147K)
+    topic: journey
+    description: Predicted vs. true species mass fractions for the same earlier checkpoint
+      at one representative initial temperature — most species track well; H2O2 and
+      the high-enthalpy-drift case (see the 1502K panel) show where it still struggles.
+    src_800: assets/img/projects/sciml/013_species_grid_T1147_neutral-800.png
+    src_1600: assets/img/projects/sciml/013_species_grid_T1147_neutral-1600.png
+  - index: 14
+    caption: Species-prediction grid, same earlier checkpoint (1502K)
+    topic: journey
+    description: The same comparison at a higher initial temperature, kept alongside
+      the 1147K panel deliberately — not every condition in the sweep is this checkpoint's
+      best case, and the record should show both.
+    src_800: assets/img/projects/sciml/014_species_grid_T1502_neutral-800.png
+    src_1600: assets/img/projects/sciml/014_species_grid_T1502_neutral-1600.png
+  - index: 15
+    caption: First-layer saturation across a 16-version normalization ablation
+    topic: diagnostics
+    description: "Whether the network's first tanh layer saturates (a classic vanishing-gradient
+      failure mode), swept across sixteen single-variable versions of the same architecture.
+      Every version training directly in raw physical units (red titles) saturates fully;
+      the three versions built on a per-channel [0,1] normalization (green titles: v1.3,
+      v1.14, v1.15) never fully saturate — a normalization choice with a large, mechanistic
+      effect on trainability, found by instrumenting the training loop itself rather
+      than only watching the loss curve."
+    src_800: assets/img/projects/sciml/015_saturation_curve_grid_L1-800.png
+    src_1600: assets/img/projects/sciml/015_saturation_curve_grid_L1-1600.png
+  - index: 16
+    caption: PC-NODE replication — predicted vs. Cantera ground truth
+    topic: replication
+    description: A replication of Kumar, Kumar & Pal (2025, Combustion Theory and Modelling
+      29(3); arXiv:2312.00038) — a physics-constrained neural ODE for stiff H2/air autoignition
+      — reproducing the paper's network, loss and training-grid specification exactly
+      (see the project README's own component-by-component comparison table). At the
+      checkpoints saved so far (33 epochs for the baseline NODE, 3 for PC-NODE), neither
+      model has converged onto the ignition trajectory yet — both traces sit flat near
+      the initial condition while Cantera's true trajectory ignites — logged honestly
+      rather than only shown once it works.
+    src_800: assets/img/projects/sciml/016_trajectories-800.png
+    src_1600: assets/img/projects/sciml/016_trajectories-1600.png
+  - index: 17
+    caption: PC-NODE replication — elemental mass-conservation drift
+    topic: replication
+    description: 'The paper''s own headline comparison: elemental mass-conservation
+      drift over time for the physics-constrained model (PCNODE) against the unconstrained
+      baseline (NODE). At these early checkpoints the result is partial, not a clean
+      win — PCNODE drifts less than NODE for the H element, consistent with the paper''s
+      claim, but not yet for O — a nuance worth keeping rather than rounding off to
+      "it worked."'
+    src_800: assets/img/projects/sciml/017_elemental_conservation-800.png
+    src_1600: assets/img/projects/sciml/017_elemental_conservation-1600.png
 cfdcore:
-- index: 1
-  caption: Method-of-manufactured-solutions convergence
-  topic: numerics-verification
-  description: A method-of-manufactured-solutions convergence study — the numerical
-    error should shrink at the theoretically predicted rate as the mesh is refined,
-    confirming the solver's discretization is implemented correctly rather than just
-    "looking right."
-  src_800: assets/img/projects/cfdcore/001_04_mms_convergence-800.png
-  src_1600: assets/img/projects/cfdcore/001_04_mms_convergence-1600.png
-- index: 2
-  caption: Numerical stability regions
-  topic: numerics-verification
-  description: Stability regions for the solver's time-integration schemes — the boundary
-    in parameter space where a numerical scheme stops producing bounded solutions,
-    verified against known theory for each scheme implemented.
-  src_800: assets/img/projects/cfdcore/002_03_stability_regions-800.png
-  src_1600: assets/img/projects/cfdcore/002_03_stability_regions-1600.png
-- index: 3
-  caption: SDF-kernel revolved nozzle
-  topic: geometry-kernel
-  description: A revolved-nozzle test shape generated by the signed-distance-field
-    geometry engine — one of three independent meshing/CAD backends cross-checked
-    against each other on the same 15 test shapes.
-  src_800: assets/img/projects/cfdcore/003_sdf_revolved_nozzle-800.png
-  src_1600: assets/img/projects/cfdcore/003_sdf_revolved_nozzle-1600.png
-- index: 4
-  caption: Gmsh-kernel revolved nozzle (cross-engine check)
-  topic: geometry-kernel
-  description: The identical revolved-nozzle shape regenerated through the Gmsh backend
-    — compare directly against the SDF-kernel and PicoGK-kernel versions to see that
-    all three independent geometry engines agree.
-  src_800: assets/img/projects/cfdcore/004_gmsh_revolved_nozzle-800.png
-  src_1600: assets/img/projects/cfdcore/004_gmsh_revolved_nozzle-1600.png
-- index: 5
-  caption: Turbine fluid-structure interaction result
-  topic: fsi-structural
-  description: A coupled fluid-structure-interaction simulation of flow around a turbine
-    blade — the structural deformation and the surrounding flow field solved together,
-    not as two separate uncoupled problems.
-  src_800: assets/img/projects/cfdcore/005_turbine_fsi_result-800.png
-  src_1600: assets/img/projects/cfdcore/005_turbine_fsi_result-1600.png
-- index: 6
-  caption: Conjugate heat transfer validation
-  topic: incompressible-heat-transfer
-  description: A conjugate-heat-transfer validation case — heat conduction through
-    a solid coupled to convective heat transfer in the adjacent fluid, solved as one
-    consistent system.
-  src_800: assets/img/projects/cfdcore/006_cht_result-800.png
-  src_1600: assets/img/projects/cfdcore/006_cht_result-1600.png
-- index: 7
-  caption: Boiling curve validation
-  topic: multiphase-boiling
-  description: A predicted boiling curve (heat flux vs. wall superheat) compared against
-    expected literature behavior — checking the solver's boiling/phase-change model
-    reproduces the correct nucleate-to-film-boiling transition shape.
-  src_800: assets/img/projects/cfdcore/007_boiling_curve-800.png
-  src_1600: assets/img/projects/cfdcore/007_boiling_curve-1600.png
-- index: 8
-  caption: 3D reacting-flow ignition transient
-  topic: combustion-propulsion
-  description: A full 3D reacting-flow ignition transient — the solver's flagship
-    combustion result, combining the low-Mach reacting Navier-Stokes formulation with
-    real chemical kinetics in a genuinely three-dimensional domain.
-  src_800: assets/img/projects/cfdcore/008_rf_ignition_transient-800.png
-  src_1600: assets/img/projects/cfdcore/008_rf_ignition_transient-1600.png
-- index: 9
-  caption: Microfluidics outlet-purity heatmap
-  topic: microfluidics
-  description: A heatmap from a ~30-cell parameter sweep showing particle-separation
-    purity at the microfluidic device's outlet across different design choices — the
-    result that motivated building this solver in the first place, after a commercial
-    tool's particle-tracing feature failed to work at all.
-  src_800: assets/img/projects/cfdcore/009_outlet_purity_heatmap-800.png
-  src_1600: assets/img/projects/cfdcore/009_outlet_purity_heatmap-1600.png
-- index: 10
-  caption: Particle-separation resolution sweep
-  topic: microfluidics
-  description: How well the microfluidic device separates particles of different sizes,
-    swept across design parameters — the companion figure to the outlet-purity heatmap
-    from the same application study.
-  src_800: assets/img/projects/cfdcore/010_separation_resolution-800.png
-  src_1600: assets/img/projects/cfdcore/010_separation_resolution-1600.png
-- index: 11
-  caption: Ornstein-Uhlenbeck sample paths
-  topic: stochastic-uq
-  description: Sample paths of an Ornstein-Uhlenbeck stochastic process — part of
-    the solver's stochastic/SDE turbulence module, used for closure-model validation
-    against known analytical statistics.
-  src_800: assets/img/projects/cfdcore/011_S1_01_ou_paths-800.png
-  src_1600: assets/img/projects/cfdcore/011_S1_01_ou_paths-1600.png
-- index: 12
-  caption: Von Neumann stability analysis
-  topic: numerics-verification
-  description: Von Neumann stability analysis of the discretization schemes — the
-    amplification factor of a Fourier error mode as a function of wavenumber, the
-    analytical companion to the empirical stability-region and MMS-convergence checks
-    above.
-  src_800: assets/img/projects/cfdcore/012_02_von_neumann-800.png
-  src_1600: assets/img/projects/cfdcore/012_02_von_neumann-1600.png
-- index: 13
-  caption: CFL-number sweep
-  topic: numerics-verification
-  description: Solution behavior swept across CFL number — how far the time-step size
-    can be pushed before a scheme's stability limit is reached, benchmarked for each
-    integrator the solver implements.
-  src_800: assets/img/projects/cfdcore/013_05_cfl_sweep-800.png
-  src_1600: assets/img/projects/cfdcore/013_05_cfl_sweep-1600.png
-- index: 14
-  caption: PicoGK-kernel revolved nozzle (third engine)
-  topic: geometry-kernel
-  description: The same revolved-nozzle shape from a third, independent geometry engine
-    (PicoGK). All three backends report the identical enclosed volume for this shape
-    (5.4633e-05, valid and watertight) — cross-engine agreement, not just three renders
-    that happen to look similar.
-  src_800: assets/img/projects/cfdcore/014_picogk_revolved_nozzle-800.png
-  src_1600: assets/img/projects/cfdcore/014_picogk_revolved_nozzle-1600.png
-- index: 15
-  caption: Lid-driven cavity flow
-  topic: incompressible-heat-transfer
-  description: The classical lid-driven cavity benchmark — a standard test case for
-    verifying an incompressible-flow solver reproduces the expected recirculation
-    structure before it's trusted on harder problems.
-  src_800: assets/img/projects/cfdcore/015_cavity_result-800.png
-  src_1600: assets/img/projects/cfdcore/015_cavity_result-1600.png
-- index: 16
-  caption: Flow boiling in a heated channel
-  topic: multiphase-boiling
-  description: A flow-boiling case in a heated channel — phase change under forced
-    convection, rather than the pool-boiling curve above, exercising the multiphase
-    model's response to bulk flow.
-  src_800: assets/img/projects/cfdcore/016_flow_boiling-800.png
-  src_1600: assets/img/projects/cfdcore/016_flow_boiling-1600.png
-- index: 17
-  caption: 2D fluid-structure interaction case
-  topic: fsi-structural
-  description: A simpler 2D fluid-structure-interaction case, used to isolate and
-    debug the coupling scheme before it's applied to the full 3D turbine case above.
-  src_800: assets/img/projects/cfdcore/017_fsi_2d_result-800.png
-  src_1600: assets/img/projects/cfdcore/017_fsi_2d_result-1600.png
-- index: 18
-  caption: Micromixer demonstration case
-  topic: microfluidics
-  description: A micromixer demonstration case run directly through the solver's own
-    geometry and meshing pipeline — showing the microfluidics module working end-to-end
-    on a self-contained example, independent of the particle-separation application
-    study above.
-  src_800: assets/img/projects/cfdcore/018_mf_micromixer_demo-800.png
-  src_1600: assets/img/projects/cfdcore/018_mf_micromixer_demo-1600.png
-- index: 19
-  caption: Variance-reduction comparison
-  topic: stochastic-uq
-  description: A variance-reduction technique compared against plain Monte Carlo sampling
-    for the same stochastic quantity — the practical payoff of the SDE module beyond
-    just being able to simulate one.
-  src_800: assets/img/projects/cfdcore/019_S2_02_variance_reduction-800.png
-  src_1600: assets/img/projects/cfdcore/019_S2_02_variance_reduction-1600.png
-- index: 20
-  caption: Stochastic sub-grid-scale closure
-  topic: stochastic-uq
-  description: A stochastic sub-grid-scale (SGS) turbulence closure result — where
-    the stochastic module connects back to the solver's turbulence modeling, not just
-    standalone SDE demonstrations.
-  src_800: assets/img/projects/cfdcore/020_S4_01_stochastic_sgs-800.png
-  src_1600: assets/img/projects/cfdcore/020_S4_01_stochastic_sgs-1600.png
+  - index: 1
+    caption: Method-of-manufactured-solutions convergence
+    topic: numerics-verification
+    description: A method-of-manufactured-solutions convergence study — the numerical
+      error should shrink at the theoretically predicted rate as the mesh is refined,
+      confirming the solver's discretization is implemented correctly rather than just
+      "looking right."
+    src_800: assets/img/projects/cfdcore/001_04_mms_convergence-800.png
+    src_1600: assets/img/projects/cfdcore/001_04_mms_convergence-1600.png
+  - index: 2
+    caption: Numerical stability regions
+    topic: numerics-verification
+    description: Stability regions for the solver's time-integration schemes — the boundary
+      in parameter space where a numerical scheme stops producing bounded solutions,
+      verified against known theory for each scheme implemented.
+    src_800: assets/img/projects/cfdcore/002_03_stability_regions-800.png
+    src_1600: assets/img/projects/cfdcore/002_03_stability_regions-1600.png
+  - index: 3
+    caption: SDF-kernel revolved nozzle
+    topic: geometry-kernel
+    description: A revolved-nozzle test shape generated by the signed-distance-field
+      geometry engine — one of three independent meshing/CAD backends cross-checked
+      against each other on the same 15 test shapes.
+    src_800: assets/img/projects/cfdcore/003_sdf_revolved_nozzle-800.png
+    src_1600: assets/img/projects/cfdcore/003_sdf_revolved_nozzle-1600.png
+  - index: 4
+    caption: Gmsh-kernel revolved nozzle (cross-engine check)
+    topic: geometry-kernel
+    description: The identical revolved-nozzle shape regenerated through the Gmsh backend
+      — compare directly against the SDF-kernel and PicoGK-kernel versions to see that
+      all three independent geometry engines agree.
+    src_800: assets/img/projects/cfdcore/004_gmsh_revolved_nozzle-800.png
+    src_1600: assets/img/projects/cfdcore/004_gmsh_revolved_nozzle-1600.png
+  - index: 5
+    caption: Turbine fluid-structure interaction result
+    topic: fsi-structural
+    description: A coupled fluid-structure-interaction simulation of flow around a turbine
+      blade — the structural deformation and the surrounding flow field solved together,
+      not as two separate uncoupled problems.
+    src_800: assets/img/projects/cfdcore/005_turbine_fsi_result-800.png
+    src_1600: assets/img/projects/cfdcore/005_turbine_fsi_result-1600.png
+  - index: 6
+    caption: Conjugate heat transfer validation
+    topic: incompressible-heat-transfer
+    description: A conjugate-heat-transfer validation case — heat conduction through
+      a solid coupled to convective heat transfer in the adjacent fluid, solved as one
+      consistent system.
+    src_800: assets/img/projects/cfdcore/006_cht_result-800.png
+    src_1600: assets/img/projects/cfdcore/006_cht_result-1600.png
+  - index: 7
+    caption: Boiling curve validation
+    topic: multiphase-boiling
+    description: A predicted boiling curve (heat flux vs. wall superheat) compared against
+      expected literature behavior — checking the solver's boiling/phase-change model
+      reproduces the correct nucleate-to-film-boiling transition shape.
+    src_800: assets/img/projects/cfdcore/007_boiling_curve-800.png
+    src_1600: assets/img/projects/cfdcore/007_boiling_curve-1600.png
+  - index: 8
+    caption: 3D reacting-flow ignition transient
+    topic: combustion-propulsion
+    description: A full 3D reacting-flow ignition transient — the solver's flagship
+      combustion result, combining the low-Mach reacting Navier-Stokes formulation with
+      real chemical kinetics in a genuinely three-dimensional domain.
+    src_800: assets/img/projects/cfdcore/008_rf_ignition_transient-800.png
+    src_1600: assets/img/projects/cfdcore/008_rf_ignition_transient-1600.png
+  - index: 9
+    caption: Microfluidics outlet-purity heatmap
+    topic: microfluidics
+    description: A heatmap from a ~30-cell parameter sweep showing particle-separation
+      purity at the microfluidic device's outlet across different design choices — the
+      result that motivated building this solver in the first place, after a commercial
+      tool's particle-tracing feature failed to work at all.
+    src_800: assets/img/projects/cfdcore/009_outlet_purity_heatmap-800.png
+    src_1600: assets/img/projects/cfdcore/009_outlet_purity_heatmap-1600.png
+  - index: 10
+    caption: Particle-separation resolution sweep
+    topic: microfluidics
+    description: How well the microfluidic device separates particles of different sizes,
+      swept across design parameters — the companion figure to the outlet-purity heatmap
+      from the same application study.
+    src_800: assets/img/projects/cfdcore/010_separation_resolution-800.png
+    src_1600: assets/img/projects/cfdcore/010_separation_resolution-1600.png
+  - index: 11
+    caption: Ornstein-Uhlenbeck sample paths
+    topic: stochastic-uq
+    description: Sample paths of an Ornstein-Uhlenbeck stochastic process — part of
+      the solver's stochastic/SDE turbulence module, used for closure-model validation
+      against known analytical statistics.
+    src_800: assets/img/projects/cfdcore/011_S1_01_ou_paths-800.png
+    src_1600: assets/img/projects/cfdcore/011_S1_01_ou_paths-1600.png
+  - index: 12
+    caption: Von Neumann stability analysis
+    topic: numerics-verification
+    description: Von Neumann stability analysis of the discretization schemes — the
+      amplification factor of a Fourier error mode as a function of wavenumber, the
+      analytical companion to the empirical stability-region and MMS-convergence checks
+      above.
+    src_800: assets/img/projects/cfdcore/012_02_von_neumann-800.png
+    src_1600: assets/img/projects/cfdcore/012_02_von_neumann-1600.png
+  - index: 13
+    caption: CFL-number sweep
+    topic: numerics-verification
+    description: Solution behavior swept across CFL number — how far the time-step size
+      can be pushed before a scheme's stability limit is reached, benchmarked for each
+      integrator the solver implements.
+    src_800: assets/img/projects/cfdcore/013_05_cfl_sweep-800.png
+    src_1600: assets/img/projects/cfdcore/013_05_cfl_sweep-1600.png
+  - index: 14
+    caption: PicoGK-kernel revolved nozzle (third engine)
+    topic: geometry-kernel
+    description: The same revolved-nozzle shape from a third, independent geometry engine
+      (PicoGK). All three backends report the identical enclosed volume for this shape
+      (5.4633e-05, valid and watertight) — cross-engine agreement, not just three renders
+      that happen to look similar.
+    src_800: assets/img/projects/cfdcore/014_picogk_revolved_nozzle-800.png
+    src_1600: assets/img/projects/cfdcore/014_picogk_revolved_nozzle-1600.png
+  - index: 15
+    caption: Lid-driven cavity flow
+    topic: incompressible-heat-transfer
+    description: The classical lid-driven cavity benchmark — a standard test case for
+      verifying an incompressible-flow solver reproduces the expected recirculation
+      structure before it's trusted on harder problems.
+    src_800: assets/img/projects/cfdcore/015_cavity_result-800.png
+    src_1600: assets/img/projects/cfdcore/015_cavity_result-1600.png
+  - index: 16
+    caption: Flow boiling in a heated channel
+    topic: multiphase-boiling
+    description: A flow-boiling case in a heated channel — phase change under forced
+      convection, rather than the pool-boiling curve above, exercising the multiphase
+      model's response to bulk flow.
+    src_800: assets/img/projects/cfdcore/016_flow_boiling-800.png
+    src_1600: assets/img/projects/cfdcore/016_flow_boiling-1600.png
+  - index: 17
+    caption: 2D fluid-structure interaction case
+    topic: fsi-structural
+    description: A simpler 2D fluid-structure-interaction case, used to isolate and
+      debug the coupling scheme before it's applied to the full 3D turbine case above.
+    src_800: assets/img/projects/cfdcore/017_fsi_2d_result-800.png
+    src_1600: assets/img/projects/cfdcore/017_fsi_2d_result-1600.png
+  - index: 18
+    caption: Micromixer demonstration case
+    topic: microfluidics
+    description: A micromixer demonstration case run directly through the solver's own
+      geometry and meshing pipeline — showing the microfluidics module working end-to-end
+      on a self-contained example, independent of the particle-separation application
+      study above.
+    src_800: assets/img/projects/cfdcore/018_mf_micromixer_demo-800.png
+    src_1600: assets/img/projects/cfdcore/018_mf_micromixer_demo-1600.png
+  - index: 19
+    caption: Variance-reduction comparison
+    topic: stochastic-uq
+    description: A variance-reduction technique compared against plain Monte Carlo sampling
+      for the same stochastic quantity — the practical payoff of the SDE module beyond
+      just being able to simulate one.
+    src_800: assets/img/projects/cfdcore/019_S2_02_variance_reduction-800.png
+    src_1600: assets/img/projects/cfdcore/019_S2_02_variance_reduction-1600.png
+  - index: 20
+    caption: Stochastic sub-grid-scale closure
+    topic: stochastic-uq
+    description: A stochastic sub-grid-scale (SGS) turbulence closure result — where
+      the stochastic module connects back to the solver's turbulence modeling, not just
+      standalone SDE demonstrations.
+    src_800: assets/img/projects/cfdcore/020_S4_01_stochastic_sgs-800.png
+    src_1600: assets/img/projects/cfdcore/020_S4_01_stochastic_sgs-1600.png
 vaporizer-rigs:
-- index: 4
-  caption: Pressure-drop sweep vs tube diameter
-  topic: analysis
-  description: Predicted pressure drop through the vaporizer as a function of tube
-    diameter — a sizing sweep used to pick a diameter that avoids excessive pumping
-    power while still fitting the target flow rate.
-  src_800: assets/img/projects/vaporizer-rigs/004_pressure_drop_vs_diameter-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/004_pressure_drop_vs_diameter-1600.png
-- index: 5
-  caption: Design-space heatmap (diameter x heater zoning)
-  topic: analysis
-  description: A two-parameter design-space heatmap (tube diameter vs. heater-zoning
-    strategy) showing how a performance metric varies across the sizing options considered
-    for the vaporizer.
-  src_800: assets/img/projects/vaporizer-rigs/005_single_zone_heatmap_DxK-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/005_single_zone_heatmap_DxK-1600.png
-- index: 8
-  caption: Thermal length vs. strain rate, all 14 catalogue tubes
-  topic: tube-sizing
-  description: Required thermal length vs. counterflow strain rate for all 14 catalogue
-    tube options — the 6mm-ID/8mm-OD tube (dark blue) sits near the low end of the
-    required-length pack, one input into the bore choice report_final.pdf's own sensitivity
-    study (Sec. 5.2.2) settles on the same tube for.
-  src_800: assets/img/projects/vaporizer-rigs/008_length_comparison-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/008_length_comparison-1600.png
-- index: 9
-  caption: Axial temperature profile, 6mm ID, low strain rate (20 s⁻¹)
-  topic: tube-sizing
-  description: Axial wall/sheath/fluid-core temperature through the same four-stage
-    march (Preheat → Boil → Mist → Superheat) as the built coil, for the 6mm-ID/8mm-OD
-    tube at the low end of a counterflow strain-rate sweep.
-  src_800: assets/img/projects/vaporizer-rigs/009_Tprofile_a20-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/009_Tprofile_a20-1600.png
-- index: 10
-  caption: Axial temperature profile, 6mm ID, mid strain rate (48 s⁻¹)
-  topic: tube-sizing
-  description: The same axial profile at a mid-range strain rate — inner wall tracks
-    the 180°C ceiling through Boil and Mist, then the superheat zone carries fluid
-    core and inner wall up together to the outlet, never crossing the cap.
-  src_800: assets/img/projects/vaporizer-rigs/010_Tprofile_a48-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/010_Tprofile_a48-1600.png
-- index: 11
-  caption: Axial temperature profile, 6mm ID, high strain rate (70 s⁻¹)
-  topic: tube-sizing
-  description: The same tube at the top of its swept strain-rate range — the stage
-    structure holds, confirming the design isn't only valid at the low-flow end of
-    the envelope.
-  src_800: assets/img/projects/vaporizer-rigs/011_Tprofile_a70-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/011_Tprofile_a70-1600.png
-- index: 12
-  caption: Radial temperature profile through the tube wall, by zone
-  topic: tube-sizing
-  description: Radial temperature from the fluid core out through the inner wall (r=3mm)
-    to the outer sheath (r=4mm), one panel per zone — the companion cross-sectional
-    view to the axial profiles above, confirming the wall's own conduction resistance
-    is small next to the fluid-side film resistance in every zone.
-  src_800: assets/img/projects/vaporizer-rigs/012_radial_a48-800.png
-  src_1600: assets/img/projects/vaporizer-rigs/012_radial_a48-1600.png
+  - index: 4
+    caption: Pressure-drop sweep vs tube diameter
+    topic: analysis
+    description: Predicted pressure drop through the vaporizer as a function of tube
+      diameter — a sizing sweep used to pick a diameter that avoids excessive pumping
+      power while still fitting the target flow rate.
+    src_800: assets/img/projects/vaporizer-rigs/004_pressure_drop_vs_diameter-800.png
+    src_1600: assets/img/projects/vaporizer-rigs/004_pressure_drop_vs_diameter-1600.png
+  - index: 5
+    caption: Design-space heatmap (diameter x heater zoning)
+    topic: analysis
+    description: A two-parameter design-space heatmap (tube diameter vs. heater-zoning
+      strategy) showing how a performance metric varies across the sizing options considered
+      for the vaporizer.
+    src_800: assets/img/projects/vaporizer-rigs/005_single_zone_heatmap_DxK-800.png
+    src_1600: assets/img/projects/vaporizer-rigs/005_single_zone_heatmap_DxK-1600.png
+  - index: 8
+    caption: Thermal length vs. strain rate, all 14 catalogue tubes
+    topic: tube-sizing
+    description: Required thermal length vs. counterflow strain rate for all 14 catalogue
+      tube options — the 6mm-ID/8mm-OD tube (dark blue) sits near the low end of the
+      required-length pack, one input into the bore choice report_final.pdf's own sensitivity
+      study (Sec. 5.2.2) settles on the same tube for.
+    src_800: assets/img/projects/vaporizer-rigs/008_length_comparison-800.png
+    src_1600: assets/img/projects/vaporizer-rigs/008_length_comparison-1600.png
+  - index: 9
+    caption: Axial temperature profile, 6mm ID, low strain rate (20 s⁻¹)
+    topic: tube-sizing
+    description: Axial wall/sheath/fluid-core temperature through the same four-stage
+      march (Preheat → Boil → Mist → Superheat) as the built coil, for the 6mm-ID/8mm-OD
+      tube at the low end of a counterflow strain-rate sweep.
+    src_800: assets/img/projects/vaporizer-rigs/009_Tprofile_a20-800.png
+    src_1600: assets/img/projects/vaporizer-rigs/009_Tprofile_a20-1600.png
+  - index: 10
+    caption: Axial temperature profile, 6mm ID, mid strain rate (48 s⁻¹)
+    topic: tube-sizing
+    description: The same axial profile at a mid-range strain rate — inner wall tracks
+      the 180°C ceiling through Boil and Mist, then the superheat zone carries fluid
+      core and inner wall up together to the outlet, never crossing the cap.
+    src_800: assets/img/projects/vaporizer-rigs/010_Tprofile_a48-800.png
+    src_1600: assets/img/projects/vaporizer-rigs/010_Tprofile_a48-1600.png
+  - index: 11
+    caption: Axial temperature profile, 6mm ID, high strain rate (70 s⁻¹)
+    topic: tube-sizing
+    description: The same tube at the top of its swept strain-rate range — the stage
+      structure holds, confirming the design isn't only valid at the low-flow end of
+      the envelope.
+    src_800: assets/img/projects/vaporizer-rigs/011_Tprofile_a70-800.png
+    src_1600: assets/img/projects/vaporizer-rigs/011_Tprofile_a70-1600.png
+  - index: 12
+    caption: Radial temperature profile through the tube wall, by zone
+    topic: tube-sizing
+    description: Radial temperature from the fluid core out through the inner wall (r=3mm)
+      to the outer sheath (r=4mm), one panel per zone — the companion cross-sectional
+      view to the axial profiles above, confirming the wall's own conduction resistance
+      is small next to the fluid-side film resistance in every zone.
+    src_800: assets/img/projects/vaporizer-rigs/012_radial_a48-800.png
+    src_1600: assets/img/projects/vaporizer-rigs/012_radial_a48-1600.png
 pysr-rate-rules:
-- index: 4
-  caption: Feature collinearity / VIF check
-  topic: method
-  description: A variance-inflation-factor / collinearity matrix over the physics-informed
-    input features (bond-dissociation energy, reaction enthalpy, degeneracy, etc.)
-    — confirming the features fed to the symbolic-regression search aren't redundant
-    with each other before trusting what formula it finds.
-  src_800: assets/img/projects/pysr-rate-rules/004_01_collinearity-800.png
-  src_1600: assets/img/projects/pysr-rate-rules/004_01_collinearity-1600.png
+  - index: 4
+    caption: Feature collinearity / VIF check
+    topic: method
+    description: A variance-inflation-factor / collinearity matrix over the physics-informed
+      input features (bond-dissociation energy, reaction enthalpy, degeneracy, etc.)
+      — confirming the features fed to the symbolic-regression search aren't redundant
+      with each other before trusting what formula it finds.
+    src_800: assets/img/projects/pysr-rate-rules/004_01_collinearity-800.png
+    src_1600: assets/img/projects/pysr-rate-rules/004_01_collinearity-1600.png
 gasification:
-- index: 1
-  caption: H2 yield vs steam-to-biomass ratio (non-monotonic finding)
-  topic: headline
-  description: Hydrogen yield (vol%, dry basis) vs. steam-to-biomass ratio, with and
-    without the MgCO3 catalyst — the catalytic curve climbs to a peak around SBR~0.26
-    and then collapses by SBR~0.47, falling below the no-catalyst case. This non-monotonic
-    shape is the thesis's headline experimental finding.
-  src_800: assets/img/projects/gasification/001_02_h2_vs_sbr-800.png
-  src_1600: assets/img/projects/gasification/001_02_h2_vs_sbr-1600.png
-- index: 2
-  caption: Cold-gas efficiency vs steam-to-biomass ratio
-  topic: headline
-  description: Cold-gas efficiency vs. steam-to-biomass ratio, catalytic and non-catalytic
-    — moves in lockstep with the hydrogen-yield curve, rising then falling at the
-    same steam ratio, reinforcing that both are driven by the same underlying mechanism.
-  src_800: assets/img/projects/gasification/002_05_cge_vs_sbr-800.png
-  src_1600: assets/img/projects/gasification/002_05_cge_vs_sbr-1600.png
-- index: 3
-  caption: Mass-balance Sankey diagram
-  topic: rigor
-  description: A Sankey diagram tracing feedstock mass through the gasifier into product
-    gas, tar, char and losses — the visual account behind the reported 0.920-0.995
-    mass-balance closure across all 14 runs.
-  src_800: assets/img/projects/gasification/003_15_mass_balance_sankey-800.png
-  src_1600: assets/img/projects/gasification/003_15_mass_balance_sankey-1600.png
-- index: 4
-  caption: Operating map across all 14 runs
-  topic: rigor
-  description: All fourteen experimental runs (seven steam ratios x two catalyst conditions)
-    plotted on one operating map — the complete design-of-experiments coverage behind
-    every other result in this project.
-  src_800: assets/img/projects/gasification/004_18_operating_map-800.png
-  src_1600: assets/img/projects/gasification/004_18_operating_map-1600.png
-- index: 5
-  caption: Combustion-zone temperature explains the H2 non-monotonicity
-  topic: headline
-  description: Combustion-zone temperature vs. steam-to-biomass ratio, from a 2026
-    re-analysis — also non-monotonic, and it correlates with hydrogen yield (Pearson
-    r=0.80 pooled, r=0.96 catalytic) far more strongly than steam ratio does directly
-    (r=0.10). This is the mechanism behind the headline finding, not just a restatement
-    of it.
-  src_800: assets/img/projects/gasification/005_25_tcomb_vs_sbr_energy_balance-800.png
-  src_1600: assets/img/projects/gasification/005_25_tcomb_vs_sbr_energy_balance-1600.png
-- index: 6
-  caption: Equilibrium-model vs measured parity
-  topic: rigor
-  description: Predicted (thermodynamic equilibrium model) vs. measured product-gas
-    composition — points off the diagonal show exactly where a simple equilibrium
-    assumption fails to explain the real gasifier behavior, motivating the deeper
-    kinetic re-analysis.
-  src_800: assets/img/projects/gasification/006_21_equilibrium_vs_measured_parity-800.png
-  src_1600: assets/img/projects/gasification/006_21_equilibrium_vs_measured_parity-1600.png
-- index: 7
-  caption: Producer-gas flame from the rig
-  topic: experiment
-  description: The producer-gas flame at the rig's outlet during an experimental run
-    — direct visual evidence the gasifier was producing combustible syngas, not just
-    a numerical result.
-  src_800: assets/img/projects/gasification/007_Flame-800.png
-  src_1600: assets/img/projects/gasification/007_Flame-1600.png
-- index: 8
-  caption: Downdraft gasifier rig, campaign run
-  topic: experiment
-  description: The pilot-scale downdraft fixed-bed gasifier rig (525mm ID, 2.165m
-    tall) during a data-collection campaign in May 2018.
-  src_800: assets/img/projects/gasification/008_IMG_20180510_105528-800.png
-  src_1600: assets/img/projects/gasification/008_IMG_20180510_105528-1600.png
-- index: 9
-  caption: Gas chromatography setup
-  topic: experiment
-  description: The gas chromatography instrument used to measure product-gas composition
-    (H2, CO, CO2, CH4, N2) for every run in the experimental campaign.
-  src_800: assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-800.png
-  src_1600: assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-1600.png
+  - index: 1
+    caption: H2 yield vs steam-to-biomass ratio (non-monotonic finding)
+    topic: headline
+    description: Hydrogen yield (vol%, dry basis) vs. steam-to-biomass ratio, with and
+      without the MgCO3 catalyst — the catalytic curve climbs to a peak around SBR~0.26
+      and then collapses by SBR~0.47, falling below the no-catalyst case. This non-monotonic
+      shape is the thesis's headline experimental finding.
+    src_800: assets/img/projects/gasification/001_02_h2_vs_sbr-800.png
+    src_1600: assets/img/projects/gasification/001_02_h2_vs_sbr-1600.png
+  - index: 2
+    caption: Cold-gas efficiency vs steam-to-biomass ratio
+    topic: headline
+    description: Cold-gas efficiency vs. steam-to-biomass ratio, catalytic and non-catalytic
+      — moves in lockstep with the hydrogen-yield curve, rising then falling at the
+      same steam ratio, reinforcing that both are driven by the same underlying mechanism.
+    src_800: assets/img/projects/gasification/002_05_cge_vs_sbr-800.png
+    src_1600: assets/img/projects/gasification/002_05_cge_vs_sbr-1600.png
+  - index: 3
+    caption: Mass-balance Sankey diagram
+    topic: rigor
+    description: A Sankey diagram tracing feedstock mass through the gasifier into product
+      gas, tar, char and losses — the visual account behind the reported 0.920-0.995
+      mass-balance closure across all 14 runs.
+    src_800: assets/img/projects/gasification/003_15_mass_balance_sankey-800.png
+    src_1600: assets/img/projects/gasification/003_15_mass_balance_sankey-1600.png
+  - index: 4
+    caption: Operating map across all 14 runs
+    topic: rigor
+    description: All fourteen experimental runs (seven steam ratios x two catalyst conditions)
+      plotted on one operating map — the complete design-of-experiments coverage behind
+      every other result in this project.
+    src_800: assets/img/projects/gasification/004_18_operating_map-800.png
+    src_1600: assets/img/projects/gasification/004_18_operating_map-1600.png
+  - index: 5
+    caption: Combustion-zone temperature explains the H2 non-monotonicity
+    topic: headline
+    description: Combustion-zone temperature vs. steam-to-biomass ratio, from a 2026
+      re-analysis — also non-monotonic, and it correlates with hydrogen yield (Pearson
+      r=0.80 pooled, r=0.96 catalytic) far more strongly than steam ratio does directly
+      (r=0.10). This is the mechanism behind the headline finding, not just a restatement
+      of it.
+    src_800: assets/img/projects/gasification/005_25_tcomb_vs_sbr_energy_balance-800.png
+    src_1600: assets/img/projects/gasification/005_25_tcomb_vs_sbr_energy_balance-1600.png
+  - index: 6
+    caption: Equilibrium-model vs measured parity
+    topic: rigor
+    description: Predicted (thermodynamic equilibrium model) vs. measured product-gas
+      composition — points off the diagonal show exactly where a simple equilibrium
+      assumption fails to explain the real gasifier behavior, motivating the deeper
+      kinetic re-analysis.
+    src_800: assets/img/projects/gasification/006_21_equilibrium_vs_measured_parity-800.png
+    src_1600: assets/img/projects/gasification/006_21_equilibrium_vs_measured_parity-1600.png
+  - index: 7
+    caption: Producer-gas flame from the rig
+    topic: experiment
+    description: The producer-gas flame at the rig's outlet during an experimental run
+      — direct visual evidence the gasifier was producing combustible syngas, not just
+      a numerical result.
+    src_800: assets/img/projects/gasification/007_Flame-800.png
+    src_1600: assets/img/projects/gasification/007_Flame-1600.png
+  - index: 8
+    caption: Downdraft gasifier rig, campaign run
+    topic: experiment
+    description: The pilot-scale downdraft fixed-bed gasifier rig (525mm ID, 2.165m
+      tall) during a data-collection campaign in May 2018.
+    src_800: assets/img/projects/gasification/008_IMG_20180510_105528-800.png
+    src_1600: assets/img/projects/gasification/008_IMG_20180510_105528-1600.png
+  - index: 9
+    caption: Gas chromatography setup
+    topic: experiment
+    description: The gas chromatography instrument used to measure product-gas composition
+      (H2, CO, CO2, CH4, N2) for every run in the experimental campaign.
+    src_800: assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-800.png
+    src_1600: assets/img/projects/gasification/009_Appendix_3,_3.1_Gas_chromatography-1600.png
 decarbonisation-tuyeres:
-- index: 1
-  caption: Base-case 15mm axisymmetric geometry
-  topic: geometry
-  description: 'The 2D axisymmetric base-case geometry (15mm lance): air inlet, lance
-    wall, coal inlet and the downstream reactor domain, with the dimensions used for
-    the pulverised-coal-injection (PCI) reacting-flow study.'
-  src_800: assets/img/projects/decarbonisation-tuyeres/001_slide_7-07_crop-800.png
-  src_1600: assets/img/projects/decarbonisation-tuyeres/001_slide_7-07_crop-1600.png
-- index: 2
-  caption: 25mm lance variant of the same geometry
-  topic: geometry
-  description: The same base-case layout re-drawn with a 25mm lance -- the two lance
-    diameters were compared to see how far downstream devolatilisation of the coal
-    starts.
-  src_800: assets/img/projects/decarbonisation-tuyeres/002_slide_8-08_crop-800.png
-  src_1600: assets/img/projects/decarbonisation-tuyeres/002_slide_8-08_crop-1600.png
-- index: 3
-  caption: 2D mesh used for the grid-convergence study
-  topic: mesh
-  description: The structured 2D mesh (ANSYS) used to check grid-convergence along
-    several probe lines before running the reacting-flow cases.
-  src_800: assets/img/projects/decarbonisation-tuyeres/003_slide_11-11_crop-800.png
-  src_1600: assets/img/projects/decarbonisation-tuyeres/003_slide_11-11_crop-1600.png
-- index: 4
-  caption: 50mm co-injection geometry -- coal + hydrogen
-  topic: geometry
-  description: 'The co-injection geometry: a separate hydrogen inlet added alongside
-    the coal inlet, air inlet and twin lance walls, used for the H2/CH4 substitution
-    cases.'
-  src_800: assets/img/projects/decarbonisation-tuyeres/004_slide_13-13_crop-800.png
-  src_1600: assets/img/projects/decarbonisation-tuyeres/004_slide_13-13_crop-1600.png
-- index: 5
-  caption: The real PCI rig this model represents
-  topic: experimental-rig
-  description: 'The SolidWorks model of the original pulverised-coal-injection rig
-    taken as the basis for the CFD geometry: lance, ceramic-honeycomb flow straightener,
-    preheating section and combustor.'
-  src_800: assets/img/projects/decarbonisation-tuyeres/005_slide_23-23_crop-800.png
-  src_1600: assets/img/projects/decarbonisation-tuyeres/005_slide_23-23_crop-1600.png
-- index: 6
-  caption: PCI 30mm 3D geometry and honeycomb detail
-  topic: geometry
-  description: The 3D geometry used for the cold-flow study, plus the ceramic-honeycomb
-    flow-straightener detail (60mm OD, 10mm ID, 5mm hexagonal cell size) fitted just
-    ahead of the combustor.
-  src_800: assets/img/projects/decarbonisation-tuyeres/006_slide_25-25_crop-800.png
-  src_1600: assets/img/projects/decarbonisation-tuyeres/006_slide_25-25_crop-1600.png
-- index: 7
-  caption: 3D tetrahedral mesh with the honeycomb detail
-  topic: mesh
-  description: The 3D tetrahedral mesh built around the bend and honeycomb section
-    -- meshing this honeycomb geometry proved difficult enough that the flame-anchoring
-    study was dropped in favour of the cold-flow case alone.
-  src_800: assets/img/projects/decarbonisation-tuyeres/007_slide_26-26_crop-800.png
-  src_1600: assets/img/projects/decarbonisation-tuyeres/007_slide_26-26_crop-1600.png
-- index: 8
-  caption: CO2 intensity vs. substitution level
-  topic: decarbonisation-results
-  description: 'Tuyere CO2 intensity per kJ of heat released, computed from the deck''s
-    own stoichiometry: 0.121 gCO2/kJ for coal alone, falling to 0.091 at 80% (by power
-    rating) CH4 substitution and 0.067 at 80% H2 substitution -- a 45% reduction on
-    hydrogen.'
-  src_800: assets/img/projects/decarbonisation-tuyeres/008_co2_intensity-800.png
-  src_1600: assets/img/projects/decarbonisation-tuyeres/008_co2_intensity-1600.png
-- index: 9
-  caption: Peak temperature vs. the 2400K tuyere material limit
-  topic: decarbonisation-results
-  description: Peak flame temperature for every case the deck reports, against the
-    2400K allowable limit for tuyere materials. Hydrogen combusts almost instantaneously
-    at the lance and drives peak temperature well past the limit even at low substitution
-    (4500K at 10% H2); the real constraint this study surfaced is materials, not chemistry.
-  src_800: assets/img/projects/decarbonisation-tuyeres/009_peak_temperature-800.png
-  src_1600: assets/img/projects/decarbonisation-tuyeres/009_peak_temperature-1600.png
+  - index: 1
+    caption: Base-case 15mm axisymmetric geometry
+    topic: geometry
+    description: "The 2D axisymmetric base-case geometry (15mm lance): air inlet, lance
+      wall, coal inlet and the downstream reactor domain, with the dimensions used for
+      the pulverised-coal-injection (PCI) reacting-flow study."
+    src_800: assets/img/projects/decarbonisation-tuyeres/001_slide_7-07_crop-800.png
+    src_1600: assets/img/projects/decarbonisation-tuyeres/001_slide_7-07_crop-1600.png
+  - index: 2
+    caption: 25mm lance variant of the same geometry
+    topic: geometry
+    description: The same base-case layout re-drawn with a 25mm lance -- the two lance
+      diameters were compared to see how far downstream devolatilisation of the coal
+      starts.
+    src_800: assets/img/projects/decarbonisation-tuyeres/002_slide_8-08_crop-800.png
+    src_1600: assets/img/projects/decarbonisation-tuyeres/002_slide_8-08_crop-1600.png
+  - index: 3
+    caption: 2D mesh used for the grid-convergence study
+    topic: mesh
+    description: The structured 2D mesh (ANSYS) used to check grid-convergence along
+      several probe lines before running the reacting-flow cases.
+    src_800: assets/img/projects/decarbonisation-tuyeres/003_slide_11-11_crop-800.png
+    src_1600: assets/img/projects/decarbonisation-tuyeres/003_slide_11-11_crop-1600.png
+  - index: 4
+    caption: 50mm co-injection geometry -- coal + hydrogen
+    topic: geometry
+    description: "The co-injection geometry: a separate hydrogen inlet added alongside
+      the coal inlet, air inlet and twin lance walls, used for the H2/CH4 substitution
+      cases."
+    src_800: assets/img/projects/decarbonisation-tuyeres/004_slide_13-13_crop-800.png
+    src_1600: assets/img/projects/decarbonisation-tuyeres/004_slide_13-13_crop-1600.png
+  - index: 5
+    caption: The real PCI rig this model represents
+    topic: experimental-rig
+    description: "The SolidWorks model of the original pulverised-coal-injection rig
+      taken as the basis for the CFD geometry: lance, ceramic-honeycomb flow straightener,
+      preheating section and combustor."
+    src_800: assets/img/projects/decarbonisation-tuyeres/005_slide_23-23_crop-800.png
+    src_1600: assets/img/projects/decarbonisation-tuyeres/005_slide_23-23_crop-1600.png
+  - index: 6
+    caption: PCI 30mm 3D geometry and honeycomb detail
+    topic: geometry
+    description: The 3D geometry used for the cold-flow study, plus the ceramic-honeycomb
+      flow-straightener detail (60mm OD, 10mm ID, 5mm hexagonal cell size) fitted just
+      ahead of the combustor.
+    src_800: assets/img/projects/decarbonisation-tuyeres/006_slide_25-25_crop-800.png
+    src_1600: assets/img/projects/decarbonisation-tuyeres/006_slide_25-25_crop-1600.png
+  - index: 7
+    caption: 3D tetrahedral mesh with the honeycomb detail
+    topic: mesh
+    description: The 3D tetrahedral mesh built around the bend and honeycomb section
+      -- meshing this honeycomb geometry proved difficult enough that the flame-anchoring
+      study was dropped in favour of the cold-flow case alone.
+    src_800: assets/img/projects/decarbonisation-tuyeres/007_slide_26-26_crop-800.png
+    src_1600: assets/img/projects/decarbonisation-tuyeres/007_slide_26-26_crop-1600.png
+  - index: 8
+    caption: CO2 intensity vs. substitution level
+    topic: decarbonisation-results
+    description: "Tuyere CO2 intensity per kJ of heat released, computed from the deck's
+      own stoichiometry: 0.121 gCO2/kJ for coal alone, falling to 0.091 at 80% (by power
+      rating) CH4 substitution and 0.067 at 80% H2 substitution -- a 45% reduction on
+      hydrogen."
+    src_800: assets/img/projects/decarbonisation-tuyeres/008_co2_intensity-800.png
+    src_1600: assets/img/projects/decarbonisation-tuyeres/008_co2_intensity-1600.png
+  - index: 9
+    caption: Peak temperature vs. the 2400K tuyere material limit
+    topic: decarbonisation-results
+    description: Peak flame temperature for every case the deck reports, against the
+      2400K allowable limit for tuyere materials. Hydrogen combusts almost instantaneously
+      at the lance and drives peak temperature well past the limit even at low substitution
+      (4500K at 10% H2); the real constraint this study surfaced is materials, not chemistry.
+    src_800: assets/img/projects/decarbonisation-tuyeres/009_peak_temperature-800.png
+    src_1600: assets/img/projects/decarbonisation-tuyeres/009_peak_temperature-1600.png
 flamelab:
-- index: 1
-  caption: Flame development across eight runs
-  topic: campaign
-  description: 'Eight repeat n-heptane pool-flame runs, ignition-aligned: each column
-    is the same time after that run''s own ignition, and every cell is the same physical
-    field of view (150 mm x 70 mm) so rows compare directly.'
-  src_800: assets/img/projects/flamelab/001_ensemble-frame-matrix-800.png
-  src_1600: assets/img/projects/flamelab/001_ensemble-frame-matrix-1600.png
-- index: 2
-  caption: Full-development matrix (0-240 s)
-  topic: campaign
-  description: The long-run subset of the frame matrix over the full 0-240 s development,
-    20 s per column.
-  src_800: assets/img/projects/flamelab/002_ensemble-frame-matrix-full-800.png
-  src_1600: assets/img/projects/flamelab/002_ensemble-frame-matrix-full-1600.png
-- index: 3
-  caption: Ensemble flame height, ignition-aligned
-  topic: campaign
-  description: Cross-run median flame height with IQR, 95% envelope and the GUM combined-uncertainty
-    band - one trustworthy trace from eight repeat experiments.
-  src_800: assets/img/projects/flamelab/003_ensemble-aligned-height-800.png
-  src_1600: assets/img/projects/flamelab/003_ensemble-aligned-height-1600.png
-- index: 4
-  caption: Phase-averaged puff cycle
-  topic: campaign
-  description: The reconstructed puffing cycle, conditional-averaged by phase across
-    every run - cycle shape recovered even where the absolute frequency sits at the
-    camera's Nyquist limit.
-  src_800: assets/img/projects/flamelab/004_ensemble-phase-cycle-800.png
-  src_1600: assets/img/projects/flamelab/004_ensemble-phase-cycle-1600.png
-- index: 5
-  caption: Height distributions by run
-  topic: campaign
-  description: Per-run flame-height distributions over the developed window - the
-    run-to-run spread the ensemble statistics quantify.
-  src_800: assets/img/projects/flamelab/005_violin-height-800.png
-  src_1600: assets/img/projects/flamelab/005_violin-height-1600.png
-- index: 6
-  caption: Tip and width fluctuation (seismograph)
-  topic: fluctuation
-  description: The flame tip tracked as a moving point in a scrolling window with
-    steady axes - height on top, width on the right in the rotated vertical configuration.
-  src_800: assets/img/projects/flamelab/006_MVI8036-corner-800.png
-  src_1600: assets/img/projects/flamelab/006_MVI8036-corner-1600.png
-- index: 7
-  caption: Sampled frames to measured fluctuation
-  topic: fluctuation
-  description: 'How the charts are built: sampled video frames connected by leader
-    lines to their points on the separated height and width fluctuation charts.'
-  src_800: assets/img/projects/flamelab/007_MVI8036-method-figure-800.png
-  src_1600: assets/img/projects/flamelab/007_MVI8036-method-figure-1600.png
-- index: 8
-  caption: Height and width with regime bands
-  topic: measurement
-  description: Flame height and width over time with the Hopf-sequence regime bands
-    (Ignition Transient, Steady Laminar, Flickering Onset, Periodic Flickering) behind
-    them.
-  src_800: assets/img/projects/flamelab/008_MVI8036-timeseries-height-width-regimes-800.png
-  src_1600: assets/img/projects/flamelab/008_MVI8036-timeseries-height-width-regimes-1600.png
-- index: 9
-  caption: Kymograph over the flickering-onset window
-  topic: measurement
-  description: 'The space-time edge diagram: local flame width vs time, the diagonal
-    stripe structure carrying the convection velocity.'
-  src_800: assets/img/projects/flamelab/009_MVI8036-onset-kymograph-plain-800.png
-  src_1600: assets/img/projects/flamelab/009_MVI8036-onset-kymograph-plain-1600.png
-- index: 10
-  caption: Windowed POD/DMD modes
-  topic: methods
-  description: Mean field, leading POD mode and leading DMD mode of the windowed pixel
-    field - coherent structures recovered from full-frame video.
-  src_800: assets/img/projects/flamelab/010_MVI8036-pod-dmd-800.png
-  src_1600: assets/img/projects/flamelab/010_MVI8036-pod-dmd-1600.png
-- index: 11
-  caption: Hilbert-Huang spectrum
-  topic: methods
-  description: Empirical mode decomposition of the height series and the Hilbert-Huang
-    spectrum - the adaptive, non-Fourier decomposition of the non-stationary onset.
-  src_800: assets/img/projects/flamelab/011_MVI8036-hht-emd-800.png
-  src_1600: assets/img/projects/flamelab/011_MVI8036-hht-emd-1600.png
-- index: 12
-  caption: Flickering-onset transition (detected contour overlay)
-  topic: run
-  description: 15 s of the flickering-onset transition with the measured contour,
-    centerline and tip burned onto the real frames.
-  src_800: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition-800.png
-  src_1600: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition-1600.png
-  video: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition.mp4
-- index: 13
-  caption: Periodic flickering (detected contour overlay)
-  topic: run
-  description: 15 s of the developed periodic-flickering regime with the measurement
-    overlay.
-  src_800: assets/img/projects/flamelab/013_MVI8036-periodic-flickering-800.png
-  src_1600: assets/img/projects/flamelab/013_MVI8036-periodic-flickering-1600.png
-  video: assets/img/projects/flamelab/013_MVI8036-periodic-flickering.mp4
-- index: 14
-  caption: Real-time seismograph (onset window)
-  topic: fluctuation
-  description: The scrolling seismograph strips (height top, width right) tracked
-    in real time alongside the flame footage through the flickering onset.
-  src_800: assets/img/projects/flamelab/014_MVI8036-seismograph-onset-800.png
-  src_1600: assets/img/projects/flamelab/014_MVI8036-seismograph-onset-1600.png
-  video: assets/img/projects/flamelab/014_MVI8036-seismograph-onset.mp4
+  - index: 1
+    caption: Flame development across eight runs
+    topic: campaign
+    description: "Eight repeat n-heptane pool-flame runs, ignition-aligned: each column
+      is the same time after that run's own ignition, and every cell is the same physical
+      field of view (150 mm x 70 mm) so rows compare directly."
+    src_800: assets/img/projects/flamelab/001_ensemble-frame-matrix-800.png
+    src_1600: assets/img/projects/flamelab/001_ensemble-frame-matrix-1600.png
+  - index: 2
+    caption: Full-development matrix (0-240 s)
+    topic: campaign
+    description: The long-run subset of the frame matrix over the full 0-240 s development,
+      20 s per column.
+    src_800: assets/img/projects/flamelab/002_ensemble-frame-matrix-full-800.png
+    src_1600: assets/img/projects/flamelab/002_ensemble-frame-matrix-full-1600.png
+  - index: 3
+    caption: Ensemble flame height, ignition-aligned
+    topic: campaign
+    description: Cross-run median flame height with IQR, 95% envelope and the GUM combined-uncertainty
+      band - one trustworthy trace from eight repeat experiments.
+    src_800: assets/img/projects/flamelab/003_ensemble-aligned-height-800.png
+    src_1600: assets/img/projects/flamelab/003_ensemble-aligned-height-1600.png
+  - index: 4
+    caption: Phase-averaged puff cycle
+    topic: campaign
+    description: The reconstructed puffing cycle, conditional-averaged by phase across
+      every run - cycle shape recovered even where the absolute frequency sits at the
+      camera's Nyquist limit.
+    src_800: assets/img/projects/flamelab/004_ensemble-phase-cycle-800.png
+    src_1600: assets/img/projects/flamelab/004_ensemble-phase-cycle-1600.png
+  - index: 5
+    caption: Height distributions by run
+    topic: campaign
+    description: Per-run flame-height distributions over the developed window - the
+      run-to-run spread the ensemble statistics quantify.
+    src_800: assets/img/projects/flamelab/005_violin-height-800.png
+    src_1600: assets/img/projects/flamelab/005_violin-height-1600.png
+  - index: 6
+    caption: Tip and width fluctuation (seismograph)
+    topic: fluctuation
+    description: The flame tip tracked as a moving point in a scrolling window with
+      steady axes - height on top, width on the right in the rotated vertical configuration.
+    src_800: assets/img/projects/flamelab/006_MVI8036-corner-800.png
+    src_1600: assets/img/projects/flamelab/006_MVI8036-corner-1600.png
+  - index: 7
+    caption: Sampled frames to measured fluctuation
+    topic: fluctuation
+    description: "How the charts are built: sampled video frames connected by leader
+      lines to their points on the separated height and width fluctuation charts."
+    src_800: assets/img/projects/flamelab/007_MVI8036-method-figure-800.png
+    src_1600: assets/img/projects/flamelab/007_MVI8036-method-figure-1600.png
+  - index: 8
+    caption: Height and width with regime bands
+    topic: measurement
+    description: Flame height and width over time with the Hopf-sequence regime bands
+      (Ignition Transient, Steady Laminar, Flickering Onset, Periodic Flickering) behind
+      them.
+    src_800: assets/img/projects/flamelab/008_MVI8036-timeseries-height-width-regimes-800.png
+    src_1600: assets/img/projects/flamelab/008_MVI8036-timeseries-height-width-regimes-1600.png
+  - index: 9
+    caption: Kymograph over the flickering-onset window
+    topic: measurement
+    description: "The space-time edge diagram: local flame width vs time, the diagonal
+      stripe structure carrying the convection velocity."
+    src_800: assets/img/projects/flamelab/009_MVI8036-onset-kymograph-plain-800.png
+    src_1600: assets/img/projects/flamelab/009_MVI8036-onset-kymograph-plain-1600.png
+  - index: 10
+    caption: Windowed POD/DMD modes
+    topic: methods
+    description: Mean field, leading POD mode and leading DMD mode of the windowed pixel
+      field - coherent structures recovered from full-frame video.
+    src_800: assets/img/projects/flamelab/010_MVI8036-pod-dmd-800.png
+    src_1600: assets/img/projects/flamelab/010_MVI8036-pod-dmd-1600.png
+  - index: 11
+    caption: Hilbert-Huang spectrum
+    topic: methods
+    description: Empirical mode decomposition of the height series and the Hilbert-Huang
+      spectrum - the adaptive, non-Fourier decomposition of the non-stationary onset.
+    src_800: assets/img/projects/flamelab/011_MVI8036-hht-emd-800.png
+    src_1600: assets/img/projects/flamelab/011_MVI8036-hht-emd-1600.png
+  - index: 12
+    caption: Flickering-onset transition (detected contour overlay)
+    topic: run
+    description: 15 s of the flickering-onset transition with the measured contour,
+      centerline and tip burned onto the real frames.
+    src_800: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition-800.png
+    src_1600: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition-1600.png
+    video: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition.mp4
+  - index: 13
+    caption: Periodic flickering (detected contour overlay)
+    topic: run
+    description: 15 s of the developed periodic-flickering regime with the measurement
+      overlay.
+    src_800: assets/img/projects/flamelab/013_MVI8036-periodic-flickering-800.png
+    src_1600: assets/img/projects/flamelab/013_MVI8036-periodic-flickering-1600.png
+    video: assets/img/projects/flamelab/013_MVI8036-periodic-flickering.mp4
+  - index: 14
+    caption: Real-time seismograph (onset window)
+    topic: fluctuation
+    description: The scrolling seismograph strips (height top, width right) tracked
+      in real time alongside the flame footage through the flickering onset.
+    src_800: assets/img/projects/flamelab/014_MVI8036-seismograph-onset-800.png
+    src_1600: assets/img/projects/flamelab/014_MVI8036-seismograph-onset-1600.png
+    video: assets/img/projects/flamelab/014_MVI8036-seismograph-onset.mp4
+neural-ode-playground:
+  - index: 1
+    caption: 12-optimizer race on the Van der Pol benchmark
+    topic: optimizer-race
+    description: All 12 gradient optimizers trained from scratch on the same tiny
+      synthetic problem (a Van der Pol oscillator, this project's non-chemistry test
+      family), same seed, same budget. Nadam reached the lowest final loss; L-BFGS,
+      Adadelta, and plain SGD were still an order of magnitude worse after 80 epochs
+      on this particular problem — reported as-is, including the optimizers that
+      didn't do well here.
+    src_800: assets/img/projects/neural-ode-playground/001_optimizer_race-800.png
+  - index: 2
+    caption: Normalization ablation — raw baseline vs. 9 normalized arms
+    topic: ablation
+    description: The project's own headline finding — a real 50-run, 5-seed factorial
+      ablation (matched-seed paired t-test) shows normalizing temperature cuts test
+      loss by roughly an order of magnitude (2.314e5 to 2.662e4, p = 3e-15) — normalizing
+      species alone, with temperature left raw, changes nothing, bit-for-bit, because
+      temperature's gradient already owns effectively 100% of an equal-weight loss.
+    src_800: assets/img/projects/neural-ode-playground/002_ablation_comparison-800.png
+    src_1600: assets/img/projects/neural-ode-playground/002_ablation_comparison-1600.png
+  - index: 3
+    caption: RL Arena — the real PPO agent's weight-space trajectory
+    topic: rl-arena
+    description: The RL Arena, live against a real running trainer_kind='rl' job —
+      not a mockup. Purple trail — the agent's actual path through a 2D slice of weight
+      space; orange arrow — the current step's action.
+    src_800: assets/img/projects/neural-ode-playground/003_rl_arena_screenshot-800.png
+    src_1600: assets/img/projects/neural-ode-playground/003_rl_arena_screenshot-1600.png
