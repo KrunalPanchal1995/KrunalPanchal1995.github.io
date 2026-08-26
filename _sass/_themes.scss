@@ -23,8 +23,9 @@
   --global-footer-text-color: #{v.$grey-color-light};
   --global-footer-link-color: #{v.$white-color};
   --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(0, 0, 0, 0.1);
-  --global-card-bg-color: #{v.$white-color};
+  --global-divider-color: rgba(26, 22, 17, 0.14);
+  --global-card-bg-color: #ffffff; // Editorial 2.0: cards lift off the paper
+  --global-label-color: #{v.$teal-accent}; // instrument register: functional labels
   --global-highlight-color: #{v.$red-color-dark};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
@@ -93,8 +94,9 @@ html[data-theme="dark"] {
   --global-footer-text-color: #{v.$grey-color-dark};
   --global-footer-link-color: #{v.$black-color};
   --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: #424246;
+  --global-divider-color: #3b352c;
   --global-card-bg-color: #{v.$grey-900};
+  --global-label-color: #{v.$teal-accent-light};
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},

@@ -8,6 +8,7 @@
  ******************************************************************************/
 
 @use "variables" as v;
+@use "sass:color";
 
 // ---------------------------------------------------------------------------
 // Editorial type system
@@ -64,7 +65,7 @@ h4 {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--global-text-color-light);
+  color: var(--global-label-color); // instrument register: functional labels
   margin-top: 1.2rem;
   margin-bottom: 0.6rem;
 }
@@ -107,7 +108,7 @@ article a,
 .publications a {
   text-decoration: underline;
   text-underline-offset: 0.18em;
-  text-decoration-color: rgba(168, 60, 26, 0.4); // light-mode theme color, dimmed
+  text-decoration-color: #{color.adjust(v.$purple-color, $alpha: -0.6)}; // light-mode theme color, dimmed -- derived, not hardcoded
   text-decoration-thickness: 1px;
 
   &:hover {
@@ -121,7 +122,7 @@ html[data-theme="dark"] article a,
 html[data-theme="dark"] .post a,
 html[data-theme="dark"] .card-text a,
 html[data-theme="dark"] .publications a {
-  text-decoration-color: rgba(226, 121, 58, 0.45); // dark-mode theme color, dimmed
+  text-decoration-color: #{color.adjust(v.$cyan-color, $alpha: -0.55)}; // dark-mode theme color, dimmed -- derived, not hardcoded
 }
 
 // About-page hero, styled from the local _layouts/about.liquid fork (see that
@@ -181,10 +182,11 @@ html[data-theme="dark"] .publications a {
 
   li {
     font-size: 0.78rem;
-    border: 1px solid var(--global-divider-color);
+    border: 1px solid v.$amber-accent-border;
     border-radius: 4px;
     padding: 0.1rem 0.5rem;
     color: var(--global-text-color);
+    background: v.$amber-accent-soft; // flame register: research areas
   }
 }
 
