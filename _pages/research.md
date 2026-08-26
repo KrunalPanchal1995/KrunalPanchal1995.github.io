@@ -9,7 +9,7 @@ nav_order: 1
 
 ## Overview
 
-I develop fair multi-objective optimization, uncertainty-quantification and reduced-order/scientific-ML methods for expensive, stiff physical simulations — using combustion chemical kinetics and mechanism reduction as a primary proving ground, and reaching into CFD, propulsion and quantum chemistry as the same methods generalize. My PhD work produced **MOSIAC**, an open-source workbench for uncertainty-aware combustion mechanism optimization, alongside hands-on experimental and numerical combustion work: pool-flame characterization, a downdraft gasifier, and the GUI-driven computer-vision tooling that post-processes the pool-flame video.
+I develop fair multi-objective optimization, uncertainty-quantification and reduced-order/scientific-ML methods for expensive, stiff physical simulations — using combustion chemical kinetics and mechanism reduction as a primary proving ground, and reaching into CFD, propulsion and quantum chemistry as the same methods generalize. My PhD work produced **MOSIAC**, an open-source workbench for uncertainty-aware combustion mechanism optimization, alongside hands-on experimental and numerical combustion work: pool-flame characterization, a downdraft gasifier, and the computer-vision measurement instrument ([flamelab](/projects/flamelab/)) that quantifies pool-flame video in physical units.
 
 <figure class="loop-media">
   <img src="/assets/img/projects/muq-sac/009_classC_ls_sample_005_10x.gif" alt="Arrhenius-curve uncertainty sampling animation, tightening in real time" loading="lazy" />
@@ -51,7 +51,7 @@ I develop fair multi-objective optimization, uncertainty-quantification and redu
       <img src="/assets/img/projects/vaporizer-rigs/004_pressure_drop_vs_diameter-800.png" alt="Vaporizer rig pressure-drop-vs-diameter design chart" loading="lazy" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;" />
       <h3>Experimental &amp; Numerical Combustion, CFD &rarr;</h3>
     </a>
-    <p>Pool-flame characterization and downdraft gasification alongside an in-house CFD/multiphysics solver, reacting-flow studies, vaporizer/burner rig design, and early-stage quantum-chemical rate-constant estimation. Rig design: <a href="/projects/vaporizer-rigs/">vaporizer rigs</a>; imaging: <a href="/projects/flame-processor/">Flame Processor</a>.</p>
+    <p>Pool-flame characterization and downdraft gasification alongside an in-house CFD/multiphysics solver, reacting-flow studies, vaporizer/burner rig design, and early-stage quantum-chemical rate-constant estimation. Rig design: <a href="/projects/vaporizer-rigs/">vaporizer rigs</a>; imaging: <a href="/projects/flamelab/">flamelab</a>.</p>
   </div>
 </div>
 
@@ -69,7 +69,7 @@ Smaller, self-contained studies that show how I work, not just what I've publish
 
 - **[Scientific ML for Stiff Kinetics](/projects/sciml/)** — a documented, 50-generation journey from an untrainable neural ODE to a working surrogate, closing with a 115-run statistical audit of my own results.
 - **[Symbolic Regression for Rate Rules](/projects/pysr-rate-rules/)** — using SR to rediscover the Evans–Polanyi relation from data, with a leave-one-class-out generalization check.
-- **[Flame Processor](/projects/flame-processor/)** — GUI-driven computer vision for pool-fire video, replacing four brittle MATLAB scripts; run against real footage, honest limitations included.
+- **[flamelab](/projects/flamelab/)** — a computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty: eight-run ensemble campaign, regime classification, thirteen analysis methods, honest limitations included.
 
 ## Methods & tools
 
@@ -79,7 +79,7 @@ Every tool below links to a project that actually used it — no skill bars.
 - **Uncertainty quantification** — correlated-parameter UQ, Sobol sensitivity analysis — see [MUQ-SAC](/projects/muq-sac/)
 - **Reduced-order modelling & scientific ML** — physics-informed neural networks, neural ODEs, response-surface surrogates — see [SciML](/projects/sciml/)
 - **Simulation & CFD** — Cantera, CHEMKIN-PRO, FlameMaster, OpenFOAM, an in-house CFD/multiphysics solver — see [MOSIAC](/projects/mosiac/) and [CFDCore.jl](/projects/cfdcore/)
-- **Experimental combustion** — rig design and commissioning, gas chromatography, thermocouple instrumentation, gasification, GUI-driven video post-processing — see [gasification](/projects/gasification/) and [Flame Processor](/projects/flame-processor/)
+- **Experimental combustion** — rig design and commissioning, gas chromatography, thermocouple instrumentation, gasification, computer-vision flame measurement — see [gasification](/projects/gasification/) and [flamelab](/projects/flamelab/)
 
 ## Publications
 

@@ -54,7 +54,7 @@ I build computational methods that connect detailed chemical models with practic
 ### Research at a glance
 
 - **Combustion Kinetics & Mechanism Reduction** — mechanism development, validation, and reduction of detailed kinetic models to tractable, simulation-ready form
-- **Experimental & Numerical Combustion** — [pool-flame characterization](/projects/vaporizer-rigs/) and downdraft gasification alongside CFD and chemical-kinetics simulation of the same systems
+- **Experimental & Numerical Combustion** — [pool-flame characterization](/projects/flamelab/) and downdraft gasification alongside CFD and chemical-kinetics simulation of the same systems
 - **Fair Multi-Objective Optimization & Uncertainty Quantification** — multi-stage, multi-dataset calibration of Arrhenius parameters with correlated-parameter Bayesian UQ, built around [MOSIAC](/projects/mosiac/), my open-source optimization framework
 - **Reduced-Order Modelling & Scientific ML** — neural and response-surface surrogates that stand in for expensive stiff simulations
 - **[Gasification](/projects/gasification/)** — steam/catalyst-assisted downdraft fixed-bed gasification, from rig commissioning to syngas analysis
@@ -63,10 +63,10 @@ I build computational methods that connect detailed chemical models with practic
 ### Selected results
 
 <figure class="loop-media">
-  <a href="/projects/flame-processor/">
-    <img src="/assets/img/projects/flame-processor/006_burner_tracking-800.png" alt="Automatic burner detection tracking a pool-fire flame -- static preview, click through for the live animated tracking" loading="lazy" />
+  <a href="/projects/flamelab/">
+    <img src="/assets/img/projects/flamelab/001_ensemble-frame-matrix-800.png" alt="Ignition-aligned flame development across eight repeat pool-flame runs, every cell the same physical field of view" loading="lazy" />
   </a>
-  <figcaption>Automatic burner tracking on real pool-fire footage, replacing four brittle MATLAB scripts — static preview here (the 1.8&nbsp;MB animated version is on the project page, not the home page); see <a href="/projects/flame-processor/">Flame Processor</a> for it live.</figcaption>
+  <figcaption>Flame development across eight repeat n-heptane pool-flame runs, ignition-aligned and shown at a common physical scale — measured with <a href="/projects/flamelab/">flamelab</a>, the computer-vision instrument behind it (animated overlay videos on the project page).</figcaption>
 </figure>
 
 <figure class="loop-media">

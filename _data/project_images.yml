@@ -647,66 +647,6 @@ cfdcore:
     standalone SDE demonstrations.
   src_800: assets/img/projects/cfdcore/020_S4_01_stochastic_sgs-800.png
   src_1600: assets/img/projects/cfdcore/020_S4_01_stochastic_sgs-1600.png
-flame-processor:
-- index: 1
-  caption: Calibration GUI in use
-  topic: gui
-  description: The interactive Tkinter calibration GUI, showing the burner-detection
-    bounding box and calibration point markers overlaid on a pool-fire video frame
-    — where a user checks and adjusts automatic burner detection before batch processing.
-  src_800: assets/img/projects/flame-processor/001_Flame_Calibrator_-_MVI_8025_screenshot_01.07.2026-800.png
-  src_1600: assets/img/projects/flame-processor/001_Flame_Calibrator_-_MVI_8025_screenshot_01.07.2026-1600.png
-- index: 2
-  caption: Raw pool-fire frame (input)
-  topic: raw
-  description: An unprocessed pool-fire video frame — the raw input before automatic
-    burner detection, camera-jerk compensation, and time-normalized extraction are
-    applied.
-  src_800: assets/img/projects/flame-processor/002_pool_fire_frame_example-800.png
-  src_1600: assets/img/projects/flame-processor/002_pool_fire_frame_example-1600.png
-- index: 3
-  caption: Ruler-based automatic scale calibration
-  topic: gui
-  description: A close-up of the calibration GUI's automatic scale-detection step,
-    zoomed on a ruler placed in frame — the tool reads the ruler markings to convert
-    pixel distances to real-world units automatically.
-  src_800: assets/img/projects/flame-processor/003_scale_with_the_ruler-800.png
-  src_1600: assets/img/projects/flame-processor/003_scale_with_the_ruler-1600.png
-- index: 4
-  caption: Automatic detection on real footage (color)
-  topic: run
-  description: 'A frame from a full run on the 22 s calibration recording (MVI_8025.MP4,
-    533 frames): the bright-rim detector finds the burner rim automatically and the
-    tool draws the reference bracket from it — no hand-set pixel coordinates. Full
-    run: 75 sampled frames, 0 stale detections, 5 camera jerks correctly re-anchored,
-    avg. detection confidence 0.69.'
-  src_800: assets/img/projects/flame-processor/004_run_color_crop-800.png
-  src_1600: assets/img/projects/flame-processor/004_run_color_crop-1600.png
-- index: 5
-  caption: Automatic detection on real footage (grayscale)
-  topic: run
-  description: The same frame and detection, grayscale output — the tool writes color
-    and grayscale side by side from a single pass, both driven from the same detected
-    geometry.
-  src_800: assets/img/projects/flame-processor/005_run_gray_crop-800.png
-  src_1600: assets/img/projects/flame-processor/005_run_gray_crop-1600.png
-- index: 6
-  caption: Reference-line tracking across the calibration recording
-  topic: run
-  description: All 75 sampled frames from the MVI_8025.MP4 run, showing the detected
-    burner rim and reference bracket holding steady across the recording, including
-    through the camera jerks the run log recorded.
-  src_800: assets/img/projects/flame-processor/006_burner_tracking-800.png
-  src_1600: assets/img/projects/flame-processor/006_burner_tracking-1600.png
-- index: 7
-  caption: The actual pool flame this tool processes (raw frame)
-  topic: raw
-  description: 'An unprocessed frame from MVI_8036.MP4, the pool-fire experiment recording
-    — this is the subject the tool is built for. Running the same pipeline on this
-    recording (a different, uncalibrated rig, no ruler in frame) is where the honest
-    limitation showed up: see Validation for the numbers.'
-  src_800: assets/img/projects/flame-processor/007_raw_flame_frame-800.png
-  src_1600: assets/img/projects/flame-processor/007_raw_flame_frame-1600.png
 vaporizer-rigs:
 - index: 4
   caption: Pressure-drop sweep vs tube diameter
@@ -925,3 +865,108 @@ decarbonisation-tuyeres:
     (4500K at 10% H2); the real constraint this study surfaced is materials, not chemistry.
   src_800: assets/img/projects/decarbonisation-tuyeres/009_peak_temperature-800.png
   src_1600: assets/img/projects/decarbonisation-tuyeres/009_peak_temperature-1600.png
+flamelab:
+- index: 1
+  caption: Flame development across eight runs
+  topic: campaign
+  description: 'Eight repeat n-heptane pool-flame runs, ignition-aligned: each column
+    is the same time after that run''s own ignition, and every cell is the same physical
+    field of view (150 mm x 70 mm) so rows compare directly.'
+  src_800: assets/img/projects/flamelab/001_ensemble-frame-matrix-800.png
+  src_1600: assets/img/projects/flamelab/001_ensemble-frame-matrix-1600.png
+- index: 2
+  caption: Full-development matrix (0-240 s)
+  topic: campaign
+  description: The long-run subset of the frame matrix over the full 0-240 s development,
+    20 s per column.
+  src_800: assets/img/projects/flamelab/002_ensemble-frame-matrix-full-800.png
+  src_1600: assets/img/projects/flamelab/002_ensemble-frame-matrix-full-1600.png
+- index: 3
+  caption: Ensemble flame height, ignition-aligned
+  topic: campaign
+  description: Cross-run median flame height with IQR, 95% envelope and the GUM combined-uncertainty
+    band - one trustworthy trace from eight repeat experiments.
+  src_800: assets/img/projects/flamelab/003_ensemble-aligned-height-800.png
+  src_1600: assets/img/projects/flamelab/003_ensemble-aligned-height-1600.png
+- index: 4
+  caption: Phase-averaged puff cycle
+  topic: campaign
+  description: The reconstructed puffing cycle, conditional-averaged by phase across
+    every run - cycle shape recovered even where the absolute frequency sits at the
+    camera's Nyquist limit.
+  src_800: assets/img/projects/flamelab/004_ensemble-phase-cycle-800.png
+  src_1600: assets/img/projects/flamelab/004_ensemble-phase-cycle-1600.png
+- index: 5
+  caption: Height distributions by run
+  topic: campaign
+  description: Per-run flame-height distributions over the developed window - the
+    run-to-run spread the ensemble statistics quantify.
+  src_800: assets/img/projects/flamelab/005_violin-height-800.png
+  src_1600: assets/img/projects/flamelab/005_violin-height-1600.png
+- index: 6
+  caption: Tip and width fluctuation (seismograph)
+  topic: fluctuation
+  description: The flame tip tracked as a moving point in a scrolling window with
+    steady axes - height on top, width on the right in the rotated vertical configuration.
+  src_800: assets/img/projects/flamelab/006_MVI8036-corner-800.png
+  src_1600: assets/img/projects/flamelab/006_MVI8036-corner-1600.png
+- index: 7
+  caption: Sampled frames to measured fluctuation
+  topic: fluctuation
+  description: 'How the charts are built: sampled video frames connected by leader
+    lines to their points on the separated height and width fluctuation charts.'
+  src_800: assets/img/projects/flamelab/007_MVI8036-method-figure-800.png
+  src_1600: assets/img/projects/flamelab/007_MVI8036-method-figure-1600.png
+- index: 8
+  caption: Height and width with regime bands
+  topic: measurement
+  description: Flame height and width over time with the Hopf-sequence regime bands
+    (Ignition Transient, Steady Laminar, Flickering Onset, Periodic Flickering) behind
+    them.
+  src_800: assets/img/projects/flamelab/008_MVI8036-timeseries-height-width-regimes-800.png
+  src_1600: assets/img/projects/flamelab/008_MVI8036-timeseries-height-width-regimes-1600.png
+- index: 9
+  caption: Kymograph over the flickering-onset window
+  topic: measurement
+  description: 'The space-time edge diagram: local flame width vs time, the diagonal
+    stripe structure carrying the convection velocity.'
+  src_800: assets/img/projects/flamelab/009_MVI8036-onset-kymograph-plain-800.png
+  src_1600: assets/img/projects/flamelab/009_MVI8036-onset-kymograph-plain-1600.png
+- index: 10
+  caption: Windowed POD/DMD modes
+  topic: methods
+  description: Mean field, leading POD mode and leading DMD mode of the windowed pixel
+    field - coherent structures recovered from full-frame video.
+  src_800: assets/img/projects/flamelab/010_MVI8036-pod-dmd-800.png
+  src_1600: assets/img/projects/flamelab/010_MVI8036-pod-dmd-1600.png
+- index: 11
+  caption: Hilbert-Huang spectrum
+  topic: methods
+  description: Empirical mode decomposition of the height series and the Hilbert-Huang
+    spectrum - the adaptive, non-Fourier decomposition of the non-stationary onset.
+  src_800: assets/img/projects/flamelab/011_MVI8036-hht-emd-800.png
+  src_1600: assets/img/projects/flamelab/011_MVI8036-hht-emd-1600.png
+- index: 12
+  caption: Flickering-onset transition (detected contour overlay)
+  topic: run
+  description: 15 s of the flickering-onset transition with the measured contour,
+    centerline and tip burned onto the real frames.
+  src_800: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition-800.png
+  src_1600: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition-1600.png
+  video: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition.mp4
+- index: 13
+  caption: Periodic flickering (detected contour overlay)
+  topic: run
+  description: 15 s of the developed periodic-flickering regime with the measurement
+    overlay.
+  src_800: assets/img/projects/flamelab/013_MVI8036-periodic-flickering-800.png
+  src_1600: assets/img/projects/flamelab/013_MVI8036-periodic-flickering-1600.png
+  video: assets/img/projects/flamelab/013_MVI8036-periodic-flickering.mp4
+- index: 14
+  caption: Real-time seismograph (onset window)
+  topic: fluctuation
+  description: The scrolling seismograph strips (height top, width right) tracked
+    in real time alongside the flame footage through the flickering onset.
+  src_800: assets/img/projects/flamelab/014_MVI8036-seismograph-onset-800.png
+  src_1600: assets/img/projects/flamelab/014_MVI8036-seismograph-onset-1600.png
+  video: assets/img/projects/flamelab/014_MVI8036-seismograph-onset.mp4

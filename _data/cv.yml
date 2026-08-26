@@ -99,7 +99,7 @@ cv:
           - "Led design of the MUQ-SAC joint-Arrhenius uncertainty-quantification methodology (Combustion Theory and Modelling, 2024)"
           - "Joint pool-flame characterization work with Gagan Verma (rig: design → outsourced fabrication → commissioning → operation)"
           - "Decarbonisation Technology course project (Aug–Dec 2022, team of six): ANSYS Fluent study of H2/CH4 co-injection with pulverised coal in blast-furnace tuyeres — CO2 intensity fell from 0.121 to 0.067 g/kJ at 80% H2 substitution"
-          - "Built Flame Processor, a computer-vision tool for automatic burner detection and post-processing of pool-flame video, replacing hand-edited MATLAB scripts; run against real footage (88/88 tests passing)"
+          - "Built flamelab, a computer-vision instrument measuring flame length, width and flicker from pool-flame video in physical units with propagated uncertainty — eight-run ensemble campaign, Hopf-sequence regime classification, thirteen analysis methods (~300 tests passing)"
 
       - company: Nirma University
         position: Graduate Research Assistant (M.Tech)
@@ -255,7 +255,7 @@ cv:
 
       - name: Experimental & Numerical Combustion
         icon: fa-solid fa-fire-flame-curved
-        keywords: "Pool-flame characterization, computer-vision video post-processing, CFD and chemical-kinetics simulation of the same systems"
+        keywords: "Pool-flame characterization, computer-vision flame measurement (flamelab), CFD and chemical-kinetics simulation of the same systems"
 
       - name: Gasification
         icon: fa-solid fa-industry
