@@ -14,7 +14,7 @@ Building a trustworthy chemical kinetic mechanism means calibrating hundreds of 
 
 ## Why it matters
 
-A mechanism that fits data without honest uncertainty bounds is a mechanism nobody can trust outside the exact conditions it was tuned on. Treating a rate constant as a *range*, not a value, and propagating that range forward through every simulation, is what makes an optimized mechanism usable for prediction rather than just curve-fitting.
+A mechanism that fits data without honest uncertainty bounds is a mechanism nobody can trust outside the exact conditions it was tuned on. Treating a rate constant as a _range_, not a value, and propagating that range forward through every simulation, is what makes an optimized mechanism usable for prediction rather than just curve-fitting.
 
 ## Approach
 
@@ -64,7 +64,7 @@ A different, self-contained diagnostic — "which reactions actually control ign
 
 ### 6. Done in 2.4 seconds — and the physics checks out
 
-The tool writes a JSON of normalized sensitivity coefficients (d ln(tau)/d ln(k)) for all 29 reactions in the mechanism. The result is exactly what combustion chemistry says it should be: **H + O2 ⇌ O + OH**, the dominant chain-branching step, has the single largest-magnitude coefficient (−1.62) — speed that reaction up and ignition delay drops. **H + O2 + N2 ⇌ HO2 + N2**, a chain-*terminating* three-body step, is next largest and has the *opposite* sign (+0.79) — speed that one up and ignition delay gets longer. A tool that didn't understand the chemistry couldn't get that sign flip right by accident.
+The tool writes a JSON of normalized sensitivity coefficients (d ln(tau)/d ln(k)) for all 29 reactions in the mechanism. The result is exactly what combustion chemistry says it should be: **H + O2 ⇌ O + OH**, the dominant chain-branching step, has the single largest-magnitude coefficient (−1.62) — speed that reaction up and ignition delay drops. **H + O2 + N2 ⇌ HO2 + N2**, a chain-_terminating_ three-body step, is next largest and has the _opposite_ sign (+0.79) — speed that one up and ignition delay gets longer. A tool that didn't understand the chemistry couldn't get that sign flip right by accident.
 
 {% include project_gallery.liquid project="mosiac" topic="wt-6-idt-done" %}
 
@@ -96,11 +96,11 @@ Developed by me, as the primary author and PhD deliverable, building on open-sou
 
 ## Publications
 
-The MOSIAC software paper is in preparation, targeting the *Journal of Open Source Software*. The uncertainty-quantification methodology at its core is published: {% cite panchal2024muqsac %}.
+The MOSIAC software paper is in preparation, targeting the _Journal of Open Source Software_. The uncertainty-quantification methodology at its core is published: {% cite panchal2024muqsac %}.
 
 ## Code
 
-Repository: [github.com/KrunalPanchal1995](https://github.com/KrunalPanchal1995) *(currently under review before public release — link will go live at that point)*.
+Repository: [github.com/KrunalPanchal1995](https://github.com/KrunalPanchal1995) _(currently under review before public release — link will go live at that point)_.
 
 ## Where this is going
 

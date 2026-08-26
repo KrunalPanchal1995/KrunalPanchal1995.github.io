@@ -7,8 +7,8 @@ importance: 9
 category: [sciml, combustion]
 related_publications: false
 ---
-{% include project_gallery.liquid project="pysr-rate-rules" %}
 
+{% include project_gallery.liquid project="pysr-rate-rules" %}
 
 ## Problem
 

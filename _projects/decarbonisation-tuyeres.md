@@ -7,8 +7,8 @@ importance: 10
 category: [cfd, combustion]
 related_publications: false
 ---
-{% include project_gallery.liquid project="decarbonisation-tuyeres" %}
 
+{% include project_gallery.liquid project="decarbonisation-tuyeres" %}
 
 ## Problem
 

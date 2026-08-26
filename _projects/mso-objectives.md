@@ -7,8 +7,8 @@ importance: 2
 category: [optimization, combustion]
 related_publications: true
 ---
-{% include project_gallery.liquid project="mso-objectives" %}
 
+{% include project_gallery.liquid project="mso-objectives" %}
 
 ## Problem
 
@@ -30,7 +30,7 @@ The two "surrogate comparison" images in the gallery above are the same methyl-b
 - **What's traded away** — the reduced fit is built from a fraction of the sample points the full fit needs, so the accuracy-per-sample-point is substantially higher, at the cost of that edge-region looseness.
 - **Why it matters** — this is the practical justification for using a reduced parameterization inside the multi-stage optimization loop at all: it needs to be re-fit many times over the course of a search, and the full-parameterization cost would make that prohibitive at the same sampling budget.
 
-The theory behind *which* parameters to keep in the reduced set is still unpublished (thesis work in preparation) and isn't detailed here — this comparison is limited to what the two images themselves show. The ellipsoid-containment theory figure in the gallery is the geometric idea both this reduced-parameterization work and MUQ-SAC's joint-Arrhenius sampling build on: the physically valid region of parameter space is represented and checked as an ellipsoid rather than sampled dimension-by-dimension — shown here as the shared theoretical figure behind both lines of work, not results in its own right.
+The theory behind _which_ parameters to keep in the reduced set is still unpublished (thesis work in preparation) and isn't detailed here — this comparison is limited to what the two images themselves show. The ellipsoid-containment theory figure in the gallery is the geometric idea both this reduced-parameterization work and MUQ-SAC's joint-Arrhenius sampling build on: the physically valid region of parameter space is represented and checked as an ellipsoid rather than sampled dimension-by-dimension — shown here as the shared theoretical figure behind both lines of work, not results in its own right.
 
 ## Multi-stage optimization, per fuel
 
@@ -42,11 +42,11 @@ The geometric-onset figure is a different, collaborative technique — led by Ga
 
 ## Extending to thermodynamic parameters
 
-The correlation-aware, multi-stage philosophy developed here for kinetic *rate* parameters extends naturally to *thermodynamic* parameters (heat capacities, formation enthalpies) — the subject of a collaborative paper, led by Bishwajeet Singh with me as second author, under review at *Fuel* and separately accepted as an abstract for the 64th Symposium (Japanese) on Combustion, Fukuoka, Nov 2026 {% cite singh2026thermoabstract %}. Per disclosure policy for work at this stage, only the title, authors and venue are given here — no formulae or numbers beyond what the accepted abstract itself already states publicly.
+The correlation-aware, multi-stage philosophy developed here for kinetic _rate_ parameters extends naturally to _thermodynamic_ parameters (heat capacities, formation enthalpies) — the subject of a collaborative paper, led by Bishwajeet Singh with me as second author, under review at _Fuel_ and separately accepted as an abstract for the 64th Symposium (Japanese) on Combustion, Fukuoka, Nov 2026 {% cite singh2026thermoabstract %}. Per disclosure policy for work at this stage, only the title, authors and venue are given here — no formulae or numbers beyond what the accepted abstract itself already states publicly.
 
 ## Results
 
-*(Published results only — see [Disclosure Policy](https://github.com/KrunalPanchal1995) for why some numbers below are omitted.)*
+_(Published results only — see [Disclosure Policy](https://github.com/KrunalPanchal1995) for why some numbers below are omitted.)_
 
 The multi-stage strategy applied to n-heptane is published: {% cite panchal2023aspacc %}.
 

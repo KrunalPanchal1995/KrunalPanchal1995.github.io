@@ -7,8 +7,8 @@ importance: 5
 category: [cfd]
 related_publications: false
 ---
-{% include project_gallery.liquid project="cfdcore" %}
 
+{% include project_gallery.liquid project="cfdcore" %}
 
 ## Problem
 

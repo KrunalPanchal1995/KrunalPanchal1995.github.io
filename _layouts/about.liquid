@@ -32,7 +32,9 @@ layout: default
     </h1>
     {% if page.profile.degree %}
       <p class="hero-credentials">
-        {{ page.profile.degree }}{% if page.profile.institute %} &middot; {{ page.profile.institute }}{% endif %}{% if page.profile.degree_year %} &middot; {{ page.profile.degree_year }}{% endif %}
+        {{ page.profile.degree -}}
+        {%- if page.profile.institute %} &middot; {{ page.profile.institute }}{% endif -%}
+        {%- if page.profile.degree_year %} &middot; {{ page.profile.degree_year }}{% endif %}
       </p>
     {% endif %}
     <p class="desc">{{ page.subtitle }}</p>
@@ -73,8 +75,12 @@ layout: default
               <div class="credentials-block">
                 <span class="credentials-label">Now</span>
                 <p>
-                  {{ page.profile.current_role.title }}{% if page.profile.current_role.org %}, {{ page.profile.current_role.org }}{% endif %}
-                  {% if page.profile.current_role.until %}<br />through {{ page.profile.current_role.until }}{% endif %}
+                  {{ page.profile.current_role.title -}}
+                  {%- if page.profile.current_role.org %}, {{ page.profile.current_role.org }}{% endif %}
+                  {% if page.profile.current_role.until -%}
+                    <br>
+                    through {{ page.profile.current_role.until -}}
+                  {%- endif %}
                 </p>
               </div>
             {% endif %}

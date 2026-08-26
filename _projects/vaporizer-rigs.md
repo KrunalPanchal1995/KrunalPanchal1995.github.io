@@ -7,8 +7,8 @@ importance: 8
 category: [experimental, cfd]
 related_publications: false
 ---
-{% include project_gallery.liquid project="vaporizer-rigs" %}
 
+{% include project_gallery.liquid project="vaporizer-rigs" %}
 
 ## Problem
 
