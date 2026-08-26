@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 description: Who I am, how I think about research, and where I'm headed.
 nav: true
-nav_order: 4
+nav_order: 5
 ---
 
 ## Who I am

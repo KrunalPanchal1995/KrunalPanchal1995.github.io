@@ -4,7 +4,7 @@ title: Writing
 permalink: /writing/
 description: Research notes, essays, and things I haven't stopped thinking about.
 nav: true
-nav_order: 2
+nav_order: 3
 ---
 
 I write about the research as I do it, not just after it's published — and occasionally about questions that don't fit inside a paper at all.

@@ -1,0 +1,27 @@
+{% comment %}
+  Home-page hero, THIRD vignette (session 11): the real trimmed public
+  playground itself (vZero/PublicDemo.tsx via `make static-demo`,
+  assets/playground/), not a decorative single-file animation like
+  hero-value-flow.liquid/hero-flow-field.liquid (this directory) -- those
+  two stay untouched, per goal.md's "do not remove anything, just keep
+  adding" instruction. This is a real classification playground: pick a
+  dataset, edit the network, watch a real from-scratch MLP train live, right
+  inside the iframe, no server involved (see vZero's own
+  PublicDemo.tsx/engine/browser/* for what's actually running).
+
+  Usage: {% include hero-playground.liquid %}
+{% endcomment %}
+<div class="hero-playground" style="margin: 1.5rem 0; max-width: 640px;">
+  <iframe
+    src="{{ '/assets/playground/index.html' | relative_url }}"
+    title="Live demo: the vZero Neural ODE playground, running entirely in your browser"
+    width="100%"
+    height="360"
+    style="border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; display: block;"
+    loading="lazy"
+  >
+  </iframe>
+  <p style="margin-top: 0.4rem; font-size: 0.85rem;">
+    <a href="{{ '/playground/' | relative_url }}">Open the full playground &rarr;</a>
+  </p>
+</div>

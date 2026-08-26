@@ -40,11 +40,13 @@ latest_posts:
 
 {% include hero-value-flow.liquid %}
 {% include hero-flow-field.liquid %}
+{% include hero-playground.liquid %}
 
 I build computational methods that connect detailed chemical models with practical combustion applications — kinetics, mechanism reduction, fair multi-objective optimization, uncertainty quantification, and scientific ML, treated as one connected problem rather than separate tools. [The full story &rarr;](/about/)
 
 <div class="cta-row">
   <a class="btn-cta btn-cta-primary" href="/research/">Explore Research &rarr;</a>
+  <a class="btn-cta btn-cta-secondary" href="/playground/">Try the Playground &rarr;</a>
   <a class="btn-cta btn-cta-secondary" href="/cv/">CV</a>
   <a class="btn-cta btn-cta-secondary" href="/about/#contact">Contact</a>
 </div>
