@@ -4,28 +4,7 @@ title: Home
 permalink: /
 subtitle: Computational methods for complex physical systems — combustion kinetics, optimization &amp; uncertainty quantification, reduced-order &amp; scientific ML.
 
-profile:
-  align: right
-  image: prof_pic.jpg # [CONTENT_REVIEW] placeholder until a headshot is selected from krunal_2026_photo.jpeg / KRUNAL.png
-  image_circular: false # crops the image to make it circular
-  degree: PhD, Mechanical Engineering
-  institute: IIT Madras
-  degree_year: "2026"
-  research_areas:
-    - Experimental &amp; Numerical Combustion
-    - Combustion Kinetics &amp; Mechanism Reduction
-    - Fair Multi-Objective Optimization &amp; UQ
-    - Reduced-Order Modelling &amp; Scientific ML
-    - Gasification
-    - CFD
-  current_role:
-    title: Project Associate
-    org: Dept. of Mechanical Engineering, IIT Madras
-    until: 30 Nov 2026
-  address: Dept. of Mechanical Engineering, IIT Madras, Chennai 600036, India
-
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
@@ -38,18 +17,20 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-{% include hero-value-flow.liquid %}
-{% include hero-flow-field.liquid %}
-{% include hero-playground.liquid %}
-
-I build computational methods that connect detailed chemical models with practical combustion applications — kinetics, mechanism reduction, fair multi-objective optimization, uncertainty quantification, and scientific ML, treated as one connected problem rather than separate tools. [The full story &rarr;](/about/)
+I build computational methods that connect detailed chemical models with practical combustion applications — kinetics, mechanism reduction, fair multi-objective optimization, uncertainty quantification, and scientific ML, treated as one connected problem rather than separate tools. Every figure on this site is backed by real runs — pool-flame experiments measured with instruments I built, stiff autoignition chemistry validated against 426 experimental targets, an open-source optimization workbench, and a live Neural ODE research playground — with the honest failures on record next to the results. [The full story &rarr;](/about/)
 
 <div class="cta-row">
   <a class="btn-cta btn-cta-primary" href="/research/">Explore Research &rarr;</a>
+  <a class="btn-cta btn-cta-secondary" href="/projects/">Browse Projects &rarr;</a>
   <a class="btn-cta btn-cta-secondary" href="/playground/">Try the Playground &rarr;</a>
   <a class="btn-cta btn-cta-secondary" href="/cv/">CV</a>
-  <a class="btn-cta btn-cta-secondary" href="/about/#contact">Contact</a>
 </div>
+
+### Selected work
+
+{% include showcase_slideshow.liquid %}
+
+A rotating sample of the best results across every research area — each slide links to its full project page. [Browse all projects &rarr;](/projects/)
 
 ### Research at a glance
 
@@ -59,6 +40,16 @@ I build computational methods that connect detailed chemical models with practic
 - **Reduced-Order Modelling & Scientific ML** — neural and response-surface surrogates that stand in for expensive stiff simulations
 - **[Gasification](/projects/gasification/)** — steam/catalyst-assisted downdraft fixed-bed gasification, from rig commissioning to syngas analysis
 - **CFD** — an in-house CFD/multiphysics solver, and reacting-flow and rig-design studies built on top of it
+
+The full research overview — themes, methods, experiments, and publications — is on the [Research page](/research/).
+
+### Try the research live
+
+Three live slices of the Neural ODE research playground, running entirely in your browser — real dynamics and a real training loop, not recordings.
+
+{% include hero-value-flow.liquid %}
+{% include hero-flow-field.liquid %}
+{% include hero-playground.liquid %}
 
 ### Selected results
 

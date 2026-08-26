@@ -1,0 +1,62 @@
+{% comment %}
+  Home-page "Selected work" showcase: an auto-advancing slideshow of the best
+  results (images + videos) across every research area, driven by
+  _data/showcase.yml. Each slide links to its full project page.
+
+  purgecss-safety by construction: every class below exists in this static
+  markup (including .active, pre-seeded on slide 1 and dot 1), and
+  assets/js/showcase.js only toggles classes that already appear here —
+  nothing dynamic-only is styled via a class. Videos carry a poster and no
+  src until their slide first activates (lazy fetch); prefers-reduced-motion
+  disables auto-advance entirely (assets/js/showcase.js).
+
+  The <script> tag is emitted here, not from _includes/scripts.liquid, so
+  the SHA-tracked scripts.liquid shadow needs no edit (same pattern the
+  hero includes use).
+
+  Usage: {% include showcase_slideshow.liquid %}
+{% endcomment %}
+{% assign slides = site.data.showcase %}
+{% if slides %}
+  <div class="showcase" data-showcase role="region" aria-roledescription="carousel" aria-label="Selected research work, in motion" tabindex="0">
+    <div class="showcase-viewport">
+      {% for slide in slides %}
+        <figure
+          class="showcase-slide{% if forloop.first %} active{% endif %}"
+          data-slide
+          {% if slide.type == 'video' %}
+            data-video-src="{{ slide.src | relative_url }}"
+          {% endif %}
+          aria-hidden="{% if forloop.first %}false{% else %}true{% endif %}"
+        >
+          {% if slide.type == 'video' %}
+            <video class="showcase-media" muted loop playsinline preload="metadata" poster="{{ slide.poster | relative_url }}" tabindex="-1"></video>
+          {% else %}
+            <a class="showcase-media-link" href="{{ slide.link | relative_url }}" tabindex="-1" aria-hidden="true">
+              <img class="showcase-media" src="{{ slide.src | relative_url }}" alt="{{ slide.caption }}" loading="lazy">
+            </a>
+          {% endif %}
+          <figcaption class="showcase-caption">
+            <a class="showcase-title" href="{{ slide.link | relative_url }}">{{ slide.title }}</a>
+            <span class="showcase-desc">{{ slide.caption }}</span>
+          </figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+    <div class="showcase-controls">
+      <button type="button" class="showcase-btn" data-showcase-prev aria-label="Previous slide">&#8249;</button>
+      <div class="showcase-dots">
+        {% for slide in slides %}
+          <button
+            type="button"
+            class="showcase-dot{% if forloop.first %} active{% endif %}"
+            data-showcase-dot="{{ forloop.index0 }}"
+            aria-label="Go to slide {{ forloop.index }}"
+          ></button>
+        {% endfor %}
+      </div>
+      <button type="button" class="showcase-btn" data-showcase-next aria-label="Next slide">&#8250;</button>
+    </div>
+  </div>
+  <script defer src="{{ '/assets/js/showcase.js' | relative_url }}"></script>
+{% endif %}

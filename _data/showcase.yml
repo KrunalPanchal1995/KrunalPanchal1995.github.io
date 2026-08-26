@@ -1,0 +1,78 @@
+# Home-page showcase slideshow — the best results from the best projects.
+# Each entry: title (link text), caption (one line under it), link (project page),
+# type (image | video), src (relative to site root), poster (videos only).
+# Order matters — this is the slide order. Add a slide by appending an entry;
+# no code changes are needed anywhere else.
+- title: Flickering onset — tracked live
+  caption: flamelab — seismograph tracking of the flame flickering onset, in real time
+  link: /projects/flamelab/
+  type: video
+  src: assets/img/projects/flamelab/014_MVI8036-seismograph-onset.mp4
+  poster: assets/img/projects/flamelab/014_MVI8036-seismograph-onset-800.png
+- title: Flickering-onset transition
+  caption: flamelab — the ignition-aligned transition into flickering, frame by frame
+  link: /projects/flamelab/
+  type: video
+  src: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition.mp4
+  poster: assets/img/projects/flamelab/012_MVI8036-flickering-onset-transition-800.png
+- title: Periodic flickering
+  caption: flamelab — the developed periodic flickering regime of a pool flame
+  link: /projects/flamelab/
+  type: video
+  src: assets/img/projects/flamelab/013_MVI8036-periodic-flickering.mp4
+  poster: assets/img/projects/flamelab/013_MVI8036-periodic-flickering-800.png
+- title: Burner tracking
+  caption: computer-vision tracking of the burner flame — the instrument behind flamelab
+  link: /projects/flamelab/
+  type: image
+  src: assets/img/projects/flame-processor/006_burner_tracking.gif
+- title: Arrhenius-curve uncertainty sampling
+  caption: MUQ-SAC — joint Arrhenius-parameter uncertainty, tightening in real time
+  link: /projects/muq-sac/
+  type: image
+  src: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x.gif
+- title: 3D ignitability map
+  caption: MOSIAC — ignitable vs. non-ignitable conditions across T, P and equivalence ratio
+  link: /projects/mosiac/
+  type: image
+  src: assets/img/projects/mosiac/007_02b_ignitability_3d_map-800.png
+- title: Fair objective-function design
+  caption: MSO objectives — WMRE vs. power-mean behaviour, the optimizer's own objective library
+  link: /projects/mso-objectives/
+  type: image
+  src: assets/img/projects/mso-objectives/001_wmre_vs_powermean-800.png
+- title: Symbolic regression for rate rules
+  caption: PySR — collinearity diagnostics for universal rate-rule discovery
+  link: /projects/pysr-rate-rules/
+  type: image
+  src: assets/img/projects/pysr-rate-rules/004_01_collinearity-800.png
+- title: The 115-run seed-noise floor
+  caption: SciML — bootstrapped ranking with the seed-noise band that humbles most hyperparameter effects
+  link: /projects/sciml/
+  type: image
+  src: assets/img/projects/sciml/001_fig1_noise_floor-800.png
+- title: 12 optimizers, one race
+  caption: Neural ODE playground — all 12 gradient optimizers trained from scratch, same seed, same budget
+  link: /projects/neural-ode-playground/
+  type: image
+  src: assets/img/projects/neural-ode-playground/001_optimizer_race-800.png
+- title: RF ignition transient
+  caption: CFDCore.jl — an in-house CFD solver's reacting-flow transient
+  link: /projects/cfdcore/
+  type: image
+  src: assets/img/projects/cfdcore/008_rf_ignition_transient-800.png
+- title: Steam-catalytic gasification
+  caption: gasification — a real flame over the downdraft gasifier, from rig commissioning to syngas
+  link: /projects/gasification/
+  type: image
+  src: assets/img/projects/gasification/007_Flame-800.png
+- title: H₂/CH₄ co-injection in tuyeres
+  caption: decarbonisation — blast-furnace tuyere co-injection study for lower-carbon ironmaking
+  link: /projects/decarbonisation-tuyeres/
+  type: image
+  src: assets/img/projects/decarbonisation-tuyeres/006_slide_25-25_crop-800.png
+- title: Vaporizer & combustion rig design
+  caption: vaporizer-rigs — design and fabrication comparison across rig generations
+  link: /projects/vaporizer-rigs/
+  type: image
+  src: assets/img/projects/vaporizer-rigs/008_length_comparison-800.png

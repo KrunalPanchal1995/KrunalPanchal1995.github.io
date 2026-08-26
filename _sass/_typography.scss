@@ -291,6 +291,141 @@ html[data-theme="dark"] .publications a {
 }
 
 // ---------------------------------------------------------------------------
+// Home-page "Selected work" showcase slideshow (see _includes/showcase_
+// slideshow.liquid and assets/js/showcase.js). Every class below appears in
+// the static include markup, so purgecss keeps it (.active is pre-seeded on
+// slide 1 and dot 1). The caption strip is white-on-gradient by design --
+// theme-independent over arbitrary media. JS disables autoplay under
+// prefers-reduced-motion; the fade is disabled here for the same preference.
+// ---------------------------------------------------------------------------
+.showcase {
+  margin: 1.5rem 0;
+  outline: none;
+}
+
+.showcase-viewport {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--global-divider-color);
+  background: #000;
+}
+
+.showcase-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.showcase-media-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.showcase-media {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.showcase-caption {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.78));
+  color: #fff;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  align-items: baseline;
+  font-size: 0.85rem;
+}
+
+.showcase-title {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.7);
+  text-underline-offset: 0.18em;
+}
+
+.showcase-desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.showcase-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.showcase-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--global-divider-color);
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--global-hover-text-color);
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
+}
+
+.showcase-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.showcase-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--global-divider-color);
+  background: transparent;
+  cursor: pointer;
+
+  &.active {
+    background: var(--global-theme-color);
+    border-color: var(--global-theme-color);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-slide {
+    transition: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .showcase-caption {
+    font-size: 0.75rem;
+    gap: 0.4rem;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Original al_folio_core typography rules (unchanged below this line)
 // ---------------------------------------------------------------------------
 
