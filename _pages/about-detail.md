@@ -5,7 +5,7 @@ permalink: /about/
 description: Who I am, how I think about research, and where I'm headed.
 subtitle: Kinetics, optimization, and uncertainty — treated as one connected problem.
 nav: true
-nav_order: 5
+nav_order: 7
 profile:
   align: right
   image: prof_pic.png

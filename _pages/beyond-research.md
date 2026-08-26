@@ -4,7 +4,7 @@ title: Beyond Research
 permalink: /beyond-research/
 description: Research is what I do. It isn't all of who I am.
 nav: true
-nav_order: 4
+nav_order: 6
 map: true
 ---
 

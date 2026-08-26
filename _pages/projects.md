@@ -3,7 +3,8 @@ layout: page
 title: Research Projects
 permalink: /projects/
 description: Optimization, uncertainty quantification, combustion kinetics, scientific ML and computational engineering — eleven projects, filterable by theme.
-nav: false
+nav: true
+nav_order: 3
 ---
 
 <div class="filter-bar" role="group" aria-label="Filter projects by theme">
