@@ -1,10 +1,31 @@
 ---
-layout: page
+layout: about
 title: About
 permalink: /about/
 description: Who I am, how I think about research, and where I'm headed.
+subtitle: Kinetics, optimization, and uncertainty — treated as one connected problem.
 nav: true
 nav_order: 5
+profile:
+  align: right
+  image: prof_pic.png
+  image_circular: false # crops the image to make it circular
+  degree: PhD, Mechanical Engineering
+  institute: IIT Madras
+  degree_year: "2026"
+  research_areas:
+    - Experimental &amp; Numerical Combustion
+    - Combustion Kinetics &amp; Mechanism Reduction
+    - Fair Multi-Objective Optimization &amp; UQ
+    - Reduced-Order Modelling &amp; Scientific ML
+    - Gasification
+    - CFD
+  current_role:
+    title: Project Associate
+    org: Dept. of Mechanical Engineering, IIT Madras
+    until: 30 Nov 2026
+  address: Dept. of Mechanical Engineering, IIT Madras, Chennai 600036, India
+social: true # includes social icons at the bottom of the page
 ---
 
 ## Who I am
@@ -20,6 +41,10 @@ I try to understand the structure of a problem before optimizing it. A rate cons
 - **PhD, Mechanical Engineering** — Indian Institute of Technology Madras (2018–2026)
 - **M.Tech, Thermal Engineering** — Nirma University, Institute of Technology (2016–2018), ISTE National Award for Best M.Tech Thesis 2018
 - **B.E., Mechanical Engineering** — Government Engineering College, Modasa (2012–2016)
+
+<figure class="loop-media">
+  <img src="/assets/img/prof_pic_alt.png" alt="Krunal Panchal" loading="lazy" style="max-width: 240px;" />
+</figure>
 
 <div class="cta-row">
   <a class="btn-cta btn-cta-secondary" href="/cv/">View the full CV &rarr;</a>
