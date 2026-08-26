@@ -18,22 +18,40 @@ I develop fair multi-objective optimization, uncertainty-quantification and redu
 
 ## Research themes
 
+<!-- B5 (GOAL_SCORECARD.md, session 11): each theme card is now a real link into
+     the project that best represents it, with a representative figure -- the
+     hover-preview system (hover_previews.liquid, B1) picks these links up
+     automatically at build time (it indexes every real internal URL), so
+     hovering any card title now shows the linked project's own title +
+     description with zero extra work here. -->
 <div class="row row-cols-1 row-cols-md-2">
   <div class="col mb-4">
-    <h3>Combustion Kinetics & Mechanism Reduction</h3>
-    <p>Chemical kinetic mechanism development, validation and reduction to tractable, simulation-ready form — from H<sub>2</sub>/O<sub>2</sub> to n-heptane, methyl butanoate and 1,3-butadiene.</p>
+    <a href="/projects/mosiac/" style="text-decoration: none; color: inherit;">
+      <img src="/assets/img/projects/mosiac/007_02b_ignitability_3d_map-800.png" alt="MOSIAC ignitability 3D map" loading="lazy" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;" />
+      <h3>Combustion Kinetics &amp; Mechanism Reduction &rarr;</h3>
+    </a>
+    <p>Chemical kinetic mechanism development, validation and reduction to tractable, simulation-ready form — from H<sub>2</sub>/O<sub>2</sub> to n-heptane, methyl butanoate and 1,3-butadiene. Workbench: <a href="/projects/mosiac/">MOSIAC</a>.</p>
   </div>
   <div class="col mb-4">
-    <h3>Fair Multi-Objective Optimization & UQ</h3>
-    <p>Multi-stage, multi-dataset optimization of Arrhenius rate parameters built around a fair mean objective across datasets; correlated-parameter Bayesian uncertainty quantification and its propagation forward through the model.</p>
+    <a href="/projects/muq-sac/" style="text-decoration: none; color: inherit;">
+      <img src="/assets/img/projects/muq-sac/001_fig1_ellipsoid_containment-800.png" alt="MUQ-SAC correlated-parameter uncertainty ellipsoid" loading="lazy" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;" />
+      <h3>Fair Multi-Objective Optimization &amp; UQ &rarr;</h3>
+    </a>
+    <p>Multi-stage, multi-dataset optimization of Arrhenius rate parameters built around a fair mean objective across datasets; correlated-parameter Bayesian uncertainty quantification and its propagation forward through the model. Method: <a href="/projects/muq-sac/">MUQ-SAC</a>, applied via <a href="/projects/mso-objectives/">MSO objectives</a>.</p>
   </div>
   <div class="col mb-4">
-    <h3>Reduced-Order Modelling & Scientific ML</h3>
-    <p>Neural and response-surface surrogates that stand in for expensive stiff simulations — where they work, where they don't, and why.</p>
+    <a href="/projects/sciml/" style="text-decoration: none; color: inherit;">
+      <img src="/assets/img/projects/sciml/001_fig1_noise_floor-800.png" alt="SciML noise-floor figure from the Neural ODE surrogate study" loading="lazy" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;" />
+      <h3>Reduced-Order Modelling &amp; Scientific ML &rarr;</h3>
+    </a>
+    <p>Neural and response-surface surrogates that stand in for expensive stiff simulations — where they work, where they don't, and why. Deep dive: <a href="/projects/sciml/">SciML</a>; live demo: <a href="/playground/">the Neural ODE playground</a>.</p>
   </div>
   <div class="col mb-4">
-    <h3>Experimental & Numerical Combustion, CFD</h3>
-    <p>Pool-flame characterization and downdraft gasification alongside an in-house CFD/multiphysics solver, reacting-flow studies, vaporizer/burner rig design, and early-stage quantum-chemical rate-constant estimation.</p>
+    <a href="/projects/vaporizer-rigs/" style="text-decoration: none; color: inherit;">
+      <img src="/assets/img/projects/vaporizer-rigs/004_pressure_drop_vs_diameter-800.png" alt="Vaporizer rig pressure-drop-vs-diameter design chart" loading="lazy" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;" />
+      <h3>Experimental &amp; Numerical Combustion, CFD &rarr;</h3>
+    </a>
+    <p>Pool-flame characterization and downdraft gasification alongside an in-house CFD/multiphysics solver, reacting-flow studies, vaporizer/burner rig design, and early-stage quantum-chemical rate-constant estimation. Rig design: <a href="/projects/vaporizer-rigs/">vaporizer rigs</a>; imaging: <a href="/projects/flame-processor/">Flame Processor</a>.</p>
   </div>
 </div>
 
