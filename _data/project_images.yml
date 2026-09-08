@@ -1416,28 +1416,27 @@ dokimazo:
     ground truth for an unbranched alkane's global MMFF94 minimum.
   src_800: assets/img/projects/dokimazo/03_torsion_convergence-800.png
 - index: 5
-  caption: Four solvers racing to the Rosenbrock minimum on a shared evaluation budget
+  caption: Five solvers racing to the Rosenbrock minimum, same evaluation budget
   topic: solver-visualization
-  description: Nelder-Mead, IPOP-CMA-ES, and two independent L-BFGS-B implementations
-    (dokimazo's own native solver and a thin scipy wrapper) searching the same landscape
-    on one shared cumulative-function-evaluation clock — not iteration count, which
-    would make gradient-based methods look free next to population-based ones. The
-    right-hand panel is the actual scoreboard — best-so-far objective value vs. evaluations
-    spent, log-scaled, so two independent implementations converging to the same path
-    (as the two L-BFGS-B variants genuinely do here) reads as "these agree," not "one
-    solver is missing."
+  description: 'Nelder-Mead, CMA-ES (an evolution strategy), a genetic algorithm (PyGAD),
+    and two independent L-BFGS-B implementations (dokimazo''s own native solver and
+    a SciPy reference) searching the same landscape on one shared cumulative-function-evaluation
+    clock -- both gradient-based and heuristic/population-based methods side by side,
+    with a final scoreboard on the figure itself: both L-BFGS-B implementations and
+    Nelder-Mead reach machine precision in 200-240 evaluations; CMA-ES matches them
+    at roughly 10x the budget; the genetic algorithm needs more than double CMA-ES''s
+    budget to get close but not to machine precision.'
   video: assets/video/dokimazo/05_race_2d.mp4
   src_800: assets/img/projects/dokimazo/05_race_2d_poster-800.png
 - index: 6
-  caption: The same four solvers on Rastrigin, a highly multimodal landscape
+  caption: The same five solvers on Rastrigin, a highly multimodal landscape
   topic: solver-visualization
-  description: On a single smooth valley (Rosenbrock, above) every solver takes visibly
-    the same route. Rastrigin's many local minima tell a different story on the same
-    shared budget — the two gradient-based methods converge in a handful of evaluations
-    to whichever nearby local minimum they land in first, Nelder-Mead stalls near
-    its own starting point, and only IPOP-CMA-ES's population-wide search (visible
-    spanning the whole box) reaches the true global optimum, via several restart escapes
-    from earlier local minima.
+  description: 'On a single smooth valley (Rosenbrock, above) most solvers take visibly
+    similar routes. Rastrigin''s many local minima tell a different, genuinely surprising
+    story on this run: both L-BFGS-B implementations and CMA-ES all reach the true
+    global optimum directly, while Nelder-Mead and the genetic algorithm both get
+    trapped in nearby local minima on the same shared budget -- real evidence that
+    gradient methods failing on a multimodal function is a tendency, not a law.'
   video: assets/video/dokimazo/06_race_rastrigin.mp4
   src_800: assets/img/projects/dokimazo/06_race_rastrigin_poster-800.png
 - index: 7
