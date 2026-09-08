@@ -1255,6 +1255,18 @@ flamelab:
     overlays (gallery above) apply campaign-wide.
   src_800: assets/img/projects/flame-processor/006_burner_tracking-800.png
   video: assets/img/projects/flame-processor/006_burner_tracking.gif
+- index: 35
+  caption: All four regimes at once -- multi-location width tracking, one frame
+  topic: zonal
+  description: 'The full Hopf-sequence regime progression (ignition transient, steady
+    laminar, flickering onset, periodic flickering) shown simultaneously in one 2x2
+    frame, each quadrant its own real-time instrument: the tracked flame boundary,
+    height/area/volume traces, and -- the point of this view -- flame width tracked
+    at multiple zone heights at once (the stacked traces in each quadrant''s bottom
+    panel), not a single fixed point.'
+  src_800: assets/img/projects/flamelab/035_MVI8036-zonal-four-regimes-quadrant-800.png
+  src_1600: assets/img/projects/flamelab/035_MVI8036-zonal-four-regimes-quadrant-1600.png
+  video: assets/img/projects/flamelab/035_MVI8036-zonal-four-regimes-quadrant.mp4
 neural-ode-playground:
 - index: 1
   caption: 12-optimizer race on the Van der Pol benchmark
