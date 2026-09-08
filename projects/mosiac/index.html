@@ -71,7 +71,7 @@
       if (play && play.catch) play.catch(function () {});
     }
   });
-</script> </li> </ul> <h2 id="step-by-step-a-real-h2o2-case-study-run-live-for-this-page">Step-by-step: a real H2/O2 case study, run live for this page</h2> <p>Everything below is from an actual session driving MOSIAC Studio on the bundled H2/O2 mechanism (29 reactions) — not a description of what the GUI is supposed to do. Screenshots and log output are unedited; where something didn’t work, that’s shown too.</p> <h3 id="1-launch">1. Launch</h3> <p>MOSIAC Studio opens on a tile gallery, grouped by workflow stage (Prepare · Explore · Quantify · Optimise · Compare · Utilities — 20 tools total). The status bar along the bottom checks every backend before anything runs: repository, the <code class="language-plaintext highlighter-rouge">.venv-gui</code> PySide6 environment, the separate science-stack Python, Cantera, and disk space all read green here.</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/018_01_launcher-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/018_01_launcher-800.png" alt="Step 1 — MOSIAC Studio launcher" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The launcher's tile gallery, grouped by workflow stage (Prepare/Explore/Quantify/Optimise/Compare/Utilities) — 20 tools total. Status bar confirms every backend is healthy (repository, .venv-gui/PySide6, Science python, Cantera, Modules, disk space) before starting. </figcaption> </figure> </div> </div> </div> <style>
+</script> </li> </ul> <h2 id="live-a-real-h2o2-case-study-screen-recorded-end-to-end">Live: a real H2/O2 case study, screen-recorded end to end</h2> <p>The two videos below are real, screen-recorded MOSIAC Studio sessions — not screenshots, not a mockup. They’re captured through Qt’s own offscreen render pipeline (this page is generated on a headless machine with no physical display attached), which paints pixels identically to a normal window but off-screen; every frame is a genuine render of the real running app reacting to real, scripted input, then encoded straight to video. Nothing about what’s on screen is staged.</p> <p>One honest gap in reproducing this demo: the original 426-target H2/O2 dataset this walkthrough was built against is no longer present in this checkout. Rather than skip the demo or fake the data, the ignition-delay targets shown here were regenerated from scratch — a real Cantera constant-volume reactor integration at 30 conditions against Cantera’s own bundled <code class="language-plaintext highlighter-rouge">h2o2.yaml</code> mechanism (29 reactions), producing a real, physically sensible Arrhenius ignition-delay curve. Getting the full pipeline to accept that data surfaced (and fixed) several real environment gaps along the way — a missing Cantera install, a Python-version-mismatched compiled extension, a case-sensitive import bug, and a missing <code class="language-plaintext highlighter-rouge">.target</code>/<code class="language-plaintext highlighter-rouge">.add</code> addendum link — documented in <code class="language-plaintext highlighter-rouge">scripts/build_h2o2_demo_target.py</code> and <code class="language-plaintext highlighter-rouge">scripts/record_studio_walkthrough.py</code> in the source repository.</p> <h3 id="nominal-simulation-configured-and-run-live">Nominal Simulation, configured and run live</h3> <p>The Nominal Simulation tool — mechanism, targets, thermo/transport files, target count — filled with the real (regenerated) H2/O2 case, then actually run. The run genuinely completes: 30 real result tables in 15.8 real seconds, watched live in the Tables tab as they land.</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure" data-kind="video"> <video src="/assets/img/projects/mosiac/018_nominal_sim_walkthrough.mp4" poster="/assets/img/projects/mosiac/018_nominal_sim_walkthrough_poster-800.png" preload="metadata" aria-label="Live: configuring and running a real H2/O2 Nominal Simulation" autoplay="" loop="" muted="" playsinline="" class="img-fluid rounded z-depth-1" style="width: 100%;"></video> <figcaption> A real, screen-recorded MOSIAC Studio session (Qt's own offscreen render pipeline, frame-captured live -- not a mockup): Cantera's bundled 29-reaction h2o2.yaml mechanism, a set of ignition-delay targets computed directly from real constant-volume Cantera reactor runs (the original demo dataset this walkthrough was built against is no longer present in this checkout, so the targets were regenerated from scratch rather than faked), fed through the Nominal Simulation tool end to end. The run genuinely completes -- 30 real result tables in 15.8 real seconds, watched live in the Tables tab as it finishes. </figcaption> </figure> </div> </div> </div> <style>
     .project-gallery figcaption {
       font-family: 'Roboto Mono', 'SF Mono', monospace;
       font-size: 0.82rem;
@@ -121,7 +121,7 @@
         if (play && play.catch) play.catch(function () {});
       }
     });
-  </script> <h3 id="2-configure-a-nominal-simulation">2. Configure a nominal simulation</h3> <p>Clicking the <strong>Nominal Simulation</strong> tile opens its own window with a plain form: run label, mechanism file, target file, thermo/transport files, target count. Filled in here with the real bundled case — <code class="language-plaintext highlighter-rouge">h2o2_he.yaml</code>, its thermo and transport data, and the 426-target experimental file that ships with it (426 targets total; run at 52 here so the demo finishes in under a minute rather than the ~4 minutes a full pass takes).</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/019_02_nominal_filled-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/019_02_nominal_filled-800.png" alt="Step 2 — Nominal Simulation, configured for H2/O2" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The Nominal Simulation form filled with the real bundled H2/O2 case: the h2o2_he.yaml mechanism (29 reactions), its thermo and transport files, and the 426-target experimental target file (426 total targets; 52 run here for a fast demo pass). </figcaption> </figure> </div> </div> </div> <style>
+  </script> <h3 id="ignition-delay-sensitivity-configured-and-run-live">Ignition-Delay Sensitivity, configured and run live</h3> <p>A different, self-contained diagnostic — “which reactions actually control ignition delay, at one condition” — rather than a full optimization run. Configured for H<sub>2</sub> fuel at T=1200 K, P=13.5 atm, phi=1.0, constant-volume reactor, brute-force method, top 20 reactions, and run to completion in under a second. The result is exactly what combustion chemistry says it should be: <strong>H + O2 ⇌ O + OH</strong>, the dominant chain-branching step, comes out with the single largest-magnitude coefficient (−1.62) — speed that reaction up and ignition delay drops. <strong>H + O2 + N2 ⇌ HO2 + N2</strong>, a chain-_terminating_ three-body step, is next largest and has the <em>opposite</em> sign (+0.79) — speed that one up and ignition delay gets longer. A tool that didn’t understand the chemistry couldn’t get that sign flip right by accident.</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure" data-kind="video"> <video src="/assets/img/projects/mosiac/019_idt_sensitivity_walkthrough.mp4" poster="/assets/img/projects/mosiac/019_idt_sensitivity_walkthrough_poster-800.png" preload="metadata" aria-label="Live: Ignition-Delay Sensitivity, configured and run" autoplay="" loop="" muted="" playsinline="" class="img-fluid rounded z-depth-1" style="width: 100%;"></video> <figcaption> The same real, live-recorded session driving a second, self-contained tool: ignition-delay sensitivity d ln(tau)/d ln(k) for H2 fuel at T=1200K, P=13.5atm, phi=1.0, constant-volume reactor, brute-force method, top 20 reactions. The run completes in well under a second, and the ranked result is physically exactly right: H + O2 &lt;=&gt; O + OH (the dominant chain-branching step) comes out as the single largest-magnitude coefficient (-1.62), and H + O2 + N2 &lt;=&gt; HO2 + N2 (a chain-terminating three-body step) is next, with the opposite sign (+0.79) -- faster branching shortens ignition delay, faster termination lengthens it. A tool that didn't understand the chemistry couldn't get that sign flip right by accident. </figcaption> </figure> </div> </div> </div> <style>
     .project-gallery figcaption {
       font-family: 'Roboto Mono', 'SF Mono', monospace;
       font-size: 0.82rem;
@@ -171,207 +171,7 @@
         if (play && play.catch) play.catch(function () {});
       }
     });
-  </script> <h3 id="3-run-it">3. Run it</h3> <p>Nominal Simulation runs on a background thread specifically so the window doesn’t lock up mid-run — Run becomes Stop, and a live log strip shows progress underneath the form.</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/020_03_nominal_running-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/020_03_nominal_running-800.png" alt="Step 3 — running (GUI stays responsive)" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The run in progress. Nominal Simulation runs on a background thread specifically so the window doesn't lock up — the Run button becomes Stop, live in the log strip below the form. </figcaption> </figure> </div> </div> </div> <style>
-    .project-gallery figcaption {
-      font-family: 'Roboto Mono', 'SF Mono', monospace;
-      font-size: 0.82rem;
-      line-height: 1.45;
-      color: var(--global-text-color-light);
-      margin-top: 0.5rem;
-    }
-    .project-gallery .original-link {
-      white-space: nowrap;
-    }
-    .project-gallery video {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: contain;
-      background: #000;
-    }
-    .project-gallery figure.gallery-figure[data-kind='video'] {
-      position: relative;
-    }
-    .project-gallery figure.gallery-figure[data-kind='video']::after {
-      content: 'video';
-      position: absolute;
-      top: 0.5rem;
-      left: 0.5rem;
-      padding: 0.15rem 0.5rem;
-      font-family: 'Roboto Mono', 'SF Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 4px;
-    }
-  </style> <script>
-    // Muted-loop gallery videos should never depend on the autoplay
-    // attribute alone -- some browsers/environments withhold it even for
-    // muted media. Kick each one explicitly once the DOM is ready; the
-    // poster remains if playback is blocked, and prefers-reduced-motion is
-    // honoured by not starting them at all.
-    document.addEventListener('DOMContentLoaded', function () {
-      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduced) return;
-      var videos = document.querySelectorAll('.project-gallery video');
-      for (var i = 0; i < videos.length; i++) {
-        var play = videos[i].play();
-        if (play && play.catch) play.catch(function () {});
-      }
-    });
-  </script> <h3 id="4-real-results-not-a-mock-up">4. Real results, not a mock-up</h3> <p>52 tables in 23.5 seconds. The Tables tab shows per-target predicted-vs-observed rows — dataset <code class="language-plaintext highlighter-rouge">TIG_0001</code> at 1000 K is the first one here — and the run wrote a full case-by-case output tree to disk: 52 numbered case directories under <code class="language-plaintext highlighter-rouge">SIM_RUNS/nominal_htc/NOMINAL/</code>, each with its own <code class="language-plaintext highlighter-rouge">time_history.csv</code>, a copy of the mechanism actually used, and a solver log, plus a <code class="language-plaintext highlighter-rouge">Plot/Dataset/</code> tree of generated figures.</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/021_04_nominal_done-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/021_04_nominal_done-800.png" alt="Step 4 — done: 52 result tables in 23.5 seconds" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> Completion state: "nominal_htc — done, Wall time: 23.5s · 52 table(s)." The Tables tab shows real per-target predicted-vs-observed rows (here, dataset TIG_0001 at 1000K); the full run wrote 52 case directories with time-history CSVs, a mechanism copy, and solver logs under SIM_RUNS/nominal_htc/. </figcaption> </figure> </div> </div> </div> <style>
-    .project-gallery figcaption {
-      font-family: 'Roboto Mono', 'SF Mono', monospace;
-      font-size: 0.82rem;
-      line-height: 1.45;
-      color: var(--global-text-color-light);
-      margin-top: 0.5rem;
-    }
-    .project-gallery .original-link {
-      white-space: nowrap;
-    }
-    .project-gallery video {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: contain;
-      background: #000;
-    }
-    .project-gallery figure.gallery-figure[data-kind='video'] {
-      position: relative;
-    }
-    .project-gallery figure.gallery-figure[data-kind='video']::after {
-      content: 'video';
-      position: absolute;
-      top: 0.5rem;
-      left: 0.5rem;
-      padding: 0.15rem 0.5rem;
-      font-family: 'Roboto Mono', 'SF Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 4px;
-    }
-  </style> <script>
-    // Muted-loop gallery videos should never depend on the autoplay
-    // attribute alone -- some browsers/environments withhold it even for
-    // muted media. Kick each one explicitly once the DOM is ready; the
-    // poster remains if playback is blocked, and prefers-reduced-motion is
-    // honoured by not starting them at all.
-    document.addEventListener('DOMContentLoaded', function () {
-      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduced) return;
-      var videos = document.querySelectorAll('.project-gallery video');
-      for (var i = 0; i < videos.length; i++) {
-        var play = videos[i].play();
-        if (play && play.catch) play.catch(function () {});
-      }
-    });
-  </script> <h3 id="5-a-second-tool-ignition-delay-sensitivity">5. A second tool: ignition-delay sensitivity</h3> <p>A different, self-contained diagnostic — “which reactions actually control ignition delay, at one condition” — rather than a full optimization run. Configured for H<sub>2</sub> fuel at T=1200 K, P=13.5 atm, phi=1.0, constant-volume reactor, brute-force method, top 20 reactions.</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/022_05_idt_filled-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/022_05_idt_filled-800.png" alt="Step 5 — Ignition-Delay Sensitivity, configured" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> A second, self-contained tool: ignition-delay sensitivity d ln(tau)/d ln(k) for one condition (H2 fuel, T=1200K, P=13.5atm, phi=1.0, constant-volume reactor, brute-force method, top 20 reactions) — same mechanism, a different diagnostic question. </figcaption> </figure> </div> </div> </div> <style>
-    .project-gallery figcaption {
-      font-family: 'Roboto Mono', 'SF Mono', monospace;
-      font-size: 0.82rem;
-      line-height: 1.45;
-      color: var(--global-text-color-light);
-      margin-top: 0.5rem;
-    }
-    .project-gallery .original-link {
-      white-space: nowrap;
-    }
-    .project-gallery video {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: contain;
-      background: #000;
-    }
-    .project-gallery figure.gallery-figure[data-kind='video'] {
-      position: relative;
-    }
-    .project-gallery figure.gallery-figure[data-kind='video']::after {
-      content: 'video';
-      position: absolute;
-      top: 0.5rem;
-      left: 0.5rem;
-      padding: 0.15rem 0.5rem;
-      font-family: 'Roboto Mono', 'SF Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 4px;
-    }
-  </style> <script>
-    // Muted-loop gallery videos should never depend on the autoplay
-    // attribute alone -- some browsers/environments withhold it even for
-    // muted media. Kick each one explicitly once the DOM is ready; the
-    // poster remains if playback is blocked, and prefers-reduced-motion is
-    // honoured by not starting them at all.
-    document.addEventListener('DOMContentLoaded', function () {
-      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduced) return;
-      var videos = document.querySelectorAll('.project-gallery video');
-      for (var i = 0; i < videos.length; i++) {
-        var play = videos[i].play();
-        if (play && play.catch) play.catch(function () {});
-      }
-    });
-  </script> <h3 id="6-done-in-24-seconds--and-the-physics-checks-out">6. Done in 2.4 seconds — and the physics checks out</h3> <p>The tool writes a JSON of normalized sensitivity coefficients (d ln(tau)/d ln(k)) for all 29 reactions in the mechanism. The result is exactly what combustion chemistry says it should be: <strong>H + O2 ⇌ O + OH</strong>, the dominant chain-branching step, has the single largest-magnitude coefficient (−1.62) — speed that reaction up and ignition delay drops. <strong>H + O2 + N2 ⇌ HO2 + N2</strong>, a chain-_terminating_ three-body step, is next largest and has the <em>opposite</em> sign (+0.79) — speed that one up and ignition delay gets longer. A tool that didn’t understand the chemistry couldn’t get that sign flip right by accident.</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/023_06_idt_done-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/023_06_idt_done-800.png" alt="Step 6 — done in 2.4 seconds" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The completed run, writing a JSON of normalized sensitivity coefficients for all 29 reactions. The top result is physically exactly right: H + O2 &lt;=&gt; O + OH (the dominant chain-branching step) has the largest-magnitude coefficient (-1.62), and H + O2 + N2 &lt;=&gt; HO2 + N2 (a chain-terminating three-body step) is next, with the opposite sign (+0.79) -- faster branching shortens ignition delay, faster termination lengthens it. </figcaption> </figure> </div> </div> </div> <style>
-    .project-gallery figcaption {
-      font-family: 'Roboto Mono', 'SF Mono', monospace;
-      font-size: 0.82rem;
-      line-height: 1.45;
-      color: var(--global-text-color-light);
-      margin-top: 0.5rem;
-    }
-    .project-gallery .original-link {
-      white-space: nowrap;
-    }
-    .project-gallery video {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: contain;
-      background: #000;
-    }
-    .project-gallery figure.gallery-figure[data-kind='video'] {
-      position: relative;
-    }
-    .project-gallery figure.gallery-figure[data-kind='video']::after {
-      content: 'video';
-      position: absolute;
-      top: 0.5rem;
-      left: 0.5rem;
-      padding: 0.15rem 0.5rem;
-      font-family: 'Roboto Mono', 'SF Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.55);
-      border-radius: 4px;
-    }
-  </style> <script>
-    // Muted-loop gallery videos should never depend on the autoplay
-    // attribute alone -- some browsers/environments withhold it even for
-    // muted media. Kick each one explicitly once the DOM is ready; the
-    // poster remains if playback is blocked, and prefers-reduced-motion is
-    // honoured by not starting them at all.
-    document.addEventListener('DOMContentLoaded', function () {
-      var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if (reduced) return;
-      var videos = document.querySelectorAll('.project-gallery video');
-      for (var i = 0; i < videos.length; i++) {
-        var play = videos[i].play();
-        if (play && play.catch) play.catch(function () {});
-      }
-    });
-  </script> <h3 id="7-attempting-an-optimization-run">7. Attempting an optimization run</h3> <p>The Optimization tool needs a fully-populated <code class="language-plaintext highlighter-rouge">target.opt</code> project file (mechanism, targets, thermo/transport, and every optimizer setting in one place) rather than a form — MOSIAC’s real campaigns aren’t quick, so this is the one tool built around editing a config file directly rather than re-filling a form each time. For this demo, a copy of the bundled H2 project config had its generation count cut from 20,000 to 5 and its target count from 426 to 30 (the real settings would run for hours); everything else — mechanism, solver, targets — is the same real H2/O2 case as steps 2–6. The design-space plot below is generated automatically as the run’s first step, before any fitting starts:</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/024_09_tpphi_space-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/024_09_tpphi_space-800.png" alt="The 30-target design space for the optimization attempt" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> Temperature/pressure/equivalence-ratio coverage of the reduced 30-target subset used for the optimization run below, generated automatically as the first step of that pipeline before any fitting starts. </figcaption> </figure> </div> </div> </div> <style>
+  </script> <h3 id="attempting-an-optimization-run">Attempting an optimization run</h3> <p>The Optimization tool needs a fully-populated <code class="language-plaintext highlighter-rouge">target.opt</code> project file (mechanism, targets, thermo/transport, and every optimizer setting in one place) rather than a form — MOSIAC’s real campaigns aren’t quick, so this is the one tool built around editing a config file directly rather than re-filling a form each time. For this demo, a copy of the bundled H2 project config had its generation count cut from 20,000 to 5 and its target count from 426 to 30 (the real settings would run for hours); everything else — mechanism, solver, targets — is the same real H2/O2 case as above. The design-space plot below is generated automatically as the run’s first step, before any fitting starts:</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/024_09_tpphi_space-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/024_09_tpphi_space-800.png" alt="The 30-target design space for the optimization attempt" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> Temperature/pressure/equivalence-ratio coverage of the reduced 30-target subset used for the optimization run below, generated automatically as the first step of that pipeline before any fitting starts. </figcaption> </figure> </div> </div> </div> <style>
     .project-gallery figcaption {
       font-family: 'Roboto Mono', 'SF Mono', monospace;
       font-size: 0.82rem;
@@ -471,7 +271,7 @@
         if (play && play.catch) play.catch(function () {});
       }
     });
-  </script> <h3 id="8-where-it-actually-broke--shown-not-hidden">8. Where it actually broke — shown, not hidden</h3> <p>The run got through target export, the design-space plot above, and parsing the joint-uncertainty data (a 3-reaction test fixture, used here since the bundled H2 project’s own uncertainty file turned out to be a plain-text target file rather than the XML the optimizer expects — a real gap in the demo data, fixed by pointing at a smaller uncertainty fixture already in the repository’s own test suite). It then failed one step later: the sensitivity-analysis sub-step expects a nominal-simulation case directory at a specific relative path (<code class="language-plaintext highlighter-rouge">nominal/case-7</code>) that this standalone optimization run hadn’t produced itself. That’s a real, undocumented dependency between two of the GUI’s own tools — Nominal Simulation and Optimization apparently need to be run from a shared working directory for the second to find the first’s output — caught only by actually running them back to back, not by reading the source.</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/026_08_opt_error-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/026_08_opt_error-800.png" alt="Step 8 — a real limitation, shown rather than hidden" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The optimizer got through target export, the design-space plot above, and parsing the joint-uncertainty data (3 reactions) before failing: its sensitivity-analysis sub-step expects a nominal-simulation case directory at a specific relative path (nominal/case-7) that this standalone run hadn't produced yet. A real dependency between two of the GUI's own tools, caught by actually running them back to back rather than reading the source. </figcaption> </figure> </div> </div> </div> <style>
+  </script> <h3 id="where-it-actually-broke--shown-not-hidden">Where it actually broke — shown, not hidden</h3> <p>The run got through target export, the design-space plot above, and parsing the joint-uncertainty data (a 3-reaction test fixture, used here since the bundled H2 project’s own uncertainty file turned out to be a plain-text target file rather than the XML the optimizer expects — a real gap in the demo data, fixed by pointing at a smaller uncertainty fixture already in the repository’s own test suite). It then failed one step later: the sensitivity-analysis sub-step expects a nominal-simulation case directory at a specific relative path (<code class="language-plaintext highlighter-rouge">nominal/case-7</code>) that this standalone optimization run hadn’t produced itself. That’s a real, undocumented dependency between two of the GUI’s own tools — Nominal Simulation and Optimization apparently need to be run from a shared working directory for the second to find the first’s output — caught only by actually running them back to back, not by reading the source.</p> <div class="project-gallery"> <div class="row row-cols-1 row-cols-md-2 g-3 mb-4"> <div class="col"> <figure class="gallery-figure"> <a href="/assets/img/projects/mosiac/026_08_opt_error-1600.png" target="_blank" rel="noopener"> <img src="/assets/img/projects/mosiac/026_08_opt_error-800.png" alt="Step 8 — a real limitation, shown rather than hidden" loading="lazy" class="img-fluid rounded z-depth-1" style="width: 100%;"> </a> <figcaption> The optimizer got through target export, the design-space plot above, and parsing the joint-uncertainty data (3 reactions) before failing: its sensitivity-analysis sub-step expects a nominal-simulation case directory at a specific relative path (nominal/case-7) that this standalone run hadn't produced yet. A real dependency between two of the GUI's own tools, caught by actually running them back to back rather than reading the source. </figcaption> </figure> </div> </div> </div> <style>
     .project-gallery figcaption {
       font-family: 'Roboto Mono', 'SF Mono', monospace;
       font-size: 0.82rem;
