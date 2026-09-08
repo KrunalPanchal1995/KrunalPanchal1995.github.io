@@ -44,7 +44,7 @@ The geometric-onset figure is a different, collaborative technique — led by Ga
 
 A journal-length extension of the multi-stage strategy above — adding an explicit reaction-classification step (extending the classical high/low-temperature-chemistry taxonomy to resolve a three-way split needed for unsaturated fuels) and applying the same calibration across three fuels rather than one — is in preparation, targeting _Combustion and Flame_. No results from that manuscript are public yet; it's named here only as a forthcoming piece, per disclosure policy for work at this stage.
 
-**Tuning the power-mean objective's own hyperparameters** is itself the subject of a separate, companion methodology paper in preparation: a systematic search over the objective's exponent and annealing schedule, combining a design-of-experiments response-surface search with a second, independent multi-optimizer confirmation pass, rather than hand-picking a setting once and reusing it. Also title-only at this stage — no numbers from that manuscript are public yet.
+**Tuning the power-mean objective's own hyperparameters** is itself the subject of a separate, companion methodology paper in preparation: a systematic search over the objective's exponent and annealing schedule, combining a design-of-experiments response-surface search with a second, independent multi-optimizer confirmation pass, rather than hand-picking a setting once and reusing it. That manuscript is still in preparation, but its own figures — the toy objective-landscape comparison, the optimizer-comparison grid, the classical-WMRE dominance analysis, and the full ignition-delay and hyperparameter-sweep breakdowns across all three fuels — are shown further down this page, published ahead of the paper itself at the author's own request (a deliberate, logged exception to the usual accepted-abstract-only tier; see `DISCLOSURE_POLICY.md`).
 
 ## Extending to thermodynamic parameters
 
@@ -59,6 +59,12 @@ The multi-stage strategy applied to n-heptane is published: {% cite panchal2023a
 The power-mean objective work is accepted for presentation at the 64th Symposium (Japanese) on Combustion, Fukuoka, Nov 2026: {% cite panchal2026powermean %}. Per the accepted abstract, at an identical solver budget the power-mean objective reduces error to **roughly a quarter of what classical WMRE achieves**, across methyl butanoate and n-heptane case studies.
 
 The underlying theoretical framework that makes this multi-stage, multi-dataset optimization computationally tractable is still in preparation; only the accepted abstract's own claims are reproduced here.
+
+## From the hyperparameter-tuning paper draft
+
+The figures below are from the in-preparation hyperparameter-tuning manuscript itself, shown ahead of publication (see the note above and `DISCLOSURE_POLICY.md`'s logged exception for 2026-09-08): the toy 2D landscape under classical WMRE vs. a fixed-p vs. an annealed-p power-mean objective, the same landscape searched by three different solvers, the classical-WMRE dominance analysis that motivates the whole approach, representative and full-appendix real ignition-delay fits across all three fuels, and solver-resolved hyperparameter-sweep heatmaps with real per-cell error numbers.
+
+{% include project_gallery.liquid project="mso-objectives" topic="full-paper-figures" %}
 
 ## Validation
 

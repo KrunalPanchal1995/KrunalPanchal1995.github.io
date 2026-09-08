@@ -224,6 +224,115 @@ mso-objectives:
   src_800: assets/img/projects/mso-objectives/013_Geometric_Onset-800.png
   src_1600: assets/img/projects/mso-objectives/013_Geometric_Onset-1600.png
   original_pdf: assets/pdf/projects/mso-objectives/Geometric_Onset.pdf
+- index: 14
+  caption: 3D objective landscape — WMRE vs. fixed-p vs. annealed powerMeanWMRE
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft (in preparation for a Japan
+    conference), shared here ahead of publication at the author''s request. A toy
+    2D search landscape shown three ways: classical WMRE''s objective surface, a
+    fixed-p power-mean surface, and the annealed-p surface a genetic-algorithm search
+    actually sees as p anneals from 4 to 0.05 during the run — the annealing is what
+    smooths a rugged multi-basin landscape into something a local search can actually
+    descend.'
+  src_800: assets/img/projects/mso-objectives/014_toy_ga_3d-800.png
+  src_1600: assets/img/projects/mso-objectives/014_toy_ga_3d-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/toy_ga_3d.pdf
+- index: 15
+  caption: Optimizer comparison across objective landscapes
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft, shared ahead of publication
+    at the author''s request. The same toy landscape searched by gradient descent,
+    a genetic algorithm, and CMA-ES, under classical WMRE, fixed-p, and annealed-p
+    objectives — nine runs in one grid, showing which solver/objective combinations
+    actually reach the true global minimum versus stall in a nearby basin.'
+  src_800: assets/img/projects/mso-objectives/015_toy_optimizer_grid-800.png
+  src_1600: assets/img/projects/mso-objectives/015_toy_optimizer_grid-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/toy_optimizer_grid.pdf
+- index: 16
+  caption: Classical-WMRE dominance share, three fuels
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft, shared ahead of publication
+    at the author''s request. For each fuel, the share of classical WMRE''s total
+    error contributed by its single worst-fit dataset (44% for n-heptane, 94% for
+    methyl butanoate, 31% for 1,3-butadiene) — the motivating problem powerMeanWMRE
+    is built to fix — plus per-condition relative-error-fraction comparisons between
+    an un-annealed control and the best-tuned powerMeanWMRE setting across a real
+    parameter sweep.'
+  src_800: assets/img/projects/mso-objectives/016_dominance_combined-800.png
+  src_1600: assets/img/projects/mso-objectives/016_dominance_combined-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/dominance_combined.pdf
+- index: 17
+  caption: Representative ignition-delay fits — control vs. best-tuned powerMeanWMRE
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft, shared ahead of publication
+    at the author''s request. Three representative real ignition-delay conditions
+    (one each for n-heptane and 1,3-butadiene) comparing the nominal mechanism,
+    the best-tuned powerMeanWMRE fit, and real experimental data with its own ±10%
+    band.'
+  src_800: assets/img/projects/mso-objectives/017_idt_profiles-800.png
+  src_1600: assets/img/projects/mso-objectives/017_idt_profiles-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/idt_profiles.pdf
+- index: 18
+  caption: Every n-heptane condition, control vs. best-tuned powerMeanWMRE (12 conditions)
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft, shared ahead of publication
+    at the author''s request. The full appendix-style breakdown behind the single
+    representative n-heptane panel above — all 12 real experimental conditions,
+    not just the headline one.'
+  src_800: assets/img/projects/mso-objectives/018_idt_profiles_full_nheptane-800.png
+  src_1600: assets/img/projects/mso-objectives/018_idt_profiles_full_nheptane-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/idt_profiles_full.pdf
+- index: 19
+  caption: Every methyl-butanoate condition, control vs. best-tuned powerMeanWMRE
+    (7 conditions)
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft, shared ahead of publication
+    at the author''s request. The same full-appendix treatment for methyl butanoate
+    — all 7 real experimental conditions, including one (Phi 1, P 30) where the
+    tuned fit and the nominal mechanism both visibly miss the experimental trend,
+    left in rather than cropped out.'
+  src_800: assets/img/projects/mso-objectives/019_idt_profiles_full_mb-800.png
+  src_1600: assets/img/projects/mso-objectives/019_idt_profiles_full_mb-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/idt_profiles_full.pdf
+- index: 20
+  caption: Every 1,3-butadiene condition, control vs. best-tuned powerMeanWMRE (9
+    conditions)
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft, shared ahead of publication
+    at the author''s request. The same full-appendix treatment for 1,3-butadiene
+    — all 9 real experimental conditions.'
+  src_800: assets/img/projects/mso-objectives/020_idt_profiles_full_butadiene-800.png
+  src_1600: assets/img/projects/mso-objectives/020_idt_profiles_full_butadiene-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/idt_profiles_full.pdf
+- index: 21
+  caption: Hyperparameter sweep, solver-resolved — n-heptane (CMA-ES)
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft, shared ahead of publication
+    at the author''s request. The same n-heptane hyperparameter sweep as the general-audience
+    heatmap earlier on this page, here with the actual solver (CMA-ES) and the real
+    per-cell mean relative error percentages shown rather than abstracted away.'
+  src_800: assets/img/projects/mso-objectives/021_heatmap_n_heptane_cmaes-800.png
+  src_1600: assets/img/projects/mso-objectives/021_heatmap_n_heptane_cmaes-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/heatmap_n_heptane_cmaes.pdf
+- index: 22
+  caption: Hyperparameter sweep, solver-resolved — methyl butanoate (GA)
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft, shared ahead of publication
+    at the author''s request. The same treatment for methyl butanoate, here run
+    with a genetic-algorithm solver rather than CMA-ES — a different solver on the
+    same sweep, real per-cell error percentages shown.'
+  src_800: assets/img/projects/mso-objectives/022_heatmap_mb_ga-800.png
+  src_1600: assets/img/projects/mso-objectives/022_heatmap_mb_ga-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/heatmap_mb_ga.pdf
+- index: 23
+  caption: Hyperparameter sweep, solver-resolved — 1,3-butadiene (CMA-ES)
+  topic: full-paper-figures
+  description: 'From the fuller powerMeanWMRE paper draft, shared ahead of publication
+    at the author''s request. The same treatment for 1,3-butadiene under CMA-ES,
+    completing the three-fuel solver-resolved sweep.'
+  src_800: assets/img/projects/mso-objectives/023_heatmap_butadiene_cmaes-800.png
+  src_1600: assets/img/projects/mso-objectives/023_heatmap_butadiene_cmaes-1600.png
+  original_pdf: assets/pdf/projects/mso-objectives/heatmap_butadiene_cmaes.pdf
 muq-sac:
 - index: 1
   caption: Ellipsoid containment (sampling validity)
