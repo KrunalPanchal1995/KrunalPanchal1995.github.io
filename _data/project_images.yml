@@ -1511,21 +1511,22 @@ dokimazo:
     the first place, a real multi-objective solver's job).
   src_800: assets/img/projects/dokimazo/09_pareto_zdt1-800.png
 - index: 10
-  caption: A real 3D surface trace — Rosenbrock, CMA-ES search path
+  caption: 'Rosenbrock: watch the search itself, not a spinning camera'
   topic: solver-visualization
-  description: A literal height-map surface z = log10(1 + f(x1, x2)) for Rosenbrock's
-    single curved valley, with a real IPOP-CMA-ES run's full evaluation cloud and
-    running-best path traced directly on the surface, camera panning through a full
-    rotation so the valley's shape is unambiguous from every angle.
+  description: 'A real CMA-ES run on the Rosenbrock benchmark, fixed camera: the gold
+    point starts at a poor initial guess and walks, evaluation by evaluation, along
+    the curved valley toward the true minimum. The panel on the right tracks the same
+    run''s best objective value dropping in real time (log scale) as the search converges
+    to essentially zero.'
   video: assets/video/dokimazo/10_surface_trace_3d.mp4
   src_800: assets/img/projects/dokimazo/10_surface_trace_3d_poster-800.png
 - index: 11
-  caption: The same surface treatment on Himmelblau — four equal global minima
+  caption: 'Himmelblau: the same search, four equal minima to choose from'
   topic: solver-visualization
-  description: 'The same rotating height-map treatment applied to Himmelblau, chosen
-    specifically for a landscape with genuinely separated basins: four distinct funnels
-    descend to the same objective value, and the traced CMA-ES search path settles
-    into whichever one it reaches first.'
+  description: The same fixed-camera, path-growth treatment on Himmelblau, which has
+    four separate equal-depth global minima. A real CMA-ES run settles on one of them,
+    its evaluation cloud and best-so-far path revealed as the search progresses, with
+    the live objective value dropping alongside it in the right-hand panel.
   video: assets/video/dokimazo/11_surface_himmelblau.mp4
   src_800: assets/img/projects/dokimazo/11_surface_himmelblau_poster-800.png
 - index: 12
