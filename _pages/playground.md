@@ -63,11 +63,20 @@ gradient-descent loop train live.
 
 ## What you're actually looking at
 
-- **The 6 datasets** (circle, XOR, two-Gaussian, spiral, plane regression, Gaussian-mixture
-  regression) are a faithful re-implementation of the exact formulas TensorFlow Playground's own
-  `dataset.ts` uses (Apache-2.0 licensed; re-derived a second time in this browser build from the
-  main project's own Python port, not copied from the JS original -- see the project's
-  `ACKNOWLEDGEMENTS.md`/`CITATIONS.bib`).
+- **9 datasets.** The original 6 (circle, XOR, two-Gaussian, spiral, plane regression,
+  Gaussian-mixture regression) are a faithful re-implementation of the exact formulas TensorFlow
+  Playground's own `dataset.ts` uses (Apache-2.0 licensed; re-derived a second time in this browser
+  build from the main project's own Python port, not copied from the JS original -- see the
+  project's `ACKNOWLEDGEMENTS.md`/`CITATIONS.bib`). 3 more are written directly for this playground,
+  not ported from anywhere: **moons** (two interleaving crescents), **checkerboard** (a 4x4
+  alternating grid, a harder multi-region generalization of XOR), and **rings** (three nested
+  alternating bands, a harder generalization of circle).
+- **Bring your own data.** A CSV upload (3 columns: `x, y, label`, label -1/0/1) trains the same
+  network on whatever you provide -- parsed and kept entirely in your browser (FileReader, nothing
+  ever leaves the tab), capped at 2,000 rows.
+- **Your personal best**, per dataset, saved in this browser's own local storage -- never shared,
+  never a public leaderboard (that would need a real server this static build deliberately doesn't
+  have). Beat your own last run and it tells you.
 - **The network** is a real multi-layer perceptron -- Linear-then-activation, repeated per hidden
   layer, trained with Adam, mini-batches, and (optionally) L1/L2 regularization -- with its own
   independent weight initialization and hand-derived backpropagation. It is verified to reach
