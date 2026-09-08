@@ -38,19 +38,90 @@ I try to understand the structure of a problem before optimizing it. A rate cons
 
 ## Background
 
-- **PhD, Mechanical Engineering** — Indian Institute of Technology Madras (2018–2026)
-- **M.Tech, Thermal Engineering** — Nirma University, Institute of Technology (2016–2018), ISTE National Award for Best M.Tech Thesis 2018
-- **B.E., Mechanical Engineering** — Government Engineering College, Modasa (2012–2016)
+<div class="career-timeline">
+  <div class="career-timeline__item">
+    <div class="career-timeline__year">2012&ndash;2016</div>
+    <div class="career-timeline__content">
+      <h3>B.E., Mechanical Engineering</h3>
+      <p class="career-timeline__org">Government Engineering College, Modasa</p>
+    </div>
+  </div>
+  <div class="career-timeline__item">
+    <div class="career-timeline__year">2016&ndash;2018</div>
+    <div class="career-timeline__content">
+      <h3>M.Tech, Thermal Engineering</h3>
+      <p class="career-timeline__org">Nirma University, Institute of Technology &middot; ISTE National Award for Best M.Tech Thesis, 2018</p>
+      <p>Experimental steam/catalyst-assisted downdraft gasification research &mdash; first hands-on rig work.</p>
+    </div>
+  </div>
+  <div class="career-timeline__item">
+    <div class="career-timeline__year">2018&ndash;2026</div>
+    <div class="career-timeline__content">
+      <h3>PhD, Mechanical Engineering</h3>
+      <p class="career-timeline__org">Indian Institute of Technology Madras &middot; advised by Prof. Krithika Narayanaswamy</p>
+      <p>MUQ-SAC joint-Arrhenius uncertainty quantification (published, <em>Combustion Theory and Modelling</em>, 2024); a multi-stage optimization strategy (ASPACC 2023); the open-source MOSIAC workbench; n-heptane pool-flame characterization.</p>
+    </div>
+  </div>
+  <div class="career-timeline__item career-timeline__item--current">
+    <div class="career-timeline__year">2026&ndash;present</div>
+    <div class="career-timeline__content">
+      <h3>Project Associate</h3>
+      <p class="career-timeline__org">Dept. of Mechanical Engineering, IIT Madras &middot; through 30 Nov 2026</p>
+      <p>A Shell-funded combustion project, while preparing the MOSIAC software paper and extending the multi-dataset objective-function work to journal form.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .career-timeline {
+    position: relative;
+    margin: 1.75rem 0 2rem;
+    padding-left: 1.75rem;
+    border-left: 2px solid var(--global-divider-color);
+  }
+  .career-timeline__item {
+    position: relative;
+    padding-bottom: 1.75rem;
+  }
+  .career-timeline__item:last-child { padding-bottom: 0; }
+  .career-timeline__item::before {
+    content: "";
+    position: absolute;
+    left: -1.94rem;
+    top: 0.3rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background: var(--global-bg-color);
+    border: 2px solid var(--global-theme-color);
+  }
+  .career-timeline__item--current::before {
+    background: var(--global-theme-color);
+  }
+  .career-timeline__year {
+    font-family: "Roboto Mono", "SF Mono", monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    color: var(--global-theme-color);
+    margin-bottom: 0.2rem;
+  }
+  .career-timeline__content h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.15rem;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .career-timeline__org {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+    margin: 0 0 0.35rem;
+  }
+  .career-timeline__content p:last-child { margin-bottom: 0; }
+</style>
 
 <div class="cta-row">
   <a class="btn-cta btn-cta-secondary" href="/cv/">View the full CV &rarr;</a>
 </div>
-
-## Academic timeline
-
-**2016–2018** — M.Tech at Nirma University: experimental gasification research, first hands-on rig work.
-**2018–2026** — PhD at IIT Madras: MUQ-SAC joint-Arrhenius uncertainty quantification (published, _Combustion Theory and Modelling_, 2024); multi-stage optimization strategy (ASPACC 2023); the MOSIAC workbench; pool-flame characterization.
-**2026 (till 30 Nov)** — Project Associate, Department of Mechanical Engineering, IIT Madras, on a Shell-funded combustion project, while preparing the MOSIAC software paper and extending the multi-dataset objective-function work to journal form.
 
 ## Questions I'm exploring
 

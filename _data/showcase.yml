@@ -21,11 +21,6 @@
   type: video
   src: assets/img/projects/flamelab/013_MVI8036-periodic-flickering.mp4
   poster: assets/img/projects/flamelab/013_MVI8036-periodic-flickering-800.png
-- title: Burner tracking
-  caption: computer-vision tracking of the burner flame — the instrument behind flamelab
-  link: /projects/flamelab/
-  type: image
-  src: assets/img/projects/flame-processor/006_burner_tracking.gif
 - title: Arrhenius-curve uncertainty sampling
   caption: MUQ-SAC — joint Arrhenius-parameter uncertainty, tightening in real time
   link: /projects/muq-sac/

@@ -1246,6 +1246,15 @@ flamelab:
     anchored/unanchored width split changes the conclusion.
   src_800: assets/img/projects/flamelab/033_forest-height-anchored-only-800.png
   src_1600: assets/img/projects/flamelab/033_forest-height-anchored-only-1600.png
+- index: 34
+  caption: Computer-vision tracking of the burner flame
+  topic: measurement
+  description: The computer-vision burner-tracking overlay from flame-processor, the
+    earlier instrument this pipeline grew out of -- the flame boundary tracked directly
+    on real footage, the same measurement principle the current pipeline's per-run
+    overlays (gallery above) apply campaign-wide.
+  src_800: assets/img/projects/flame-processor/006_burner_tracking-800.png
+  video: assets/img/projects/flame-processor/006_burner_tracking.gif
 neural-ode-playground:
 - index: 1
   caption: 12-optimizer race on the Van der Pol benchmark
