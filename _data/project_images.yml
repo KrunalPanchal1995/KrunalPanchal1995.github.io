@@ -564,11 +564,16 @@ cfdcore:
   src_800: assets/img/projects/cfdcore/007_boiling_curve-800.png
   src_1600: assets/img/projects/cfdcore/007_boiling_curve-1600.png
 - index: 8
-  caption: 3D reacting-flow ignition transient
+  caption: 'Hot-spot ignition: a warm patch turning into a self-sustaining flame'
   topic: combustion-propulsion
-  description: A full 3D reacting-flow ignition transient — the solver's flagship
-    combustion result, combining the low-Mach reacting Navier-Stokes formulation with
-    real chemical kinetics in a genuinely three-dimensional domain.
+  description: 'What ignition actually looks like, computed with PANSOPHIA: a small
+    pre-heated patch -- the kind of hot spot a spark or a hot particle leaves behind
+    -- sits in an otherwise cool, fuel-filled space. For a while it just slowly warms
+    (heat trickling in from the surrounding reaction outpaces the heat leaking away);
+    then, at a real, measured tipping point, the reaction runs away with itself, the
+    patch heats sharply, and it settles into a genuine self-sustaining burning kernel
+    that keeps consuming fuel on its own -- the physical definition of ignition, not
+    just "it got hot."'
   src_800: assets/img/projects/cfdcore/008_rf_ignition_transient-800.png
   src_1600: assets/img/projects/cfdcore/008_rf_ignition_transient-1600.png
 - index: 9
