@@ -25,6 +25,7 @@ gradient-descent loop train live.
 
 <div class="playground-embed" style="margin: 1.5rem 0;">
   <iframe
+    id="vzero-full-playground-frame"
     src="{{ '/assets/playground/index.html' | relative_url }}"
     title="vZero Playground -- full public demo"
     width="100%"
@@ -34,6 +35,31 @@ gradient-descent loop train live.
   >
   </iframe>
 </div>
+<script>
+  (function () {
+    // Fix for "the playground keeps moving" (auto-sizing, same mechanism as
+    // hero-playground.liquid's own listener -- see that file's comment and
+    // main-public.tsx's own for the full empirical diagnosis): real content
+    // height here was measured at ~1796px at this page's typical width vs.
+    // this iframe's height="1400" guess, so without this listener the
+    // iframe gets its OWN internal scrollbar nested inside the page's
+    // scrollbar -- scroll focus flipping between the two as the cursor
+    // crosses the iframe boundary is what reads as the page "moving". This
+    // makes the iframe always exactly as tall as its real content instead,
+    // so the page is the only thing that ever scrolls.
+    var frame = document.getElementById('vzero-full-playground-frame');
+    if (!frame) return;
+    window.addEventListener('message', function (event) {
+      if (event.source !== frame.contentWindow) return;
+      var data = event.data;
+      if (!data || data.source !== 'vzero-playground' || data.type !== 'resize') return;
+      var h = Number(data.height);
+      if (!isFinite(h) || h <= 0) return;
+      h = Math.max(400, Math.min(h, 6000));
+      frame.style.height = h + 'px';
+    });
+  })();
+</script>
 
 ## What you're actually looking at
 
@@ -52,6 +78,11 @@ gradient-descent loop train live.
   components the full local playground uses -- this build only swaps out where the training data
   comes from (a live WebSocket from a real server, vs. a training loop running on your own CPU right
   now), not what renders it.
+- **Two things TensorFlow Playground doesn't have.** Every hidden (and readout) neuron in the
+  network diagram carries its own small activation-heatmap preview -- what that one neuron alone has
+  learned, not just the combined output surface. And the loss function is a real picker, not fixed:
+  squared error (TF Playground's own only option) or cross-entropy, so the textbook accuracy-vs-loss
+  distinction is something you can actually toggle and watch change, not just read about.
 
 Built with Claude Code across an 11-session multi-week collaboration. Full continuity log, design
 decisions, and the complete (non-public) research environment live in the project's own repository.
