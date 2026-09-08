@@ -57,7 +57,7 @@
   type: image
   src: assets/img/projects/neural-ode-playground/001_optimizer_race-800.png
 - title: RF ignition transient
-  caption: CFDCore.jl — an in-house CFD solver's reacting-flow transient
+  caption: PANSOPHIA — an in-house CFD solver's reacting-flow transient
   link: /projects/cfdcore/
   type: image
   src: assets/img/projects/cfdcore/008_rf_ignition_transient-800.png

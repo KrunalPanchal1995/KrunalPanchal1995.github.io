@@ -39,7 +39,8 @@ A rotating sample of the best results across every research area — each slide 
 - **Fair Multi-Objective Optimization & Uncertainty Quantification** — multi-stage, multi-dataset calibration of Arrhenius parameters with correlated-parameter Bayesian UQ, built around [MOSIAC](/projects/mosiac/), my open-source optimization framework
 - **Reduced-Order Modelling & Scientific ML** — neural and response-surface surrogates that stand in for expensive stiff simulations
 - **[Gasification](/projects/gasification/)** — steam/catalyst-assisted downdraft fixed-bed gasification, from rig commissioning to syngas analysis
-- **CFD** — an in-house CFD/multiphysics solver, and reacting-flow and rig-design studies built on top of it
+- **CFD** — [PANSOPHIA](/projects/cfdcore/), an in-house CFD/multiphysics solver, and reacting-flow and rig-design studies built on top of it
+- **Optimization & Reinforcement Learning** — [dokimazo](/projects/dokimazo/), an open-source, dependency-light optimization/RL workbench with a plug-and-play graph IR — closed with an RL agent that tunes a real molecule's rotatable bonds to find its lowest-energy 3D shape
 
 The full research overview — themes, methods, experiments, and publications — is on the [Research page](/research/).
 
@@ -63,4 +64,11 @@ Three live slices of the Neural ODE research playground, running entirely in you
 <figure class="loop-media">
   <img src="/assets/img/projects/muq-sac/010_classC_ls_sample_002_10x.gif" alt="A second Arrhenius-curve uncertainty sampling animation, tightening in real time" loading="lazy" />
   <figcaption>MUQ-SAC sampling a second class-C reaction's joint uncertainty band (10&times; real speed) — see <a href="/projects/muq-sac/">MUQ-SAC</a>.</figcaption>
+</figure>
+
+<figure class="loop-media">
+  <a href="/projects/dokimazo/">
+    <img src="/assets/img/projects/dokimazo/02_three_way_benchmark-800.png" alt="Three-way benchmark: RL rotor-tuning, dokimazo's IPOP-CMA-ES, and RDKit's ETKDG+MMFF94 reference, converging on n-dodecane's conformer energy" loading="lazy" />
+  </a>
+  <figcaption>An RL agent and dokimazo's own IPOP-CMA-ES both independently reach n-dodecane's true global-minimum conformer energy, verified against a directly-computable structural ground truth — see <a href="/projects/dokimazo/">dokimazo</a> (optimization-process video on the project page).</figcaption>
 </figure>

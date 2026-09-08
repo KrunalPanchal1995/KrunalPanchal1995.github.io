@@ -53,6 +53,13 @@ I develop fair multi-objective optimization, uncertainty-quantification and redu
     </a>
     <p>Pool-flame characterization and downdraft gasification alongside an in-house CFD/multiphysics solver, reacting-flow studies, vaporizer/burner rig design, and early-stage quantum-chemical rate-constant estimation. Rig design: <a href="/projects/vaporizer-rigs/">vaporizer rigs</a>; imaging: <a href="/projects/flamelab/">flamelab</a>.</p>
   </div>
+  <div class="col mb-4">
+    <a href="/projects/dokimazo/" style="text-decoration: none; color: inherit;">
+      <img src="/assets/img/projects/dokimazo/01_training_curve-800.png" alt="RL training curve for rotor-tuning conformer search" loading="lazy" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;" />
+      <h3>Optimization &amp; Reinforcement Learning &rarr;</h3>
+    </a>
+    <p>A from-scratch, dependency-light optimization/RL workbench with a plug-and-play graph IR — solvers cross-benchmarked head to head, sampling &amp; UQ, a jax-backed NN/RL training layer, a browser pipeline editor, and an RL agent that tunes a real molecule's rotatable bonds. Workbench: <a href="/projects/dokimazo/">dokimazo</a>.</p>
+  </div>
 </div>
 
 ## Featured projects
@@ -70,6 +77,7 @@ Smaller, self-contained studies that show how I work, not just what I've publish
 - **[Scientific ML for Stiff Kinetics](/projects/sciml/)** — a documented, 50-generation journey from an untrainable neural ODE to a working surrogate, closing with a 115-run statistical audit of my own results.
 - **[Symbolic Regression for Rate Rules](/projects/pysr-rate-rules/)** — using SR to rediscover the Evans–Polanyi relation from data, with a leave-one-class-out generalization check.
 - **[flamelab](/projects/flamelab/)** — a computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty: eight-run ensemble campaign, regime classification, thirteen analysis methods, honest limitations included.
+- **[dokimazo](/projects/dokimazo/)** — an RL agent tunes a real molecule's rotatable bonds one at a time, independently reaching the same global-minimum conformer as a from-scratch CMA-ES implementation, checked against a directly-computable structural ground truth rather than solver agreement alone.
 
 ## Methods & tools
 
@@ -78,8 +86,9 @@ Every tool below links to a project that actually used it — no skill bars.
 - **Fair Multi-Objective Optimization** — genetic algorithms, CMA-ES, gradient/NLLS, Bayesian & GP optimization, surrogate-assisted search — see [MSO objectives](/projects/mso-objectives/)
 - **Uncertainty quantification** — correlated-parameter UQ, Sobol sensitivity analysis — see [MUQ-SAC](/projects/muq-sac/)
 - **Reduced-order modelling & scientific ML** — physics-informed neural networks, neural ODEs, response-surface surrogates — see [SciML](/projects/sciml/)
-- **Simulation & CFD** — Cantera, CHEMKIN-PRO, FlameMaster, OpenFOAM, an in-house CFD/multiphysics solver — see [MOSIAC](/projects/mosiac/) and [CFDCore.jl](/projects/cfdcore/)
+- **Simulation & CFD** — Cantera, CHEMKIN-PRO, FlameMaster, OpenFOAM, an in-house CFD/multiphysics solver — see [MOSIAC](/projects/mosiac/) and [PANSOPHIA](/projects/cfdcore/)
 - **Experimental combustion** — rig design and commissioning, gas chromatography, thermocouple instrumentation, gasification, computer-vision flame measurement — see [gasification](/projects/gasification/) and [flamelab](/projects/flamelab/)
+- **Optimization & reinforcement learning software** — a from-scratch graph-IR workbench, cross-benchmarked solvers, REINFORCE — see [dokimazo](/projects/dokimazo/)
 
 ## Publications
 

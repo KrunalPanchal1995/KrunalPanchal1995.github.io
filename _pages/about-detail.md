@@ -42,10 +42,6 @@ I try to understand the structure of a problem before optimizing it. A rate cons
 - **M.Tech, Thermal Engineering** — Nirma University, Institute of Technology (2016–2018), ISTE National Award for Best M.Tech Thesis 2018
 - **B.E., Mechanical Engineering** — Government Engineering College, Modasa (2012–2016)
 
-<figure class="loop-media">
-  <img src="/assets/img/prof_pic_alt.png" alt="Krunal Panchal" loading="lazy" style="max-width: 240px;" />
-</figure>
-
 <div class="cta-row">
   <a class="btn-cta btn-cta-secondary" href="/cv/">View the full CV &rarr;</a>
 </div>
