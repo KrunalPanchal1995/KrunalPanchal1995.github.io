@@ -1294,13 +1294,20 @@ flamelab:
   video: assets/img/projects/flamelab/035_MVI8036-zonal-four-regimes-quadrant.mp4
 neural-ode-playground:
 - index: 1
-  caption: 12-optimizer race on the Van der Pol benchmark
+  caption: 11-optimizer race on the Van der Pol benchmark, proper names + final numbers
   topic: optimizer-race
-  description: All 12 gradient optimizers trained from scratch on the same tiny synthetic
-    problem (a Van der Pol oscillator, this project's non-chemistry test family),
-    same seed, same budget. Nadam reached the lowest final loss; L-BFGS, Adadelta,
-    and plain SGD were still an order of magnitude worse after 80 epochs on this particular
-    problem — reported as-is, including the optimizers that didn't do well here.
+  description: All 11 gradient-based optimizers in the registry, trained from scratch
+    on the same tiny synthetic problem (a Van der Pol oscillator, this project's non-chemistry
+    test family), same seed, same 80-epoch budget -- re-run for this page with each
+    curve's actual final loss value shown directly in the legend. Nadam reached the
+    lowest final loss (0.696); L-BFGS barely moved off its starting point (9.52 ->
+    9.27, effectively stuck) and Adadelta was similarly poor (8.19) -- both an order
+    of magnitude worse than the best performers after 80 epochs. Adam and AdamW land
+    on nearly identical curves (1.040 vs. 1.040), a real result, not a plotting artifact
+    -- the small weight-decay term barely changes anything on this problem. This chart
+    covers gradient-based methods only; a genuine heuristic/population-based comparison
+    (CMA-ES and a genetic algorithm against gradient methods, same shared-budget discipline)
+    is on the dokimazo project page's own solver race.
   src_800: assets/img/projects/neural-ode-playground/001_optimizer_race-800.png
 - index: 2
   caption: Normalization ablation — raw baseline vs. 9 normalized arms
