@@ -50,6 +50,16 @@
   --global-danger-block-text: #600;
   --global-danger-block-title: #c00;
 
+  // Editorial 2.5: per-theme category hues -- consumed only by
+  // _pages/projects.md's own scoped CSS (see _variables.scss for the
+  // contrast-checked source values).
+  --cat-combustion: #{v.$cat-combustion};
+  --cat-optimization: #{v.$cat-optimization};
+  --cat-uq: #{v.$cat-uq};
+  --cat-sciml: #{v.$cat-sciml};
+  --cat-cfd: #{v.$cat-cfd};
+  --cat-experimental: #{v.$cat-experimental};
+
   #light-toggle-system {
     display: inline-block;
   }
@@ -119,6 +129,15 @@ html[data-theme="dark"] {
   --global-danger-block-bg: #600;
   --global-danger-block-text: #ffb9b9;
   --global-danger-block-title: #ffe0e0;
+
+  // Editorial 2.5: per-theme category hues, dark-mode variants (lightened
+  // for contrast against the dark card surface).
+  --cat-combustion: #{v.$cat-combustion-dark};
+  --cat-optimization: #{v.$cat-optimization-dark};
+  --cat-uq: #{v.$cat-uq-dark};
+  --cat-sciml: #{v.$cat-sciml-dark};
+  --cat-cfd: #{v.$cat-cfd-dark};
+  --cat-experimental: #{v.$cat-experimental-dark};
 
   .only-light {
     display: none;
