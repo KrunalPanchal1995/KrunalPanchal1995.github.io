@@ -96,7 +96,11 @@ al_folio:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false # was true (al-folio default): pins the copyright/credits bar to the
+# viewport bottom on every page at every scroll position via Bootstrap's `fixed-bottom`,
+# permanently eating a strip of screen real estate rather than just sitting at the true
+# end of the page content -- that's the "taking up a lot of space at the bottom" complaint.
+# false = normal static-flow footer, only appears once you actually scroll to the bottom.
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
