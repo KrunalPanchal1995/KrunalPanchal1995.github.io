@@ -40,6 +40,12 @@ The two "multi-stage" gallery images show the HTC/LTC decomposition applied to t
 
 The geometric-onset figure is a different, collaborative technique — led by Gautam Srikanth, credited below — for automatically detecting where a shock-tube species-concentration curve "turns on," so a response surface can be fit against the real shape of an experimental curve rather than a single extracted target point. It's included here because it's presented alongside the power-mean objective work at the same Fukuoka symposium, not because it's part of this project's own methodology.
 
+## Extending to a full multi-fuel treatment
+
+A journal-length extension of the multi-stage strategy above — adding an explicit reaction-classification step (extending the classical high/low-temperature-chemistry taxonomy to resolve a three-way split needed for unsaturated fuels) and applying the same calibration across three fuels rather than one — is in preparation, targeting _Combustion and Flame_. No results from that manuscript are public yet; it's named here only as a forthcoming piece, per disclosure policy for work at this stage.
+
+**Tuning the power-mean objective's own hyperparameters** is itself the subject of a separate, companion methodology paper in preparation: a systematic search over the objective's exponent and annealing schedule, combining a design-of-experiments response-surface search with a second, independent multi-optimizer confirmation pass, rather than hand-picking a setting once and reusing it. Also title-only at this stage — no numbers from that manuscript are public yet.
+
 ## Extending to thermodynamic parameters
 
 The correlation-aware, multi-stage philosophy developed here for kinetic _rate_ parameters extends naturally to _thermodynamic_ parameters (heat capacities, formation enthalpies) — the subject of a collaborative paper, led by Bishwajeet Singh with me as second author, under review at _Fuel_ and separately accepted as an abstract for the 64th Symposium (Japanese) on Combustion, Fukuoka, Nov 2026 {% cite singh2026thermoabstract %}. Per disclosure policy for work at this stage, only the title, authors and venue are given here — no formulae or numbers beyond what the accepted abstract itself already states publicly.
@@ -71,4 +77,4 @@ Developed and led by me: the multi-stage decomposition and the power-mean object
 
 ## Where this is going
 
-A mechanism calibrated jointly across several fuels and datasets, without any one dataset silently winning the fit — and at a fraction of the solver budget a naive full-range optimization would need.
+A mechanism calibrated jointly across several fuels and datasets, without any one dataset silently winning the fit — and at a fraction of the solver budget a naive full-range optimization would need. More broadly, a systematic evaluation of fair multi-dataset objective-function design itself — comparing the power-mean approach against other candidate formulations under one shared framework — is an active research direction growing out of this work, still at the exploratory stage.

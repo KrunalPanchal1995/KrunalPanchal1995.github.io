@@ -1,12 +1,16 @@
 ---
 layout: page
-title: CFDCore.jl — In-House CFD & Multiphysics Solver
+title: "PANSOPHIA — In-House CFD & Multiphysics Solver"
 description: A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning
 img: assets/img/projects/cfdcore/001_04_mms_convergence-800.png
 importance: 5
 category: [cfd]
 related_publications: false
 ---
+
+<p style="font-family: 'Roboto Mono', 'SF Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; color: var(--global-text-color-light); margin-top: -0.5rem;">Πανσοφία &mdash; "all-encompassing wisdom": one solver, every physics.</p>
+
+*Formerly developed and referred to internally as CFDCore.jl — the Julia module name is unchanged; **PANSOPHIA** is the project's public name going forward.*
 
 {% include project_gallery.liquid project="cfdcore" %}
 
@@ -16,7 +20,7 @@ Most CFD codes in wide use today — commercial and open-source alike — carry 
 
 ## Approach
 
-CFDCore.jl is an attempt to draw the strongest available open-source components — meshing, linear algebra, automatic differentiation, SciML — together behind one coherent interface, rather than accepting either a commercial black box or a pile of disconnected open-source tools that don't talk to each other. The aim, stated plainly: match what COMSOL, STAR-CCM+, Ansys and CONVERGE can do, and go further where their architecture is the limiting factor — specifically, on native integration of neural/ML models as terms inside the governing equations, not as an afterthought. This is a long-term, actively developing effort, not a finished product, and it's described here in that spirit.
+PANSOPHIA is an attempt to draw the strongest available open-source components — meshing, linear algebra, automatic differentiation, SciML — together behind one coherent interface, rather than accepting either a commercial black box or a pile of disconnected open-source tools that don't talk to each other. The aim, stated plainly: match what COMSOL, STAR-CCM+, Ansys and CONVERGE can do, and go further where their architecture is the limiting factor — specifically, on native integration of neural/ML models as terms inside the governing equations, not as an afterthought. This is a long-term, actively developing effort, not a finished product, and it's described here in that spirit.
 
 Concretely, it's a from-scratch CFD/multiphysics library in Julia (~40,000 lines across 290 source files, spanning finite-volume numerics, chemistry, combustion, multiphysics coupling, structural mechanics, stochastic/UQ methods and a SciML module), built with a Python frontend, two GUIs (a Qt desktop app and a Dash web app), and a cross-engine geometry kernel — Gmsh, a signed-distance-field kernel, and a PicoGK-compatible interface — so the same shape can be verified against three independent meshers rather than trusted on the word of one.
 
@@ -52,6 +56,16 @@ The geometry kernel's own validation is cross-engine agreement, not just "did it
 Two smaller physics studies from the pre-release planning archive round out the picture: a spherical-droplet extinction sweep reproduces the classic U-shaped extinction curve — kinetic extinction at small droplet diameter, radiative extinction at large diameter, with a stable burning window in between (d₀ ∈ [0.20, 3.0] mm in this sweep) — confirming both extinction branches are physically present, not just one. A 2D volume-of-fluid tank-slosh case measures the free-oscillation natural frequency at 5.3235 rad/s against an analytic 5.3156 rad/s (0.15% error), and confirms resonant forcing produces a larger steady-state amplitude than off-resonant forcing, as it must.
 
 The documentation deliberately marks known gaps (no compressible density-based solver, no AMR, no radiation) rather than overstating maturity — that candor is itself part of the engineering discipline here.
+
+## Microfluidics validation dossier
+
+The particle-separation application that motivated the whole project gets its own standing validation dossier, not just a demo screenshot: the base 3D pipe-flow field checked to machine precision against the exact Hagen-Poiseuille profile, then a real 3D particle tracer built on that field reproducing the Segre-Silberberg (1962) tubular-pinch mechanism directly — four tracked particles genuinely migrating toward an intermediate equilibrium radius from both directions, not assumed. Curved-duct Dean secondary flow is checked quantitatively against both the low-De (Dean 1928) and high-De (Ookawara 2004) scaling laws, and a predicted four-vortex transition that this model's own probe does *not* reproduce is kept in as a disclosed, investigated miss rather than dropped.
+
+The topology-optimization formulation gets the same treatment as the physics: a closed-form Brinkman-channel exact solution the penalization method actually solves (residual under 1e-6 relative, ForwardDiff-checked); the Brinkman-penalization approximation cross-checked directly against a genuinely body-fitted mesh of the same geometry, including a real, mesh-refinement-confirmed non-monotonic conditioning effect; a dissipated-power identity closing to FEM discretization error; and — the actual pre-optimization gate — the analytic design-sensitivity gradient overlaid exactly on a central-finite-difference estimate, since a wrong gradient here would silently break every downstream optimization result.
+
+## Geometry creator (new: from-scratch feature-tree CAD)
+
+Building on the cross-engine geometry-kernel work above, a newer sub-project pushes the from-scratch signed-distance-field kernel toward genuine CAD-style feature-tree modeling, dependency-free: revolve (a profile swept into a solid of revolution), fillet (smoothly blending two intersecting primitives, not a sharp boolean seam), shell (hollowing a solid to a specified wall thickness), and exact circular sweep (a disk swept into a torus geometrically, not by discretized approximation) are all implemented and verified by rendering each feature and checking it by eye against its expected geometric identity.
 
 ## My contribution
 

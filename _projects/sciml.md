@@ -24,7 +24,7 @@ A loss curve alone doesn't say _why_ a model is struggling. One recurring diagno
 
 ## The discipline that mattered most
 
-The most consequential step wasn't a bigger model or more training — it was **stopping to statistically audit my own results** before believing them. A controlled, multi-seed re-analysis of the full experimental campaign found that a substantial fraction of what looked like a hyperparameter-driven improvement was indistinguishable from ordinary seed-to-seed noise once measured properly, while other effects held up under scrutiny. That distinction — which apparent wins are real and which are noise — is now a standing check applied before any result from this line of work is reported as fact, here or in the eventual papers.
+The most consequential step wasn't a bigger model or more training — it was **stopping to statistically audit my own results** before believing them. A controlled, multi-seed re-analysis of the full 115-run experimental campaign found that **67% of runs (77 of 115)** fell inside the seed-noise band of the single best result — the same configuration, re-run with a different random seed alone, produced up to a 3.4x spread in the reported metric. At the sample sizes this campaign actually used, the minimum effect size detectable at conventional statistical power was a **3.71x (271%) fold-change** — anything smaller than that could not have been distinguished from noise regardless of whether it was real. A separate check found the training objective actually being optimized correlated only weakly with the metric the results were ultimately judged on (Spearman ρ ≈ 0.13) — a substantial share of the campaign's compute was spent optimizing a proxy that wasn't a reliable stand-in for the thing that mattered. That distinction — which apparent wins are real and which are noise — is now a standing check applied before any result from this line of work is reported as fact, here or in the eventual papers.
 
 ## Recurring lessons (method-agnostic, safe to share)
 
@@ -33,6 +33,7 @@ The most consequential step wasn't a bigger model or more training — it was **
 - Budget explicitly for gradient amplification when training through multi-step rollouts.
 - A win on one metric does not automatically compose with a win on another; each combination has to be re-verified, not assumed.
 - Statistical rigor about your own results is not optional once a claim will be published.
+- A reproducibility gate pays for itself: a later re-porting pass across this campaign's architecture families required every migrated version to reproduce its original's own training-loss history bit-for-bit at default settings before any new capability was considered done — catching silent behavior drift at the moment it's introduced, not months later when it's hard to trace back.
 
 ## A published-paper replication, done honestly
 
