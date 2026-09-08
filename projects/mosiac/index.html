@@ -615,7 +615,7 @@
     
       "/projects/": {
         title: "Research Projects",
-        description: "Optimization, uncertainty quantification, combustion kinetics, scientific ML and computational engineering — eleven projects, filterable by theme."
+        description: "Optimization, uncertainty quantification, combustion kinetics, scientific ML and computational engineering — filterable by theme."
       },
     
       "/publications/": {
@@ -644,13 +644,18 @@
       },
     
       "/projects/cfdcore/": {
-        title: "CFDCore.jl — In-House CFD \u0026 Multiphysics Solver",
+        title: "PANSOPHIA — In-House CFD \u0026 Multiphysics Solver",
         description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning"
       },
     
       "/projects/decarbonisation-tuyeres/": {
         title: "H₂/CH₄ Co-injection in Blast-Furnace Tuyeres",
         description: "A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you"
+      },
+    
+      "/projects/dokimazo/": {
+        title: "dokimazo — A PIDO Optimization Workbench",
+        description: "A dependency-light process-integration-and-design-optimization workbench with a plug-and-play graph IR, closed by a reinforcement-learning conformer search that tunes a long alkane chain's rotors one at a time"
       },
     
       "/projects/flamelab/": {
@@ -691,6 +696,11 @@
       "/projects/sciml/": {
         title: "Scientific ML for Stiff Kinetics",
         description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results"
+      },
+    
+      "/projects/turbulence-closures/": {
+        title: "Turbulence Closures — From Mixing Length to Data-Driven RANS",
+        description: "A from-scratch, chronologically-built turbulence-closure curriculum in Python — classical RANS through LES, hybrid RANS-LES, and a first data-driven correction, every claim backed by a mechanically-enforced disclosure registry"
       },
     
       "/projects/vaporizer-rigs/": {
@@ -739,7 +749,7 @@ ninja.data = [{
           },
         },{id: "nav-research-projects",
           title: "Research Projects",
-          description: "Optimization, uncertainty quantification, combustion kinetics, scientific ML and computational engineering — eleven projects, filterable by theme.",
+          description: "Optimization, uncertainty quantification, combustion kinetics, scientific ML and computational engineering — filterable by theme.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -778,8 +788,8 @@ ninja.data = [{
           section: "News",},{id: "news-three-abstracts-accepted-for-presentation-at-the-64th-symposium-japanese-on-combustion-fukuoka-4-6-nov-2026-including-the-power-mean-objective-function-work-panchal-amp-amp-narayanaswamy-2026",
           title: 'Three abstracts accepted for presentation at the 64th Symposium (Japanese) on Combustion, Fukuoka,...',
           description: "",
-          section: "News",},{id: "projects-cfdcore-jl-in-house-cfd-amp-multiphysics-solver",
-          title: 'CFDCore.jl — In-House CFD &amp;amp; Multiphysics Solver',
+          section: "News",},{id: "projects-pansophia-in-house-cfd-amp-multiphysics-solver",
+          title: 'PANSOPHIA — In-House CFD &amp;amp; Multiphysics Solver',
           description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning",
           section: "Projects",handler: () => {
               window.location.href = "/projects/cfdcore/";
@@ -788,6 +798,11 @@ ninja.data = [{
           description: "A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you",
           section: "Projects",handler: () => {
               window.location.href = "/projects/decarbonisation-tuyeres/";
+            },},{id: "projects-dokimazo-a-pido-optimization-workbench",
+          title: 'dokimazo — A PIDO Optimization Workbench',
+          description: "A dependency-light process-integration-and-design-optimization workbench with a plug-and-play graph IR, closed by a reinforcement-learning conformer search that tunes a long alkane chain&#39;s rotors one at a time",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dokimazo/";
             },},{id: "projects-flamelab",
           title: 'flamelab',
           description: "A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods",
@@ -828,6 +843,11 @@ ninja.data = [{
           description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results",
           section: "Projects",handler: () => {
               window.location.href = "/projects/sciml/";
+            },},{id: "projects-turbulence-closures-from-mixing-length-to-data-driven-rans",
+          title: 'Turbulence Closures — From Mixing Length to Data-Driven RANS',
+          description: "A from-scratch, chronologically-built turbulence-closure curriculum in Python — classical RANS through LES, hybrid RANS-LES, and a first data-driven correction, every claim backed by a mechanically-enforced disclosure registry",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/turbulence-closures/";
             },},{id: "projects-vaporizer-amp-combustion-rig-design",
           title: 'Vaporizer &amp;amp; Combustion Rig Design',
           description: "An induction-heated tube vaporizer for MtG/ethanol surrogate fuel, sized against boiling glide, critical heat flux and flow instability, plus a fabrication-grade combustion-rig drawing package",
