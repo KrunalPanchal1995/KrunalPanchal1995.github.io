@@ -1038,13 +1038,6 @@ flamelab:
     run-to-run spread the ensemble statistics quantify.
   src_800: assets/img/projects/flamelab/005_violin-height-800.png
   src_1600: assets/img/projects/flamelab/005_violin-height-1600.png
-- index: 6
-  caption: Tip and width fluctuation (seismograph)
-  topic: fluctuation
-  description: The flame tip tracked as a moving point in a scrolling window with
-    steady axes - height on top, width on the right in the rotated vertical configuration.
-  src_800: assets/img/projects/flamelab/006_MVI8036-corner-800.png
-  src_1600: assets/img/projects/flamelab/006_MVI8036-corner-1600.png
 - index: 7
   caption: Sampled frames to measured fluctuation
   topic: fluctuation
