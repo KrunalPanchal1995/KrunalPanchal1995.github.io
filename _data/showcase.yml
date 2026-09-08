@@ -9,11 +9,12 @@
   type: video
   src: assets/img/projects/flamelab/035_MVI8036-zonal-four-regimes-quadrant.mp4
   poster: assets/img/projects/flamelab/035_MVI8036-zonal-four-regimes-quadrant-800.png
-- title: Arrhenius-curve uncertainty sampling
-  caption: MUQ-SAC — joint Arrhenius-parameter uncertainty, tightening in real time
+- title: Four sampling methods, live, one frame
+  caption: MUQ-SAC — all four sampling-method classes building their uncertainty bands at once, each at its own real measured speed
   link: /projects/muq-sac/
-  type: image
-  src: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x.gif
+  type: video
+  src: assets/img/projects/muq-sac/011_four_classes_live.mp4
+  poster: assets/img/projects/muq-sac/011_four_classes_live_poster-800.png
 - title: 3D ignitability map
   caption: MOSIAC — ignitable vs. non-ignitable conditions across T, P and equivalence ratio
   link: /projects/mosiac/

@@ -62,8 +62,8 @@ Three live slices of the Neural ODE research playground, running entirely in you
 </figure>
 
 <figure class="loop-media">
-  <img src="/assets/img/projects/muq-sac/010_classC_ls_sample_002_10x.gif" alt="A second Arrhenius-curve uncertainty sampling animation, tightening in real time" loading="lazy" />
-  <figcaption>MUQ-SAC sampling a second class-C reaction's joint uncertainty band (10&times; real speed) — see <a href="/projects/muq-sac/">MUQ-SAC</a>.</figcaption>
+  <video src="/assets/img/projects/muq-sac/011_four_classes_live.mp4" poster="/assets/img/projects/muq-sac/011_four_classes_live_poster-800.png" autoplay loop muted playsinline aria-label="All four MUQ-SAC sampling-method classes building their uncertainty bands live, one frame" style="width: 100%; border-radius: 6px;"></video>
+  <figcaption>All four MUQ-SAC sampling-method classes (A, B, C, D) building their joint-uncertainty bands at once, each panel's own real measured compute time ticking at its true rate — one crawls, three finish almost instantly — see <a href="/projects/muq-sac/">MUQ-SAC</a>.</figcaption>
 </figure>
 
 <figure class="loop-media">
