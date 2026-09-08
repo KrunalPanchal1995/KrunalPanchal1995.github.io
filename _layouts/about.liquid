@@ -130,6 +130,39 @@ layout: default
       </div>
     {% endif %}
 
+    <!--
+      Public visitor counter (no account, no server of ours -- a free
+      third-party badge service, visitorbadge.io, keyed by this page's own
+      canonical URL). Shows the real page-view count to every visitor,
+      openly, matching the "show everyone the foot traffic" request.
+      (hits.seeyoufarm.com, the more commonly seen version of this badge,
+      was tried first and confirmed dead -- fetch fails even from a real
+      headless-Chrome context, not just this sandbox's curl. visitorbadge.io
+      was verified live: real request returned a valid incrementing SVG.)
+      Not wired to GoatCounter (site.goatcounter_code below) since that's a
+      private-analytics dashboard, not a public-facing number -- swap this
+      badge out if/when a GoatCounter account is set up and its public
+      stats page is preferred instead.
+    -->
+    <div class="visitor-badge">
+      <img
+        src="https://api.visitorbadge.io/api/visitors?path={{ site.url }}{{ site.baseurl }}%2F&label=page%20views&countColor=%239C2F16&style=flat"
+        alt="page view count"
+        loading="lazy"
+      />
+    </div>
+    <style>
+      .visitor-badge {
+        display: flex;
+        justify-content: center;
+        margin-top: 0.75rem;
+        opacity: 0.85;
+      }
+      .visitor-badge img {
+        height: 20px;
+      }
+    </style>
+
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
       {% if site.plugins contains 'al_newsletter' %}
         {% include plugins/al_newsletter_form_center_margin.liquid %}
