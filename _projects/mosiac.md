@@ -2,7 +2,7 @@
 layout: page
 title: MOSIAC
 description: An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization
-img: assets/img/projects/mosiac/018_01_launcher-800.png
+img: assets/img/projects/mosiac/018_nominal_sim_walkthrough_poster-800.png
 importance: 1
 category: [combustion, optimization, uq]
 related_publications: false
@@ -28,55 +28,33 @@ MOSIAC (formerly named RMIP, now retired) unifies the full workflow behind one c
 
 {% include project_gallery.liquid project="mosiac" topic="hero" %}
 
-## Step-by-step: a real H2/O2 case study, run live for this page
+## Live: a real H2/O2 case study, screen-recorded end to end
 
-Everything below is from an actual session driving MOSIAC Studio on the bundled H2/O2 mechanism (29 reactions) — not a description of what the GUI is supposed to do. Screenshots and log output are unedited; where something didn't work, that's shown too.
+The two videos below are real, screen-recorded MOSIAC Studio sessions — not screenshots, not a mockup. They're captured through Qt's own offscreen render pipeline (this page is generated on a headless machine with no physical display attached), which paints pixels identically to a normal window but off-screen; every frame is a genuine render of the real running app reacting to real, scripted input, then encoded straight to video. Nothing about what's on screen is staged.
 
-### 1. Launch
+One honest gap in reproducing this demo: the original 426-target H2/O2 dataset this walkthrough was built against is no longer present in this checkout. Rather than skip the demo or fake the data, the ignition-delay targets shown here were regenerated from scratch — a real Cantera constant-volume reactor integration at 30 conditions against Cantera's own bundled `h2o2.yaml` mechanism (29 reactions), producing a real, physically sensible Arrhenius ignition-delay curve. Getting the full pipeline to accept that data surfaced (and fixed) several real environment gaps along the way — a missing Cantera install, a Python-version-mismatched compiled extension, a case-sensitive import bug, and a missing `.target`/`.add` addendum link — documented in `scripts/build_h2o2_demo_target.py` and `scripts/record_studio_walkthrough.py` in the source repository.
 
-MOSIAC Studio opens on a tile gallery, grouped by workflow stage (Prepare · Explore · Quantify · Optimise · Compare · Utilities — 20 tools total). The status bar along the bottom checks every backend before anything runs: repository, the `.venv-gui` PySide6 environment, the separate science-stack Python, Cantera, and disk space all read green here.
+### Nominal Simulation, configured and run live
 
-{% include project_gallery.liquid project="mosiac" topic="wt-1-launcher" %}
+The Nominal Simulation tool — mechanism, targets, thermo/transport files, target count — filled with the real (regenerated) H2/O2 case, then actually run. The run genuinely completes: 30 real result tables in 15.8 real seconds, watched live in the Tables tab as they land.
 
-### 2. Configure a nominal simulation
+{% include project_gallery.liquid project="mosiac" topic="wt-nominal-video" %}
 
-Clicking the **Nominal Simulation** tile opens its own window with a plain form: run label, mechanism file, target file, thermo/transport files, target count. Filled in here with the real bundled case — `h2o2_he.yaml`, its thermo and transport data, and the 426-target experimental file that ships with it (426 targets total; run at 52 here so the demo finishes in under a minute rather than the ~4 minutes a full pass takes).
+### Ignition-Delay Sensitivity, configured and run live
 
-{% include project_gallery.liquid project="mosiac" topic="wt-2-nominal-config" %}
+A different, self-contained diagnostic — "which reactions actually control ignition delay, at one condition" — rather than a full optimization run. Configured for H<sub>2</sub> fuel at T=1200 K, P=13.5 atm, phi=1.0, constant-volume reactor, brute-force method, top 20 reactions, and run to completion in under a second. The result is exactly what combustion chemistry says it should be: **H + O2 ⇌ O + OH**, the dominant chain-branching step, comes out with the single largest-magnitude coefficient (−1.62) — speed that reaction up and ignition delay drops. **H + O2 + N2 ⇌ HO2 + N2**, a chain-_terminating_ three-body step, is next largest and has the _opposite_ sign (+0.79) — speed that one up and ignition delay gets longer. A tool that didn't understand the chemistry couldn't get that sign flip right by accident.
 
-### 3. Run it
+{% include project_gallery.liquid project="mosiac" topic="wt-idt-video" %}
 
-Nominal Simulation runs on a background thread specifically so the window doesn't lock up mid-run — Run becomes Stop, and a live log strip shows progress underneath the form.
+### Attempting an optimization run
 
-{% include project_gallery.liquid project="mosiac" topic="wt-3-nominal-running" %}
-
-### 4. Real results, not a mock-up
-
-52 tables in 23.5 seconds. The Tables tab shows per-target predicted-vs-observed rows — dataset `TIG_0001` at 1000 K is the first one here — and the run wrote a full case-by-case output tree to disk: 52 numbered case directories under `SIM_RUNS/nominal_htc/NOMINAL/`, each with its own `time_history.csv`, a copy of the mechanism actually used, and a solver log, plus a `Plot/Dataset/` tree of generated figures.
-
-{% include project_gallery.liquid project="mosiac" topic="wt-4-nominal-done" %}
-
-### 5. A second tool: ignition-delay sensitivity
-
-A different, self-contained diagnostic — "which reactions actually control ignition delay, at one condition" — rather than a full optimization run. Configured for H<sub>2</sub> fuel at T=1200 K, P=13.5 atm, phi=1.0, constant-volume reactor, brute-force method, top 20 reactions.
-
-{% include project_gallery.liquid project="mosiac" topic="wt-5-idt-config" %}
-
-### 6. Done in 2.4 seconds — and the physics checks out
-
-The tool writes a JSON of normalized sensitivity coefficients (d ln(tau)/d ln(k)) for all 29 reactions in the mechanism. The result is exactly what combustion chemistry says it should be: **H + O2 ⇌ O + OH**, the dominant chain-branching step, has the single largest-magnitude coefficient (−1.62) — speed that reaction up and ignition delay drops. **H + O2 + N2 ⇌ HO2 + N2**, a chain-_terminating_ three-body step, is next largest and has the _opposite_ sign (+0.79) — speed that one up and ignition delay gets longer. A tool that didn't understand the chemistry couldn't get that sign flip right by accident.
-
-{% include project_gallery.liquid project="mosiac" topic="wt-6-idt-done" %}
-
-### 7. Attempting an optimization run
-
-The Optimization tool needs a fully-populated `target.opt` project file (mechanism, targets, thermo/transport, and every optimizer setting in one place) rather than a form — MOSIAC's real campaigns aren't quick, so this is the one tool built around editing a config file directly rather than re-filling a form each time. For this demo, a copy of the bundled H2 project config had its generation count cut from 20,000 to 5 and its target count from 426 to 30 (the real settings would run for hours); everything else — mechanism, solver, targets — is the same real H2/O2 case as steps 2–6. The design-space plot below is generated automatically as the run's first step, before any fitting starts:
+The Optimization tool needs a fully-populated `target.opt` project file (mechanism, targets, thermo/transport, and every optimizer setting in one place) rather than a form — MOSIAC's real campaigns aren't quick, so this is the one tool built around editing a config file directly rather than re-filling a form each time. For this demo, a copy of the bundled H2 project config had its generation count cut from 20,000 to 5 and its target count from 426 to 30 (the real settings would run for hours); everything else — mechanism, solver, targets — is the same real H2/O2 case as above. The design-space plot below is generated automatically as the run's first step, before any fitting starts:
 
 {% include project_gallery.liquid project="mosiac" topic="wt-7-design-space" %}
 
 {% include project_gallery.liquid project="mosiac" topic="wt-8-opt-running" %}
 
-### 8. Where it actually broke — shown, not hidden
+### Where it actually broke — shown, not hidden
 
 The run got through target export, the design-space plot above, and parsing the joint-uncertainty data (a 3-reaction test fixture, used here since the bundled H2 project's own uncertainty file turned out to be a plain-text target file rather than the XML the optimizer expects — a real gap in the demo data, fixed by pointing at a smaller uncertainty fixture already in the repository's own test suite). It then failed one step later: the sensitivity-analysis sub-step expects a nominal-simulation case directory at a specific relative path (`nominal/case-7`) that this standalone optimization run hadn't produced itself. That's a real, undocumented dependency between two of the GUI's own tools — Nominal Simulation and Optimization apparently need to be run from a shared working directory for the second to find the first's output — caught only by actually running them back to back, not by reading the source.
 

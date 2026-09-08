@@ -67,59 +67,35 @@ mosiac:
   src_800: assets/img/projects/mosiac/014_04_species_profile_case-50-800.png
   src_1600: assets/img/projects/mosiac/014_04_species_profile_case-50-1600.png
 - index: 18
-  caption: Step 1 — MOSIAC Studio launcher
-  topic: wt-1-launcher
-  description: The launcher's tile gallery, grouped by workflow stage (Prepare/Explore/Quantify/Optimise/Compare/Utilities)
-    — 20 tools total. Status bar confirms every backend is healthy (repository, .venv-gui/PySide6,
-    Science python, Cantera, Modules, disk space) before starting.
-  src_800: assets/img/projects/mosiac/018_01_launcher-800.png
-  src_1600: assets/img/projects/mosiac/018_01_launcher-1600.png
+  caption: 'Live: configuring and running a real H2/O2 Nominal Simulation'
+  topic: wt-nominal-video
+  description: 'A real, screen-recorded MOSIAC Studio session (Qt''s own offscreen
+    render pipeline, frame-captured live -- not a mockup): Cantera''s bundled 29-reaction
+    h2o2.yaml mechanism, a set of ignition-delay targets computed directly from real
+    constant-volume Cantera reactor runs (the original demo dataset this walkthrough
+    was built against is no longer present in this checkout, so the targets were
+    regenerated from scratch rather than faked), fed through the Nominal Simulation
+    tool end to end. The run genuinely completes -- 30 real result tables in 15.8
+    real seconds, watched live in the Tables tab as it finishes.'
+  src_800: assets/img/projects/mosiac/018_nominal_sim_walkthrough_poster-800.png
+  src_1600: assets/img/projects/mosiac/018_nominal_sim_walkthrough_poster-1600.png
+  video: assets/img/projects/mosiac/018_nominal_sim_walkthrough.mp4
 - index: 19
-  caption: Step 2 — Nominal Simulation, configured for H2/O2
-  topic: wt-2-nominal-config
-  description: 'The Nominal Simulation form filled with the real bundled H2/O2 case:
-    the h2o2_he.yaml mechanism (29 reactions), its thermo and transport files, and
-    the 426-target experimental target file (426 total targets; 52 run here for a
-    fast demo pass).'
-  src_800: assets/img/projects/mosiac/019_02_nominal_filled-800.png
-  src_1600: assets/img/projects/mosiac/019_02_nominal_filled-1600.png
-- index: 20
-  caption: Step 3 — running (GUI stays responsive)
-  topic: wt-3-nominal-running
-  description: The run in progress. Nominal Simulation runs on a background thread
-    specifically so the window doesn't lock up — the Run button becomes Stop, live
-    in the log strip below the form.
-  src_800: assets/img/projects/mosiac/020_03_nominal_running-800.png
-  src_1600: assets/img/projects/mosiac/020_03_nominal_running-1600.png
-- index: 21
-  caption: 'Step 4 — done: 52 result tables in 23.5 seconds'
-  topic: wt-4-nominal-done
-  description: 'Completion state: "nominal_htc — done, Wall time: 23.5s · 52 table(s)."
-    The Tables tab shows real per-target predicted-vs-observed rows (here, dataset
-    TIG_0001 at 1000K); the full run wrote 52 case directories with time-history CSVs,
-    a mechanism copy, and solver logs under SIM_RUNS/nominal_htc/.'
-  src_800: assets/img/projects/mosiac/021_04_nominal_done-800.png
-  src_1600: assets/img/projects/mosiac/021_04_nominal_done-1600.png
-- index: 22
-  caption: Step 5 — Ignition-Delay Sensitivity, configured
-  topic: wt-5-idt-config
-  description: 'A second, self-contained tool: ignition-delay sensitivity d ln(tau)/d
-    ln(k) for one condition (H2 fuel, T=1200K, P=13.5atm, phi=1.0, constant-volume
-    reactor, brute-force method, top 20 reactions) — same mechanism, a different diagnostic
-    question.'
-  src_800: assets/img/projects/mosiac/022_05_idt_filled-800.png
-  src_1600: assets/img/projects/mosiac/022_05_idt_filled-1600.png
-- index: 23
-  caption: Step 6 — done in 2.4 seconds
-  topic: wt-6-idt-done
-  description: 'The completed run, writing a JSON of normalized sensitivity coefficients
-    for all 29 reactions. The top result is physically exactly right: H + O2 <=> O
-    + OH (the dominant chain-branching step) has the largest-magnitude coefficient
-    (-1.62), and H + O2 + N2 <=> HO2 + N2 (a chain-terminating three-body step) is
-    next, with the opposite sign (+0.79) -- faster branching shortens ignition delay,
-    faster termination lengthens it.'
-  src_800: assets/img/projects/mosiac/023_06_idt_done-800.png
-  src_1600: assets/img/projects/mosiac/023_06_idt_done-1600.png
+  caption: 'Live: Ignition-Delay Sensitivity, configured and run'
+  topic: wt-idt-video
+  description: 'The same real, live-recorded session driving a second, self-contained
+    tool: ignition-delay sensitivity d ln(tau)/d ln(k) for H2 fuel at T=1200K, P=13.5atm,
+    phi=1.0, constant-volume reactor, brute-force method, top 20 reactions. The run
+    completes in well under a second, and the ranked result is physically exactly
+    right: H + O2 <=> O + OH (the dominant chain-branching step) comes out as the
+    single largest-magnitude coefficient (-1.62), and H + O2 + N2 <=> HO2 + N2 (a
+    chain-terminating three-body step) is next, with the opposite sign (+0.79) --
+    faster branching shortens ignition delay, faster termination lengthens it. A
+    tool that didn''t understand the chemistry couldn''t get that sign flip right
+    by accident.'
+  src_800: assets/img/projects/mosiac/019_idt_sensitivity_walkthrough_poster-800.png
+  src_1600: assets/img/projects/mosiac/019_idt_sensitivity_walkthrough_poster-1600.png
+  video: assets/img/projects/mosiac/019_idt_sensitivity_walkthrough.mp4
 - index: 24
   caption: The 30-target design space for the optimization attempt
   topic: wt-7-design-space
@@ -305,24 +281,54 @@ muq-sac:
   src_800: assets/img/projects/muq-sac/007_parity_v2_GP-800.png
   src_1600: assets/img/projects/muq-sac/007_parity_v2_GP-1600.png
 - index: 9
-  caption: Arrhenius-curve sampling animation (10x speed), sample 5
+  caption: 'Class A sampling: kappa scale, real UQ limits, fit quality per sample'
   topic: animation
-  description: An animation (10x real speed) of Arrhenius-curve sampling in the (A,
-    n) subplane for one n-heptane reaction (nC7H16 + H -> C7H15-3 + H2), using a least-squares
-    sampling strategy — each frame is one sampled curve tightening the uncertainty
-    band.
-  src_800: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-800.png
-  src_1600: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x-1600.png
-  video: assets/img/projects/muq-sac/009_classC_ls_sample_005_10x.gif
+  description: 'Arrhenius-curve sampling for the same n-heptane reaction (nC7H16 +
+    H -> C7H15-3 + H2, R1071), reworked in kappa scale: the left panel plots each
+    accepted sample''s real Δκ_S(T) curve against 1/T, with MUQ-SAC''s own real ±f_prior_S(T)
+    uncertainty bound drawn explicitly (dashed) rather than left implicit -- that
+    is the actual UQ limit the sampling is constrained to. The right panel tracks,
+    per sample, the real fit-quality objective (how closely that sample''s curve
+    matches a best-fit scaled copy of the UQ envelope''s own shape) -- Class A''s
+    real Moore-Penrose pseudo-inverse solve, a closed-form linear solve rather than
+    an iterative search.'
+  src_800: assets/img/projects/muq-sac/muqsac_kappa_classA_poster-800.png
+  src_1600: assets/img/projects/muq-sac/muqsac_kappa_classA_poster-1600.png
+  video: assets/img/projects/muq-sac/muqsac_kappa_classA.mp4
 - index: 10
-  caption: Arrhenius-curve sampling animation (10x speed), sample 2
+  caption: 'Class C sampling: kappa scale, real UQ limits, fit quality per sample'
   topic: animation
-  description: A second, independent sampling run of the same reaction and method
-    as the sample-5 animation — shown together to demonstrate that repeated sampling
-    converges on a consistent uncertainty band rather than one lucky draw.
-  src_800: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-800.png
-  src_1600: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x-1600.png
-  video: assets/img/projects/muq-sac/010_classC_ls_sample_002_10x.gif
+  description: The same kappa-scale treatment for Class C (ordinary least-squares,
+    closed-form) -- a second, independently-run sampling method on the same real
+    reaction, same real UQ envelope, same per-sample fit-quality readout, so the
+    two closed-form classes (A and this one) can be compared directly rather than
+    taken on faith.
+  src_800: assets/img/projects/muq-sac/muqsac_kappa_classC_poster-800.png
+  src_1600: assets/img/projects/muq-sac/muqsac_kappa_classC_poster-1600.png
+  video: assets/img/projects/muq-sac/muqsac_kappa_classC.mp4
+- index: 13
+  caption: 'Class D sampling: kappa scale, real UQ limits, fit quality per sample'
+  topic: animation
+  description: The same kappa-scale, UQ-limit, fit-quality-per-sample treatment for
+    Class D (SLSQP, reduced 2-parameter fit) -- an iterative optimizer this time,
+    not a closed-form solve, on the same real reaction and UQ envelope as the other
+    three classes.
+  src_800: assets/img/projects/muq-sac/muqsac_kappa_classD_poster-800.png
+  src_1600: assets/img/projects/muq-sac/muqsac_kappa_classD_poster-1600.png
+  video: assets/img/projects/muq-sac/muqsac_kappa_classD.mp4
+- index: 14
+  caption: 'Class B sampling: kappa scale, real UQ limits, fit quality per sample'
+  topic: animation
+  description: 'The same treatment for Class B (SLSQP, full 3-parameter fit) -- the
+    slowest of the four methods (see the measured-cost figure below), shown here
+    with fewer real samples (10 rather than 16) purely because each one is genuinely
+    more expensive to compute, not because the method is different in kind. Class
+    B has no reduced (A, n)-only mode in MUQ-SAC''s own code -- its real sampler
+    only supports the full 3-parameter fit, so this one uses all three Arrhenius
+    parameters rather than the 2-parameter subset the other three classes use.'
+  src_800: assets/img/projects/muq-sac/muqsac_kappa_classB_poster-800.png
+  src_1600: assets/img/projects/muq-sac/muqsac_kappa_classB_poster-1600.png
+  video: assets/img/projects/muq-sac/muqsac_kappa_classB.mp4
 - index: 11
   caption: All four sampling-method classes, live, one frame
   topic: sampling-methods
