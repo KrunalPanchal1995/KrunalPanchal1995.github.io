@@ -327,15 +327,6 @@ muq-sac:
     GP, RBF) compared for how well each reproduces the underlying simulation.
   src_800: assets/img/projects/muq-sac/007_parity_v2_GP-800.png
   src_1600: assets/img/projects/muq-sac/007_parity_v2_GP-1600.png
-- index: 8
-  caption: Sampling-method comparison
-  topic: sampling
-  description: A comparison of different design-of-experiments sampling strategies
-    (e.g. Latin hypercube vs. structured grids) for building the response-surface
-    training set — which method covers the parameter space most efficiently.
-  src_800: assets/img/projects/muq-sac/008_sampling_methods_comparison-800.png
-  src_1600: assets/img/projects/muq-sac/008_sampling_methods_comparison-1600.png
-  original_pdf: assets/pdf/projects/muq-sac/sampling_methods_comparison.pdf
 - index: 9
   caption: Arrhenius-curve sampling animation (10x speed), sample 5
   topic: animation
