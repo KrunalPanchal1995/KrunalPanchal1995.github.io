@@ -1626,6 +1626,85 @@ dokimazo:
     on the histogram — uncertainty propagation as a plain graph node, not a bespoke
     analysis script.
   src_800: assets/img/projects/dokimazo/13_uq_propagation_histogram-800.png
+- index: 14
+  caption: 'The vine mark: "I am the vine, you are the branches" (John 15:5) as a real
+    topology optimization'
+  topic: identity-vine-mark
+  description: 'dokimazo''s own mark, generated — not drawn — by a real SIMP compliance-
+    minimization topology optimization (dokimazo.physics.topopt): a single trunk support
+    carrying a distributed canopy load, converging under an exact self-adjoint gradient
+    to a genuinely branching structure. Every branch is 100% solver output; only the
+    ink color and typography are a human choice, both stated plainly in docs/IDENTITY.md.'
+  video: assets/video/dokimazo/14_logo_topopt.mp4
+  src_800: assets/img/projects/dokimazo/14_logo_topopt_poster-800.png
+- index: 15
+  caption: The bare vine mark
+  topic: identity-vine-mark
+  description: The converged material field alone, transparent background — the actual
+    logo asset, unedited from the SIMP solver's own output.
+  src_800: assets/img/projects/dokimazo/15_vine_mark-800.png
+- index: 16
+  caption: Gradient descent beats a genetic algorithm and reinforcement learning by
+    ~4x, at equal evaluation budget
+  topic: topology-optimization-study
+  description: Same SIMP compliance-minimization problem (288 correlated design
+    variables), same ~150-evaluation budget, same exact volume-constraint projection
+    applied to every arm so none fails on worse constraint handling alone. The exact
+    self-adjoint gradient (one extra vector operation, no second linear solve) lets
+    Optimality-Criteria descent reach compliance=143.7; PyGAD's genetic algorithm
+    (593.3, using roughly double the evaluation budget) and a REINFORCE policy over a
+    static Gaussian action (577.1) both structurally cannot use that information.
+  src_800: assets/img/projects/dokimazo/16_topopt_gradient_vs_heuristics-800.png
+- index: 17
+  caption: The three arms' resulting material layouts, side by side
+  topic: topology-optimization-study
+  description: What each method actually converged to at the same evaluation budget —
+    the gradient arm's clean, load-path-following structure next to the GA/RL arms'
+    still-mostly-undifferentiated density fields.
+  src_800: assets/img/projects/dokimazo/17_topopt_density_fields-800.png
+- index: 18
+  caption: '"Tested by fire" (1 Peter 1:7): a real constrained combustion optimization'
+  topic: identity-refining-fire
+  description: 'dokimazo''s second mark — a real reactor temperature trajectory (GRI-Mech
+    3.0, 36-species kinetics) at the converged optimum of a genuinely constrained
+    optimization run through PANSOPHIA''s own CFDCore.ignition_delay as a third-party
+    connector (dokimazo.objectives.external): minimize ignition delay subject to a
+    2320 K temperature ceiling — "that the dross be consumed... yet the gold not
+    destroyed." The optimizer converged to T_final=2295.4 K, 24.6 K under the ceiling —
+    a genuinely binding constraint, not a slack one.'
+  video: assets/video/dokimazo/18_refining_fire.mp4
+  src_800: assets/img/projects/dokimazo/18_refining_fire_poster-800.png
+- index: 19
+  caption: Constrained optimization convergence — ignition delay minimized against
+    the temperature ceiling
+  topic: identity-refining-fire
+  description: 82 real Julia/GRI-Mech-3.0 kinetics evaluations (penalty-continuation
+    over Nelder-Mead, dokimazo.constraints), each one an actual external-process
+    subprocess call — not a surrogate or a cached analytic function.
+  src_800: assets/img/projects/dokimazo/19_refining_fire_convergence-800.png
+- index: 20
+  caption: Rocket-nozzle shape optimization through a real third-party quasi-1D Euler
+    CFD solver
+  topic: third-party-connector
+  description: dokimazo.objectives.external driving PANSOPHIA's own
+    CFDCore.solve_quasi1d_euler as a black-box connector — no dokimazo kernel change to
+    add this physics code, only a driver script on the params.json/result.json
+    contract. 37 real CFD evaluations (Nelder-Mead), nozzle thrust improved from
+    4.328e6 to 4.367e6 N-equivalent.
+  src_800: assets/img/projects/dokimazo/20_nozzle_thrust_convergence-800.png
+- index: 21
+  caption: 'Rectangle to airfoil: a real free-form camber-shape optimization, gradient-driven'
+  topic: aircraft-design
+  description: 'The jax-native vortex-panel method (dokimazo_aero.panel_method) giving
+    EXACT jax.grad gradients through a real thin-airfoil linear solve, maximizing
+    section lift coefficient over a free-form 2-harmonic camber-line design space
+    (not the fixed NACA (m, p) family). Two segments, honestly distinguished on
+    the video itself: an illustrative opening morphs a literal rectangular block
+    into the optimizer''s own flat-plate starting point (never claimed as solver
+    output); every frame after that is a real per-iteration gradient-ascent step,
+    unedited, ending at a converged cambered shape.'
+  video: assets/video/dokimazo/21_airfoil_optimization.mp4
+  src_800: assets/img/projects/dokimazo/21_airfoil_optimization_poster-800.png
 turbulence-closures:
 - index: 1
   caption: LES energy-spectrum validation, freely-decaying 2D turbulence
