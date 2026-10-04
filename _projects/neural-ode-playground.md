@@ -10,6 +10,8 @@ related_publications: false
 
 {% include project_gallery.liquid project="neural-ode-playground" %}
 
+> Course notes: the mathematics behind this project is written up as a [self-built Neural ODE course]({{ site.baseurl }}/projects/neural-ode-course/), with a verified animation for every session.
+
 ## Problem
 
 `sweep/`, `sweep_normalization/` and `sweep_temp/` had 44 hand-cloned copies of essentially the same H<sub>2</sub>/O<sub>2</sub> autoignition Neural ODE training script between the three of them (52 counting a handful of earlier one-off folders) — each one a small, undocumented fork exploring one axis (a different normalizer, a different time-rescaling, a different loss space) with no shared code and no record of which combination did what. Reproducing an old result meant re-reading a specific version's diff by hand. This project is that: one codebase, one `Config` object standing in for every version, plus a live, browser-based environment for running and comparing new ones — closer in spirit to [TensorFlow Playground](https://playground.tensorflow.org) and [ConvNetJS](https://cs.stanford.edu/people/karpathy/convnetjs/) than to a one-off research script.
