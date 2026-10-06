@@ -12,6 +12,17 @@ restored_from: main@5fe9141
 icon: assets/img/projects/neural-ode-course/icon.webp
 icon_video: assets/img/projects/neural-ode-course/icon.webm
 icon_video_mp4: assets/img/projects/neural-ode-course/icon.mp4
+recreate:
+  video: assets/img/projects/neural-ode-course/recreate.webm
+  poster: assets/img/projects/neural-ode-course/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Choose the example: a map u(x, y), v(x, y)'
+  - 'Choose the shape: circle'
+  - Raise the window half-width to 4
+  - Press Play
+  explainer: figure.neural-ode-course.maps-flows-and-invariants
+  route: deform?preset=2
 ---
 
 ## What this is
@@ -22,7 +33,7 @@ Everything below is teaching material built on standard results. Each animation 
 
 ## Plan
 
-Roughly 61 sessions from October 2026 to April 2027, foundations first. Forty-two are written as of 6 October 2026; the next block is the objective side (relative error, power means, Sobolev loss).
+Roughly 72 sessions from October 2026 to April 2027, foundations first. Fifty-two are written as of 6 October 2026; the next block is the constraint side (the stoichiometric matrix, conservation laws, hard constraints, CRNN).
 
 | Month | Focus |
 | --- | --- |
@@ -43,7 +54,7 @@ Roughly 61 sessions from October 2026 to April 2027, foundations first. Forty-tw
 
 ## Animations and figures
 
-Grouped by phase: maps (P0), transformations (P1), ODE theory (P2), numerical integrators (P3), Neural-ODE core, adjoint and expressivity (P4 to P6, S028 to S037), and a last tab on regularization, stiff training, ChemNODE-style training on hydrogen/air, shooting and latent spaces, and flow maps (S038 to S042). Sessions S001 to S042. The videos loop silently; click a still figure for full size.
+Grouped by phase: maps (P0), transformations (P1), ODE theory (P2), numerical integrators (P3), Neural-ODE core, adjoint and expressivity (P4 to P6, S028 to S037), and a last tab on regularization, stiff training, ChemNODE-style training on hydrogen/air, shooting and latent spaces, and flow maps (S038 to S042). Sessions S001 to S042. The videos loop silently; click a still figure for full size. Two further tabs cover the objective side (S043 to S046: power means, Sobolev loss, the Mahalanobis term, split estimators and leakage) and the capstones (S047 to S052: flows, slow manifolds, sparse and symbolic regression, the real hydrogen/air stiffness spectrum, state charts for a Neural ODE and a pilot check for training runs).
 
 ## Method
 
