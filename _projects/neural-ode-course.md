@@ -1,11 +1,17 @@
 ---
-layout: page
+layout: project
 title: Neural ODEs and Transformations — A Self-Built Course
 description: A multi-month, derivation-first course on Neural ODEs, coordinate transformations and stiff chemical kinetics, with a verified animation for every session
-img: assets/img/projects/neural-ode-course/s022_anim_rober_simplex-800.png
+img: assets/img/projects/neural-ode-course/41_s028_anim_induced_field_stretch-800.png
 importance: 4
-category: [sciml]
-related_publications: false
+category:
+- sciml
+source: intake
+studio: deform?preset=2
+restored_from: main@5fe9141
+icon: assets/img/projects/neural-ode-course/icon.webp
+icon_video: assets/img/projects/neural-ode-course/icon.webm
+icon_video_mp4: assets/img/projects/neural-ode-course/icon.mp4
 ---
 
 ## What this is
@@ -16,7 +22,7 @@ Everything below is teaching material built on standard results. Each animation 
 
 ## Plan
 
-Roughly 61 sessions from October 2026 to April 2027, foundations first.
+Roughly 61 sessions from October 2026 to April 2027, foundations first. Forty-two are written as of 6 October 2026; the next block is the objective side (relative error, power means, Sobolev loss).
 
 | Month | Focus |
 | --- | --- |
@@ -37,9 +43,7 @@ Roughly 61 sessions from October 2026 to April 2027, foundations first.
 
 ## Animations and figures
 
-Grouped by phase: maps (P0), transformations (P1), ODE theory (P2) and numerical integrators (P3), sessions S001 to S027. The videos loop silently; click a still figure for full size.
-
-{% include project_gallery.liquid project="neural-ode-course" %}
+Grouped by phase: maps (P0), transformations (P1), ODE theory (P2), numerical integrators (P3), Neural-ODE core, adjoint and expressivity (P4 to P6, S028 to S037), and a last tab on regularization, stiff training, ChemNODE-style training on hydrogen/air, shooting and latent spaces, and flow maps (S038 to S042). Sessions S001 to S042. The videos loop silently; click a still figure for full size.
 
 ## Method
 
@@ -50,4 +54,4 @@ Grouped by phase: maps (P0), transformations (P1), ODE theory (P2) and numerical
 
 ## Related
 
-The experimental setting behind the course, a stiff H<sub>2</sub>/O<sub>2</sub> autoignition Neural ODE, is described in the [Neural ODE playground]({{ site.baseurl }}/projects/neural-ode-playground/) project.
+The experimental setting behind the course, a stiff H<sub>2</sub>/O<sub>2</sub> autoignition Neural ODE, is described in the [Neural ODE playground](/projects/neural-ode-playground/) project.

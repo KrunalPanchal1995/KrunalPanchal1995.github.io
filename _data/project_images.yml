@@ -2110,242 +2110,746 @@ turbulence-closures:
   video: assets/img/projects/turbulence-closures/028_mov05_pipeline_animation.mp4
 neural-ode-course:
 - index: 1
-  caption: "S001 What a Function Does to Space"
+  caption: S001 What a Function Does to Space
   topic: p0-maps
-  description: "Grid morphing along a homotopy to a fold map; Jacobian sign tracked. Numeric check: max |det numeric - analytic| = 4.95e-10."
-  src_800: assets/img/projects/neural-ode-course/s001_anim_homotopy_grid-800.png
-  video: assets/img/projects/neural-ode-course/s001_anim_homotopy_grid.mp4
+  description: 'Grid morphing along a homotopy to a fold map; Jacobian sign tracked. Numeric check: max |det numeric - analytic| = 4.95e-10.'
+  src_800: assets/img/projects/neural-ode-course/01_s001_anim_homotopy_grid-800.png
+  video: assets/img/projects/neural-ode-course/01_s001_anim_homotopy_grid.mp4
 - index: 2
-  caption: "S002 Smooth, Continuous, Invertible"
+  caption: S002 Smooth, Continuous, Invertible
   topic: p0-maps
-  description: "Flow-map semigroup: phi_t then phi_s equals phi_(t+s). Numeric check: semigroup error 2.1e-14; order preserved."
-  src_800: assets/img/projects/neural-ode-course/s002_anim_flow_semigroup-800.png
-  video: assets/img/projects/neural-ode-course/s002_anim_flow_semigroup.mp4
+  description: 'Flow-map semigroup: phi_t then phi_s equals phi_(t+s). Numeric check: semigroup error 2.1e-14; order preserved.'
+  src_800: assets/img/projects/neural-ode-course/02_s002_anim_flow_semigroup-800.png
+  video: assets/img/projects/neural-ode-course/02_s002_anim_flow_semigroup.mp4
 - index: 3
-  caption: "S003 Topological Invariants"
+  caption: S003 Topological Invariants
   topic: p0-maps
-  description: "Two linked rings under an isotopy; Gauss linking integral tracked live. Numeric check: Lk stays in [-1.0009, -1.0003]."
-  src_800: assets/img/projects/neural-ode-course/s003_anim_linked_isotopy-800.png
-  video: assets/img/projects/neural-ode-course/s003_anim_linked_isotopy.mp4
+  description: 'Two linked rings under an isotopy; Gauss linking integral tracked live. Numeric check: Lk stays in [-1.0009, -1.0003].'
+  src_800: assets/img/projects/neural-ode-course/03_s003_anim_linked_isotopy-800.png
+  video: assets/img/projects/neural-ode-course/03_s003_anim_linked_isotopy.mp4
 - index: 4
-  caption: "S004 Elementary Scalar Transforms"
+  caption: S004 Elementary Scalar Transforms
   topic: p1-transforms
-  description: "Power map x^p as p sweeps; fixed and critical points. Numeric check: slope at x=1 error 1.4e-10; round trip 1.8e-15."
-  src_800: assets/img/projects/neural-ode-course/s004_anim_power_sweep-800.png
-  video: assets/img/projects/neural-ode-course/s004_anim_power_sweep.mp4
+  description: 'Power map x^p as p sweeps; fixed and critical points. Numeric check: slope at x=1 error 1.4e-10; round trip 1.8e-15.'
+  src_800: assets/img/projects/neural-ode-course/04_s004_anim_power_sweep-800.png
+  video: assets/img/projects/neural-ode-course/04_s004_anim_power_sweep.mp4
 - index: 5
-  caption: "S005 Exp, Log and the Log-Scaler"
+  caption: S005 Exp, Log and the Log-Scaler
   topic: p1-transforms
-  description: "Multi-scale trajectory as the log-scaler epsilon changes. Numeric check: round trip 1e-15."
-  src_800: assets/img/projects/neural-ode-course/s005_anim_epsilon_log-800.png
-  video: assets/img/projects/neural-ode-course/s005_anim_epsilon_log.mp4
+  description: 'Multi-scale trajectory as the log-scaler epsilon changes. Numeric check: round trip 1e-15.'
+  src_800: assets/img/projects/neural-ode-course/05_s005_anim_epsilon_log-800.png
+  video: assets/img/projects/neural-ode-course/05_s005_anim_epsilon_log.mp4
 - index: 6
-  caption: "S006 Statistical Transforms"
+  caption: S006 Statistical Transforms
   topic: p1-transforms
-  description: "Empirical CDF, Box-Cox lambda and the Q-Q line. Numeric check: MLE lambda 0.011 vs scipy 0.0108."
-  src_800: assets/img/projects/neural-ode-course/s006_anim_quantile_boxcox-800.png
-  video: assets/img/projects/neural-ode-course/s006_anim_quantile_boxcox.mp4
+  description: 'Empirical CDF, Box-Cox lambda and the Q-Q line. Numeric check: MLE lambda 0.011 vs scipy 0.0108.'
+  src_800: assets/img/projects/neural-ode-course/06_s006_anim_quantile_boxcox-800.png
+  video: assets/img/projects/neural-ode-course/06_s006_anim_quantile_boxcox.mp4
 - index: 7
-  caption: "S007 Trig and Hyperbolic Transforms"
+  caption: S007 Trig and Hyperbolic Transforms
   topic: p1-transforms
-  description: "Bounded maps saturate as the cloud scale grows. Numeric check: float64 tanh = 1.0 at x = 18.99."
-  src_800: assets/img/projects/neural-ode-course/s007_anim_saturation-800.png
-  video: assets/img/projects/neural-ode-course/s007_anim_saturation.mp4
+  description: 'Bounded maps saturate as the cloud scale grows. Numeric check: float64 tanh = 1.0 at x = 18.99.'
+  src_800: assets/img/projects/neural-ode-course/07_s007_anim_saturation-800.png
+  video: assets/img/projects/neural-ode-course/07_s007_anim_saturation.mp4
 - index: 8
-  caption: "S008 Polar, Cylindrical, Spherical"
+  caption: S008 Polar, Cylindrical, Spherical
   topic: p1-transforms
-  description: "A path crossing the origin and the atan2 branch cut. Numeric check: jump = -2pi + 0.0318."
-  src_800: assets/img/projects/neural-ode-course/s008_anim_branch_cut-800.png
-  video: assets/img/projects/neural-ode-course/s008_anim_branch_cut.mp4
+  description: 'A path crossing the origin and the atan2 branch cut. Numeric check: jump = -2pi + 0.0318.'
+  src_800: assets/img/projects/neural-ode-course/08_s008_anim_branch_cut-800.png
+  video: assets/img/projects/neural-ode-course/08_s008_anim_branch_cut.mp4
 - index: 9
-  caption: "S009 Curvilinear Coordinates"
+  caption: S009 Curvilinear Coordinates
   topic: p1-transforms
-  description: "Conformal homotopy from a Cartesian grid to elliptic coordinates. Numeric check: orthogonality deviation <= 3.7e-8 deg."
-  src_800: assets/img/projects/neural-ode-course/s009_anim_conformal_homotopy-800.png
-  video: assets/img/projects/neural-ode-course/s009_anim_conformal_homotopy.mp4
+  description: 'Conformal homotopy from a Cartesian grid to elliptic coordinates. Numeric check: orthogonality deviation <= 3.7e-8 deg.'
+  src_800: assets/img/projects/neural-ode-course/09_s009_anim_conformal_homotopy-800.png
+  video: assets/img/projects/neural-ode-course/09_s009_anim_conformal_homotopy.mp4
 - index: 10
-  caption: "S010 Linear Maps"
+  caption: S010 Linear Maps
   topic: p1-transforms
-  description: "exp(tA) of a non-normal matrix: transient growth. Numeric check: peak norm 2.563 at t = 0.663."
-  src_800: assets/img/projects/neural-ode-course/s010_anim_expm_transient-800.png
-  video: assets/img/projects/neural-ode-course/s010_anim_expm_transient.mp4
+  description: 'exp(tA) of a non-normal matrix: transient growth. Numeric check: peak norm 2.563 at t = 0.663.'
+  src_800: assets/img/projects/neural-ode-course/10_s010_anim_expm_transient-800.png
+  video: assets/img/projects/neural-ode-course/10_s010_anim_expm_transient.mp4
 - index: 11
-  caption: "S011 Homogeneous and Mobius Maps"
+  caption: S011 Homogeneous and Mobius Maps
   topic: p1-transforms
-  description: "Mobius flow through elliptic, parabolic, hyperbolic classes. Numeric check: cross-ratio drift 4.0e-15."
-  src_800: assets/img/projects/neural-ode-course/s011_anim_mobius_classes-800.png
-  video: assets/img/projects/neural-ode-course/s011_anim_mobius_classes.mp4
+  description: 'Mobius flow through elliptic, parabolic, hyperbolic classes. Numeric check: cross-ratio drift 4.0e-15.'
+  src_800: assets/img/projects/neural-ode-course/11_s011_anim_mobius_classes-800.png
+  video: assets/img/projects/neural-ode-course/11_s011_anim_mobius_classes.mp4
 - index: 12
-  caption: "S012 Polynomial Bases"
+  caption: S012 Polynomial Bases
   topic: p1-transforms
-  description: "Runge function: equispaced vs Chebyshev nodes as degree grows. Numeric check: n=40 error 1.05e5 vs 2.89e-4."
-  src_800: assets/img/projects/neural-ode-course/s012_anim_runge_nodes-800.png
-  video: assets/img/projects/neural-ode-course/s012_anim_runge_nodes.mp4
+  description: 'Runge function: equispaced vs Chebyshev nodes as degree grows. Numeric check: n=40 error 1.05e5 vs 2.89e-4.'
+  src_800: assets/img/projects/neural-ode-course/12_s012_anim_runge_nodes-800.png
+  video: assets/img/projects/neural-ode-course/12_s012_anim_runge_nodes.mp4
 - index: 13
-  caption: "S013 Fourier and the DFT"
+  caption: S013 Fourier and the DFT
   topic: p1-transforms
-  description: "A sinusoid swept past Nyquist; the DFT peak jumps to the alias. Numeric check: peak bin = alias in 57 of 57 frames."
-  src_800: assets/img/projects/neural-ode-course/s013_anim_alias_sweep-800.png
-  video: assets/img/projects/neural-ode-course/s013_anim_alias_sweep.mp4
+  description: 'A sinusoid swept past Nyquist; the DFT peak jumps to the alias. Numeric check: peak bin = alias in 57 of 57 frames.'
+  src_800: assets/img/projects/neural-ode-course/13_s013_anim_alias_sweep-800.png
+  video: assets/img/projects/neural-ode-course/13_s013_anim_alias_sweep.mp4
 - index: 14
-  caption: "S014 Laplace and Resolvents"
+  caption: S014 Laplace and Resolvents
   topic: p1-transforms
-  description: "Poles moving with damping; time response and ROC. Numeric check: impulse response vs scipy 3.4e-13."
-  src_800: assets/img/projects/neural-ode-course/s014_anim_pole_damping-800.png
-  video: assets/img/projects/neural-ode-course/s014_anim_pole_damping.mp4
+  description: 'Poles moving with damping; time response and ROC. Numeric check: impulse response vs scipy 3.4e-13.'
+  src_800: assets/img/projects/neural-ode-course/14_s014_anim_pole_damping-800.png
+  video: assets/img/projects/neural-ode-course/14_s014_anim_pole_damping.mp4
 - index: 15
-  caption: "S015 Wavelets"
+  caption: S015 Wavelets
   topic: p1-transforms
-  description: "Haar thresholding: kept coefficients vs error. Numeric check: error = discarded energy to 2.1e-14."
-  src_800: assets/img/projects/neural-ode-course/s015_anim_haar_threshold-800.png
-  video: assets/img/projects/neural-ode-course/s015_anim_haar_threshold.mp4
+  description: 'Haar thresholding: kept coefficients vs error. Numeric check: error = discarded energy to 2.1e-14.'
+  src_800: assets/img/projects/neural-ode-course/15_s015_anim_haar_threshold-800.png
+  video: assets/img/projects/neural-ode-course/15_s015_anim_haar_threshold.mp4
 - index: 16
-  caption: "S016 PCA and Whitening"
+  caption: S016 PCA and Whitening
   topic: p1-transforms
-  description: "Center, rotate and whiten a correlated cloud. Numeric check: cond(cov) 14.62 -> 1.0."
-  src_800: assets/img/projects/neural-ode-course/s016_anim_whitening-800.png
-  video: assets/img/projects/neural-ode-course/s016_anim_whitening.mp4
+  description: 'Center, rotate and whiten a correlated cloud. Numeric check: cond(cov) 14.62 -> 1.0.'
+  src_800: assets/img/projects/neural-ode-course/16_s016_anim_whitening-800.png
+  video: assets/img/projects/neural-ode-course/16_s016_anim_whitening.mp4
 - index: 17
-  caption: "S017 Activation Functions"
+  caption: S017 Activation Functions
   topic: p1-transforms
-  description: "ReLU, tanh and softplus deforming a grid; Jacobian determinant mask. Numeric check: degenerate points after 2 layers: ReLU 87.3%, tanh 9.8%, softplus 0%."
-  src_800: assets/img/projects/neural-ode-course/s017_anim_activation_grid-800.png
-  video: assets/img/projects/neural-ode-course/s017_anim_activation_grid.mp4
+  description: 'ReLU, tanh and softplus deforming a grid; Jacobian determinant mask. Numeric check: degenerate points after 2 layers: ReLU 87.3%, tanh 9.8%, softplus 0%.'
+  src_800: assets/img/projects/neural-ode-course/17_s017_anim_activation_grid-800.png
+  video: assets/img/projects/neural-ode-course/17_s017_anim_activation_grid.mp4
 - index: 18
-  caption: "S018 Auditing a Transformation"
+  caption: S018 Auditing a Transformation
   topic: p1-transforms
-  description: "Raw vs transformed field; induced-field formula checked live. Numeric check: max error 1.3e-8 (log), 4.5e-9 (asinh)."
-  src_800: assets/img/projects/neural-ode-course/s018_anim_induced_field-800.png
-  video: assets/img/projects/neural-ode-course/s018_anim_induced_field.mp4
+  description: 'Raw vs transformed field; induced-field formula checked live. Numeric check: max error 1.3e-8 (log), 4.5e-9 (asinh).'
+  src_800: assets/img/projects/neural-ode-course/18_s018_anim_induced_field-800.png
+  video: assets/img/projects/neural-ode-course/18_s018_anim_induced_field.mp4
 - index: 19
-  caption: "S019 ODEs and Vector Fields"
+  caption: S019 ODEs and Vector Fields
   topic: p2-ode-theory
-  description: "Particle swarm in the oscillator field: exact vs Euler. Numeric check: Euler energy ratio 4.2844 = 1.0625^24."
-  src_800: assets/img/projects/neural-ode-course/s019_anim_swarm_flow-800.png
-  video: assets/img/projects/neural-ode-course/s019_anim_swarm_flow.mp4
+  description: 'Particle swarm in the oscillator field: exact vs Euler. Numeric check: Euler energy ratio 4.2844 = 1.0625^24.'
+  src_800: assets/img/projects/neural-ode-course/19_s019_anim_swarm_flow-800.png
+  video: assets/img/projects/neural-ode-course/19_s019_anim_swarm_flow.mp4
 - index: 20
-  caption: "S020 Picard and Gronwall"
+  caption: S020 Picard and Gronwall
   topic: p2-ode-theory
-  description: "Picard iterates converging to the exact solution. Numeric check: iterates equal Taylor sums."
-  src_800: assets/img/projects/neural-ode-course/s020_anim_picard-800.png
-  video: assets/img/projects/neural-ode-course/s020_anim_picard.mp4
+  description: 'Picard iterates converging to the exact solution. Numeric check: iterates equal Taylor sums.'
+  src_800: assets/img/projects/neural-ode-course/20_s020_anim_picard-800.png
+  video: assets/img/projects/neural-ode-course/20_s020_anim_picard.mp4
 - index: 21
-  caption: "S021 Linearization and Phase Portraits"
+  caption: S021 Linearization and Phase Portraits
   topic: p2-ode-theory
-  description: "Trace-determinant point sweeping through the portrait zoo. Numeric check: Carleman N=1 equals Jacobian exactly (0.0)."
-  src_800: assets/img/projects/neural-ode-course/s021_anim_trdet-800.png
-  video: assets/img/projects/neural-ode-course/s021_anim_trdet.mp4
+  description: 'Trace-determinant point sweeping through the portrait zoo. Numeric check: Carleman N=1 equals Jacobian exactly (0.0).'
+  src_800: assets/img/projects/neural-ode-course/21_s021_anim_trdet-800.png
+  video: assets/img/projects/neural-ode-course/21_s021_anim_trdet.mp4
 - index: 22
-  caption: "S022 Stiffness and Arrhenius"
+  caption: S022 Stiffness and Arrhenius
   topic: p2-ode-theory
-  description: "ROBER on the 3D simplex with its eigenvalue spectrum. Numeric check: sum drift 2e-15; hard-constraint drift <= 2.1e-14."
-  src_800: assets/img/projects/neural-ode-course/s022_anim_rober_simplex-800.png
-  video: assets/img/projects/neural-ode-course/s022_anim_rober_simplex.mp4
+  description: 'ROBER on the 3D simplex with its eigenvalue spectrum. Numeric check: sum drift 2e-15; hard-constraint drift <= 2.1e-14.'
+  src_800: assets/img/projects/neural-ode-course/22_s022_anim_rober_simplex-800.png
+  video: assets/img/projects/neural-ode-course/22_s022_anim_rober_simplex.mp4
 - index: 23
-  caption: "S023 Forward Euler: Step Halving"
+  caption: 'S023 Forward Euler: Step Halving'
   topic: p3-integrators
-  description: "Euler polygon converging to the exact curve as the step halves. Numeric check: global error slope 0.970 on log-log; local error slope 1.975."
-  src_800: assets/img/projects/neural-ode-course/s023_anim_euler_halving-800.png
-  video: assets/img/projects/neural-ode-course/s023_anim_euler_halving.mp4
+  description: 'Euler polygon converging to the exact curve as the step halves. Numeric check: global error slope 0.970 on log-log; local error slope 1.975.'
+  src_800: assets/img/projects/neural-ode-course/23_s023_anim_euler_halving-800.png
+  video: assets/img/projects/neural-ode-course/23_s023_anim_euler_halving.mp4
 - index: 24
-  caption: "S023 Forward Euler: Stability Blow-up"
+  caption: 'S023 Forward Euler: Stability Blow-up'
   topic: p3-integrators
-  description: "Step-size sweep on y' = lambda y: amplification factor 1 + h lambda crossing -1. Numeric check: measured amplification 0.5, -0.5, -1.5 equals 1 + h lambda."
-  src_800: assets/img/projects/neural-ode-course/s023_anim_stability_blowup-800.png
-  video: assets/img/projects/neural-ode-course/s023_anim_stability_blowup.mp4
+  description: 'Step-size sweep on y'' = lambda y: amplification factor 1 + h lambda crossing -1. Numeric check: measured amplification 0.5, -0.5, -1.5 equals 1 + h lambda.'
+  src_800: assets/img/projects/neural-ode-course/24_s023_anim_stability_blowup-800.png
+  video: assets/img/projects/neural-ode-course/24_s023_anim_stability_blowup.mp4
 - index: 25
-  caption: "S024 RK4 Stages as Slope Arrows"
+  caption: S024 RK4 Stages as Slope Arrows
   topic: p3-integrators
-  description: "The four slope evaluations of one RK4 step and the weighted average that is taken. Numeric check: measured order slopes Euler 0.99, Heun 1.99, RK4 3.98; order-condition residual <= 3.9e-16."
-  src_800: assets/img/projects/neural-ode-course/s024_anim_rk4_stages-800.png
-  video: assets/img/projects/neural-ode-course/s024_anim_rk4_stages.mp4
+  description: 'The four slope evaluations of one RK4 step and the weighted average that is taken. Numeric check: measured order slopes Euler 0.99, Heun 1.99, RK4 3.98; order-condition residual <= 3.9e-16.'
+  src_800: assets/img/projects/neural-ode-course/25_s024_anim_rk4_stages-800.png
+  video: assets/img/projects/neural-ode-course/25_s024_anim_rk4_stages.mp4
 - index: 26
-  caption: "S025 Absolute Stability Sweep"
+  caption: S025 Absolute Stability Sweep
   topic: p3-integrators
-  description: "The point h lambda leaves the RK4 stability region while the live iterate blows up. Numeric check: RK4 real-axis bound 2.785293563 agrees across four methods to 1.3e-9."
-  src_800: assets/img/projects/neural-ode-course/s025_anim_stability_sweep-800.png
-  video: assets/img/projects/neural-ode-course/s025_anim_stability_sweep.mp4
+  description: 'The point h lambda leaves the RK4 stability region while the live iterate blows up. Numeric check: RK4 real-axis bound 2.785293563 agrees across four methods to 1.3e-9.'
+  src_800: assets/img/projects/neural-ode-course/26_s025_anim_stability_sweep-800.png
+  video: assets/img/projects/neural-ode-course/26_s025_anim_stability_sweep.mp4
 - index: 27
-  caption: "S026 Newton Inside a Backward Euler Step"
+  caption: S026 Newton Inside a Backward Euler Step
   topic: p3-integrators
-  description: "Newton iterations converging to the implicit-step solution on ROBER. Numeric check: step norms fall from 6.7e-4 to 2.2e-17 in 5 iterations."
-  src_800: assets/img/projects/neural-ode-course/s026_anim_newton_step-800.png
-  video: assets/img/projects/neural-ode-course/s026_anim_newton_step.mp4
+  description: 'Newton iterations converging to the implicit-step solution on ROBER. Numeric check: step norms fall from 6.7e-4 to 2.2e-17 in 5 iterations.'
+  src_800: assets/img/projects/neural-ode-course/27_s026_anim_newton_step-800.png
+  video: assets/img/projects/neural-ode-course/27_s026_anim_newton_step.mp4
 - index: 28
-  caption: "S026 BDF Steps on the ROBER Simplex"
+  caption: S026 BDF Steps on the ROBER Simplex
   topic: p3-integrators
-  description: "Variable-order BDF steps filling the 3D conservation simplex. Numeric check: ROBER on [0,10] at rtol 1e-6: RK45 7088 steps, BDF 116."
-  src_800: assets/img/projects/neural-ode-course/s026_anim_rober_bdf_steps-800.png
-  video: assets/img/projects/neural-ode-course/s026_anim_rober_bdf_steps.mp4
+  description: 'Variable-order BDF steps filling the 3D conservation simplex. Numeric check: ROBER on [0,10] at rtol 1e-6: RK45 7088 steps, BDF 116.'
+  src_800: assets/img/projects/neural-ode-course/28_s026_anim_rober_bdf_steps-800.png
+  video: assets/img/projects/neural-ode-course/28_s026_anim_rober_bdf_steps.mp4
 - index: 29
-  caption: "S027 Adaptive Step Size Chasing Ignition"
+  caption: S027 Adaptive Step Size Chasing Ignition
   topic: p3-integrators
-  description: "Step markers and the step-size trace on a 3-reaction H2-like toy. Numeric check: own DOPRI5 vs SciPy RK45: identical accepted step counts in 6 of 6 runs."
-  src_800: assets/img/projects/neural-ode-course/s027_anim_adaptive_ignition-800.png
-  video: assets/img/projects/neural-ode-course/s027_anim_adaptive_ignition.mp4
+  description: 'Step markers and the step-size trace on a 3-reaction H2-like toy. Numeric check: own DOPRI5 vs SciPy RK45: identical accepted step counts in 6 of 6 runs.'
+  src_800: assets/img/projects/neural-ode-course/29_s027_anim_adaptive_ignition-800.png
+  video: assets/img/projects/neural-ode-course/29_s027_anim_adaptive_ignition.mp4
 - index: 30
-  caption: "S020 Picard iterates"
+  caption: S020 Picard iterates
   topic: p2-ode-theory
-  description: "Successive Picard iterates for a polynomial ODE; each iterate adds a Taylor term."
-  src_800: assets/img/projects/neural-ode-course/020_fig01_picard_iterates-800.png
-  src_1600: assets/img/projects/neural-ode-course/020_fig01_picard_iterates-1600.png
+  description: Successive Picard iterates for a polynomial ODE; each iterate adds a Taylor term.
+  src_800: assets/img/projects/neural-ode-course/30_fig01_picard_iterates-800.png
+  src_1600: assets/img/projects/neural-ode-course/30_fig01_picard_iterates-1600.png
 - index: 31
-  caption: "S021 The phase-portrait zoo"
+  caption: S021 The phase-portrait zoo
   topic: p2-ode-theory
-  description: "Sinks, sources, saddles, spirals and centers from the trace and determinant of the Jacobian."
-  src_800: assets/img/projects/neural-ode-course/021_fig02_zoo-800.png
-  src_1600: assets/img/projects/neural-ode-course/021_fig02_zoo-1600.png
+  description: Sinks, sources, saddles, spirals and centers from the trace and determinant of the Jacobian.
+  src_800: assets/img/projects/neural-ode-course/31_fig02_zoo-800.png
+  src_1600: assets/img/projects/neural-ode-course/31_fig02_zoo-1600.png
 - index: 32
-  caption: "S021 Carleman truncation orders"
+  caption: S021 Carleman truncation orders
   topic: p2-ode-theory
-  description: "Carleman lifting at orders 1 to 4 compared with the true nonlinear solution; order 1 is the Jacobian linearization."
-  src_800: assets/img/projects/neural-ode-course/021_fig06_carleman-800.png
-  src_1600: assets/img/projects/neural-ode-course/021_fig06_carleman-1600.png
+  description: Carleman lifting at orders 1 to 4 compared with the true nonlinear solution; order 1 is the Jacobian linearization.
+  src_800: assets/img/projects/neural-ode-course/32_fig06_carleman-800.png
+  src_1600: assets/img/projects/neural-ode-course/32_fig06_carleman-1600.png
 - index: 33
-  caption: "S022 ROBER in 3D"
+  caption: S022 ROBER in 3D
   topic: p2-ode-theory
-  description: "The Robertson 3-reaction problem on its conservation simplex, coloured by log time."
-  src_800: assets/img/projects/neural-ode-course/022_fig01_rober_3d-800.png
-  src_1600: assets/img/projects/neural-ode-course/022_fig01_rober_3d-1600.png
+  description: The Robertson 3-reaction problem on its conservation simplex, coloured by log time.
+  src_800: assets/img/projects/neural-ode-course/33_fig01_rober_3d-800.png
+  src_1600: assets/img/projects/neural-ode-course/33_fig01_rober_3d-1600.png
 - index: 34
-  caption: "S022 Absolute stability regions"
+  caption: S022 Absolute stability regions
   topic: p2-ode-theory
-  description: "Stability boundaries of explicit and implicit methods in the complex plane."
-  src_800: assets/img/projects/neural-ode-course/022_fig07_stability_regions-800.png
-  src_1600: assets/img/projects/neural-ode-course/022_fig07_stability_regions-1600.png
+  description: Stability boundaries of explicit and implicit methods in the complex plane.
+  src_800: assets/img/projects/neural-ode-course/34_fig07_stability_regions-800.png
 - index: 35
-  caption: "S022 Hard vs soft conservation"
+  caption: S022 Hard vs soft conservation
   topic: p2-ode-theory
-  description: "A soft penalty lets the species sum drift; the stoichiometric parametrization holds it to machine precision."
-  src_800: assets/img/projects/neural-ode-course/022_fig08_hard_vs_soft-800.png
-  src_1600: assets/img/projects/neural-ode-course/022_fig08_hard_vs_soft-1600.png
+  description: A soft penalty lets the species sum drift; the stoichiometric parametrization holds it to machine precision.
+  src_800: assets/img/projects/neural-ode-course/35_fig08_hard_vs_soft-800.png
+  src_1600: assets/img/projects/neural-ode-course/35_fig08_hard_vs_soft-1600.png
 - index: 36
-  caption: "S023 Euler on ROBER in 3D"
+  caption: S023 Euler on ROBER in 3D
   topic: p3-integrators
-  description: "Exact and forward-Euler orbits of the Robertson problem on its simplex."
-  src_800: assets/img/projects/neural-ode-course/023_fig05_rober_euler_3d-800.png
-  src_1600: assets/img/projects/neural-ode-course/023_fig05_rober_euler_3d-1600.png
+  description: Exact and forward-Euler orbits of the Robertson problem on its simplex.
+  src_800: assets/img/projects/neural-ode-course/36_fig05_rober_euler_3d-800.png
+  src_1600: assets/img/projects/neural-ode-course/36_fig05_rober_euler_3d-1600.png
 - index: 37
-  caption: "S024 Order-of-accuracy surface"
+  caption: S024 Order-of-accuracy surface
   topic: p3-integrators
-  description: "Error against step size and method on a 3D surface."
-  src_800: assets/img/projects/neural-ode-course/024_fig03_order_surface_3d-800.png
-  src_1600: assets/img/projects/neural-ode-course/024_fig03_order_surface_3d-1600.png
+  description: Error against step size and method on a 3D surface.
+  src_800: assets/img/projects/neural-ode-course/37_fig03_order_surface_3d-800.png
 - index: 38
-  caption: "S025 Stability function surface"
+  caption: S025 Stability function surface
   topic: p3-integrators
-  description: "The modulus of R(z) over the complex plane with the contour at 1 that bounds the stability region."
-  src_800: assets/img/projects/neural-ode-course/025_fig02_surface3d-800.png
-  src_1600: assets/img/projects/neural-ode-course/025_fig02_surface3d-1600.png
+  description: The modulus of R(z) over the complex plane with the contour at 1 that bounds the stability region.
+  src_800: assets/img/projects/neural-ode-course/38_fig02_surface3d-800.png
+  src_1600: assets/img/projects/neural-ode-course/38_fig02_surface3d-1600.png
 - index: 39
-  caption: "S026 BDF vs RK45 step points"
+  caption: S026 BDF vs RK45 step points
   topic: p3-integrators
-  description: "Step points of BDF and RK45 along the ROBER orbit in 3D."
-  src_800: assets/img/projects/neural-ode-course/026_fig06_rober_step_points_3d-800.png
-  src_1600: assets/img/projects/neural-ode-course/026_fig06_rober_step_points_3d-1600.png
+  description: Step points of BDF and RK45 along the ROBER orbit in 3D.
+  src_800: assets/img/projects/neural-ode-course/39_fig06_rober_step_points_3d-800.png
+  src_1600: assets/img/projects/neural-ode-course/39_fig06_rober_step_points_3d-1600.png
 - index: 40
-  caption: "S027 Pseudospectrum surface"
+  caption: S027 Pseudospectrum surface
   topic: p3-integrators
-  description: "Resolvent norm surface of the ROBER Jacobian over the complex plane."
-  src_800: assets/img/projects/neural-ode-course/027_fig07_rober_pseudospectrum_3d-800.png
-  src_1600: assets/img/projects/neural-ode-course/027_fig07_rober_pseudospectrum_3d-1600.png
+  description: Resolvent norm surface of the ROBER Jacobian over the complex plane.
+  src_800: assets/img/projects/neural-ode-course/40_fig07_rober_pseudospectrum_3d-800.png
+- index: 41
+  caption: S028 Affine Normalization as Raw Reweighting
+  topic: p4-p6-neural-odes
+  description: Induced raw field as the second coordinate is stretched from d2 = 1 to 100, beside its Jacobian eigenvalues, which do not move.
+  src_800: assets/img/projects/neural-ode-course/41_s028_anim_induced_field_stretch-800.png
+  video: assets/img/projects/neural-ode-course/41_s028_anim_induced_field_stretch.mp4
+- index: 42
+  caption: S029 SGD and Adam in Raw and Normalized Coordinates
+  topic: p4-p6-neural-odes
+  description: 'Four descent runs on one quadratic loss: paths in the normalized plane and the four loss curves; the raw runs first move along one axis only.'
+  src_800: assets/img/projects/neural-ode-course/42_s029_anim_optimizer_race-800.png
+  video: assets/img/projects/neural-ode-course/42_s029_anim_optimizer_race.mp4
+- index: 43
+  caption: 'S030 Log-Scaler Dead Zone: clamp_min against add_eps'
+  topic: p4-p6-neural-odes
+  description: Paths in the plane of log amplitude and log rate over the dead-fraction map; clamp_min paths stay where they start, add_eps paths reach the minimum.
+  src_800: assets/img/projects/neural-ode-course/43_s030_anim_dead_zone_paths-800.png
+  video: assets/img/projects/neural-ode-course/43_s030_anim_dead_zone_paths.mp4
+- index: 44
+  caption: S031 The Price of Eigenvalue Compression
+  topic: p4-p6-neural-odes
+  description: Raw and power-chart eigenvalues moving toward each other as the exponent p falls, with the error amplification 1/q for each mode.
+  src_800: assets/img/projects/neural-ode-course/44_s031_anim_compression_price-800.png
+  video: assets/img/projects/neural-ode-course/44_s031_anim_compression_price.mp4
+- index: 45
+  caption: S032 Gradient Flow Across Depth as the Gain Sweeps
+  topic: p4-p6-neural-odes
+  description: Backward signal norm layer by layer for one initialization gain at a time; blue where it vanishes, green balanced, red where it explodes.
+  src_800: assets/img/projects/neural-ode-course/45_s032_anim_gradient_flow_gain_sweep-800.png
+  video: assets/img/projects/neural-ode-course/45_s032_anim_gradient_flow_gain_sweep.mp4
+- index: 46
+  caption: 'S033 Depth as Time: Residual Blocks Against the Flow'
+  topic: p4-p6-neural-odes
+  description: Six initial conditions pushed through N tied residual blocks (N = 1 to 48) against the exact flow, with the mean end-point error falling like 1/N.
+  src_800: assets/img/projects/neural-ode-course/46_s033_anim_depth_as_time-800.png
+  video: assets/img/projects/neural-ode-course/46_s033_anim_depth_as_time.mp4
+- index: 47
+  caption: S034 Neural ODE Training Trajectories
+  topic: p4-p6-neural-odes
+  description: Truth (solid) and learned field (dashed) in the phase plane and in time, logged at epochs 0 to 299 of a small training run.
+  src_800: assets/img/projects/neural-ode-course/47_s034_anim_training_trajectories-800.png
+  video: assets/img/projects/neural-ode-course/47_s034_anim_training_trajectories.mp4
+- index: 48
+  caption: S035 Re-integrating the State Backwards
+  topic: p4-p6-neural-odes
+  description: 'The coupled system with s = 12, T = 2: the state re-integrated backwards leaves the true state and the error follows 1e-13 exp(s(T-t)).'
+  src_800: assets/img/projects/neural-ode-course/48_s035_anim_backward_reintegration-800.png
+  video: assets/img/projects/neural-ode-course/48_s035_anim_backward_reintegration.mp4
+- index: 49
+  caption: 'S036 Two routes to the gradient: the mismatch shrinks with the step'
+  topic: p4-p6-neural-odes
+  description: 'Euler path and the discretize-then-optimize and optimize-then-discretize gradients as the step is refined on Van der Pol. Numeric check: the discrete adjoint matches finite differences of the discrete loss to 4e-9; observed orders 1.06, 2.01, 3.98 for Euler, Heun, RK4.'
+  src_800: assets/img/projects/neural-ode-course/49_s036_anim_two_routes-800.png
+  src_1600: assets/img/projects/neural-ode-course/49_s036_anim_two_routes-1600.png
+  video: assets/img/projects/neural-ode-course/49_s036_anim_two_routes.mp4
+- index: 50
+  caption: 'S037 Augmented Neural ODE: Rings Flow'
+  topic: p4-p6-neural-odes
+  description: 'Learned flow of the two-rings problem with one augmented dimension: the field carries the inner disk up and the ring down along u.'
+  src_800: assets/img/projects/neural-ode-course/49_s037_anim_rings_flow-800.png
+  video: assets/img/projects/neural-ode-course/49_s037_anim_rings_flow.mp4
+- index: 51
+  caption: S001 Jacobian parallelogram and determinant map
+  topic: p0-maps
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/50_s001_fig02_jacobian_parallelogram_det-800.png
+- index: 52
+  caption: 'S001 The fold map: two points to one'
+  topic: p0-maps
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/51_s001_fig03_fold_two_to_one-800.png
+- index: 53
+  caption: S002 Flows cannot cross
+  topic: p0-maps
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/52_s002_fig03_flows_cannot_cross-800.png
+- index: 54
+  caption: S003 Linked rings under a flow, linking number unchanged
+  topic: p0-maps
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/53_s003_fig03_linked_rings_flow-800.png
+  src_1600: assets/img/projects/neural-ode-course/53_s003_fig03_linked_rings_flow-1600.png
+- index: 55
+  caption: S003 Augmenting a dimension separates the annulus
+  topic: p0-maps
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/54_s003_fig04_augmented_lift-800.png
+  src_1600: assets/img/projects/neural-ode-course/54_s003_fig04_augmented_lift-1600.png
+- index: 56
+  caption: S004 Sign-power slope near the origin as the exponent changes
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/55_s004_fig03_critical_point_vs_p-800.png
+- index: 57
+  caption: S005 Clamp versus additive epsilon in the log-scaler
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/56_s005_fig03_clamp_vs_addeps-800.png
+- index: 58
+  caption: S006 Box-Cox Jacobian slope near zero
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/57_s006_fig03_slope_blowup-800.png
+- index: 59
+  caption: S007 Float64 round-trip error of bounded maps
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/58_s007_fig05_roundtrip-800.png
+  src_1600: assets/img/projects/neural-ode-course/58_s007_fig05_roundtrip-1600.png
+- index: 60
+  caption: S008 Angle field and its branch cut
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/59_s008_fig03_angle_field_and_branch_cut-800.png
+  src_1600: assets/img/projects/neural-ode-course/59_s008_fig03_angle_field_and_branch_cut-1600.png
+- index: 61
+  caption: S009 Four curvilinear coordinate grids
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/60_s009_fig01_four_grids-800.png
+  src_1600: assets/img/projects/neural-ode-course/60_s009_fig01_four_grids-1600.png
+- index: 62
+  caption: S009 Toroidal coordinates in 3D
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/61_s009_fig06_toroidal_3d-800.png
+  src_1600: assets/img/projects/neural-ode-course/61_s009_fig06_toroidal_3d-1600.png
+- index: 63
+  caption: 'S010 Shear flow: transient growth without an exponential rate'
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/62_s010_fig03_shear_flow_and_growth-800.png
+- index: 64
+  caption: S011 Mobius maps send circles and lines to circles and lines
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/63_s011_fig02_mobius_circles_and_lines-800.png
+  src_1600: assets/img/projects/neural-ode-course/63_s011_fig02_mobius_circles_and_lines-1600.png
+- index: 65
+  caption: S011 Four Mobius classes and their iteration orbits
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/64_s011_fig03_mobius_classification_orbits-800.png
+- index: 66
+  caption: 'S012 Runge phenomenon: equispaced against Chebyshev nodes'
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/65_s012_fig03_runge-800.png
+- index: 67
+  caption: 'S013 Aliasing: two sinusoids on the same samples'
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/66_s013_fig02_aliasing-800.png
+- index: 68
+  caption: S014 Resolvent gain of a non-normal matrix
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/67_s014_fig03_resolvent_gain-800.png
+- index: 69
+  caption: S015 Wavelet scale map of a two-bump signal
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/68_s015_fig04_local_scale_map-800.png
+- index: 70
+  caption: S016 Centering, PCA rotation and whitening
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/69_s016_fig01_geometry-800.png
+  src_1600: assets/img/projects/neural-ode-course/69_s016_fig01_geometry-1600.png
+- index: 71
+  caption: S017 Activation functions and their derivatives
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/70_s017_fig01_values_derivatives-800.png
+  src_1600: assets/img/projects/neural-ode-course/70_s017_fig01_values_derivatives-1600.png
+- index: 72
+  caption: S018 Two transformed coordinates and their field derivatives
+  topic: p1-transforms
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/71_s018_fig01_maps_and_jacobians-800.png
+  src_1600: assets/img/projects/neural-ode-course/71_s018_fig01_maps_and_jacobians-1600.png
+- index: 73
+  caption: S019 Phase portrait of the oscillator
+  topic: p2-ode-theory
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/72_s019_fig02_phase_portrait-800.png
+- index: 74
+  caption: S020 Gronwall bound for a spiral, a saddle and Lorenz
+  topic: p2-ode-theory
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/73_s020_fig03_gronwall-800.png
+  src_1600: assets/img/projects/neural-ode-course/73_s020_fig03_gronwall-1600.png
+- index: 75
+  caption: S021 Trace-determinant plane
+  topic: p2-ode-theory
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/74_s021_fig01_trdet-800.png
+  src_1600: assets/img/projects/neural-ode-course/74_s021_fig01_trdet-1600.png
+- index: 76
+  caption: S021 Phase portraits of classic systems
+  topic: p2-ode-theory
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/75_s021_fig04_classics-800.png
+  src_1600: assets/img/projects/neural-ode-course/75_s021_fig04_classics-1600.png
+- index: 77
+  caption: S022 ROBER trajectory over the stiffness surface
+  topic: p2-ode-theory
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/76_s022_fig02_kappa_surface-800.png
+- index: 78
+  caption: S022 RK45 against BDF step counts on ROBER
+  topic: p2-ode-theory
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/77_s022_fig06_step_counts-800.png
+  src_1600: assets/img/projects/neural-ode-course/77_s022_fig06_step_counts-1600.png
+- index: 79
+  caption: S023 Euler polygons approach the exact curve as h halves
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/78_s023_fig01_euler_polygon-800.png
+  src_1600: assets/img/projects/neural-ode-course/78_s023_fig01_euler_polygon-1600.png
+- index: 80
+  caption: S023 Forward Euler energy growth on the oscillator
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/79_s023_fig06_oscillator_energy-800.png
+  src_1600: assets/img/projects/neural-ode-course/79_s023_fig06_oscillator_energy-1600.png
+- index: 81
+  caption: S024 Measured order of accuracy of one-step methods
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/80_s024_fig02_order_slopes-800.png
+- index: 82
+  caption: S024 Work-precision of explicit Runge-Kutta methods
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/81_s024_fig04_work_precision-800.png
+- index: 83
+  caption: S025 Stability regions of explicit methods
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/82_s025_fig01_regions-800.png
+  src_1600: assets/img/projects/neural-ode-course/82_s025_fig01_regions-1600.png
+- index: 84
+  caption: S025 Stability ceiling of the step size along ROBER
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/83_s025_fig05_step_limits-800.png
+  src_1600: assets/img/projects/neural-ode-course/83_s025_fig05_step_limits-1600.png
+- index: 85
+  caption: S026 BDF stability regions
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/84_s026_fig03_bdf_regions-800.png
+  src_1600: assets/img/projects/neural-ode-course/84_s026_fig03_bdf_regions-1600.png
+- index: 86
+  caption: 'S026 L-stability: trapezoid ringing against backward Euler'
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/85_s026_fig08_l_stability_ringing-800.png
+  src_1600: assets/img/projects/neural-ode-course/85_s026_fig08_l_stability_ringing-1600.png
+- index: 87
+  caption: S027 Step-size controller on Van der Pol
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/86_s027_fig01_controller_vdp-800.png
+  src_1600: assets/img/projects/neural-ode-course/86_s027_fig01_controller_vdp-1600.png
+- index: 88
+  caption: S027 Cost against tolerance for adaptive solvers
+  topic: p3-integrators
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/87_s027_fig02_nfe_vs_tol-800.png
+  src_1600: assets/img/projects/neural-ode-course/87_s027_fig02_nfe_vs_tol-1600.png
+- index: 89
+  caption: S028 Induced raw field as one coordinate is stretched
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/88_s028_fig02_induced_streamlines-800.png
+  src_1600: assets/img/projects/neural-ode-course/88_s028_fig02_induced_streamlines-1600.png
+- index: 90
+  caption: S028 RK4 commutes with affine maps, not with log
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/89_s028_fig04_rk_equivariance-800.png
+  src_1600: assets/img/projects/neural-ode-course/89_s028_fig04_rk_equivariance-1600.png
+- index: 91
+  caption: S028 Conditioning of raw and normalized MSE
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/90_s028_fig06_conditioning_3d-800.png
+  src_1600: assets/img/projects/neural-ode-course/90_s028_fig06_conditioning_3d-1600.png
+- index: 92
+  caption: 'S029 SGD and Adam, raw and normalized: four ways to descend'
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/91_s029_fig02_four_combinations-800.png
+  src_1600: assets/img/projects/neural-ode-course/91_s029_fig02_four_combinations-1600.png
+- index: 93
+  caption: S029 Iterations against scale ratio for SGD and Adam
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/92_s029_fig03_scaling_laws-800.png
+- index: 94
+  caption: S030 ROBER in log coordinates
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/93_s030_fig03_rober_log_coordinates-800.png
+  src_1600: assets/img/projects/neural-ode-course/93_s030_fig03_rober_log_coordinates-1600.png
+- index: 95
+  caption: 'S030 Dead zone of the clamp: loss contours and convergence maps'
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/94_s030_fig04_dead_zone_maps-800.png
+  src_1600: assets/img/projects/neural-ode-course/94_s030_fig04_dead_zone_maps-1600.png
+- index: 96
+  caption: 'S031 Power chart: eigenvalue compression and its price'
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/95_s031_fig01_power_chart_claim_and_price-800.png
+  src_1600: assets/img/projects/neural-ode-course/95_s031_fig01_power_chart_claim_and_price-1600.png
+- index: 97
+  caption: S031 Smooth charts and the spectral radius along a trajectory
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/96_s031_fig03_smooth_charts-800.png
+  src_1600: assets/img/projects/neural-ode-course/96_s031_fig03_smooth_charts-1600.png
+- index: 98
+  caption: S032 Gradient flow against depth and gain
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/97_s032_fig02_gradient_flow_depth_gain-800.png
+  src_1600: assets/img/projects/neural-ode-course/97_s032_fig02_gradient_flow_depth_gain-1600.png
+- index: 99
+  caption: S032 Optimizers as integrators
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/98_s032_fig05_optimizers_as_integrators-800.png
+  src_1600: assets/img/projects/neural-ode-course/98_s032_fig05_optimizers_as_integrators-1600.png
+- index: 100
+  caption: S032 Optimizer race on a small tanh network
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/99_s032_fig06_optimizer_race_mlp-800.png
+- index: 101
+  caption: S033 Effective weight decay and reparametrization
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/100_s033_fig03_effective_decay_and_reparametrization-800.png
+  src_1600: assets/img/projects/neural-ode-course/100_s033_fig03_effective_decay_and_reparametrization-1600.png
+- index: 102
+  caption: 'S033 Depth as time: residual blocks against the flow'
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/101_s033_fig04_depth_as_time-800.png
+  src_1600: assets/img/projects/neural-ode-course/101_s033_fig04_depth_as_time-1600.png
+- index: 103
+  caption: S034 Anatomy of a Neural ODE forward pass
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/102_s034_fig01_forward_pass_anatomy-800.png
+  src_1600: assets/img/projects/neural-ode-course/102_s034_fig01_forward_pass_anatomy-1600.png
+- index: 104
+  caption: S034 Spectral radius and largest relative rate on ROBER
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/103_s034_fig04_log_chart_relative_rates-800.png
+  src_1600: assets/img/projects/neural-ode-course/103_s034_fig04_log_chart_relative_rates-1600.png
+- index: 105
+  caption: S035 Adjoint sensitivity on Van der Pol
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/104_s035_fig01_adjoint_on_van_der_pol-800.png
+  src_1600: assets/img/projects/neural-ode-course/104_s035_fig01_adjoint_on_van_der_pol-1600.png
+- index: 106
+  caption: S035 Instability of re-integrating the state backwards
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/105_s035_fig02_reintegration_instability-800.png
+  src_1600: assets/img/projects/neural-ode-course/105_s035_fig02_reintegration_instability-1600.png
+- index: 107
+  caption: S036 Two routes to the gradient
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/106_s036_fig01_two_routes_diagram-800.png
+  src_1600: assets/img/projects/neural-ode-course/106_s036_fig01_two_routes_diagram-1600.png
+- index: 108
+  caption: S036 Discretize-then-optimize against optimize-then-discretize
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/107_s036_fig02_convergence_dto_otd-800.png
+  src_1600: assets/img/projects/neural-ode-course/107_s036_fig02_convergence_dto_otd-1600.png
+- index: 109
+  caption: S037 The reversal map that a flow cannot represent
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/108_s037_fig01_reversal_obstruction-800.png
+  src_1600: assets/img/projects/neural-ode-course/108_s037_fig01_reversal_obstruction-1600.png
+- index: 110
+  caption: S037 Exact lift of the rings problem
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/109_s037_fig02_rings_exact_lift-800.png
+  src_1600: assets/img/projects/neural-ode-course/109_s037_fig02_rings_exact_lift-1600.png
+- index: 111
+  caption: S037 Learned decision regions with augmentation
+  topic: p4-p6-neural-odes
+  description: ''
+  src_800: assets/img/projects/neural-ode-course/110_s037_fig05_learned_decision_regions-800.png
+  src_1600: assets/img/projects/neural-ode-course/110_s037_fig05_learned_decision_regions-1600.png
+- index: 112
+  caption: 'S038 Regularizing Neural ODE dynamics: paths straighten as the Jacobian weight grows'
+  topic: p6-training-and-chemistry
+  description: '70 test points of the planar twist map flowing through six learned fields as the Jacobian weight grows from 0 to 1. Numeric check: inference NFE 38 to 20; kinetic energy at or above its chord bound at all 512 test points of four models.'
+  src_800: assets/img/projects/neural-ode-course/111_s038_anim_straightening-800.png
+  video: assets/img/projects/neural-ode-course/111_s038_anim_straightening.mp4
+- index: 113
+  caption: 'S039 Stiff Neural ODE on ROBER: training with backward Euler in the loop'
+  topic: p6-training-and-chemistry
+  description: 'Backward-Euler path of a ROBER Neural ODE against the Radau reference during training, epochs 0 to 299. Numeric check: re-integrating the learned field with Radau gives 0.96 to 1.11 times the training loss in 22 of 27 runs.'
+  src_800: assets/img/projects/neural-ode-course/112_s039_anim_stiff_training-800.png
+  src_1600: assets/img/projects/neural-ode-course/112_s039_anim_stiff_training-1600.png
+  video: assets/img/projects/neural-ode-course/112_s039_anim_stiff_training.mp4
+- index: 114
+  caption: 'S040 ChemNODE-style training on H2/air autoignition: a held-out condition'
+  topic: p6-training-and-chemistry
+  description: 'A ChemNODE-style Neural ODE (log chart) on the held-out condition T0 = 1125 K against Cantera. Numeric check: elemental mass drift of the exact reference below 1e-8; reference ignition delay 7.3e-5 s.'
+  src_800: assets/img/projects/neural-ode-course/113_s040_anim_chemnode_training-800.png
+  video: assets/img/projects/neural-ode-course/113_s040_anim_chemnode_training.mp4
+- index: 115
+  caption: S041 Single shooting flattens out; multiple shooting follows the oscillation
+  topic: p6-training-and-chemistry
+  description: 'Single shooting (left) and windows of 10 intervals (right) on six periods of an oscillator, epochs 0 to 999. Numeric check: full-horizon MSE 0.46 to 0.48 for single shooting against 1e-4 to 1e-3 for windows over three seeds.'
+  src_800: assets/img/projects/neural-ode-course/114_s041_anim_shooting-800.png
+  src_1600: assets/img/projects/neural-ode-course/114_s041_anim_shooting-1600.png
+  video: assets/img/projects/neural-ode-course/114_s041_anim_shooting.mp4
+- index: 116
+  caption: S042 A learned flow map rolled out on a held-out ignition
+  topic: p6-training-and-chemistry
+  description: 'A learned flow map (scaled chart, POD latent space of 5) rolled out in 150 steps on the held-out condition 1125 K. Numeric check: elemental drift 1.4e-14; semigroup defect of the exact map 3e-16.'
+  src_800: assets/img/projects/neural-ode-course/115_s042_anim_flowmap-800.png
+  video: assets/img/projects/neural-ode-course/115_s042_anim_flowmap.mp4
+- index: 117
+  caption: 'S038 The twist map learned four ways: paths and deformed grids'
+  topic: p6-training-and-chemistry
+  description: 'Test trajectories and the learned map applied to a grid for no penalty, a kinetic penalty and two Jacobian penalties. Numeric check: inference NFE 38, 26, 26, 20; median path straightness 0.915 to 0.992.'
+  src_800: assets/img/projects/neural-ode-course/116_s038_fig05_paths_and_grids-800.png
+  src_1600: assets/img/projects/neural-ode-course/116_s038_fig05_paths_and_grids-1600.png
+- index: 118
+  caption: S038 Loss against inference cost for kinetic and Jacobian penalties
+  topic: p6-training-and-chemistry
+  description: '42 runs on the planar twist map: validation loss against inference NFE, and what each penalty buys and costs. Numeric check: Spearman rank correlation of NFE with J 0.92 and with K 0.79.'
+  src_800: assets/img/projects/neural-ode-course/117_s038_fig04_pareto_tradeoff-800.png
+  src_1600: assets/img/projects/neural-ode-course/117_s038_fig04_pareto_tradeoff-1600.png
+- index: 119
+  caption: 'S039 Amplification factors: backward Euler contracts an unstable mode'
+  topic: p6-training-and-chemistry
+  description: 'Per-step multiplier of the exact flow, backward Euler, forward Euler and RK4 against h*lambda. Numeric check: z = 5 gives -0.25 for backward Euler against e^5 for the exact flow.'
+  src_800: assets/img/projects/neural-ode-course/118_s039_fig02_amplification_factors-800.png
+  src_1600: assets/img/projects/neural-ode-course/118_s039_fig02_amplification_factors-1600.png
+- index: 120
+  caption: S039 Failure map of an explicit solver on random initial fields
+  topic: p6-training-and-chemistry
+  description: 'Fraction of 12 random fields per cell on which RK45 finishes, ends in blow-up or at the step cap, and on which backward Euler stays bounded. Numeric check: all 22 failing cells contain blow-ups; the step cap is reached in 2.'
+  src_800: assets/img/projects/neural-ode-course/119_s039_fig03_explicit_failure_map-800.png
+  src_1600: assets/img/projects/neural-ode-course/119_s039_fig03_explicit_failure_map-1600.png
+- index: 121
+  caption: S039 Gradient clipping against no clipping on ROBER
+  topic: p6-training-and-chemistry
+  description: 'Final loss, loss curves, gradient norm and learned spectral radius with and without clipping the gradient norm at 1. Numeric check: final loss 2e-4 to 1e-3 against 7e-3 to 2.8e-2 (8 of 9 runs finish).'
+  src_800: assets/img/projects/neural-ode-course/120_s039_fig10_gradient_clipping-800.png
+  src_1600: assets/img/projects/neural-ode-course/120_s039_fig10_gradient_clipping-1600.png
+- index: 122
+  caption: S040 Stiffness and the explosive mode of the real H2/air Jacobian
+  topic: p6-training-and-chemistry
+  description: 'Eigenvalues of the true Jacobian along a Cantera autoignition from 1000 K. Numeric check: spectral radius up to 8.3e8 1/s; explosive mode up to 2.96e5 1/s at t/tau = 0.991.'
+  src_800: assets/img/projects/neural-ode-course/121_s040_fig02_real_spectrum-800.png
+  src_1600: assets/img/projects/neural-ode-course/121_s040_fig02_real_spectrum-1600.png
+- index: 123
+  caption: 'S040 A held-out and an extrapolation condition: temperature, OH and element balance'
+  topic: p6-training-and-chemistry
+  description: 'Learned models against Cantera at 1125 K (held out) and 950 K (extrapolation). Numeric check: elemental drift of the trajectory-trained models 13% to 159%; the derivative-matched model leaves the plot.'
+  src_800: assets/img/projects/neural-ode-course/122_s040_fig06_trajectories-800.png
+  src_1600: assets/img/projects/neural-ode-course/122_s040_fig06_trajectories-1600.png
+- index: 124
+  caption: S041 Loss landscape of single and multiple shooting (closed form)
+  topic: p6-training-and-chemistry
+  description: 'Exact rotation model: loss against the model rate for several horizons and window lengths, and the basin of attraction against length. Numeric check: basin half-width 0.743 rad/s measured against 4.493/T = 0.749 at T = 6 s.'
+  src_800: assets/img/projects/neural-ode-course/123_s041_fig01_landscape-800.png
+  src_1600: assets/img/projects/neural-ode-course/123_s041_fig01_landscape-1600.png
+- index: 125
+  caption: S041 POD of the chemistry snapshots in three charts
+  topic: p6-training-and-chemistry
+  description: 'Singular values, captured energy, reconstruction error and elemental change after decoding for the scaled, Box-Cox and log charts. Numeric check: rank 7 in the scaled chart; elemental change 6e-14 for every rank.'
+  src_800: assets/img/projects/neural-ode-course/124_s041_fig03_pod-800.png
+  src_1600: assets/img/projects/neural-ode-course/124_s041_fig03_pod-1600.png
+- index: 126
+  caption: S042 Step-size robustness of learned flow maps
+  topic: p6-training-and-chemistry
+  description: 'Delay error against the number of rollout steps, spread of the final temperature, and the semigroup defect for pair-only maps and maps with the n-step rollout loss. Numeric check: detector resolution 3/N of the delay.'
+  src_800: assets/img/projects/neural-ode-course/125_s042_fig05_step_size_robustness-800.png
+  src_1600: assets/img/projects/neural-ode-course/125_s042_fig05_step_size_robustness-1600.png
+- index: 127
+  caption: S042 Learned flow maps rolled out on held-out conditions
+  topic: p6-training-and-chemistry
+  description: '600-step rollouts at 1125 K and 950 K for the best seed of four models, with the hydrogen element balance. Numeric check: scaled latent map elemental drift 1.4e-14.'
+  src_800: assets/img/projects/neural-ode-course/126_s042_fig06_trajectories-800.png
+  src_1600: assets/img/projects/neural-ode-course/126_s042_fig06_trajectories-1600.png
