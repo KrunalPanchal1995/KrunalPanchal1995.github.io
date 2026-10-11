@@ -1,0 +1,113 @@
+{%- comment -%}
+  "How this course was made" block, shown on course pages whose intake header has `how_made: true`.
+  Plain HTML + CSS only. No unpublished method names. Prompts are deliberately not published yet ("Coming soon").
+{%- endcomment -%}
+<section class="hm" aria-labelledby="hm-h" data-toc-extra="How it was made">
+  <h2 id="hm-h" class="pj-h2">How this course was made</h2>
+  <p class="hm-lead">
+    This course is built with an AI tutoring workflow: the <em>Socratic Mastery Tutor</em> skill running in Claude Code. A person decides what to
+    learn and checks the work; the tutor writes the derivations, code and figures.
+  </p>
+  <ol class="hm-steps">
+    <li><strong>List the terms.</strong> Every word is defined before it is used.</li>
+    <li><strong>Derive.</strong> Every result is built step by step, with no skipped algebra.</li>
+    <li><strong>Code.</strong> Runnable Python reproduces the result.</li>
+    <li>
+      <strong>Draw.</strong> Figures and animations are made by scripts that also write numeric checks (for example a measured convergence order).
+    </li>
+    <li><strong>Write up.</strong> Each session ends as a LaTeX document with PDF and Word copies.</li>
+    <li><strong>Check.</strong> An automated test suite must pass, and claims written from memory are flagged for a source check.</li>
+  </ol>
+  <p>
+    Progress lives in plain files (a state file, a curriculum, a glossary and one folder per session), so the course carries on across months of new
+    chats.
+  </p>
+
+  <h3 class="hm-h3">What is Bloom's Revised Taxonomy?</h3>
+  <p>
+    It is a ladder of six kinds of learning, from simple to demanding. Benjamin Bloom and colleagues proposed the first version in 1956. Anderson and
+    Krathwohl revised it in 2001: the levels became verbs, and <em>Create</em> moved to the top. Each step builds on the one below.
+  </p>
+  <ol class="hm-ladder" aria-label="Bloom's Revised Taxonomy, from top to bottom">
+    <li><strong>Create</strong><span>Make something new by combining ideas.</span></li>
+    <li><strong>Evaluate</strong><span>Judge it, compare it, and say when not to use it.</span></li>
+    <li><strong>Analyze</strong><span>Break it apart: which term dominates, and where does it fail?</span></li>
+    <li><strong>Apply</strong><span>Use it on a new problem and in code.</span></li>
+    <li><strong>Understand</strong><span>Explain it and reproduce the derivation.</span></li>
+    <li><strong>Remember</strong><span>Recall the definition, symbol and units.</span></li>
+  </ol>
+  <p class="hm-note">
+    The revision also adds a second axis, the kind of knowledge: facts, concepts, procedures, and knowing how you think (metacognition).
+  </p>
+
+  <h3 class="hm-h3">How this course uses it</h3>
+  <p>The tutor adds a first stage, <strong>Terms</strong>, before Remember. Each stage has a clear "done" test:</p>
+  <div class="hm-table" role="region" aria-label="Stages and what done looks like" tabindex="0">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Stage</th>
+          <th scope="col">Done when you can…</th>
+          <th scope="col">What the session contains</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Terms</th>
+          <td>see every word, none unexplained</td>
+          <td>A table of terms</td>
+        </tr>
+        <tr>
+          <th scope="row">Remember</th>
+          <td>recall without looking</td>
+          <td>A quiz and a memory hook</td>
+        </tr>
+        <tr>
+          <th scope="row">Understand</th>
+          <td>reproduce the derivation</td>
+          <td>A full derivation</td>
+        </tr>
+        <tr>
+          <th scope="row">Apply</th>
+          <td>solve a fresh problem</td>
+          <td>Worked problems, a script, a figure</td>
+        </tr>
+        <tr>
+          <th scope="row">Analyze</th>
+          <td>say what dominates and what breaks</td>
+          <td>Limits, sensitivity plots</td>
+        </tr>
+        <tr>
+          <th scope="row">Evaluate</th>
+          <td>compare and say when not to use it</td>
+          <td>A comparison table</td>
+        </tr>
+        <tr>
+          <th scope="row">Create</th>
+          <td>propose something new</td>
+          <td>Project ideas that combine sessions</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Within each topic the difficulty also rises in five tiers: <strong>easy</strong> (a picture), <strong>medium</strong> (the definition),
+    <strong>medium-hard</strong> (the full derivation), <strong>hard</strong> (generalisations and edge cases) and <strong>hardest</strong> (open
+    questions).
+  </p>
+
+  <h3 class="hm-h3">Everything that went into it</h3>
+  <ul class="hm-list">
+    <li>Claude Code and the Socratic Mastery Tutor skill, with one subject pack per course</li>
+    <li>Python with NumPy, SciPy and matplotlib; Cantera for the chemistry examples</li>
+    <li>LaTeX for the write-ups, with PDF and Word copies</li>
+    <li>Jekyll (al-folio) and GitHub Pages for this website</li>
+    <li>Reference: Anderson and Krathwohl (eds.), <em>A Taxonomy for Learning, Teaching, and Assessing</em> (2001); Bloom et al. (1956)</li>
+  </ul>
+
+  <h3 class="hm-h3">Prompts used to make this</h3>
+  <div class="hm-soon raised">
+    <span class="hm-badge">Coming soon</span>
+    <p>The prompts behind each session will be published here.</p>
+  </div>
+</section>

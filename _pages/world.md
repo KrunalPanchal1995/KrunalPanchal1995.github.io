@@ -4,8 +4,8 @@ title: Research World
 accent_word: World
 eyebrow: Drive around
 permalink: /world/
-nav: true
-nav_group: more
+nav: false
 nav_order: 2.5
 embed: assets/html/world/index.html
+published: false
 ---

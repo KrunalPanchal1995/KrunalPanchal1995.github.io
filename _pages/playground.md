@@ -6,8 +6,7 @@ title: Playground
 eyebrow: Section
 accent_word: Playground
 permalink: /playground/
-nav: true
-nav_group: more
+nav: false
 nav_order: 2
 nav_icon: fa-flask
 section_project: neural-ode-playground

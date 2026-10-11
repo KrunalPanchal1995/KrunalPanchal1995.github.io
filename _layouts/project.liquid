@@ -110,7 +110,12 @@ layout: default
         </section>
       {% endif %}
 
-      {% include project-recreate.liquid route=route item=request_item %}
+      {%- if page.how_made -%}{% include course-how-made.liquid %}{%- endif -%}
+
+      <details class="pj-more">
+        <summary>How to recreate this in the Studio</summary>
+        {% include project-recreate.liquid route=route item=request_item %}
+      </details>
 
       {%- if docs and docs.size > 0 -%}
         <section class="pj-section" aria-labelledby="pj-docs-h" data-toc-extra="Documents">

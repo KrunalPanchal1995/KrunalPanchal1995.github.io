@@ -26,33 +26,16 @@ layout: default
 {%- if it.media and it.media.size > 0 -%}{%- assign has_media = true -%}{%- endif -%}
 
 <div class="home">
-  <div class="home-hero">
-    {% include hero-switch.liquid name=home_name tagline=tag accent_word=acc %}
-  </div>
-  {% include home-under-hood.liquid %}
-
-  {%- if body == '' and has_media == false -%}
-    <aside class="home-empty raised" aria-label="Home page not written yet">
-      <p class="eyebrow">Not written yet</p>
-      <h2 class="home-empty__t">Write your home page</h2>
-      <p class="home-empty__p">
-        Write your home page in <code class="home-empty__path">PORTFOLIO_INTAKE/00_SITE/home/page.md</code>. A subtitle, a body and media for the
-        Selected work carousel all appear here once you add them.
-      </p>
-    </aside>
-  {%- endif -%}
+  <header class="home-hero home-hero--plain">
+    <h1 class="home-hero__name">{{ home_name }}</h1>
+    {%- if tag != ' ' -%}
+      <p class="home-hero__tag">{{ tag }}</p>
+    {%- endif -%}
+  </header>
 
   {% include home-intro.liquid %}
-  {% include home-marquee.liquid %}
-  {% include home-stage.liquid %}
-  {% include home-stats.liquid %}
   {% include home-showcase.liquid %}
   {% include home-recent.liquid %}
-
-  {%- comment -%} "Try the research live" strip (WP-Fluid): included once the file exists. {%- endcomment -%}
-  {% include home-live.liquid %}
-
-  {% include home-teasers.liquid %}
 
   {%- if page.announcements and page.announcements.enabled -%}
     <section class="home-sec" aria-labelledby="home-news">
@@ -90,4 +73,3 @@ layout: default
   {%- endif -%}
 </div>
 <script defer src="{{ '/assets/js/site/home.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
-<script defer src="{{ '/assets/js/site/icon-video.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

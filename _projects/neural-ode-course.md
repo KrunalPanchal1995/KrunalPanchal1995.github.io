@@ -7,6 +7,7 @@ importance: 4
 category:
 - sciml
 source: intake
+how_made: true
 studio: deform?preset=2
 restored_from: main@5fe9141
 icon: assets/img/projects/neural-ode-course/icon.webp

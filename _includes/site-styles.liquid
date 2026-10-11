@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ '/assets/css/site/base.css' | relative_url }}?v={{ v }}">
 <link rel="stylesheet" href="{{ '/assets/css/site/nav.css' | relative_url }}?v={{ v }}">
 {%- comment -%} Per-area sheets (one owner each, see the first comment line of every file). {%- endcomment -%}
-{% assign sheets = 'project,projects-index,home,pages,hero,apps,components,fx,studio,reel,playground,open' | split: ',' %}
+{% assign sheets = 'project,projects-index,home,pages,hero,apps,components,studio,reel,playground,open' | split: ',' %}
 {% for sheet in sheets %}
   <link rel="stylesheet" href="{{ '/assets/css/site/' | append: sheet | append: '.css' | relative_url }}?v={{ v }}">
 {% endfor %}

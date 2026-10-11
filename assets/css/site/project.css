@@ -1039,3 +1039,106 @@ html.lb-lock body {
 .pg-tab i {
   color: inherit;
 }
+
+/* Course "How it was made" block (_includes/course-how-made.liquid). Plain CSS, tokens only. */
+.hm {
+  margin: 2.5rem 0;
+}
+.hm-lead {
+  font-size: 1.1rem;
+}
+.hm-steps {
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.4rem;
+}
+.hm-h3 {
+  margin: 2rem 0 0.6rem;
+  font-size: 1.25rem;
+}
+.hm-ladder {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+  counter-reset: none;
+}
+.hm-ladder li {
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.6rem 0.9rem;
+  border-left: 4px solid var(--teal, #0f9f8f);
+  background: var(--panel, rgba(127, 127, 127, 0.08));
+  border-radius: 6px;
+}
+.hm-ladder li:nth-child(1) {
+  margin-left: 0;
+}
+.hm-ladder li:nth-child(2) {
+  margin-left: 0.5rem;
+}
+.hm-ladder li:nth-child(3) {
+  margin-left: 1rem;
+}
+.hm-ladder li:nth-child(4) {
+  margin-left: 1.5rem;
+}
+.hm-ladder li:nth-child(5) {
+  margin-left: 2rem;
+}
+.hm-ladder li:nth-child(6) {
+  margin-left: 2.5rem;
+}
+.hm-note {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+.hm-table {
+  overflow-x: auto;
+}
+.hm-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.hm-table th,
+.hm-table td {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.3);
+  vertical-align: top;
+}
+.hm-soon {
+  padding: 1rem 1.25rem;
+  border: 1px dashed rgba(127, 127, 127, 0.6);
+  border-radius: 8px;
+}
+.hm-soon p {
+  margin: 0.5rem 0 0;
+}
+.hm-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: var(--amber-text, #8a5200);
+  color: #fff;
+}
+.pj-more {
+  margin: 2rem 0;
+}
+.pj-more > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+@media (max-width: 560px) {
+  .hm-ladder li {
+    grid-template-columns: 1fr;
+    gap: 0.1rem;
+    margin-left: 0 !important;
+  }
+}

@@ -99,9 +99,6 @@
         </li>
       </ul>
       <div class="pillnav__tools">
-        <button id="fx-toggle" type="button" title="Visual effects" aria-label="Visual effects" aria-pressed="true" hidden>
-          <span class="fx-toggle__dot" aria-hidden="true"></span><span class="fx-toggle__label">FX</span>
-        </button>
         {% if site.search_enabled %}
           <button id="search-toggle" type="button" title="Search" aria-label="Open search">
             <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
@@ -123,6 +120,4 @@
     </progress>
   {% endif %}
 </header>
-{% include fx-intro.liquid %}
 <script defer src="{{ '/assets/js/site/nav.js' | relative_url }}"></script>
-<script defer src="{{ '/assets/js/site/fx.js' | relative_url }}"></script>

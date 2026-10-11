@@ -6,8 +6,7 @@ title: Beyond Research
 accent_word: Research
 eyebrow: Lab and art
 permalink: /beyond-research/
-nav: true
-nav_group: more
+nav: false
 nav_order: 6
 map: true
 empty_hint: "Write anything about life outside research. Media are grouped by topic (for example chess, photography, travel, books); each topic becomes a labelled section."

@@ -2072,3 +2072,19 @@ html[data-fx="off"] .uh__btn {
 .uh__oa .oa-req {
   margin: 0;
 }
+
+/* Plain hero: text only, no canvas or WebGL (faster first paint). */
+.home-hero--plain {
+  padding: clamp(2.5rem, 8vw, 5rem) 0 1rem;
+}
+.home-hero__name {
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  line-height: 1.1;
+  margin: 0 0 0.5rem;
+}
+.home-hero__tag {
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  color: var(--global-text-color-light, inherit);
+  max-width: 40rem;
+  margin: 0;
+}
