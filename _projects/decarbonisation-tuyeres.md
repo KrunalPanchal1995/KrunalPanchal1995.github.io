@@ -1,14 +1,19 @@
 ---
-layout: page
+layout: project
 title: H₂/CH₄ Co-injection in Blast-Furnace Tuyeres
 description: A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you
-img: assets/img/projects/decarbonisation-tuyeres/006_slide_25-25_crop-800.png
+img: assets/img/projects/decarbonisation-tuyeres/06_slide_25-25_crop-800.png
 importance: 10
-category: [cfd, combustion]
-related_publications: false
+category:
+- cfd
+- combustion
+source: intake
+studio: molecules?preset=8
+restored_from: main@5fe9141
+icon: assets/img/projects/decarbonisation-tuyeres/icon.webp
+icon_video: assets/img/projects/decarbonisation-tuyeres/icon.webm
+icon_video_mp4: assets/img/projects/decarbonisation-tuyeres/icon.mp4
 ---
-
-{% include project_gallery.liquid project="decarbonisation-tuyeres" %}
 
 ## Problem
 

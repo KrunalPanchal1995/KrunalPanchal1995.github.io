@@ -1,16 +1,32 @@
 ---
-layout: page
+layout: project
 title: vZero — A Neural ODE Research Playground
 description: An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, RL-as-a-trainer, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum
-img: assets/img/projects/neural-ode-playground/001_optimizer_race-800.png
+img: assets/img/projects/neural-ode-playground/01_optimizer_race-800.png
 importance: 5
-category: [sciml, optimization]
-related_publications: false
+category:
+- sciml
+- optimization
+source: intake
+studio: solver?tab=ode&preset=4
+restored_from: main@5fe9141
+icon: assets/img/projects/neural-ode-playground/icon.webp
+icon_video: assets/img/projects/neural-ode-playground/icon.webm
+icon_video_mp4: assets/img/projects/neural-ode-playground/icon.mp4
+recreate:
+  video: assets/img/projects/neural-ode-playground/recreate.webm
+  poster: assets/img/projects/neural-ode-playground/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Pick example 1: A saddle'
+  - Type probe x = -1.2
+  - Type probe y = 0.9
+  - Raise the contour lines to 28
+  explainer: figure.neural-ode-playground.gradients-and-representations
+  route: atlas?ch=S13&ex=0
 ---
 
-{% include project_gallery.liquid project="neural-ode-playground" %}
-
-> Course notes: the mathematics behind this project is written up as a [self-built Neural ODE course]({{ site.baseurl }}/projects/neural-ode-course/), with a verified animation for every session.
+> Course notes: the mathematics behind this project is written up as a [self-built Neural ODE course](/projects/neural-ode-course/), with a verified animation for every session.
 
 ## Problem
 
@@ -31,7 +47,7 @@ related_publications: false
 - **Multi-objective, topology, geometry, and CFD optimization — the user's own extension.** From-scratch NSGA-II (non-dominated sorting + crowding distance, re-implemented from the published formulas, not wrapped from a library), hypervolume and three scalarizations; SIMP topology optimization (verified against known truss patterns) plus a neural-reparameterization variant; and CST airfoil parameterization driving a from-scratch Weissinger vortex-lattice lift solver — validated against thin-airfoil theory's closed form (0.13% agreement) before being trusted for genuinely-cambered sections — racing a real NSGA-II drag-vs-lift Pareto front. All three reachable as real playground views (Pareto, airfoil) and live-tested `POST /moo/*` endpoints, not library calls.
 - **Neural-operator baselines (DeepONet and a Fourier Neural Operator), from scratch.** The operator-learning counterpart to the PINN rows: a branch/trunk DeepONet and a 2D spectral-convolution FNO re-implemented from the papers, trained on the same Burgers trajectories the Neural-ODE side uses and scored by the same fine-grid L2 metric — FNO 0.188, DeepONet 0.401 at a bounded 200-epoch first pass, next to PINN 0.439 and Neural-ODE-MoL 0.126 (the FNO's grid-agnostic spectral layers are what let it evaluate directly at the 8× finer reference resolution). First-pass numbers, no hyperparameter tuning, stated as such.
 - **A five-view instrument shell**, not one long scrolling form: a working Instrument view (edit the network, watch the decision surface and flow field update live, before you even press Run), a narrated Atlas of every visualization technique, a Lab for optimizer races/hyperparameter search/config exports, the Learn curriculum, and a Data view with a real pre-processing pipeline (channel selection, rescaling, resampling, outlier clipping, live before/after) over whatever dataset is currently loaded.
-- **A public build with zero server dependency.** The classification/regression toy-dataset half of the playground — datasets, feature picker, network editor, decision surface — re-runs entirely client-side: a from-scratch multi-layer perceptron (own initialization, own hand-derived backpropagation) trained with `requestAnimationFrame`, verified to clear the same accuracy bar as the real PyTorch path on the same problems, not to match it bit-for-bit. Reuses the exact same visualization components as the local app; only the training loop underneath is swapped out. Live at [/playground/]({{ site.baseurl }}/playground/).
+- **A public build with zero server dependency.** The classification/regression toy-dataset half of the playground — datasets, feature picker, network editor, decision surface — re-runs entirely client-side: a from-scratch multi-layer perceptron (own initialization, own hand-derived backpropagation) trained with `requestAnimationFrame`, verified to clear the same accuracy bar as the real PyTorch path on the same problems, not to match it bit-for-bit. Reuses the exact same visualization components as the local app; only the training loop underneath is swapped out. Live at [/playground/](/playground/).
 - **A scroll-driven explainer for people who've never seen a Neural ODE.** Four live-canvas beats — a vector field, discrete layers dissolving into continuous depth, a real network training in front of you, and this project's own dynamic-range finding (below) made visible — replacing a static onboarding modal as the playground's first-visit landing page.
 
 ## Results
@@ -70,7 +86,7 @@ Before trusting any accuracy number from a train/validation/test split, two ques
 
 The notebook behind the figure above, embedded in full — every cell was run for real (headlessly, via `nbclient`) against this project's own code, not hand-typed:
 
-{::nomarkdown}{% jupyter_notebook "/assets/jupyter/vzero_optimizer_race.ipynb" %}{:/nomarkdown}
+<!-- Interactive notebook not embedded in the restored text: assets/jupyter/vzero_optimizer_race.ipynb (executed optimizer-race notebook) -->
 
 ## Validation
 

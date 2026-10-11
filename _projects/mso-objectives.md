@@ -1,14 +1,30 @@
 ---
-layout: page
+layout: project
 title: MSO Objective Functions & Multi-Stage Optimization
 description: Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration
-img: assets/img/projects/mso-objectives/001_wmre_vs_powermean-800.png
+img: assets/img/projects/mso-objectives/01_wmre_vs_powermean-800.png
 importance: 2
-category: [optimization, combustion]
-related_publications: true
+category:
+- optimization
+- combustion
+source: intake
+studio: atlas?ch=S13&ex=4
+restored_from: main@5fe9141
+icon: assets/img/projects/mso-objectives/icon.webp
+icon_video: assets/img/projects/mso-objectives/icon.webm
+icon_video_mp4: assets/img/projects/mso-objectives/icon.mp4
+recreate:
+  video: assets/img/projects/mso-objectives/recreate.webm
+  poster: assets/img/projects/mso-objectives/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Pick example 2: Climbing a hill along the gradient'
+  - Raise a to 3
+  - Type probe x = -1
+  - Type probe y = -0.6
+  explainer: figure.mso-objectives.toy-landscape-and-solver-grid
+  route: atlas?ch=S13&ex=1
 ---
-
-{% include project_gallery.liquid project="mso-objectives" %}
 
 ## Problem
 
@@ -48,23 +64,21 @@ A journal-length extension of the multi-stage strategy above — adding an expli
 
 ## Extending to thermodynamic parameters
 
-The correlation-aware, multi-stage philosophy developed here for kinetic _rate_ parameters extends naturally to _thermodynamic_ parameters (heat capacities, formation enthalpies) — the subject of a collaborative paper, led by Bishwajeet Singh with me as second author, under review at _Fuel_ and separately accepted as an abstract for the 64th Symposium (Japanese) on Combustion, Fukuoka, Nov 2026 {% cite singh2026thermoabstract %}. Per disclosure policy for work at this stage, only the title, authors and venue are given here — no formulae or numbers beyond what the accepted abstract itself already states publicly.
+The correlation-aware, multi-stage philosophy developed here for kinetic _rate_ parameters extends naturally to _thermodynamic_ parameters (heat capacities, formation enthalpies) — the subject of a collaborative paper, led by Bishwajeet Singh with me as second author, under review at _Fuel_ and separately accepted as an abstract for the 64th Symposium (Japanese) on Combustion, Fukuoka, Nov 2026 Singh et al. (2026). Per disclosure policy for work at this stage, only the title, authors and venue are given here — no formulae or numbers beyond what the accepted abstract itself already states publicly.
 
 ## Results
 
 _(Published results only — see [Disclosure Policy](https://github.com/KrunalPanchal1995) for why some numbers below are omitted.)_
 
-The multi-stage strategy applied to n-heptane is published: {% cite panchal2023aspacc %}.
+The multi-stage strategy applied to n-heptane is published: Panchal et al. (2023).
 
-The power-mean objective work is accepted for presentation at the 64th Symposium (Japanese) on Combustion, Fukuoka, Nov 2026: {% cite panchal2026powermean %}. Per the accepted abstract, at an identical solver budget the power-mean objective reduces error to **roughly a quarter of what classical WMRE achieves**, across methyl butanoate and n-heptane case studies.
+The power-mean objective work is accepted for presentation at the 64th Symposium (Japanese) on Combustion, Fukuoka, Nov 2026: Panchal and Narayanaswamy (2026). Per the accepted abstract, at an identical solver budget the power-mean objective reduces error to **roughly a quarter of what classical WMRE achieves**, across methyl butanoate and n-heptane case studies.
 
 The underlying theoretical framework that makes this multi-stage, multi-dataset optimization computationally tractable is still in preparation; only the accepted abstract's own claims are reproduced here.
 
 ## From the hyperparameter-tuning paper draft
 
 The figures below are from the in-preparation hyperparameter-tuning manuscript itself, shown ahead of publication (see the note above and `DISCLOSURE_POLICY.md`'s logged exception for 2026-09-08): the toy 2D landscape under classical WMRE vs. a fixed-p vs. an annealed-p power-mean objective, the same landscape searched by three different solvers, the classical-WMRE dominance analysis that motivates the whole approach, representative and full-appendix real ignition-delay fits across all three fuels, and solver-resolved hyperparameter-sweep heatmaps with real per-cell error numbers.
-
-{% include project_gallery.liquid project="mso-objectives" topic="full-paper-figures" %}
 
 ## Validation
 
@@ -76,10 +90,10 @@ Developed and led by me: the multi-stage decomposition and the power-mean object
 
 ## Publications
 
-{% cite panchal2023aspacc %}
-{% cite panchal2026powermean %}
-{% cite panchal2026mso_pprs %}
-{% cite singh2026thermoabstract %}
+- Panchal, Krunal; Vasudavan, Vaisakh; Narayanaswamy, Krithika (2023). A multi-stage kinetic reaction optimization strategy applied to n-heptane combustion mechanism. *14th Asia-Pacific Conference on Combustion (ASPACC)*.
+- Panchal, Krunal R.; Narayanaswamy, Krithika (2026). A Power-Mean (Hölder) Objective Function for Balancing Unequal Datasets in Combustion Kinetic Mechanism Optimization: Case Studies on Methyl Butanoate and n-Heptane. *64th Symposium (Japanese) on Combustion*. Accepted.
+- Panchal, Krunal; Narayanaswamy, Krithika (2026). A multi-stage optimization strategy with partial polynomial response surfaces for combustion kinetic mechanisms. In preparation, target: Fuel.
+- Singh, Bishwajeet; Panchal, Krunal; Narayanaswamy, Krithika; Ambikasaran, Sivaram (2026). A novel, temperature-dependent optimization framework for thermodynamic parameters of fuel kinetic mechanism. *64th Symposium (Japanese) on Combustion*. Accepted.
 
 ## Where this is going
 

@@ -12,21 +12,21 @@
 
 :root {
   color-scheme: light;
-  --global-bg-color: #{v.$white-color};
-  --global-code-bg-color: #{v.$code-bg-color-light};
-  --global-text-color: #{v.$black-color};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$purple-color};
-  --global-hover-color: #{v.$purple-color};
-  --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-dark};
-  --global-footer-text-color: #{v.$grey-color-light};
-  --global-footer-link-color: #{v.$white-color};
-  --global-distill-app-color: #{v.$grey-color};
-  --global-divider-color: rgba(26, 22, 17, 0.14);
-  --global-card-bg-color: #ffffff; // Editorial 2.0: cards lift off the paper
-  --global-label-color: #{v.$teal-accent}; // instrument register: functional labels
-  --global-highlight-color: #{v.$red-color-dark};
+  --global-bg-color: var(--bg);
+  --global-code-bg-color: var(--field);
+  --global-text-color: var(--text);
+  --global-text-color-light: var(--muted);
+  --global-theme-color: var(--teal-text);
+  --global-hover-color: var(--teal-text);
+  --global-hover-text-color: var(--on-accent);
+  --global-footer-bg-color: var(--panel);
+  --global-footer-text-color: var(--muted);
+  --global-footer-link-color: var(--text);
+  --global-distill-app-color: var(--muted);
+  --global-divider-color: var(--border);
+  --global-card-bg-color: var(--panel); // Editorial 2.0: cards lift off the paper
+  --global-label-color: var(--amber); // instrument register: functional labels
+  --global-highlight-color: var(--rose);
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$black-color, "red", v.$space: rgb)},
     #{color.channel(v.$black-color, "green", v.$space: rgb)},
@@ -34,8 +34,8 @@
     0.4
   );
   --global-back-to-top-text-color: #{v.$white-color};
-  --global-newsletter-bg-color: #{v.$white-color};
-  --global-newsletter-text-color: #{v.$black-color};
+  --global-newsletter-bg-color: var(--panel);
+  --global-newsletter-text-color: var(--text);
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #e2f5ec;
@@ -53,12 +53,6 @@
   // Editorial 2.5: per-theme category hues -- consumed only by
   // _pages/projects.md's own scoped CSS (see _variables.scss for the
   // contrast-checked source values).
-  --cat-combustion: #{v.$cat-combustion};
-  --cat-optimization: #{v.$cat-optimization};
-  --cat-uq: #{v.$cat-uq};
-  --cat-sciml: #{v.$cat-sciml};
-  --cat-cfd: #{v.$cat-cfd};
-  --cat-experimental: #{v.$cat-experimental};
 
   #light-toggle-system {
     display: inline-block;
@@ -93,20 +87,20 @@
 
 html[data-theme="dark"] {
   color-scheme: dark;
-  --global-bg-color: #{v.$grey-color-dark};
-  --global-code-bg-color: #{v.$code-bg-color-dark};
-  --global-text-color: #{v.$grey-color-light};
-  --global-text-color-light: #{v.$grey-color};
-  --global-theme-color: #{v.$cyan-color};
-  --global-hover-color: #{v.$cyan-color};
-  --global-hover-text-color: #{v.$white-color};
-  --global-footer-bg-color: #{v.$grey-color-light};
-  --global-footer-text-color: #{v.$grey-color-dark};
-  --global-footer-link-color: #{v.$black-color};
-  --global-distill-app-color: #{v.$grey-color-light};
-  --global-divider-color: #3b352c;
-  --global-card-bg-color: #{v.$grey-900};
-  --global-label-color: #{v.$teal-accent-light};
+  --global-bg-color: var(--bg);
+  --global-code-bg-color: var(--field);
+  --global-text-color: var(--text);
+  --global-text-color-light: var(--muted);
+  --global-theme-color: var(--teal-text);
+  --global-hover-color: var(--teal-text);
+  --global-hover-text-color: var(--on-accent);
+  --global-footer-bg-color: var(--panel);
+  --global-footer-text-color: var(--muted);
+  --global-footer-link-color: var(--text);
+  --global-distill-app-color: var(--muted);
+  --global-divider-color: var(--border);
+  --global-card-bg-color: var(--panel);
+  --global-label-color: var(--amber);
   --global-back-to-top-bg-color: rgba(
     #{color.channel(v.$white-color, "red", v.$space: rgb)},
     #{color.channel(v.$white-color, "green", v.$space: rgb)},
@@ -114,8 +108,8 @@ html[data-theme="dark"] {
     0.5
   );
   --global-back-to-top-text-color: #{v.$black-color};
-  --global-newsletter-bg-color: #{v.$grey-color-light};
-  --global-newsletter-text-color: #{v.$grey-color-dark};
+  --global-newsletter-bg-color: var(--panel);
+  --global-newsletter-text-color: var(--text);
 
   --global-tip-block: #42b983;
   --global-tip-block-bg: #215d42;
@@ -132,12 +126,6 @@ html[data-theme="dark"] {
 
   // Editorial 2.5: per-theme category hues, dark-mode variants (lightened
   // for contrast against the dark card surface).
-  --cat-combustion: #{v.$cat-combustion-dark};
-  --cat-optimization: #{v.$cat-optimization-dark};
-  --cat-uq: #{v.$cat-uq-dark};
-  --cat-sciml: #{v.$cat-sciml-dark};
-  --cat-cfd: #{v.$cat-cfd-dark};
-  --cat-experimental: #{v.$cat-experimental-dark};
 
   .only-light {
     display: none;

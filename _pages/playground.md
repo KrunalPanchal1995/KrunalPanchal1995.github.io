@@ -1,97 +1,17 @@
 ---
-layout: page
+layout: section
+intake: playground
+variant: playground
 title: Playground
+eyebrow: Section
+accent_word: Playground
 permalink: /playground/
-description: A public, server-free Neural ODE playground -- pick a dataset, edit the network, and watch a real model train live in your browser.
 nav: true
+nav_group: more
 nav_order: 2
+nav_icon: fa-flask
+section_project: neural-ode-playground
+section_docs: vzero-explainer
+section_subject: playground
+section_notebook: /assets/jupyter/vzero_optimizer_race.ipynb
 ---
-
-This is a trimmed, public build of **vZero**, a TensorFlow-Playground-class research environment for
-Neural ODEs built around a chemical-kinetics problem (H2/O2 combustion). Everything below runs
-**entirely in your browser** -- no server, no data leaves this tab, and it works even if you're
-offline. Pick a dataset, edit the network's width and depth, choose an activation, and watch a real
-gradient-descent loop train live.
-
-> This is intentionally a SMALL slice of the full project: the classification/regression toy-dataset
-> playground only, with a from-scratch multi-layer perceptron (own weight init, own hand-derived
-> backprop -- see the project write-up for what that means and why). The full local research
-> environment adds Cantera chemical-kinetics trajectories, a continuous-depth Neural-ODE classifier
-> peer, hyperparameter search, reinforcement learning, exportable notebooks, and multi-language code
-> export (Python/JAX/Julia) -- none of which can run without a real backend, so none of it is here.
-> Read the full story on the [project page](/projects/neural-ode-playground/) or browse the
-> [source](https://github.com/KrunalPanchal1995) for the complete environment.
-> {: .block-tip }
-
-<div class="playground-embed" style="margin: 1.5rem 0;">
-  <iframe
-    id="vzero-full-playground-frame"
-    src="{{ '/assets/playground/index.html' | relative_url }}"
-    title="vZero Playground -- full public demo"
-    width="100%"
-    height="1400"
-    style="border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; display: block;"
-    loading="lazy"
-  >
-  </iframe>
-</div>
-<script>
-  (function () {
-    // Fix for "the playground keeps moving" (auto-sizing, same mechanism as
-    // hero-playground.liquid's own listener -- see that file's comment and
-    // main-public.tsx's own for the full empirical diagnosis): real content
-    // height here was measured at ~1796px at this page's typical width vs.
-    // this iframe's height="1400" guess, so without this listener the
-    // iframe gets its OWN internal scrollbar nested inside the page's
-    // scrollbar -- scroll focus flipping between the two as the cursor
-    // crosses the iframe boundary is what reads as the page "moving". This
-    // makes the iframe always exactly as tall as its real content instead,
-    // so the page is the only thing that ever scrolls.
-    var frame = document.getElementById('vzero-full-playground-frame');
-    if (!frame) return;
-    window.addEventListener('message', function (event) {
-      if (event.source !== frame.contentWindow) return;
-      var data = event.data;
-      if (!data || data.source !== 'vzero-playground' || data.type !== 'resize') return;
-      var h = Number(data.height);
-      if (!isFinite(h) || h <= 0) return;
-      h = Math.max(400, Math.min(h, 6000));
-      frame.style.height = h + 'px';
-    });
-  })();
-</script>
-
-## What you're actually looking at
-
-- **9 datasets.** The original 6 (circle, XOR, two-Gaussian, spiral, plane regression,
-  Gaussian-mixture regression) are a faithful re-implementation of the exact formulas TensorFlow
-  Playground's own `dataset.ts` uses (Apache-2.0 licensed; re-derived a second time in this browser
-  build from the main project's own Python port, not copied from the JS original -- see the
-  project's `ACKNOWLEDGEMENTS.md`/`CITATIONS.bib`). 3 more are written directly for this playground,
-  not ported from anywhere: **moons** (two interleaving crescents), **checkerboard** (a 4x4
-  alternating grid, a harder multi-region generalization of XOR), and **rings** (three nested
-  alternating bands, a harder generalization of circle).
-- **Bring your own data.** A CSV upload (3 columns: `x, y, label`, label -1/0/1) trains the same
-  network on whatever you provide -- parsed and kept entirely in your browser (FileReader, nothing
-  ever leaves the tab), capped at 2,000 rows.
-- **Your personal best**, per dataset, saved in this browser's own local storage -- never shared,
-  never a public leaderboard (that would need a real server this static build deliberately doesn't
-  have). Beat your own last run and it tells you.
-- **The network** is a real multi-layer perceptron -- Linear-then-activation, repeated per hidden
-  layer, trained with Adam, mini-batches, and (optionally) L1/L2 regularization -- with its own
-  independent weight initialization and hand-derived backpropagation. It is verified to reach
-  comparable accuracy to the main project's PyTorch implementation on the same datasets (roughly
-  75%+ test accuracy within 200 epochs on circle/gauss/xor), not to reproduce it bit-for-bit --
-  different languages, different random-number streams, same architecture and same problem.
-- **The decision surface, loss chart, and network diagram** are the exact same visualization
-  components the full local playground uses -- this build only swaps out where the training data
-  comes from (a live WebSocket from a real server, vs. a training loop running on your own CPU right
-  now), not what renders it.
-- **Two things TensorFlow Playground doesn't have.** Every hidden (and readout) neuron in the
-  network diagram carries its own small activation-heatmap preview -- what that one neuron alone has
-  learned, not just the combined output surface. And the loss function is a real picker, not fixed:
-  squared error (TF Playground's own only option) or cross-entropy, so the textbook accuracy-vs-loss
-  distinction is something you can actually toggle and watch change, not just read about.
-
-Built with Claude Code across an 11-session multi-week collaboration. Full continuity log, design
-decisions, and the complete (non-public) research environment live in the project's own repository.

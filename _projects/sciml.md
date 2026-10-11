@@ -1,14 +1,29 @@
 ---
-layout: page
+layout: project
 title: Scientific ML for Stiff Kinetics
 description: A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results
-img: assets/img/projects/sciml/001_fig1_noise_floor-800.png
+img: assets/img/projects/sciml/01_fig1_noise_floor-800.png
 importance: 4
-category: [sciml]
-related_publications: false
+category:
+- sciml
+source: intake
+studio: atlas?ch=S32&ex=0
+restored_from: main@5fe9141
+icon: assets/img/projects/sciml/icon.webp
+icon_video: assets/img/projects/sciml/icon.webm
+icon_video_mp4: assets/img/projects/sciml/icon.mp4
+recreate:
+  video: assets/img/projects/sciml/recreate.webm
+  poster: assets/img/projects/sciml/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Pick example 1: Explicit Euler on a stiff decay'
+  - Press Play
+  - Choose the implicit (backward) method
+  - Raise the step h to 0.5
+  explainer: figure.sciml.learned-stiffness-and-ignition-timing
+  route: atlas?ch=S32&ex=0
 ---
-
-{% include project_gallery.liquid project="sciml" %}
 
 ## Problem
 

@@ -1,14 +1,30 @@
 ---
-layout: page
+layout: project
 title: Symbolic Regression for Universal Rate Rules
 description: Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions
-img: assets/img/projects/pysr-rate-rules/004_01_collinearity-800.png
+img: assets/img/projects/pysr-rate-rules/01_01_collinearity-800.png
 importance: 9
-category: [sciml, combustion]
-related_publications: false
+category:
+- sciml
+- combustion
+source: intake
+studio: solver?tab=sr&preset=0
+restored_from: main@5fe9141
+icon: assets/img/projects/pysr-rate-rules/icon.webp
+icon_video: assets/img/projects/pysr-rate-rules/icon.webm
+icon_video_mp4: assets/img/projects/pysr-rate-rules/icon.mp4
+recreate:
+  video: assets/img/projects/pysr-rate-rules/recreate.webm
+  poster: assets/img/projects/pysr-rate-rules/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Pick example 1: A calibration line by least squares'
+  - Raise the polynomial degree to 2
+  - Raise the polynomial degree to 4
+  - Lower it back to 1
+  explainer: figure.pysr-rate-rules.collinearity
+  route: atlas?ch=S26&ex=0
 ---
-
-{% include project_gallery.liquid project="pysr-rate-rules" %}
 
 ## Problem
 

@@ -16,3 +16,27 @@ _data/citations.yml
 # Machine-managed by 'al-folio upgrade overrides accept' (rewritten on every
 # re-acknowledgement, in the tool's own format)
 .al-folio-overrides.yml
+
+# Redesign: generated or vendored files (owned by scripts/build_from_intake.py, tokens/build.py or third parties)
+_data/project_images.yml
+_data/project_docs.yml
+_data/intake_pages.yml
+_data/apps.yml
+_data/recent.yml
+assets/css/site/tokens.css
+assets/fonts-site/
+assets/vendor/
+assets/html/world/projects.json
+assets/html/hero_tests/
+assets/html/world/tests/
+.intake_manifest.json
+_projects/*.md
+
+# Generated static copy of the Math Visual Studio (scripts/build_studio_static.py)
+assets/apps/math-studio/
+# Liquid-generated list in a Jekyll file
+assets/html/world/index.html
+
+# Test/demo harnesses (generated or hand-copied markup)
+assets/html/fx_demo.html
+assets/html/hero_preview.html

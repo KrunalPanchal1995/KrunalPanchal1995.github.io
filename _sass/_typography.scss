@@ -13,14 +13,19 @@
 // ---------------------------------------------------------------------------
 // Editorial type system
 // ---------------------------------------------------------------------------
-$font-serif-display: "Newsreader", Georgia, "Times New Roman", serif;
-$font-sans-body:
-  Roboto,
+$font-serif-display:
+  "Public Sans",
+  system-ui,
   -apple-system,
-  BlinkMacSystemFont,
+  "Segoe UI",
+  sans-serif; // headlines are sans now; the serif lives in .accent-serif
+$font-sans-body:
+  "Public Sans",
+  system-ui,
+  -apple-system,
   "Segoe UI",
   sans-serif;
-$font-mono-data: "SF Mono", "Consolas", "Liberation Mono", Menlo, monospace;
+$font-mono-data: "IBM Plex Mono", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
 
 body {
   font-family: $font-sans-body;
@@ -195,52 +200,7 @@ html[data-theme="dark"] .publications a {
   }
 }
 
-// Call-to-action rows (e.g. "Explore Research · CV · Contact") -- rendered
-// as explicit buttons instead of a bolded, dot-separated sentence, so they
-// read as navigation rather than prose. `.btn-cta` links opt out of the
-// underline-by-default rule above via their own always-visible outline/fill.
-.cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1.25rem 0 1.5rem;
-}
-
-.btn-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.5rem 1.1rem;
-  border-radius: 999px;
-  font-family: $font-sans-body;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none !important;
-  border: 1.5px solid var(--global-theme-color);
-  transition:
-    background-color 0.15s ease,
-    color 0.15s ease;
-
-  &.btn-cta-primary {
-    background: var(--global-theme-color);
-    color: var(--global-bg-color);
-
-    &:hover {
-      background: transparent;
-      color: var(--global-theme-color);
-    }
-  }
-
-  &.btn-cta-secondary {
-    background: transparent;
-    color: var(--global-theme-color);
-
-    &:hover {
-      background: var(--global-theme-color);
-      color: var(--global-bg-color);
-    }
-  }
-}
+// Call-to-action rows and .btn-cta buttons now live in assets/css/site/base.css (tokenised, contrast-checked).
 
 // ---------------------------------------------------------------------------
 // Entrance transition -- a page's header and its first row of section cards

@@ -1,14 +1,29 @@
 ---
-layout: page
+layout: project
 title: Turbulence Closures — From Mixing Length to Data-Driven RANS
 description: A from-scratch, chronologically-built turbulence-closure curriculum in Python — classical RANS through LES, hybrid RANS-LES, and a first data-driven correction, every claim backed by a mechanically-enforced disclosure registry
-img: assets/img/projects/turbulence-closures/013_tv_fig06_closure_scorecard-800.png
+img: assets/img/projects/turbulence-closures/13_tv_fig06_closure_scorecard-800.png
 importance: 4
-category: [cfd]
-related_publications: false
+category:
+- cfd
+source: intake
+studio: atlas?ch=S82&ex=3
+restored_from: main@5fe9141
+icon: assets/img/projects/turbulence-closures/icon.webp
+icon_video: assets/img/projects/turbulence-closures/icon.webm
+icon_video_mp4: assets/img/projects/turbulence-closures/icon.mp4
+recreate:
+  video: assets/img/projects/turbulence-closures/recreate.webm
+  poster: assets/img/projects/turbulence-closures/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Pick example 4: A Rankine vortex'
+  - Press Play
+  - Raise the rate a to 2.5
+  - Press Play again
+  explainer: figure.turbulence-closures.fig01-vorticity-okubo-weiss
+  route: atlas?ch=S82&ex=3
 ---
-
-{% include project_gallery.liquid project="turbulence-closures" %}
 
 ## Problem
 

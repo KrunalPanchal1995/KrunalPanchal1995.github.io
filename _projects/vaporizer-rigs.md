@@ -1,14 +1,30 @@
 ---
-layout: page
+layout: project
 title: Vaporizer & Combustion Rig Design
 description: An induction-heated tube vaporizer for MtG/ethanol surrogate fuel, sized against boiling glide, critical heat flux and flow instability, plus a fabrication-grade combustion-rig drawing package
-img: assets/img/projects/vaporizer-rigs/008_length_comparison-800.png
+img: assets/img/projects/vaporizer-rigs/03_length_comparison-800.png
 importance: 8
-category: [experimental, cfd]
-related_publications: false
+category:
+- experimental
+- cfd
+source: intake
+studio: atlas?ch=S53&ex=2
+restored_from: main@5fe9141
+icon: assets/img/projects/vaporizer-rigs/icon.webp
+icon_video: assets/img/projects/vaporizer-rigs/icon.webm
+icon_video_mp4: assets/img/projects/vaporizer-rigs/icon.mp4
+recreate:
+  video: assets/img/projects/vaporizer-rigs/recreate.webm
+  poster: assets/img/projects/vaporizer-rigs/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Pick example 3: Heat loss through an insulated wall'
+  - Set the outside air to -25 C
+  - Raise the inside air to 40 C
+  - Lower the outside film coefficient to 5
+  explainer: figure.vaporizer-rigs.tube-sizing-profiles
+  route: atlas?ch=S53&ex=2
 ---
-
-{% include project_gallery.liquid project="vaporizer-rigs" %}
 
 ## Problem
 

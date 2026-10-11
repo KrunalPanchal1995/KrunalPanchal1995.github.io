@@ -1,14 +1,18 @@
 ---
-layout: page
+layout: project
 title: flamelab
 description: A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods
-img: assets/img/projects/flamelab/001_ensemble-frame-matrix-800.png
+img: assets/img/projects/flamelab/01_ensemble-frame-matrix-800.png
 importance: 7
-category: [experimental]
-related_publications: false
+category:
+- experimental
+source: intake
+studio: atlas?ch=S113&ex=0
+restored_from: main@5fe9141
+icon: assets/img/projects/flamelab/icon.webp
+icon_video: assets/img/projects/flamelab/icon.webm
+icon_video_mp4: assets/img/projects/flamelab/icon.mp4
 ---
-
-{% include project_gallery.liquid project="flamelab" %}
 
 ## Agenda
 
@@ -47,7 +51,7 @@ The campaign is eight repeat n-heptane pool-flame runs from one recording sessio
 The gallery above shows the ignition-aligned frame matrix (same physical field of view in every cell), the seismograph-style tip and width fluctuation charts, the ensemble traces with uncertainty bands, kymographs, POD/DMD modes, the per-regime overlay videos with the detected contour burned onto the real footage, and the zonal seismograph videos described below. The ensemble power-spectral-density figure is the direct spectral evidence behind the puffing-frequency measurement above, and the per-run flickering-onset-time and anchored-subset-robustness figures make the run-to-run repeatability question directly inspectable rather than folded into one summary statistic. A sample of the live measurement:
 
 <figure class="loop-media">
-  <img src="/assets/img/projects/flamelab/015_onset_tracking.gif" alt="The measured contour, centerline and tip tracking the flame through the flickering-onset transition" loading="lazy" />
+  <img src="/assets/img/projects/flamelab/inline/015_onset_tracking.gif" alt="The measured contour, centerline and tip tracking the flame through the flickering-onset transition" loading="lazy" />
   <figcaption>The flickering-onset transition with the measurement burned onto the real frames — green: measured boundary, cyan: centerline, red cross: tip, blue: burner axis (full-resolution overlay videos are in the gallery).</figcaption>
 </figure>
 
@@ -66,6 +70,12 @@ Every method is validated against synthetic truth before touching real footage: 
 ## My contribution
 
 The instrument is mine: the measurement pipeline, the uncertainty and refusal policy, the regime classifier, the ensemble statistics and every figure in the gallery. The experimental rig (tube burner, pool-fire configuration) was designed and commissioned jointly with Gagan Verma.
+
+## Calibration, video stitching and an interactive course
+
+A take recorded in several files is declared in the run registry as a list of video parts, and flamelab reads the parts as one continuous frame stream: it checks that the parts match in frame size, frame rate and rotation, refuses a recording with a time gap unless that is declared, counts the frames it can actually decode rather than trusting the container, and records the part boundaries in its output. On a real clip split in two, every stitched frame was verified to equal an original frame. A separate calibration clip (a ruler beside the unlit burner) measures the pixels-per-millimetre scale from the periodic ticks of the ruler, and shows that a scale cannot be carried from one clip to another when the camera has moved.
+
+The ideas behind the measurements (aliasing against the camera's frame rate, veiling glare and thresholding, sub-pixel edges, the kymograph, flame height, the onset of puffing, onion-peeling inversion, onset detection and stitching) are also available as nine interactive models in the Math Visualization Studio, opened by the *Explore in Studio* action of this page, and as an eight-session written course with figures drawn from these runs.
 
 ## Where this is going
 

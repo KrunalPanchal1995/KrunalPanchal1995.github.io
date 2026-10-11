@@ -1,14 +1,19 @@
 ---
-layout: page
+layout: project
 title: dokimazo — A PIDO Optimization Workbench
 description: A dependency-light process-integration-and-design-optimization workbench with a plug-and-play graph IR, closed by a reinforcement-learning conformer search that tunes a long alkane chain's rotors one at a time
-img: assets/img/projects/dokimazo/02_three_way_benchmark-800.png
+img: assets/img/projects/dokimazo/03_02_three_way_benchmark-800.png
 importance: 11
-category: [optimization, sciml]
-related_publications: false
+category:
+- optimization
+- sciml
+source: intake
+studio: mechanism?preset=19
+restored_from: main@5fe9141
+icon: assets/img/projects/dokimazo/icon.webp
+icon_video: assets/img/projects/dokimazo/icon.webm
+icon_video_mp4: assets/img/projects/dokimazo/icon.mp4
 ---
-
-{% include project_gallery.liquid project="dokimazo" %}
 
 ## Problem
 

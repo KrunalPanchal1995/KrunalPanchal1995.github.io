@@ -1,14 +1,19 @@
 ---
-layout: page
+layout: project
 title: Steam-Catalytic Downdraft Gasification
 description: M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier
-img: assets/img/projects/gasification/001_02_h2_vs_sbr-800.png
+img: assets/img/projects/gasification/01_02_h2_vs_sbr-800.png
 importance: 6
-category: [experimental, combustion]
-related_publications: true
+category:
+- experimental
+- combustion
+source: intake
+studio: molecules?preset=12
+restored_from: main@5fe9141
+icon: assets/img/projects/gasification/icon.webp
+icon_video: assets/img/projects/gasification/icon.webm
+icon_video_mp4: assets/img/projects/gasification/icon.mp4
 ---
-
-{% include project_gallery.liquid project="gasification" %}
 
 ## Problem
 
@@ -20,7 +25,7 @@ A pilot-scale downdraft fixed-bed gasifier (525 mm ID, 2.165 m tall, mild steel)
 
 ## Results
 
-Published, {% cite upadhyay2020airsteam %}, {% cite upadhyay2019equivalence %}, {% cite sakhiya2019elemental %}, {% cite upadhyay2018thermodynamic %}.
+Published, Upadhyay et al. (2020), Upadhyay et al. (2019), Sakhiya et al. (2019), Upadhyay et al. (2018).
 
 The catalyst raised hydrogen yield from 24.1–32.6% to 23.2–34.7%, cold-gas efficiency from 62.2–75.2% to 68.1–86.9%, and lower heating value from 4.48–5.19 to 4.67–6.65 MJ/Nm<sup>3</sup>. The headline finding was a **non-monotonic hydrogen response**: with the catalyst, H<sub>2</sub> climbed to a 34.7% peak around SBR ≈ 0.26 and then _collapsed_ to 23.2% by SBR ≈ 0.47 — falling below the no-catalyst case — moving in lockstep with cold-gas efficiency and heating value.
 
@@ -36,10 +41,10 @@ Experimental design, rig operation, and primary analysis, under the supervision 
 
 ## Publications
 
-{% cite upadhyay2020airsteam %}
-{% cite upadhyay2019equivalence %}
-{% cite sakhiya2019elemental %}
-{% cite upadhyay2018thermodynamic %}
+- Upadhyay, D. S.; Panchal, Krunal R.; Sakhiya, A. K. V.; Patel, R. N. (2020). Air-Steam gasification of lignite in a fixed bed gasifier: Influence of steam to lignite ratio on performance of downdraft gasifier. *Energy* 211, 118187. [doi:10.1016/j.energy.2020.118187](https://doi.org/10.1016/j.energy.2020.118187)
+- Upadhyay, D. S.; Sakhiya, A. K.; Panchal, Krunal; Patel, A. H.; Patel, R. N. (2019). Effect of equivalence ratio on the performance of the downdraft gasifier – An experimental and modelling approach. *Energy* 168, 833–846. [doi:10.1016/j.energy.2018.11.133](https://doi.org/10.1016/j.energy.2018.11.133)
+- Sakhiya, A. K.; Chaturvedi, A.; Barasara, V.; Panchal, Krunal; Upadhyay, D. S.; Patel, R. N. (2019). Elemental and heat loss analysis of different feedstock in downdraft gasifier. *Journal of Energy and Environmental Sustainability* 7, 10–16. [doi:10.47469/jees.2019.v07.100070](https://doi.org/10.47469/jees.2019.v07.100070)
+- Upadhyay, D. S.; Sakhiya, A. K. V.; Panchal, Krunal R.; Patel, R. N. (2018). Thermodynamic analysis of lignite gasification in the downdraft gasifier. *Journal of Energy and Environmental Sustainability* 5, 58–64. [doi:10.47469/jees.2018.v05.100058](https://doi.org/10.47469/jees.2018.v05.100058)
 
 ## Where this is going
 

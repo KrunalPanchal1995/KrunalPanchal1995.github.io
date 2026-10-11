@@ -1,14 +1,30 @@
 ---
-layout: page
+layout: project
 title: MUQ-SAC — Joint Arrhenius Uncertainty Quantification
 description: A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression
-img: assets/img/projects/muq-sac/001_fig1_ellipsoid_containment-800.png
+img: assets/img/projects/muq-sac/01_fig1_ellipsoid_containment-800.png
 importance: 3
-category: [uq, combustion]
-related_publications: true
+category:
+- uq
+- combustion
+source: intake
+studio: atlas?ch=S27&ex=2
+restored_from: main@5fe9141
+icon: assets/img/projects/muq-sac/icon.webp
+icon_video: assets/img/projects/muq-sac/icon.webm
+icon_video_mp4: assets/img/projects/muq-sac/icon.mp4
+recreate:
+  video: assets/img/projects/muq-sac/recreate.webm
+  poster: assets/img/projects/muq-sac/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Pick example 4: Monte Carlo error falls as 1/sqrt(n)'
+  - Press Play
+  - 'Choose the sampled shape: sphere in a cube'
+  - Change the random seed to 40
+  explainer: figure.muq-sac.ellipsoid-containment
+  route: atlas?ch=S27&ex=3
 ---
-
-{% include project_gallery.liquid project="muq-sac" %}
 
 ## Problem
 
@@ -26,7 +42,7 @@ MUQ-SAC (_Method of Uncertainty Quantification and Sampling of Arrhenius Curves_
 
 ## Results
 
-Published in _Combustion Theory and Modelling_ (2024), applied to the H<sub>2</sub>/CO kinetic mechanism: {% cite panchal2024muqsac %}. The animated figure above shows all four sampling-method classes at once, real accepted Arrhenius curves building up their uncertainty bands in the same frame — with each panel's own timer reading out the *real* measured compute cost of getting there, not a decorative counter. That cost turns out to matter a great deal: generating 100 samples measures at **204.3 s under Class B**'s full 3-parameter SLSQP fit and **5.5 s under Class D**'s reduced 2-parameter SLSQP fit, against **0.018 s (Class A) and 0.02 s (Class C)** for the closed-form methods — roughly four to five orders of magnitude apart for statistically equivalent output on the same reaction family. That gap is the practical argument for the closed-form classes over the SLSQP-based ones at scale, not just a theoretical preference.
+Published in _Combustion Theory and Modelling_ (2024), applied to the H<sub>2</sub>/CO kinetic mechanism: Panchal et al. (2024). The animated figure above shows all four sampling-method classes at once, real accepted Arrhenius curves building up their uncertainty bands in the same frame — with each panel's own timer reading out the *real* measured compute cost of getting there, not a decorative counter. That cost turns out to matter a great deal: generating 100 samples measures at **204.3 s under Class B**'s full 3-parameter SLSQP fit and **5.5 s under Class D**'s reduced 2-parameter SLSQP fit, against **0.018 s (Class A) and 0.02 s (Class C)** for the closed-form methods — roughly four to five orders of magnitude apart for statistically equivalent output on the same reaction family. That gap is the practical argument for the closed-form classes over the SLSQP-based ones at scale, not just a theoretical preference.
 
 ## Validation
 
@@ -38,7 +54,7 @@ Developed by me as lead author, in collaboration with Vaisakh Vasudavan, Sivaram
 
 ## Publications
 
-{% cite panchal2024muqsac %}
+- Panchal, Krunal; Vasudavan, Vaisakh; Ambikasaran, Sivaram; Narayanaswamy, Krithika (2024). A fast uncertainty quantification methodology and sampling technique for joint probability distribution of the Arrhenius rate expression: a case study applied to H2/CO kinetic mechanism. *Combustion Theory and Modelling* 28, 411–440. [doi:10.1080/13647830.2024.2326413](https://doi.org/10.1080/13647830.2024.2326413)
 
 ## Where this is going
 

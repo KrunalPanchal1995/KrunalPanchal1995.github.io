@@ -1,18 +1,33 @@
 ---
-layout: page
-title: "PANSOPHIA — In-House CFD & Multiphysics Solver"
+layout: project
+title: PANSOPHIA — In-House CFD & Multiphysics Solver
 description: A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning
-img: assets/img/projects/cfdcore/001_04_mms_convergence-800.png
+img: assets/img/projects/cfdcore/01_04_mms_convergence-800.png
 importance: 5
-category: [cfd]
-related_publications: false
+category:
+- cfd
+source: intake
+studio: atlas?ch=S34&ex=1
+restored_from: main@5fe9141
+icon: assets/img/projects/cfdcore/icon.webp
+icon_video: assets/img/projects/cfdcore/icon.webm
+icon_video_mp4: assets/img/projects/cfdcore/icon.mp4
+recreate:
+  video: assets/img/projects/cfdcore/recreate.webm
+  poster: assets/img/projects/cfdcore/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Pick example 2: FTCS heat at r = 0.55'
+  - 'Press Play: the sawtooth grows'
+  - Lower the stability number r to 0.4
+  - 'Press Play again: the profile stays smooth'
+  explainer: figure.cfdcore.scheme-stability-and-diffusion
+  route: atlas?ch=S34&ex=1
 ---
 
-<p style="font-family: 'Roboto Mono', 'SF Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; color: var(--global-text-color-light); margin-top: -0.5rem;">Πανσοφία &mdash; "all-encompassing wisdom": one solver, every physics.</p>
+*Πανσοφία — "all-encompassing wisdom": one solver, every physics.*
 
 *Formerly developed and referred to internally as CFDCore.jl — the Julia module name is unchanged; **PANSOPHIA** is the project's public name going forward.*
-
-{% include project_gallery.liquid project="cfdcore" %}
 
 ## Problem
 

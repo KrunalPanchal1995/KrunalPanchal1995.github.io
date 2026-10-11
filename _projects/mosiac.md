@@ -1,11 +1,30 @@
 ---
-layout: page
+layout: project
 title: MOSIAC
 description: An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization
-img: assets/img/projects/mosiac/018_nominal_sim_walkthrough_poster-800.png
+img: assets/img/projects/mosiac/09_nominal_sim_walkthrough_poster-800.png
 importance: 1
-category: [combustion, optimization, uq]
-related_publications: false
+category:
+- combustion
+- optimization
+- uq
+source: intake
+studio: molecules?preset=11
+restored_from: main@5fe9141
+icon: assets/img/projects/mosiac/icon.webp
+icon_video: assets/img/projects/mosiac/icon.webm
+icon_video_mp4: assets/img/projects/mosiac/icon.mp4
+recreate:
+  video: assets/img/projects/mosiac/recreate.webm
+  poster: assets/img/projects/mosiac/recreate.webp
+  steps:
+  - Open the controls panel
+  - 'Choose the example: Collision theory, A + B to C'
+  - Press Play
+  - Raise the activation energy Ea to 3.5
+  - Press Re-run
+  explainer: figure.mosiac.rop-and-species
+  route: molecules?preset=8
 ---
 
 ## Problem
@@ -26,8 +45,6 @@ MOSIAC (formerly named RMIP, now retired) unifies the full workflow behind one c
 - **Architecture:** a pure-Python core (`mso_studio.core`, zero Qt) cleanly separated from the GUI layer, joined by a run-configuration/run-record contract — so every campaign is reproducible and every run can be paused, patched, and resumed.
 - **~2,300 Python files**, with a documented, tested public API (Sphinx + ReadTheDocs).
 
-{% include project_gallery.liquid project="mosiac" topic="hero" %}
-
 ## Live: a real H2/O2 case study, screen-recorded end to end
 
 The two videos below are real, screen-recorded MOSIAC Studio sessions — not screenshots, not a mockup. They're captured through Qt's own offscreen render pipeline (this page is generated on a headless machine with no physical display attached), which paints pixels identically to a normal window but off-screen; every frame is a genuine render of the real running app reacting to real, scripted input, then encoded straight to video. Nothing about what's on screen is staged.
@@ -38,27 +55,17 @@ One honest gap in reproducing this demo: the original 426-target H2/O2 dataset t
 
 The Nominal Simulation tool — mechanism, targets, thermo/transport files, target count — filled with the real (regenerated) H2/O2 case, then actually run. The run genuinely completes: 30 real result tables in 15.8 real seconds, watched live in the Tables tab as they land.
 
-{% include project_gallery.liquid project="mosiac" topic="wt-nominal-video" %}
-
 ### Ignition-Delay Sensitivity, configured and run live
 
 A different, self-contained diagnostic — "which reactions actually control ignition delay, at one condition" — rather than a full optimization run. Configured for H<sub>2</sub> fuel at T=1200 K, P=13.5 atm, phi=1.0, constant-volume reactor, brute-force method, top 20 reactions, and run to completion in under a second. The result is exactly what combustion chemistry says it should be: **H + O2 ⇌ O + OH**, the dominant chain-branching step, comes out with the single largest-magnitude coefficient (−1.62) — speed that reaction up and ignition delay drops. **H + O2 + N2 ⇌ HO2 + N2**, a chain-_terminating_ three-body step, is next largest and has the _opposite_ sign (+0.79) — speed that one up and ignition delay gets longer. A tool that didn't understand the chemistry couldn't get that sign flip right by accident.
-
-{% include project_gallery.liquid project="mosiac" topic="wt-idt-video" %}
 
 ### Attempting an optimization run
 
 The Optimization tool needs a fully-populated `target.opt` project file (mechanism, targets, thermo/transport, and every optimizer setting in one place) rather than a form — MOSIAC's real campaigns aren't quick, so this is the one tool built around editing a config file directly rather than re-filling a form each time. For this demo, a copy of the bundled H2 project config had its generation count cut from 20,000 to 5 and its target count from 426 to 30 (the real settings would run for hours); everything else — mechanism, solver, targets — is the same real H2/O2 case as above. The design-space plot below is generated automatically as the run's first step, before any fitting starts:
 
-{% include project_gallery.liquid project="mosiac" topic="wt-7-design-space" %}
-
-{% include project_gallery.liquid project="mosiac" topic="wt-8-opt-running" %}
-
 ### Where it actually broke — shown, not hidden
 
 The run got through target export, the design-space plot above, and parsing the joint-uncertainty data (a 3-reaction test fixture, used here since the bundled H2 project's own uncertainty file turned out to be a plain-text target file rather than the XML the optimizer expects — a real gap in the demo data, fixed by pointing at a smaller uncertainty fixture already in the repository's own test suite). It then failed one step later: the sensitivity-analysis sub-step expects a nominal-simulation case directory at a specific relative path (`nominal/case-7`) that this standalone optimization run hadn't produced itself. That's a real, undocumented dependency between two of the GUI's own tools — Nominal Simulation and Optimization apparently need to be run from a shared working directory for the second to find the first's output — caught only by actually running them back to back, not by reading the source.
-
-{% include project_gallery.liquid project="mosiac" topic="wt-9-opt-error" %}
 
 This is the honest state of a standalone Optimization run today: three of the four Explore/Optimise-stage tools (Nominal Simulation, Ignition-Delay Sensitivity, and the first three stages of Optimization) run cleanly end to end on real data; the fourth needs its working-directory contract with Nominal Simulation tightened up. Left as a finding, not smoothed over.
 
@@ -66,15 +73,13 @@ This is the honest state of a standalone Optimization run today: three of the fo
 
 The clearest validation study is an H<sub>2</sub>/O<sub>2</sub> extreme-condition sweep cross-checked across **four independent solvers** — Cantera, CHEMKIN-PRO, Zero-RK and FlameMaster — covering explosion limits, ignition delay, laminar flame speed, extinction strain rate, and jet-stirred-reactor S-curves. Where the four solvers agree, that's confidence in the physics; where they don't, MOSIAC's diagnostics (stiffness maps, rate-of-production spectra) show why.
 
-{% include project_gallery.liquid project="mosiac" topic="h2o2-validation" %}
-
 ## My contribution
 
 Developed by me, as the primary author and PhD deliverable, building on open-source foundations (Cantera, RMG-Py conventions, ReSpecTh data format) rather than reimplementing them.
 
 ## Publications
 
-The MOSIAC software paper is in preparation, targeting the _Journal of Open Source Software_. The uncertainty-quantification methodology at its core is published: {% cite panchal2024muqsac %}.
+The MOSIAC software paper is in preparation, targeting the _Journal of Open Source Software_. The uncertainty-quantification methodology at its core is published: Panchal et al. (2024).
 
 ## Code
 
