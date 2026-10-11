@@ -3318,14 +3318,14 @@ phd-thesis:
   src_1600: assets/img/projects/phd-thesis/12_ch3_comparison_plot_final_with_rms_ONLY_TIG_63-1600.png
   subject: optimization
 - index: 13
-  caption: Chapter 3. Number of active parameters used to build the p-PRS for high- and low-temperature targets, methyl butanoate
+  caption: Chapter 3. Number of active parameters for high- and low-temperature targets, methyl butanoate
   topic: chapter-3
   description: ''
   src_800: assets/img/projects/phd-thesis/13_ch3_mb-800.png
   src_1600: assets/img/projects/phd-thesis/13_ch3_mb-1600.png
   subject: optimization
 - index: 14
-  caption: Chapter 3. Number of active parameters used to build the p-PRS for high- and low-temperature targets, n-heptane
+  caption: Chapter 3. Number of active parameters for high- and low-temperature targets, n-heptane
   topic: chapter-3
   description: ''
   src_800: assets/img/projects/phd-thesis/14_ch3_nHeptane-800.png

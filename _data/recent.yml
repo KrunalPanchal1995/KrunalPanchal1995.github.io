@@ -62,9 +62,8 @@
   src_800: assets/img/projects/flamelab/41_studio-S113-aliasing-800.png
   date: '2026-10-07'
   video: assets/img/projects/flamelab/41_studio-S113-aliasing.mp4
-- project: flamelab
-  title: flamelab
-  caption: All four regimes at once -- multi-location width tracking, one frame
-  src_800: assets/img/projects/flamelab/34_MVI8036-zonal-four-regimes-quadrant-800.png
-  date: '2026-09-08'
-  video: assets/img/projects/flamelab/34_MVI8036-zonal-four-regimes-quadrant.mp4
+- project: neural-ode-course
+  title: Neural ODEs and Transformations — A Self-Built Course
+  caption: S052 No chart compresses the stiffness ratio of hydrogen/air; a nonlinear chart moves a spectrum only away from rest
+  src_800: assets/img/projects/neural-ode-course/151_s052_fig01_audit_compression-800.png
+  date: '2026-10-06'
