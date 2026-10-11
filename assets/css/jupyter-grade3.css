@@ -143,14 +143,6 @@ body > #header .header-bar {
   border: none;
 }
 
-.navbar-nav > li > .dropdown-menu {
-  margin-top: 0px;
-}
-
-.navbar-nav {
-  margin: 0;
-}
-
 @-webkit-keyframes pulsate {
   0% {
     -webkit-transform: scale(1, 1);
@@ -504,6 +496,26 @@ div.cell.selected:before {
   height: 100%;
 }
 
+div.prompt,
+.prompt {
+  font-family: monospace, monospace;
+  font-size: 9pt !important;
+  font-weight: normal;
+  color: #828892;
+  line-height: 170%;
+  padding: 0px;
+  padding-top: 4px;
+  padding-left: 0px;
+  padding-right: 1px;
+  text-align: right !important;
+  min-width: 11.5ex !important;
+  width: 11.5ex !important;
+}
+
+div.cell.selected .prompt {
+  top: 0;
+}
+
 pre,
 code,
 kbd {
@@ -565,6 +577,18 @@ hr {
   -webkit-box-shadow: none;
   box-shadow: none;
   z-index: 10;
+}
+
+#clusters > a {
+  color: #ef5c00;
+  text-decoration: underline;
+  cursor: auto;
+}
+
+#clusters > a:hover {
+  color: #126dce;
+  text-decoration: underline;
+  cursor: auto;
 }
 
 mark,

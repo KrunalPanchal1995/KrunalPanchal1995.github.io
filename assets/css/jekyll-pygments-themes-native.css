@@ -39,7 +39,11 @@
 .highlight .cp {
   color: #cd2828;
   font-weight: bold;
-} /* Comment.Preproc */ /* Comment.Single */
+} /* Comment.Preproc */
+.highlight .c1 {
+  color: #999999;
+  font-style: italic;
+} /* Comment.Single */
 .highlight .cs {
   color: #e50808;
   font-weight: bold;
@@ -64,7 +68,10 @@
 } /* Generic.Inserted */
 .highlight .go {
   color: #cccccc;
-} /* Generic.Output */ /* Generic.Prompt */
+} /* Generic.Output */
+.highlight .gp {
+  color: #aaaaaa;
+} /* Generic.Prompt */
 .highlight .gs {
   color: #d0d0d0;
   font-weight: bold;
@@ -87,7 +94,10 @@
 .highlight .kn {
   color: #6ab825;
   font-weight: bold;
-} /* Keyword.Namespace */ /* Keyword.Pseudo */
+} /* Keyword.Namespace */
+.highlight .kp {
+  color: #6ab825;
+} /* Keyword.Pseudo */
 .highlight .kr {
   color: #6ab825;
   font-weight: bold;
@@ -136,14 +146,20 @@
 .highlight .nn {
   color: #447fcf;
   text-decoration: underline;
-} /* Name.Namespace */ /* Name.Other */
+} /* Name.Namespace */
+.highlight .nx {
+  color: #d0d0d0;
+} /* Name.Other */
 .highlight .py {
   color: #d0d0d0;
 } /* Name.Property */
 .highlight .nt {
   color: #6ab825;
   font-weight: bold;
-} /* Name.Tag */ /* Name.Variable */ /* Operator.Word */
+} /* Name.Tag */
+.highlight .nv {
+  color: #40ffff;
+} /* Name.Variable */ /* Operator.Word */
 .highlight .w {
   color: #666666;
 } /* Text.Whitespace */
@@ -158,7 +174,10 @@
 } /* Literal.Number.Integer */
 .highlight .mo {
   color: #3677a9;
-} /* Literal.Number.Oct */ /* Literal.String.Backtick */
+} /* Literal.Number.Oct */
+.highlight .sb {
+  color: #ed9d13;
+} /* Literal.String.Backtick */
 .highlight .sc {
   color: #ed9d13;
 } /* Literal.String.Char */
@@ -173,10 +192,16 @@
 } /* Literal.String.Heredoc */
 .highlight .si {
   color: #ed9d13;
-} /* Literal.String.Interpol */ /* Literal.String.Other */
+} /* Literal.String.Interpol */
+.highlight .sx {
+  color: #ffa500;
+} /* Literal.String.Other */
 .highlight .sr {
   color: #ed9d13;
-} /* Literal.String.Regex */ /* Literal.String.Single */
+} /* Literal.String.Regex */
+.highlight .s1 {
+  color: #ed9d13;
+} /* Literal.String.Single */
 .highlight .ss {
   color: #ed9d13;
 } /* Literal.String.Symbol */
@@ -185,7 +210,10 @@
 } /* Name.Builtin.Pseudo */
 .highlight .vc {
   color: #40ffff;
-} /* Name.Variable.Class */ /* Name.Variable.Global */
+} /* Name.Variable.Class */
+.highlight .vg {
+  color: #40ffff;
+} /* Name.Variable.Global */
 .highlight .vi {
   color: #40ffff;
 } /* Name.Variable.Instance */
