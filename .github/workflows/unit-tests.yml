@@ -35,10 +35,10 @@ jobs:
         run: |
           set +e
           fail=0
-          # integration_comments and integration_distill are intentionally not run: they assert al-folio's demo blog posts
-          # (/blog/2022/giscus-comments/, /blog/2021/distill/), which this personalised site does not ship (no _posts/).
+          # integration_comments, integration_distill and integration_new_plugins are intentionally not run: they assert al-folio's
+          # demo blog posts (giscus-comments, distill, RTL and marimo demos), which this personalised site does not ship (no _posts/).
           # Re-add them here if those posts or features are ever added.
-          for t in plugin_toggles bootstrap_compat upgrade_cli css_minify new_plugins; do
+          for t in plugin_toggles bootstrap_compat upgrade_cli css_minify; do
             echo "::group::integration_$t"
             bash test/integration_$t.sh; rc=$?
             echo "::endgroup::"
