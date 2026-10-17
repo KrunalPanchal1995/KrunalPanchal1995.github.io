@@ -140,7 +140,7 @@ enable_simple_analytics: false # Simple Analytics identifies a site by its domai
 # https://<code>.goatcounter.com), and put just that code below.
 # openfirststep (https://github.com/KrunalPanchal1995/openfirststep): own privacy-first counter, stores only
 # page, referrer hostname and approximate location. Paste your Worker URL to turn it on; blank = off.
-openfirststep_endpoint: # e.g. https://openfirststep.<you>.workers.dev
+openfirststep_endpoint: https://openfirststep.krunalpanchal1995.workers.dev
 goatcounter_code: # your GoatCounter site code, e.g. "krunalpanchal1995" -- blank = feature is off
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
