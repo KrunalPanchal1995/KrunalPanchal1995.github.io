@@ -16,11 +16,18 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
       - run: npm ci
+      - name: System deps (same as deploy.yml)
+        run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
       - name: Style contract
         run: npm run lint:style-contract
       - name: Production build
-        run: bundle exec jekyll build
+        run: JEKYLL_ENV=production bundle exec jekyll build
       - name: Integration scripts
         run: |
           set +e
