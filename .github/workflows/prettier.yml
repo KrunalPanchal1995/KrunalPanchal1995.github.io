@@ -42,7 +42,7 @@ jobs:
           retention-days: 7
       - name: Dispatch information to repository 🗣️
         if: ${{ failure() && steps.prettier.conclusion == 'failure' && github.event_name == 'pull_request' }}
-        uses: peter-evans/repository-dispatch@bf47d102fdb849e755b0b0023ea3e81a44b6f570 # v2
+        uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697 # v4.0.1
         with:
           event-type: prettier-failed-on-pr
           client-payload: '{"pr_number": "${{ github.event.number }}", "artifact_url": "${{ steps.artifact-upload.outputs.artifact-url }}", "run_id": "${{ github.run_id }}"}'
