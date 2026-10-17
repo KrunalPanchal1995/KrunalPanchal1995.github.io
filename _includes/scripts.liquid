@@ -16,6 +16,9 @@
 -->
 {% include goatcounter.liquid %}
 
+<!-- openfirststep visit counter: off until site.openfirststep_endpoint is set (_config.yml). -->
+{% include openfirststep.liquid %}
+
 <!-- Core navigation/runtime scripts -->
 <script src="{{ '/assets/js/nav-toggle.js' | relative_url | bust_file_cache }}"></script>
 {% if site.al_folio.compat.bootstrap.enabled %}

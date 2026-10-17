@@ -73,9 +73,9 @@ is measured and disclosed (a ~92x eddy-viscosity collapse), not hidden.
 channel DNS by 93–96% RMS — a genuine, large, disclosed miss, reported at the same standard as
 every passing result, because a closure that only shows its wins isn't validated at all.
 
-**A first data-driven closure** (Fig. 6): a $C_\mu(y^+)$ correction curve-fit against Re$_\tau$=180
-DNS, evaluated — never re-fit — against held-out Re$_\tau$=1000: a genuine 52% RMS generalization
-miss, with the root cause (Re$_\tau$=180's own short log-law window biasing the fitted asymptote)
+**A first data-driven closure** (Fig. 6): a $C_\mu(y^+)$ correction curve-fit against $\mathrm{Re}_\tau$=180
+DNS, evaluated — never re-fit — against held-out $\mathrm{Re}_\tau$=1000: a genuine 52% RMS generalization
+miss, with the root cause ($\mathrm{Re}_\tau$=180's own short log-law window biasing the fitted asymptote)
 investigated and recorded, not just measured and dropped.
 
 **Turbulent-kinetic-energy budget, order-of-magnitude analysis** (Fig. 7): the production/
