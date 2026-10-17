@@ -19,20 +19,23 @@ on:
 env:
   URL: ""
 
+permissions:
+  contents: read
+
 jobs:
   check:
     # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@651ff0d62c5c79bed6d53ec518387aae20e72c1a # v1
         with:
           ruby-version: "3.2.2"
           bundler-cache: true
       - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@main
+        uses: fjogeleit/yaml-update-action@dffe9a5223d84653c13374032382f6bb5de8e5ef # v0.17.0
         with:
           commitChange: false
           valueFile: "_config.yml"
@@ -59,7 +62,7 @@ jobs:
           echo "CHROMIUM_VERSION=$CHROMIUM_VERSION" >> $GITHUB_ENV
       - name: Setup Chrome 🌐
         id: setup-chrome
-        uses: browser-actions/setup-chrome@v1
+        uses: browser-actions/setup-chrome@c785b87e244131f27c9f19c1a33e2ead956ab7ce # v1
         with:
           chrome-version: ${{ env.CHROMIUM_VERSION }}
       - name: Install chromedriver 🚗

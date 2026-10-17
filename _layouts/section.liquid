@@ -157,7 +157,8 @@ layout: default
               {%- assign s16 = m.src_1600 | default: m.src_800 -%}
               {%- assign cap = m.caption | strip -%}
               {%- assign pstem = m.src_800 | split: '/' | last | split: '.' | first | remove: '-800' -%}
-              {%- assign eid = site.data.figure_explainers[proj | append: '/' | append: pstem] -%}
+              {%- assign ekey = proj | append: '/' | append: pstem -%}
+              {%- assign eid = site.data.figure_explainers[ekey] -%}
               <figure class="pgs-fig raised fx-spot" data-fx="reveal">
                 <div class="fx-plate">
                   <a href="{{ s16 | relative_url }}" data-lightbox="pgs-{{ g.name | slugify }}" data-caption="{{ cap | escape }}"
