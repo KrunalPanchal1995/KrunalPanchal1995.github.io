@@ -1,0 +1,705 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Silicon photonics waveguides | Dr. Krunal Panchal </title> <meta name="author" content="Krunal R. Panchal"> <meta name="description" content="How light is guided on a chip - slab and wire waveguides, ring resonators and optical interconnects. A first-principles learning page."> <meta name="keywords" content="Krunal Panchal, combustion kinetics, chemical kinetic mechanism optimization, mechanism reduction, reduced-order modelling, uncertainty quantification, scientific machine learning, gasification, computational fluid dynamics, mechanical engineering, IIT Madras, postdoctoral researcher"> <meta property="og:site_name" content="Dr. Krunal Panchal"> <meta property="og:type" content="website"> <meta property="og:title" content="Dr. Krunal Panchal | Silicon photonics waveguides"> <meta property="og:url" content="https://krunalpanchal1995.github.io/projects/silicon-photonics-waveguides/"> <meta property="og:description" content="How light is guided on a chip - slab and wire waveguides, ring resonators and optical interconnects. A first-principles learning page."> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Silicon photonics waveguides"> <meta name="twitter:description" content="How light is guided on a chip - slab and wire waveguides, ring resonators and optical interconnects. A first-principles learning page."> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Krunal R. Panchal"
+        },
+        "url": "https://krunalpanchal1995.github.io/projects/silicon-photonics-waveguides/",
+        "@type": "WebSite",
+        "description": "How light is guided on a chip - slab and wire waveguides, ring resonators and optical interconnects. A first-principles learning page.",
+        "headline": "Silicon photonics waveguides",
+        
+        "sameAs": ["https://orcid.org/0000-0003-2595-8824","https://github.com/KrunalPanchal1995","https://www.linkedin.com/in/Krunal-panchal-phd","https://www.researchgate.net/profile/Krunal-Panchal"],
+        
+        "name": "Krunal R. Panchal",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 980px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="/assets/css/site/tokens.css"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.svg?v=d7336c80a3fb6a9993bfe2296dff1dc0"> <link rel="apple-touch-icon" href="/assets/img/favicon-180.png?v=4330e3aef920dacf2d6a07a0de549504"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://krunalpanchal1995.github.io/projects/silicon-photonics-waveguides/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> </head> <body class="fixed-top-nav sticky-bottom-footer"> <link rel="stylesheet" href="/assets/css/site/tokens.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/base.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/nav.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/project.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/projects-index.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/home.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/pages.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/hero.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/apps.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/components.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/fx.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/studio.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/reel.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/playground.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/open.css?v=1792290782"> <header class="site-header"> <nav id="navbar" class="pillnav" role="navigation" aria-label="Main"> <a class="pillnav__brand" href="/">Krunal<span class="accent-dot">.</span> </a> <button class="navbar-toggler collapsed pillnav__toggle" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="pillnav__panel" id="navbarNav"> <ul class="navbar-menu-list pillnav__list"> <li class="nav-item "> <a class="nav-link" href="/">Home</a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">Research</a> </li> <li class="nav-item "> <a class="nav-link" href="/studio/">Studio</a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/" aria-current="page">Research Projects</a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications</a> </li> <li class="nav-item "> <a class="nav-link" href="/writing/">Writing</a> </li> <li class="nav-item "> <a class="nav-link" href="/about/">About</a> </li> <li class="nav-item pillnav__more " data-more> <button type="button" class="nav-link pillnav__morebtn" aria-haspopup="true" aria-expanded="false" aria-controls="pillnav-more-list" data-more-toggle> More <svg class="pillnav__caret" viewbox="0 0 10 6" width="10" height="6" aria-hidden="true"> <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </button> <ul class="pillnav__morelist" id="pillnav-more-list" role="menu" hidden> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/playground/"><i class="fa-solid fa-flask pillnav__icon" aria-hidden="true"></i>Playground</a> </li> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/world/">Research World</a> </li> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/reel/">Reel</a> </li> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/open/"><i class="fa-solid fa-unlock pillnav__icon" aria-hidden="true"></i>Open science</a> </li> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/beyond-research/">Beyond Research</a> </li> </ul> </li> </ul> <div class="pillnav__tools"> <button id="fx-toggle" type="button" title="Visual effects" aria-label="Visual effects" aria-pressed="true" hidden> <span class="fx-toggle__dot" aria-hidden="true"></span><span class="fx-toggle__label">FX</span> </button> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"><span class="progress-bar"></span></div> </progress> </header> <script>
+    (function () {
+      var d = document.documentElement,
+        q = new URLSearchParams(location.search),
+        n = navigator,
+        c = n.connection;
+      function g(s, k) {
+        try {
+          return window[s].getItem(k);
+        } catch (e) {
+          return null;
+        }
+      }
+      function p(s, k, v) {
+        try {
+          window[s].setItem(k, v);
+        } catch (e) {}
+      }
+      var o = q.get("fx");
+      if (o === "on" || o === "off" || o === "lite") p("sessionStorage", "fx-override", o);
+      else o = g("sessionStorage", "fx-override");
+      if (o !== "on" && o !== "off" && o !== "lite") o = null;
+      var u = g("localStorage", "fx"),
+        rm = matchMedia("(prefers-reduced-motion: reduce)").matches,
+        auto = rm
+          ? "off"
+          : (c && c.saveData) ||
+              (n.hardwareConcurrency && n.hardwareConcurrency <= 4) ||
+              (n.deviceMemory && n.deviceMemory <= 4) ||
+              matchMedia("(pointer: coarse)").matches
+            ? "lite"
+            : "on",
+        s = o || (u === "on" || u === "off" ? u : auto);
+      d.setAttribute("data-fx", s);
+      d.setAttribute("data-fx-auto", auto);
+    })();
+</script> <script defer src="/assets/js/site/nav.js"></script> <script defer src="/assets/js/site/fx.js"></script> <div class="container mt-5" role="main"> <article class="pj" data-project="silicon-photonics-waveguides"> <p class="pj-back"> <a href="/projects/"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a> </p> <header class="pj-head"> <ul class="pj-cats" aria-label="Categories"><li class="pj-cat" style="--c: var(--cat-photonics, var(--teal));">photonics</li></ul> <h1 class="pj-title">Silicon photonics <span class="accent-serif">waveguides</span> </h1> <p class="pj-sub">How light is guided on a chip - slab and wire waveguides, ring resonators and optical interconnects. A first-principles learning page.</p> <p class="pj-meta mono">2 images · 4 min read </p> <div class="pj-actions"> <a class="pj-act pj-act--studio" href="/studio/"><i class="fa-solid fa-cube" aria-hidden="true"></i><span>Open Studio</span></a><a class="pj-act pj-act--ghost" href="#pj-gallery-h"><i class="fa-regular fa-images" aria-hidden="true"></i><span>Jump to gallery</span></a> </div> </header> <div class="pj-intro"> <figure class="pj-hero raised"> <div class="pj-hero__plate fx-plate" data-slate-project="silicon-photonics-waveguides" data-slate-take="01" data-slate-file="01_ring_resonator_transmission-800.png"> <img src="/assets/img/projects/silicon-photonics-waveguides/01_ring_resonator_transmission-800.png" alt="Silicon photonics waveguides" fetchpriority="high"> </div> </figure><section class="ds" aria-labelledby="ds-h"> <header class="ds__bar mono"> <span class="ds__dots" aria-hidden="true"><i></i><i></i><i></i></span> <h2 id="ds-h" class="ds__t"> datasheet <span class="ds__sl">// silicon-photonics-waveguides</span> </h2> </header> <dl class="ds__list mono"> <div class="ds__row"> <dt>images</dt> <dd>2</dd> </div> <div class="ds__row"> <dt>videos</dt> <dd>0</dd> </div> <div class="ds__row"> <dt>formats</dt> <dd> png </dd> </div> <div class="ds__row"> <dt>text</dt> <dd>670 words · 4 min read</dd> </div> <div class="ds__row"> <dt>studio</dt> <dd><a href="/studio/">/studio (gallery)</a></dd> </div> <div class="ds__row ds__row--topics"> <dt>topics</dt> <dd> <ul class="ds__topics"> <li> rings <span class="ds__n">×1</span> </li> <li> waveguides <span class="ds__n">×1</span> </li> </ul> </dd> </div> </dl> </section> </div> <div class="pj-read" data-read> <aside class="pj-toc pj-toc--side" data-toc-side aria-label="On this page" hidden> <p class="eyebrow">On this page</p> <ol class="pj-toc__list"></ol> <p class="pj-prog mono"> <span class="pj-prog__bar" aria-hidden="true"><span data-prog-bar></span></span><span data-prog-n>0%</span> read </p> </aside> <div class="pj-main"> <details class="pj-toc pj-toc--sheet" data-toc-sheet hidden> <summary><span>On this page</span><span class="pj-toc__pct mono" data-prog-n>0%</span></summary> <ol class="pj-toc__list"></ol> </details><section class="pj-prose" data-prose aria-label="About this project"> <p>A learning page: standard physics and engineering from the textbooks listed at the bottom, with figures computed from the formulas shown. It makes no claim of new research results.</p> <h2 id="intuition">Intuition</h2> <p>Light stays inside a material of higher refractive index the way a marble stays inside a gutter. Make a thin strip of silicon (index about 3.5), surround it with glass (index about 1.4), and light travelling along the strip is trapped by repeated total internal reflection. That strip is a <strong>waveguide</strong>. Wires carry electrons; waveguides carry light.</p> <h2 id="school-level">School level</h2> <ul> <li>Snell’s law: n<sub>1</sub> sin θ<sub>1</sub> = n<sub>2</sub> sin θ<sub>2</sub>. Past the critical angle, sin θ<sub>c</sub> = n<sub>2</sub>/n<sub>1</sub>, light cannot leave the high-index material.</li> <li>For silicon in glass, θ<sub>c</sub> = arcsin(1.44 / 3.48) ≈ 24.4°. Anything steeper than that is trapped, which is why silicon guides so tightly and bends can be very small.</li> <li>Silicon is transparent for wavelengths beyond about 1.1 µm (its band gap is 1.12 eV), which is why chip photonics works at 1.3 µm and 1.55 µm, the wavelengths of optical fibre.</li> </ul> <h2 id="college-level">College level</h2> <p>Treat the guide as a symmetric slab of thickness d. A mode is a field pattern that repeats itself after a round trip, and that condition gives</p> <p>V √(1 − b) = m π + 2 arctan √( b / (1 − b) ), with V = (2π d / λ) √(n<sub>1</sub><sup>2</sup> − n<sub>2</sub><sup>2</sup>) and b = (n<sub>eff</sub><sup>2</sup> − n<sub>2</sub><sup>2</sup>) / (n<sub>1</sub><sup>2</sup> − n<sub>2</sub><sup>2</sup>).</p> <p>Mode m only exists when V &gt; m π (figure 2), so the guide is single-mode when V &lt; π. Worked example: a 220 nm silicon layer in glass at λ = 1.55 µm gives V ≈ 2.8, so the slab carries one TE mode.</p> <p>A <strong>ring resonator</strong> is a waveguide bent into a loop next to a straight one. Light that returns in phase reinforces itself, which happens when n<sub>eff</sub> L = m λ. Resonances repeat every free spectral range</p> <p>FSR = λ<sup>2</sup> / (n<sub>g</sub> L), where the group index n<sub>g</sub> = n<sub>eff</sub> − λ dn<sub>eff</sub>/dλ.</p> <p>For the all-pass ring in figure 1, with self-coupling r and single-pass amplitude transmission a, the through-port power is T = (a<sup>2</sup> − 2 a r cos φ + r<sup>2</sup>) / (1 − 2 a r cos φ + (a r)<sup>2</sup>), with round-trip phase φ = 2π n<sub>eff</sub> L / λ. Light is fully extinguished at resonance only when <strong>r = a</strong> (critical coupling).</p> <h2 id="advanced">Advanced</h2> <ul> <li> <strong>Loss.</strong> Sidewall roughness scatters light, and bends radiate once the radius gets small, so real wire waveguides trade footprint against loss.</li> <li> <strong>Tuning.</strong> Silicon’s thermo-optic coefficient (about 1.8 × 10<sup>-4</sup> per kelvin) shifts a ring’s resonance by of the order of 0.1 nm per kelvin, so rings need heaters or feedback to stay on target.</li> <li> <strong>Platform.</strong> Silicon-on-insulator wafers let photonic chips use CMOS factories, which is the main economic argument for the field.</li> </ul> <h2 id="where-this-shows-up">Where this shows up</h2> <ul> <li>Optical transceivers and data-centre links that replace copper at high data rates.</li> <li>Chip-scale sensors, where a ring’s resonance shifts when a substance sticks to its surface.</li> <li>LiDAR and optical switching research.</li> </ul> <h2 id="check-yourself">Check yourself</h2> <ol> <li>Why would a waveguide with a 100 nm silicon layer, not 220 nm, stop guiding the 1.55 µm light well? <em>Answer: V falls to about 1.3. The fundamental mode never has a hard cutoff, but here it is only weakly confined (b is about 0.3, so n<sub>eff</sub> is close to the glass index), so most of its field spreads into the glass and bends or roughness leak it easily.</em> </li> <li>A ring has n<sub>g</sub> = 4.2 and radius 10 µm. What is its FSR at 1550 nm? <em>Answer: λ<sup>2</sup> / (n<sub>g</sub> 2π R) ≈ 9.1 nm.</em> </li> <li>What does critical coupling mean physically? <em>Answer: the power coupled into the ring each round trip equals the power lost there, so the two contributions cancel at the through port.</em> </li> </ol> <h2 id="read-next">Read next</h2> <ul> <li>B. E. A. Saleh and M. C. Teich, <em>Fundamentals of Photonics</em>.</li> <li>L. Chrostowski and M. Hochberg, <em>Silicon Photonics Design</em>.</li> <li>W. Bogaerts et al., “Silicon microring resonators”, <em>Laser &amp; Photonics Reviews</em> 6 (2012).</li> </ul> </section> <section class="pj-section" aria-labelledby="pj-gallery-h" data-toc-extra="Gallery"> <h2 id="pj-gallery-h" class="pj-h2">Gallery</h2> <div class="pg" data-gallery> <div class="pg-tabs" role="tablist" aria-label="Gallery topics" hidden> <button type="button" role="tab" class="pg-tab" id="pgtab-all" data-tab="all" aria-selected="true" aria-controls="pg-panel" tabindex="0"> All <span class="pg-count">2</span> </button><button type="button" role="tab" class="pg-tab" id="pgtab-rings" data-tab="rings" aria-selected="false" aria-controls="pg-panel" tabindex="-1"> rings <span class="pg-count">1</span> </button><button type="button" role="tab" class="pg-tab" id="pgtab-waveguides" data-tab="waveguides" aria-selected="false" aria-controls="pg-panel" tabindex="-1"> waveguides <span class="pg-count">1</span> </button> </div> <div class="pg-panel" id="pg-panel" role="tabpanel" aria-labelledby="pgtab-all" tabindex="-1"> <div class="pg-grid"> <figure class="pg-card raised" data-topic="rings" data-full="/assets/img/projects/silicon-photonics-waveguides/01_ring_resonator_transmission-1600.png" data-index="1"> <div class="pg-plate fx-plate" data-slate-project="silicon-photonics-waveguides" data-slate-take="01" data-slate-file="01_ring_resonator_transmission-800.png"> <button type="button" class="pg-open" aria-label="Open image 1: Through-port dip of an all-pass ring: the depth depends on how the coupling r compares with the round-trip loss a; resonances repeat every FSR."><img class="pg-media" src="/assets/img/projects/silicon-photonics-waveguides/01_ring_resonator_transmission-800.png" alt="Through-port dip of an all-pass ring: the depth depends on how the coupling r compares with the round-trip loss a; resonances repeat every FSR." loading="lazy" decoding="async"></button> </div> <figcaption class="pg-cap"><span class="pg-cap__t">Through-port dip of an all-pass ring: the depth depends on how the coupling r compares with the round-trip loss a; resonances repeat every FSR.</span></figcaption></figure><figure class="pg-card raised" data-topic="waveguides" data-full="/assets/img/projects/silicon-photonics-waveguides/02_slab_waveguide_modes-1600.png" data-index="2"> <div class="pg-plate fx-plate" data-slate-project="silicon-photonics-waveguides" data-slate-take="02" data-slate-file="02_slab_waveguide_modes-800.png"> <button type="button" class="pg-open" aria-label="Open image 2: TE modes of a symmetric slab: mode m exists only above its cutoff V=m pi, so V &lt; pi gives a single-mode guide."><img class="pg-media" src="/assets/img/projects/silicon-photonics-waveguides/02_slab_waveguide_modes-800.png" alt="TE modes of a symmetric slab: mode m exists only above its cutoff V=m pi, so V &lt; pi gives a single-mode guide." loading="lazy" decoding="async"></button> </div> <figcaption class="pg-cap"><span class="pg-cap__t">TE modes of a symmetric slab: mode m exists only above its cutoff V = m pi, so V &lt; pi gives a single-mode guide.</span></figcaption></figure> </div> </div> </div> </section> </div> </div> <nav class="pj-pager" aria-label="More projects"><a class="pj-pager__a pj-pager__a--prev raised" href="/projects/vzero-explainer/" rel="prev"> <span class="eyebrow"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Previous</span> <span class="pj-pager__t">vZero explainer</span> </a><a class="pj-pager__a pj-pager__a--next raised" href="/projects/lasers-photodetectors/" rel="next"> <span class="eyebrow">Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span> <span class="pj-pager__t">Lasers and photodetectors</span> </a></nav> </article> <script defer src="/assets/js/site/project.js?v=1792290782"></script> </div> <footer class="site-footer" role="contentinfo"> <div class="container site-footer__inner"> <div class="site-footer__brand"> <a class="site-footer__name" href="/">Krunal Panchal<span class="accent-dot" aria-hidden="true">.</span></a> </div> <ul class="site-footer__links"> <li><a href="#" class="al-email-protect" data-eu="krunalpanchal1995" data-ed="gmail.com" aria-label="Copy email address"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span></a></li> <li> <a href="https://orcid.org/0000-0003-2595-8824" rel="me noopener" target="_blank"><i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span></a> </li> <li> <a href="https://github.com/KrunalPanchal1995" rel="me noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a> </li> <li> <a href="https://www.linkedin.com/in/Krunal-panchal-phd" rel="me noopener" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a> </li> <li> <a href="https://www.researchgate.net/profile/Krunal-Panchal" rel="me noopener" target="_blank"><i class="ai ai-researchgate" aria-hidden="true"></i><span>ResearchGate</span></a> </li> <li> <a href="/cv/"><i class="ai ai-cv" aria-hidden="true"></i><span>CV</span></a> </li> <li> <a href="/feed.xml"><i class="fa-solid fa-square-rss" aria-hidden="true"></i><span>RSS</span></a> </li> </ul> <p class="site-footer__legal"> © 2026 Krunal Panchal. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. <a href="/privacy/">Privacy</a>. </p> </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script>
+  window.__hoverPreviews = {
+    
+      "/404.html": {
+        title: "Page not found",
+        description: "Nothing exists at this address."
+      },
+    
+      "/about/": {
+        title: "About",
+        description: ""
+      },
+    
+      "/beyond-research/": {
+        title: "Beyond Research",
+        description: ""
+      },
+    
+      "/books/": {
+        title: "Bookshelf",
+        description: ""
+      },
+    
+      "/cv/": {
+        title: "CV",
+        description: "Curriculum vitae, generated from _data/cv.yml."
+      },
+    
+      "/news/": {
+        title: "News",
+        description: ""
+      },
+    
+      "/open/": {
+        title: "Open science",
+        description: "How the code and PDF notes behind my plots are shared. Free of cost, open now for the home page demo, on approval for the rest."
+      },
+    
+      "/playground/": {
+        title: "Playground",
+        description: ""
+      },
+    
+      "/privacy/": {
+        title: "Privacy",
+        description: "What this site counts about visitors, and what it does not."
+      },
+    
+      "/projects/": {
+        title: "Research Projects",
+        description: "Research projects in combustion, optimization, uncertainty quantification, scientific ML and CFD."
+      },
+    
+      "/publications/": {
+        title: "Publications",
+        description: "Journal articles, conference papers and work in preparation, most recent first."
+      },
+    
+      "/reel/": {
+        title: "Reel",
+        description: "A full-screen sequence of the project videos, with a title graphic for each clip."
+      },
+    
+      "/research/": {
+        title: "Research",
+        description: ""
+      },
+    
+      "/studio/": {
+        title: "Studio",
+        description: "The Math Visual Studio, running in the browser. Open any of my projects as a live, interactive workspace."
+      },
+    
+      "/teaching/": {
+        title: "Teaching",
+        description: "Teaching assistantships and lab demonstrator roles held at IIT Madras."
+      },
+    
+      "/world/": {
+        title: "Research World",
+        description: ""
+      },
+    
+      "/writing/": {
+        title: "Writing",
+        description: ""
+      },
+    
+      "/blog/index.html": {
+        title: "Writing Archive",
+        description: ""
+      },
+    
+      "/projects/bangalore-2026-conference/": {
+        title: "Enhanced Multi-Stage Optimization Technique for Fuel Combustion Kinetic Mechanisms",
+        description: "Conference paper submitted to ICICEPC 2026"
+      },
+    
+      "/projects/cfd-multiphysics/": {
+        title: "PANSOPHIA multiphysics test cases",
+        description: "Cavity, conjugate heat transfer, boiling, FSI, structural, ignition and stochastic/UQ test figures from the PANSOPHIA solver"
+      },
+    
+      "/projects/cfd-numerics-teaching/": {
+        title: "PANSOPHIA numerics teaching figures",
+        description: "Fifteen teaching figures on schemes, stability and accuracy, generated from the PANSOPHIA numerics stack"
+      },
+    
+      "/projects/cfdcore/": {
+        title: "PANSOPHIA — In-House CFD \u0026 Multiphysics Solver",
+        description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning"
+      },
+    
+      "/projects/decarbonisation-tuyeres/": {
+        title: "H₂/CH₄ Co-injection in Blast-Furnace Tuyeres",
+        description: "A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you"
+      },
+    
+      "/projects/dokimazo/": {
+        title: "dokimazo — A PIDO Optimization Workbench",
+        description: "A dependency-light process-integration-and-design-optimization workbench with a plug-and-play graph IR, closed by a reinforcement-learning conformer search that tunes a long alkane chain's rotors one at a time"
+      },
+    
+      "/projects/electromagnetics-maxwell/": {
+        title: "Electromagnetics and Maxwell",
+        description: "From Maxwell's equations to waves, reflection and the skin effect - the physics under every antenna, waveguide and chip wire. A first-principles learning page."
+      },
+    
+      "/projects/flamelab/": {
+        title: "flamelab",
+        description: "A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods"
+      },
+    
+      "/projects/future-work-cnf-mso/": {
+        title: "Reaction-Classification-Aware Multi-Stage Optimization",
+        description: "Forthcoming"
+      },
+    
+      "/projects/gasification/": {
+        title: "Steam-Catalytic Downdraft Gasification",
+        description: "M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier"
+      },
+    
+      "/projects/geometry-kernel/": {
+        title: "PANSOPHIA geometry kernel",
+        description: "A from-scratch signed-distance-field geometry kernel cross-checked against Gmsh and a PicoGK-compatible engine, with the GeoStudio GUI"
+      },
+    
+      "/projects/ic-fabrication-flow/": {
+        title: "IC fabrication flow",
+        description: "How a chip is made, from a bare silicon wafer to a packaged die - oxidation, lithography, etching, doping, deposition, polishing and yield. A first-principles learning page."
+      },
+    
+      "/projects/japan-2026-paper/": {
+        title: "Power-mean objective: Japan 2026 symposium paper",
+        description: "Figures from the full paper on a power-mean objective for multi-dataset combustion mechanism optimization"
+      },
+    
+      "/projects/lasers-photodetectors/": {
+        title: "Lasers and photodetectors",
+        description: "How semiconductors make light and detect it - LEDs, laser diodes, photodiodes and solar cells. A first-principles learning page."
+      },
+    
+      "/projects/lithography-euv-limits/": {
+        title: "Lithography and EUV limits",
+        description: "Why printing smaller chips needs shorter light and bigger lenses - Rayleigh resolution, depth of focus, EUV and photon shot noise. A first-principles learning page."
+      },
+    
+      "/projects/math-studio-course/": {
+        title: "Math Visual Studio",
+        description: "A local web app for visualising multivariable calculus, transformations, ODEs and PDEs, mechanisms, deformation and molecules"
+      },
+    
+      "/projects/microfluidics/": {
+        title: "PANSOPHIA microfluidics solver",
+        description: "In-house 2D/3D finite-element flow solver and Maxey-Riley particle tracer for inertial-microfluidics separation studies, with a validation dossier"
+      },
+    
+      "/projects/mosfet-cmos-scaling/": {
+        title: "MOSFET and CMOS scaling",
+        description: "How the transistor works and why shrinking it helped, then stopped helping - square-law operation, subthreshold leakage and Dennard scaling. A first-principles learning page."
+      },
+    
+      "/projects/mosiac/": {
+        title: "MOSIAC",
+        description: "An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization"
+      },
+    
+      "/projects/mso-objectives/": {
+        title: "MSO Objective Functions \u0026 Multi-Stage Optimization",
+        description: "Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration"
+      },
+    
+      "/projects/muq-sac/": {
+        title: "MUQ-SAC — Joint Arrhenius Uncertainty Quantification",
+        description: "A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression"
+      },
+    
+      "/projects/muqsac-plus-plus/": {
+        title: "MUQSAC++",
+        description: "Software engineering: fourteen copies of a kinetics pipeline merged into one tested code base"
+      },
+    
+      "/projects/neural-ode-course/": {
+        title: "Neural ODEs and Transformations — A Self-Built Course",
+        description: "A multi-month, derivation-first course on Neural ODEs, coordinate transformations and stiff chemical kinetics, with a verified animation for every session"
+      },
+    
+      "/projects/neural-ode-playground/": {
+        title: "vZero — A Neural ODE Research Playground",
+        description: "An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, RL-as-a-trainer, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum"
+      },
+    
+      "/projects/phd-thesis/": {
+        title: "PhD thesis: a fast, robust, kinetics-based optimization framework",
+        description: "IIT Madras doctoral thesis on optimization of combustion kinetic models; Chapter 3 and Chapter 4 figures"
+      },
+    
+      "/projects/plasma-sludge-pyrolysis/": {
+        title: "Plasma sludge pyrolysis",
+        description: "A zero-dimensional thermal-plasma sludge model: direction only"
+      },
+    
+      "/projects/power-electronics-converters/": {
+        title: "Power electronics converters",
+        description: "How switching converters change voltage efficiently - buck, boost and buck-boost, inductor ripple, losses and wide-bandgap devices. A first-principles learning page."
+      },
+    
+      "/projects/pysr-rate-rules/": {
+        title: "Symbolic Regression for Universal Rate Rules",
+        description: "Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions"
+      },
+    
+      "/projects/quantum-chemistry/": {
+        title: "Quantum chemistry",
+        description: "A differentiable electronic-structure engine in early development, and a self-study course in quantum chemistry"
+      },
+    
+      "/projects/rf-antennas-microwaves/": {
+        title: "RF, antennas and microwaves",
+        description: "Transmission lines, reflection and matching, antennas and the Friis link budget - how radio signals travel and how circuits hand them over. A first-principles learning page."
+      },
+    
+      "/projects/sciml/": {
+        title: "Scientific ML for Stiff Kinetics",
+        description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results"
+      },
+    
+      "/projects/sensors-mems-control/": {
+        title: "Sensors, MEMS and control",
+        description: "How tiny mechanical sensors work and how feedback makes systems behave - MEMS resonators, capacitive sensing and PID control. A first-principles learning page."
+      },
+    
+      "/projects/silicon-photonics-waveguides/": {
+        title: "Silicon photonics waveguides",
+        description: "How light is guided on a chip - slab and wire waveguides, ring resonators and optical interconnects. A first-principles learning page."
+      },
+    
+      "/projects/turbulence-closures/": {
+        title: "Turbulence Closures — From Mixing Length to Data-Driven RANS",
+        description: "A from-scratch, chronologically-built turbulence-closure curriculum in Python — classical RANS through LES, hybrid RANS-LES, and a first data-driven correction, every claim backed by a mechanically-enforced disclosure registry"
+      },
+    
+      "/projects/vaporizer-rigs/": {
+        title: "Vaporizer \u0026 Combustion Rig Design",
+        description: "An induction-heated tube vaporizer for MtG/ethanol surrogate fuel, sized against boiling glide, critical heat flux and flow instability, plus a fabrication-grade combustion-rig drawing package"
+      },
+    
+      "/projects/vlsi-circuit-design/": {
+        title: "VLSI circuit design",
+        description: "From a single CMOS inverter to a chip - logic levels, noise margin, dynamic power, the energy-delay trade-off and the digital design flow. A first-principles learning page."
+      },
+    
+      "/projects/vzero-explainer/": {
+        title: "vZero explainer",
+        description: "Charts, diagrams and a slide deck explaining Neural ODEs for stiff chemistry, with toy experiments"
+      },
+    
+      "/news/2026-07-16-phd-conferred/": {
+        title: "Phd Conferred",
+        description: ""
+      },
+    
+      "/news/2026-08-07-fukuoka-accepted/": {
+        title: "Fukuoka Accepted",
+        description: ""
+      }
+    
+  };
+</script> <script defer src="/assets/js/hover-previews.js"></script> <script src="/assets/js/ofs.js?v=dc693beed477841156654f3db0a6db0f" data-endpoint="https://openfirststep.krunalpanchal1995.workers.dev" defer></script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-home",
+    title: "Home",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-research",
+          title: "Research",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
+          },
+        },{id: "nav-playground",
+          title: "Playground",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/playground/";
+          },
+        },{id: "nav-studio",
+          title: "Studio",
+          description: "The Math Visual Studio, running in the browser. Open any of my projects as a live, interactive workspace.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/studio/";
+          },
+        },{id: "nav-research-world",
+          title: "Research World",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/world/";
+          },
+        },{id: "nav-reel",
+          title: "Reel",
+          description: "A full-screen sequence of the project videos, with a title graphic for each clip.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/reel/";
+          },
+        },{id: "nav-research-projects",
+          title: "Research Projects",
+          description: "Research projects in combustion, optimization, uncertainty quantification, scientific ML and CFD.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-open-science",
+          title: "Open science",
+          description: "How the code and PDF notes behind my plots are shared. Free of cost, open now for the home page demo, on approval for the rest.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/open/";
+          },
+        },{id: "nav-publications",
+          title: "Publications",
+          description: "Journal articles, conference papers and work in preparation, most recent first.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-writing",
+          title: "Writing",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/writing/";
+          },
+        },{id: "nav-beyond-research",
+          title: "Beyond Research",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/beyond-research/";
+          },
+        },{id: "nav-about",
+          title: "About",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/about/";
+          },
+        },{id: "news-phd-degree-conferred-by-iit-madras",
+          title: 'PhD degree conferred by IIT Madras.',
+          description: "",
+          section: "News",},{id: "news-three-abstracts-accepted-for-presentation-at-the-64th-symposium-japanese-on-combustion-fukuoka-4-6-nov-2026-including-the-power-mean-objective-function-work-panchal-amp-amp-narayanaswamy-2026",
+          title: 'Three abstracts accepted for presentation at the 64th Symposium (Japanese) on Combustion, Fukuoka,...',
+          description: "",
+          section: "News",},{id: "projects-enhanced-multi-stage-optimization-technique-for-fuel-combustion-kinetic-mechanisms",
+          title: 'Enhanced Multi-Stage Optimization Technique for Fuel Combustion Kinetic Mechanisms',
+          description: "Conference paper submitted to ICICEPC 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/bangalore-2026-conference/";
+            },},{id: "projects-pansophia-multiphysics-test-cases",
+          title: 'PANSOPHIA multiphysics test cases',
+          description: "Cavity, conjugate heat transfer, boiling, FSI, structural, ignition and stochastic/UQ test figures from the PANSOPHIA solver",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cfd-multiphysics/";
+            },},{id: "projects-pansophia-numerics-teaching-figures",
+          title: 'PANSOPHIA numerics teaching figures',
+          description: "Fifteen teaching figures on schemes, stability and accuracy, generated from the PANSOPHIA numerics stack",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cfd-numerics-teaching/";
+            },},{id: "projects-pansophia-in-house-cfd-amp-multiphysics-solver",
+          title: 'PANSOPHIA — In-House CFD &amp;amp; Multiphysics Solver',
+          description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cfdcore/";
+            },},{id: "projects-h-ch-co-injection-in-blast-furnace-tuyeres",
+          title: 'H₂/CH₄ Co-injection in Blast-Furnace Tuyeres',
+          description: "A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/decarbonisation-tuyeres/";
+            },},{id: "projects-dokimazo-a-pido-optimization-workbench",
+          title: 'dokimazo — A PIDO Optimization Workbench',
+          description: "A dependency-light process-integration-and-design-optimization workbench with a plug-and-play graph IR, closed by a reinforcement-learning conformer search that tunes a long alkane chain&#39;s rotors one at a time",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dokimazo/";
+            },},{id: "projects-electromagnetics-and-maxwell",
+          title: 'Electromagnetics and Maxwell',
+          description: "From Maxwell&#39;s equations to waves, reflection and the skin effect - the physics under every antenna, waveguide and chip wire. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/electromagnetics-maxwell/";
+            },},{id: "projects-flamelab",
+          title: 'flamelab',
+          description: "A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/flamelab/";
+            },},{id: "projects-reaction-classification-aware-multi-stage-optimization",
+          title: 'Reaction-Classification-Aware Multi-Stage Optimization',
+          description: "Forthcoming",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/future-work-cnf-mso/";
+            },},{id: "projects-steam-catalytic-downdraft-gasification",
+          title: 'Steam-Catalytic Downdraft Gasification',
+          description: "M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/gasification/";
+            },},{id: "projects-pansophia-geometry-kernel",
+          title: 'PANSOPHIA geometry kernel',
+          description: "A from-scratch signed-distance-field geometry kernel cross-checked against Gmsh and a PicoGK-compatible engine, with the GeoStudio GUI",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/geometry-kernel/";
+            },},{id: "projects-ic-fabrication-flow",
+          title: 'IC fabrication flow',
+          description: "How a chip is made, from a bare silicon wafer to a packaged die - oxidation, lithography, etching, doping, deposition, polishing and yield. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ic-fabrication-flow/";
+            },},{id: "projects-power-mean-objective-japan-2026-symposium-paper",
+          title: 'Power-mean objective: Japan 2026 symposium paper',
+          description: "Figures from the full paper on a power-mean objective for multi-dataset combustion mechanism optimization",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/japan-2026-paper/";
+            },},{id: "projects-lasers-and-photodetectors",
+          title: 'Lasers and photodetectors',
+          description: "How semiconductors make light and detect it - LEDs, laser diodes, photodiodes and solar cells. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lasers-photodetectors/";
+            },},{id: "projects-lithography-and-euv-limits",
+          title: 'Lithography and EUV limits',
+          description: "Why printing smaller chips needs shorter light and bigger lenses - Rayleigh resolution, depth of focus, EUV and photon shot noise. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lithography-euv-limits/";
+            },},{id: "projects-math-visual-studio",
+          title: 'Math Visual Studio',
+          description: "A local web app for visualising multivariable calculus, transformations, ODEs and PDEs, mechanisms, deformation and molecules",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/math-studio-course/";
+            },},{id: "projects-pansophia-microfluidics-solver",
+          title: 'PANSOPHIA microfluidics solver',
+          description: "In-house 2D/3D finite-element flow solver and Maxey-Riley particle tracer for inertial-microfluidics separation studies, with a validation dossier",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/microfluidics/";
+            },},{id: "projects-mosfet-and-cmos-scaling",
+          title: 'MOSFET and CMOS scaling',
+          description: "How the transistor works and why shrinking it helped, then stopped helping - square-law operation, subthreshold leakage and Dennard scaling. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mosfet-cmos-scaling/";
+            },},{id: "projects-mosiac",
+          title: 'MOSIAC',
+          description: "An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mosiac/";
+            },},{id: "projects-mso-objective-functions-amp-multi-stage-optimization",
+          title: 'MSO Objective Functions &amp;amp; Multi-Stage Optimization',
+          description: "Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mso-objectives/";
+            },},{id: "projects-muq-sac-joint-arrhenius-uncertainty-quantification",
+          title: 'MUQ-SAC — Joint Arrhenius Uncertainty Quantification',
+          description: "A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/muq-sac/";
+            },},{id: "projects-muqsac",
+          title: 'MUQSAC++',
+          description: "Software engineering: fourteen copies of a kinetics pipeline merged into one tested code base",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/muqsac-plus-plus/";
+            },},{id: "projects-neural-odes-and-transformations-a-self-built-course",
+          title: 'Neural ODEs and Transformations — A Self-Built Course',
+          description: "A multi-month, derivation-first course on Neural ODEs, coordinate transformations and stiff chemical kinetics, with a verified animation for every session",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/neural-ode-course/";
+            },},{id: "projects-vzero-a-neural-ode-research-playground",
+          title: 'vZero — A Neural ODE Research Playground',
+          description: "An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, RL-as-a-trainer, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/neural-ode-playground/";
+            },},{id: "projects-phd-thesis-a-fast-robust-kinetics-based-optimization-framework",
+          title: 'PhD thesis: a fast, robust, kinetics-based optimization framework',
+          description: "IIT Madras doctoral thesis on optimization of combustion kinetic models; Chapter 3 and Chapter 4 figures",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/phd-thesis/";
+            },},{id: "projects-plasma-sludge-pyrolysis",
+          title: 'Plasma sludge pyrolysis',
+          description: "A zero-dimensional thermal-plasma sludge model: direction only",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/plasma-sludge-pyrolysis/";
+            },},{id: "projects-power-electronics-converters",
+          title: 'Power electronics converters',
+          description: "How switching converters change voltage efficiently - buck, boost and buck-boost, inductor ripple, losses and wide-bandgap devices. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/power-electronics-converters/";
+            },},{id: "projects-symbolic-regression-for-universal-rate-rules",
+          title: 'Symbolic Regression for Universal Rate Rules',
+          description: "Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pysr-rate-rules/";
+            },},{id: "projects-quantum-chemistry",
+          title: 'Quantum chemistry',
+          description: "A differentiable electronic-structure engine in early development, and a self-study course in quantum chemistry",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/quantum-chemistry/";
+            },},{id: "projects-rf-antennas-and-microwaves",
+          title: 'RF, antennas and microwaves',
+          description: "Transmission lines, reflection and matching, antennas and the Friis link budget - how radio signals travel and how circuits hand them over. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rf-antennas-microwaves/";
+            },},{id: "projects-scientific-ml-for-stiff-kinetics",
+          title: 'Scientific ML for Stiff Kinetics',
+          description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sciml/";
+            },},{id: "projects-sensors-mems-and-control",
+          title: 'Sensors, MEMS and control',
+          description: "How tiny mechanical sensors work and how feedback makes systems behave - MEMS resonators, capacitive sensing and PID control. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sensors-mems-control/";
+            },},{id: "projects-silicon-photonics-waveguides",
+          title: 'Silicon photonics waveguides',
+          description: "How light is guided on a chip - slab and wire waveguides, ring resonators and optical interconnects. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/silicon-photonics-waveguides/";
+            },},{id: "projects-turbulence-closures-from-mixing-length-to-data-driven-rans",
+          title: 'Turbulence Closures — From Mixing Length to Data-Driven RANS',
+          description: "A from-scratch, chronologically-built turbulence-closure curriculum in Python — classical RANS through LES, hybrid RANS-LES, and a first data-driven correction, every claim backed by a mechanically-enforced disclosure registry",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/turbulence-closures/";
+            },},{id: "projects-vaporizer-amp-combustion-rig-design",
+          title: 'Vaporizer &amp;amp; Combustion Rig Design',
+          description: "An induction-heated tube vaporizer for MtG/ethanol surrogate fuel, sized against boiling glide, critical heat flux and flow instability, plus a fabrication-grade combustion-rig drawing package",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vaporizer-rigs/";
+            },},{id: "projects-vlsi-circuit-design",
+          title: 'VLSI circuit design',
+          description: "From a single CMOS inverter to a chip - logic levels, noise margin, dynamic power, the energy-delay trade-off and the digital design flow. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vlsi-circuit-design/";
+            },},{id: "projects-vzero-explainer",
+          title: 'vZero explainer',
+          description: "Charts, diagrams and a slide deck explaining Neural ODEs for stiff chemistry, with toy experiments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vzero-explainer/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6B%72%75%6E%61%6C%70%61%6E%63%68%61%6C%31%39%39%35@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0003-2595-8824", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/KrunalPanchal1995", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/Krunal-panchal-phd", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Krunal-Panchal", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> <script defer src="/assets/al_email_protect/js/email-protect.js"></script> </body> </html>

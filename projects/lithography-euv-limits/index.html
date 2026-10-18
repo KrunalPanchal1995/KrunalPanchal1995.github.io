@@ -1,0 +1,705 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Lithography and EUV limits | Dr. Krunal Panchal </title> <meta name="author" content="Krunal R. Panchal"> <meta name="description" content="Why printing smaller chips needs shorter light and bigger lenses - Rayleigh resolution, depth of focus, EUV and photon shot noise. A first-principles learning page."> <meta name="keywords" content="Krunal Panchal, combustion kinetics, chemical kinetic mechanism optimization, mechanism reduction, reduced-order modelling, uncertainty quantification, scientific machine learning, gasification, computational fluid dynamics, mechanical engineering, IIT Madras, postdoctoral researcher"> <meta property="og:site_name" content="Dr. Krunal Panchal"> <meta property="og:type" content="website"> <meta property="og:title" content="Dr. Krunal Panchal | Lithography and EUV limits"> <meta property="og:url" content="https://krunalpanchal1995.github.io/projects/lithography-euv-limits/"> <meta property="og:description" content="Why printing smaller chips needs shorter light and bigger lenses - Rayleigh resolution, depth of focus, EUV and photon shot noise. A first-principles learning page."> <meta property="og:locale" content="en"> <meta name="twitter:card" content="summary"> <meta name="twitter:title" content="Lithography and EUV limits"> <meta name="twitter:description" content="Why printing smaller chips needs shorter light and bigger lenses - Rayleigh resolution, depth of focus, EUV and photon shot noise. A first-principles learning page."> <script type="application/ld+json">
+    {
+        "author":
+        {
+            "@type": "Person",
+            "name": "Krunal R. Panchal"
+        },
+        "url": "https://krunalpanchal1995.github.io/projects/lithography-euv-limits/",
+        "@type": "WebSite",
+        "description": "Why printing smaller chips needs shorter light and bigger lenses - Rayleigh resolution, depth of focus, EUV and photon shot noise. A first-principles learning page.",
+        "headline": "Lithography and EUV limits",
+        
+        "sameAs": ["https://orcid.org/0000-0003-2595-8824","https://github.com/KrunalPanchal1995","https://www.linkedin.com/in/Krunal-panchal-phd","https://www.researchgate.net/profile/Krunal-Panchal"],
+        
+        "name": "Krunal R. Panchal",
+        "@context": "https://schema.org"
+    }
+  </script> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 980px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="/assets/css/site/tokens.css"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="/assets/img/favicon.svg?v=d7336c80a3fb6a9993bfe2296dff1dc0"> <link rel="apple-touch-icon" href="/assets/img/favicon-180.png?v=4330e3aef920dacf2d6a07a0de549504"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://krunalpanchal1995.github.io/projects/lithography-euv-limits/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> <link rel="stylesheet" href="/assets/al_email_protect/css/email-protect.css"> </head> <body class="fixed-top-nav sticky-bottom-footer"> <link rel="stylesheet" href="/assets/css/site/tokens.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/base.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/nav.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/project.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/projects-index.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/home.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/pages.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/hero.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/apps.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/components.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/fx.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/studio.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/reel.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/playground.css?v=1792290782"> <link rel="stylesheet" href="/assets/css/site/open.css?v=1792290782"> <header class="site-header"> <nav id="navbar" class="pillnav" role="navigation" aria-label="Main"> <a class="pillnav__brand" href="/">Krunal<span class="accent-dot">.</span> </a> <button class="navbar-toggler collapsed pillnav__toggle" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="pillnav__panel" id="navbarNav"> <ul class="navbar-menu-list pillnav__list"> <li class="nav-item "> <a class="nav-link" href="/">Home</a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">Research</a> </li> <li class="nav-item "> <a class="nav-link" href="/studio/">Studio</a> </li> <li class="nav-item active"> <a class="nav-link" href="/projects/" aria-current="page">Research Projects</a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">Publications</a> </li> <li class="nav-item "> <a class="nav-link" href="/writing/">Writing</a> </li> <li class="nav-item "> <a class="nav-link" href="/about/">About</a> </li> <li class="nav-item pillnav__more " data-more> <button type="button" class="nav-link pillnav__morebtn" aria-haspopup="true" aria-expanded="false" aria-controls="pillnav-more-list" data-more-toggle> More <svg class="pillnav__caret" viewbox="0 0 10 6" width="10" height="6" aria-hidden="true"> <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </button> <ul class="pillnav__morelist" id="pillnav-more-list" role="menu" hidden> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/playground/"><i class="fa-solid fa-flask pillnav__icon" aria-hidden="true"></i>Playground</a> </li> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/world/">Research World</a> </li> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/reel/">Reel</a> </li> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/open/"><i class="fa-solid fa-unlock pillnav__icon" aria-hidden="true"></i>Open science</a> </li> <li role="none"> <a role="menuitem" class="pillnav__moreitem " href="/beyond-research/">Beyond Research</a> </li> </ul> </li> </ul> <div class="pillnav__tools"> <button id="fx-toggle" type="button" title="Visual effects" aria-label="Visual effects" aria-pressed="true" hidden> <span class="fx-toggle__dot" aria-hidden="true"></span><span class="fx-toggle__label">FX</span> </button> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"><span class="progress-bar"></span></div> </progress> </header> <script>
+    (function () {
+      var d = document.documentElement,
+        q = new URLSearchParams(location.search),
+        n = navigator,
+        c = n.connection;
+      function g(s, k) {
+        try {
+          return window[s].getItem(k);
+        } catch (e) {
+          return null;
+        }
+      }
+      function p(s, k, v) {
+        try {
+          window[s].setItem(k, v);
+        } catch (e) {}
+      }
+      var o = q.get("fx");
+      if (o === "on" || o === "off" || o === "lite") p("sessionStorage", "fx-override", o);
+      else o = g("sessionStorage", "fx-override");
+      if (o !== "on" && o !== "off" && o !== "lite") o = null;
+      var u = g("localStorage", "fx"),
+        rm = matchMedia("(prefers-reduced-motion: reduce)").matches,
+        auto = rm
+          ? "off"
+          : (c && c.saveData) ||
+              (n.hardwareConcurrency && n.hardwareConcurrency <= 4) ||
+              (n.deviceMemory && n.deviceMemory <= 4) ||
+              matchMedia("(pointer: coarse)").matches
+            ? "lite"
+            : "on",
+        s = o || (u === "on" || u === "off" ? u : auto);
+      d.setAttribute("data-fx", s);
+      d.setAttribute("data-fx-auto", auto);
+    })();
+</script> <script defer src="/assets/js/site/nav.js"></script> <script defer src="/assets/js/site/fx.js"></script> <div class="container mt-5" role="main"> <article class="pj" data-project="lithography-euv-limits"> <p class="pj-back"> <a href="/projects/"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a> </p> <header class="pj-head"> <ul class="pj-cats" aria-label="Categories"><li class="pj-cat" style="--c: var(--cat-electronics, var(--teal));">electronics</li></ul> <h1 class="pj-title">Lithography and EUV <span class="accent-serif">limits</span> </h1> <p class="pj-sub">Why printing smaller chips needs shorter light and bigger lenses - Rayleigh resolution, depth of focus, EUV and photon shot noise. A first-principles learning page.</p> <p class="pj-meta mono">2 images · 3 min read </p> <div class="pj-actions"> <a class="pj-act pj-act--studio" href="/studio/"><i class="fa-solid fa-cube" aria-hidden="true"></i><span>Open Studio</span></a><a class="pj-act pj-act--ghost" href="#pj-gallery-h"><i class="fa-regular fa-images" aria-hidden="true"></i><span>Jump to gallery</span></a> </div> </header> <div class="pj-intro"> <figure class="pj-hero raised"> <div class="pj-hero__plate fx-plate" data-slate-project="lithography-euv-limits" data-slate-take="01" data-slate-file="01_rayleigh_resolution-800.png"> <img src="/assets/img/projects/lithography-euv-limits/01_rayleigh_resolution-800.png" alt="Lithography and EUV limits" fetchpriority="high"> </div> </figure><section class="ds" aria-labelledby="ds-h"> <header class="ds__bar mono"> <span class="ds__dots" aria-hidden="true"><i></i><i></i><i></i></span> <h2 id="ds-h" class="ds__t"> datasheet <span class="ds__sl">// lithography-euv-limits</span> </h2> </header> <dl class="ds__list mono"> <div class="ds__row"> <dt>images</dt> <dd>2</dd> </div> <div class="ds__row"> <dt>videos</dt> <dd>0</dd> </div> <div class="ds__row"> <dt>formats</dt> <dd> png </dd> </div> <div class="ds__row"> <dt>text</dt> <dd>592 words · 3 min read</dd> </div> <div class="ds__row"> <dt>studio</dt> <dd><a href="/studio/">/studio (gallery)</a></dd> </div> <div class="ds__row ds__row--topics"> <dt>topics</dt> <dd> <ul class="ds__topics"> <li> resolution <span class="ds__n">×1</span> </li> <li> stochastics <span class="ds__n">×1</span> </li> </ul> </dd> </div> </dl> </section> </div> <div class="pj-read" data-read> <aside class="pj-toc pj-toc--side" data-toc-side aria-label="On this page" hidden> <p class="eyebrow">On this page</p> <ol class="pj-toc__list"></ol> <p class="pj-prog mono"> <span class="pj-prog__bar" aria-hidden="true"><span data-prog-bar></span></span><span data-prog-n>0%</span> read </p> </aside> <div class="pj-main"> <details class="pj-toc pj-toc--sheet" data-toc-sheet hidden> <summary><span>On this page</span><span class="pj-toc__pct mono" data-prog-n>0%</span></summary> <ol class="pj-toc__list"></ol> </details><section class="pj-prose" data-prose aria-label="About this project"> <p>A learning page: standard optics from the textbooks listed at the bottom, with figures computed from the formulas shown. It makes no claim of new research results, and the tool numbers are idealised, not specifications of any machine.</p> <h2 id="intuition">Intuition</h2> <p>Lithography is a very precise slide projector: a mask is shrunk and projected onto a wafer so that light prints the pattern in a light-sensitive film. Light spreads out as it passes through any opening (diffraction), and that blur sets the smallest feature you can print. To print finer detail you either use light with a shorter wavelength or collect more of the spread-out light with a bigger lens.</p> <h2 id="school-level">School level</h2> <ul> <li>A wave bends around edges by an amount that grows with its wavelength, so shorter wavelengths give sharper images.</li> <li>Chip makers moved from visible and ultraviolet light to deep ultraviolet at 193 nm, and then to <strong>extreme ultraviolet (EUV)</strong> at 13.5 nm.</li> <li>A lens with a wider opening (a larger numerical aperture) gathers more of the diffracted light and prints finer detail, at the price of a shallower zone where the image stays sharp.</li> </ul> <h2 id="college-level">College level</h2> <p>The Rayleigh criteria give the smallest half-pitch R and the depth of focus DOF:</p> <p>R = k<sub>1</sub> λ / NA, DOF = k<sub>2</sub> λ / NA<sup>2</sup>,</p> <p>where NA = n sin θ and k<sub>1</sub>, k<sub>2</sub> are process factors (k<sub>1</sub> has a theoretical floor of 0.25 for a single exposure). With k<sub>1</sub> = 0.3:</p> <ul> <li>193 nm immersion (NA 1.35, using water as the immersion liquid): R ≈ 43 nm.</li> <li>EUV at 13.5 nm, NA 0.33: R ≈ 12 nm.</li> <li>High-NA EUV, NA 0.55: R ≈ 7 nm.</li> </ul> <p>Real printing has additional steps (multiple exposures, resolution-enhancement techniques), so these are idealised limits (figure 1). Note DOF shrinks as 1 / NA<sup>2</sup>, so a larger NA demands much flatter wafers.</p> <p><strong>Shot noise (stochastics).</strong> Photon energy is E = h c / λ, about 6.4 eV at 193 nm and about 91.8 eV at 13.5 nm, 14 times more. At the same dose (an assumed 30 mJ/cm<sup>2</sup>), a 10 nm × 10 nm pixel receives about 29,000 photons at 193 nm but only about 2,000 at 13.5 nm. Photon arrivals are random, so the relative noise is 1 / √N: about 0.6 % versus 2.2 % (figure 2). Edges print rougher unless the dose is raised.</p> <h2 id="advanced">Advanced</h2> <ul> <li>EUV light is absorbed by almost every material, including air, so EUV machines work in vacuum and use <strong>multilayer mirrors</strong> (alternating thin molybdenum and silicon layers) instead of lenses.</li> <li>The light comes from a laser-produced tin plasma; source power, mirror reflectivity and resist sensitivity together set throughput.</li> <li> <strong>Resolution enhancement</strong>: phase-shift masks, off-axis illumination, optical proximity correction and computational lithography push k<sub>1</sub> towards its limit.</li> </ul> <h2 id="where-this-shows-up">Where this shows up</h2> <ul> <li>The cost and pace of every new chip generation.</li> <li>Mask design software and process-control analysis of line-edge roughness.</li> </ul> <h2 id="check-yourself">Check yourself</h2> <ol> <li>Why can a larger NA hurt manufacturing even though it improves resolution? <em>Answer: the depth of focus falls as 1 / NA<sup>2</sup>, so the wafer surface must be much flatter and focus much tighter.</em> </li> <li>Halving the wavelength at fixed NA and k<sub>1</sub> does what to R? <em>Answer: it halves R.</em> </li> <li>Why do EUV photons make noisier images at equal dose? <em>Answer: each photon carries about 14 times more energy, so the same energy per area is delivered by 14 times fewer photons, and the relative noise 1 / √N rises.</em> </li> </ol> <h2 id="read-next">Read next</h2> <ul> <li>C. A. Mack, <em>Fundamental Principles of Optical Lithography</em>.</li> <li>H. J. Levinson, <em>Principles of Lithography</em>.</li> <li>A. K.-K. Wong, <em>Resolution Enhancement Techniques in Optical Lithography</em>.</li> </ul> </section> <section class="pj-section" aria-labelledby="pj-gallery-h" data-toc-extra="Gallery"> <h2 id="pj-gallery-h" class="pj-h2">Gallery</h2> <div class="pg" data-gallery> <div class="pg-tabs" role="tablist" aria-label="Gallery topics" hidden> <button type="button" role="tab" class="pg-tab" id="pgtab-all" data-tab="all" aria-selected="true" aria-controls="pg-panel" tabindex="0"> All <span class="pg-count">2</span> </button><button type="button" role="tab" class="pg-tab" id="pgtab-resolution" data-tab="resolution" aria-selected="false" aria-controls="pg-panel" tabindex="-1"> resolution <span class="pg-count">1</span> </button><button type="button" role="tab" class="pg-tab" id="pgtab-stochastics" data-tab="stochastics" aria-selected="false" aria-controls="pg-panel" tabindex="-1"> stochastics <span class="pg-count">1</span> </button> </div> <div class="pg-panel" id="pg-panel" role="tabpanel" aria-labelledby="pgtab-all" tabindex="-1"> <div class="pg-grid"> <figure class="pg-card raised" data-topic="resolution" data-full="/assets/img/projects/lithography-euv-limits/01_rayleigh_resolution-1600.png" data-index="1"> <div class="pg-plate fx-plate" data-slate-project="lithography-euv-limits" data-slate-take="01" data-slate-file="01_rayleigh_resolution-800.png"> <button type="button" class="pg-open" aria-label="Open image 1: Resolution improves with shorter wavelength and larger NA; the dots mark typical tool settings (idealised, single exposure)."><img class="pg-media" src="/assets/img/projects/lithography-euv-limits/01_rayleigh_resolution-800.png" alt="Resolution improves with shorter wavelength and larger NA; the dots mark typical tool settings (idealised, single exposure)." loading="lazy" decoding="async"></button> </div> <figcaption class="pg-cap"><span class="pg-cap__t">Resolution improves with shorter wavelength and larger NA; the dots mark typical tool settings (idealised, single exposure).</span></figcaption></figure><figure class="pg-card raised" data-topic="stochastics" data-full="/assets/img/projects/lithography-euv-limits/02_photon_shot_noise-1600.png" data-index="2"> <div class="pg-plate fx-plate" data-slate-project="lithography-euv-limits" data-slate-take="02" data-slate-file="02_photon_shot_noise-800.png"> <button type="button" class="pg-open" aria-label="Open image 2: EUV photons carry ~14x more energy, so the same dose delivers far fewer photons per pixel, which makes edges noisier (stochastics)."><img class="pg-media" src="/assets/img/projects/lithography-euv-limits/02_photon_shot_noise-800.png" alt="EUV photons carry ~14x more energy, so the same dose delivers far fewer photons per pixel, which makes edges noisier (stochastics)." loading="lazy" decoding="async"></button> </div> <figcaption class="pg-cap"><span class="pg-cap__t">EUV photons carry ~14x more energy, so the same dose delivers far fewer photons per pixel, which makes edges noisier (stochastics).</span></figcaption></figure> </div> </div> </div> </section> </div> </div> <nav class="pj-pager" aria-label="More projects"><a class="pj-pager__a pj-pager__a--prev raised" href="/projects/ic-fabrication-flow/" rel="prev"> <span class="eyebrow"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Previous</span> <span class="pj-pager__t">IC fabrication flow</span> </a><a class="pj-pager__a pj-pager__a--next raised" href="/projects/mosfet-cmos-scaling/" rel="next"> <span class="eyebrow">Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span> <span class="pj-pager__t">MOSFET and CMOS scaling</span> </a></nav> </article> <script defer src="/assets/js/site/project.js?v=1792290782"></script> </div> <footer class="site-footer" role="contentinfo"> <div class="container site-footer__inner"> <div class="site-footer__brand"> <a class="site-footer__name" href="/">Krunal Panchal<span class="accent-dot" aria-hidden="true">.</span></a> </div> <ul class="site-footer__links"> <li><a href="#" class="al-email-protect" data-eu="krunalpanchal1995" data-ed="gmail.com" aria-label="Copy email address"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span></a></li> <li> <a href="https://orcid.org/0000-0003-2595-8824" rel="me noopener" target="_blank"><i class="ai ai-orcid" aria-hidden="true"></i><span>ORCID</span></a> </li> <li> <a href="https://github.com/KrunalPanchal1995" rel="me noopener" target="_blank"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span></a> </li> <li> <a href="https://www.linkedin.com/in/Krunal-panchal-phd" rel="me noopener" target="_blank"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a> </li> <li> <a href="https://www.researchgate.net/profile/Krunal-Panchal" rel="me noopener" target="_blank"><i class="ai ai-researchgate" aria-hidden="true"></i><span>ResearchGate</span></a> </li> <li> <a href="/cv/"><i class="ai ai-cv" aria-hidden="true"></i><span>CV</span></a> </li> <li> <a href="/feed.xml"><i class="fa-solid fa-square-rss" aria-hidden="true"></i><span>RSS</span></a> </li> </ul> <p class="site-footer__legal"> © 2026 Krunal Panchal. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. <a href="/privacy/">Privacy</a>. </p> </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script>
+  window.__hoverPreviews = {
+    
+      "/404.html": {
+        title: "Page not found",
+        description: "Nothing exists at this address."
+      },
+    
+      "/about/": {
+        title: "About",
+        description: ""
+      },
+    
+      "/beyond-research/": {
+        title: "Beyond Research",
+        description: ""
+      },
+    
+      "/books/": {
+        title: "Bookshelf",
+        description: ""
+      },
+    
+      "/cv/": {
+        title: "CV",
+        description: "Curriculum vitae, generated from _data/cv.yml."
+      },
+    
+      "/news/": {
+        title: "News",
+        description: ""
+      },
+    
+      "/open/": {
+        title: "Open science",
+        description: "How the code and PDF notes behind my plots are shared. Free of cost, open now for the home page demo, on approval for the rest."
+      },
+    
+      "/playground/": {
+        title: "Playground",
+        description: ""
+      },
+    
+      "/privacy/": {
+        title: "Privacy",
+        description: "What this site counts about visitors, and what it does not."
+      },
+    
+      "/projects/": {
+        title: "Research Projects",
+        description: "Research projects in combustion, optimization, uncertainty quantification, scientific ML and CFD."
+      },
+    
+      "/publications/": {
+        title: "Publications",
+        description: "Journal articles, conference papers and work in preparation, most recent first."
+      },
+    
+      "/reel/": {
+        title: "Reel",
+        description: "A full-screen sequence of the project videos, with a title graphic for each clip."
+      },
+    
+      "/research/": {
+        title: "Research",
+        description: ""
+      },
+    
+      "/studio/": {
+        title: "Studio",
+        description: "The Math Visual Studio, running in the browser. Open any of my projects as a live, interactive workspace."
+      },
+    
+      "/teaching/": {
+        title: "Teaching",
+        description: "Teaching assistantships and lab demonstrator roles held at IIT Madras."
+      },
+    
+      "/world/": {
+        title: "Research World",
+        description: ""
+      },
+    
+      "/writing/": {
+        title: "Writing",
+        description: ""
+      },
+    
+      "/blog/index.html": {
+        title: "Writing Archive",
+        description: ""
+      },
+    
+      "/projects/bangalore-2026-conference/": {
+        title: "Enhanced Multi-Stage Optimization Technique for Fuel Combustion Kinetic Mechanisms",
+        description: "Conference paper submitted to ICICEPC 2026"
+      },
+    
+      "/projects/cfd-multiphysics/": {
+        title: "PANSOPHIA multiphysics test cases",
+        description: "Cavity, conjugate heat transfer, boiling, FSI, structural, ignition and stochastic/UQ test figures from the PANSOPHIA solver"
+      },
+    
+      "/projects/cfd-numerics-teaching/": {
+        title: "PANSOPHIA numerics teaching figures",
+        description: "Fifteen teaching figures on schemes, stability and accuracy, generated from the PANSOPHIA numerics stack"
+      },
+    
+      "/projects/cfdcore/": {
+        title: "PANSOPHIA — In-House CFD \u0026 Multiphysics Solver",
+        description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning"
+      },
+    
+      "/projects/decarbonisation-tuyeres/": {
+        title: "H₂/CH₄ Co-injection in Blast-Furnace Tuyeres",
+        description: "A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you"
+      },
+    
+      "/projects/dokimazo/": {
+        title: "dokimazo — A PIDO Optimization Workbench",
+        description: "A dependency-light process-integration-and-design-optimization workbench with a plug-and-play graph IR, closed by a reinforcement-learning conformer search that tunes a long alkane chain's rotors one at a time"
+      },
+    
+      "/projects/electromagnetics-maxwell/": {
+        title: "Electromagnetics and Maxwell",
+        description: "From Maxwell's equations to waves, reflection and the skin effect - the physics under every antenna, waveguide and chip wire. A first-principles learning page."
+      },
+    
+      "/projects/flamelab/": {
+        title: "flamelab",
+        description: "A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods"
+      },
+    
+      "/projects/future-work-cnf-mso/": {
+        title: "Reaction-Classification-Aware Multi-Stage Optimization",
+        description: "Forthcoming"
+      },
+    
+      "/projects/gasification/": {
+        title: "Steam-Catalytic Downdraft Gasification",
+        description: "M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier"
+      },
+    
+      "/projects/geometry-kernel/": {
+        title: "PANSOPHIA geometry kernel",
+        description: "A from-scratch signed-distance-field geometry kernel cross-checked against Gmsh and a PicoGK-compatible engine, with the GeoStudio GUI"
+      },
+    
+      "/projects/ic-fabrication-flow/": {
+        title: "IC fabrication flow",
+        description: "How a chip is made, from a bare silicon wafer to a packaged die - oxidation, lithography, etching, doping, deposition, polishing and yield. A first-principles learning page."
+      },
+    
+      "/projects/japan-2026-paper/": {
+        title: "Power-mean objective: Japan 2026 symposium paper",
+        description: "Figures from the full paper on a power-mean objective for multi-dataset combustion mechanism optimization"
+      },
+    
+      "/projects/lasers-photodetectors/": {
+        title: "Lasers and photodetectors",
+        description: "How semiconductors make light and detect it - LEDs, laser diodes, photodiodes and solar cells. A first-principles learning page."
+      },
+    
+      "/projects/lithography-euv-limits/": {
+        title: "Lithography and EUV limits",
+        description: "Why printing smaller chips needs shorter light and bigger lenses - Rayleigh resolution, depth of focus, EUV and photon shot noise. A first-principles learning page."
+      },
+    
+      "/projects/math-studio-course/": {
+        title: "Math Visual Studio",
+        description: "A local web app for visualising multivariable calculus, transformations, ODEs and PDEs, mechanisms, deformation and molecules"
+      },
+    
+      "/projects/microfluidics/": {
+        title: "PANSOPHIA microfluidics solver",
+        description: "In-house 2D/3D finite-element flow solver and Maxey-Riley particle tracer for inertial-microfluidics separation studies, with a validation dossier"
+      },
+    
+      "/projects/mosfet-cmos-scaling/": {
+        title: "MOSFET and CMOS scaling",
+        description: "How the transistor works and why shrinking it helped, then stopped helping - square-law operation, subthreshold leakage and Dennard scaling. A first-principles learning page."
+      },
+    
+      "/projects/mosiac/": {
+        title: "MOSIAC",
+        description: "An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization"
+      },
+    
+      "/projects/mso-objectives/": {
+        title: "MSO Objective Functions \u0026 Multi-Stage Optimization",
+        description: "Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration"
+      },
+    
+      "/projects/muq-sac/": {
+        title: "MUQ-SAC — Joint Arrhenius Uncertainty Quantification",
+        description: "A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression"
+      },
+    
+      "/projects/muqsac-plus-plus/": {
+        title: "MUQSAC++",
+        description: "Software engineering: fourteen copies of a kinetics pipeline merged into one tested code base"
+      },
+    
+      "/projects/neural-ode-course/": {
+        title: "Neural ODEs and Transformations — A Self-Built Course",
+        description: "A multi-month, derivation-first course on Neural ODEs, coordinate transformations and stiff chemical kinetics, with a verified animation for every session"
+      },
+    
+      "/projects/neural-ode-playground/": {
+        title: "vZero — A Neural ODE Research Playground",
+        description: "An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, RL-as-a-trainer, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum"
+      },
+    
+      "/projects/phd-thesis/": {
+        title: "PhD thesis: a fast, robust, kinetics-based optimization framework",
+        description: "IIT Madras doctoral thesis on optimization of combustion kinetic models; Chapter 3 and Chapter 4 figures"
+      },
+    
+      "/projects/plasma-sludge-pyrolysis/": {
+        title: "Plasma sludge pyrolysis",
+        description: "A zero-dimensional thermal-plasma sludge model: direction only"
+      },
+    
+      "/projects/power-electronics-converters/": {
+        title: "Power electronics converters",
+        description: "How switching converters change voltage efficiently - buck, boost and buck-boost, inductor ripple, losses and wide-bandgap devices. A first-principles learning page."
+      },
+    
+      "/projects/pysr-rate-rules/": {
+        title: "Symbolic Regression for Universal Rate Rules",
+        description: "Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions"
+      },
+    
+      "/projects/quantum-chemistry/": {
+        title: "Quantum chemistry",
+        description: "A differentiable electronic-structure engine in early development, and a self-study course in quantum chemistry"
+      },
+    
+      "/projects/rf-antennas-microwaves/": {
+        title: "RF, antennas and microwaves",
+        description: "Transmission lines, reflection and matching, antennas and the Friis link budget - how radio signals travel and how circuits hand them over. A first-principles learning page."
+      },
+    
+      "/projects/sciml/": {
+        title: "Scientific ML for Stiff Kinetics",
+        description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results"
+      },
+    
+      "/projects/sensors-mems-control/": {
+        title: "Sensors, MEMS and control",
+        description: "How tiny mechanical sensors work and how feedback makes systems behave - MEMS resonators, capacitive sensing and PID control. A first-principles learning page."
+      },
+    
+      "/projects/silicon-photonics-waveguides/": {
+        title: "Silicon photonics waveguides",
+        description: "How light is guided on a chip - slab and wire waveguides, ring resonators and optical interconnects. A first-principles learning page."
+      },
+    
+      "/projects/turbulence-closures/": {
+        title: "Turbulence Closures — From Mixing Length to Data-Driven RANS",
+        description: "A from-scratch, chronologically-built turbulence-closure curriculum in Python — classical RANS through LES, hybrid RANS-LES, and a first data-driven correction, every claim backed by a mechanically-enforced disclosure registry"
+      },
+    
+      "/projects/vaporizer-rigs/": {
+        title: "Vaporizer \u0026 Combustion Rig Design",
+        description: "An induction-heated tube vaporizer for MtG/ethanol surrogate fuel, sized against boiling glide, critical heat flux and flow instability, plus a fabrication-grade combustion-rig drawing package"
+      },
+    
+      "/projects/vlsi-circuit-design/": {
+        title: "VLSI circuit design",
+        description: "From a single CMOS inverter to a chip - logic levels, noise margin, dynamic power, the energy-delay trade-off and the digital design flow. A first-principles learning page."
+      },
+    
+      "/projects/vzero-explainer/": {
+        title: "vZero explainer",
+        description: "Charts, diagrams and a slide deck explaining Neural ODEs for stiff chemistry, with toy experiments"
+      },
+    
+      "/news/2026-07-16-phd-conferred/": {
+        title: "Phd Conferred",
+        description: ""
+      },
+    
+      "/news/2026-08-07-fukuoka-accepted/": {
+        title: "Fukuoka Accepted",
+        description: ""
+      }
+    
+  };
+</script> <script defer src="/assets/js/hover-previews.js"></script> <script src="/assets/js/ofs.js?v=dc693beed477841156654f3db0a6db0f" data-endpoint="https://openfirststep.krunalpanchal1995.workers.dev" defer></script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-home",
+    title: "Home",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-research",
+          title: "Research",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/research/";
+          },
+        },{id: "nav-playground",
+          title: "Playground",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/playground/";
+          },
+        },{id: "nav-studio",
+          title: "Studio",
+          description: "The Math Visual Studio, running in the browser. Open any of my projects as a live, interactive workspace.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/studio/";
+          },
+        },{id: "nav-research-world",
+          title: "Research World",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/world/";
+          },
+        },{id: "nav-reel",
+          title: "Reel",
+          description: "A full-screen sequence of the project videos, with a title graphic for each clip.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/reel/";
+          },
+        },{id: "nav-research-projects",
+          title: "Research Projects",
+          description: "Research projects in combustion, optimization, uncertainty quantification, scientific ML and CFD.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-open-science",
+          title: "Open science",
+          description: "How the code and PDF notes behind my plots are shared. Free of cost, open now for the home page demo, on approval for the rest.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/open/";
+          },
+        },{id: "nav-publications",
+          title: "Publications",
+          description: "Journal articles, conference papers and work in preparation, most recent first.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-writing",
+          title: "Writing",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/writing/";
+          },
+        },{id: "nav-beyond-research",
+          title: "Beyond Research",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/beyond-research/";
+          },
+        },{id: "nav-about",
+          title: "About",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/about/";
+          },
+        },{id: "news-phd-degree-conferred-by-iit-madras",
+          title: 'PhD degree conferred by IIT Madras.',
+          description: "",
+          section: "News",},{id: "news-three-abstracts-accepted-for-presentation-at-the-64th-symposium-japanese-on-combustion-fukuoka-4-6-nov-2026-including-the-power-mean-objective-function-work-panchal-amp-amp-narayanaswamy-2026",
+          title: 'Three abstracts accepted for presentation at the 64th Symposium (Japanese) on Combustion, Fukuoka,...',
+          description: "",
+          section: "News",},{id: "projects-enhanced-multi-stage-optimization-technique-for-fuel-combustion-kinetic-mechanisms",
+          title: 'Enhanced Multi-Stage Optimization Technique for Fuel Combustion Kinetic Mechanisms',
+          description: "Conference paper submitted to ICICEPC 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/bangalore-2026-conference/";
+            },},{id: "projects-pansophia-multiphysics-test-cases",
+          title: 'PANSOPHIA multiphysics test cases',
+          description: "Cavity, conjugate heat transfer, boiling, FSI, structural, ignition and stochastic/UQ test figures from the PANSOPHIA solver",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cfd-multiphysics/";
+            },},{id: "projects-pansophia-numerics-teaching-figures",
+          title: 'PANSOPHIA numerics teaching figures',
+          description: "Fifteen teaching figures on schemes, stability and accuracy, generated from the PANSOPHIA numerics stack",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cfd-numerics-teaching/";
+            },},{id: "projects-pansophia-in-house-cfd-amp-multiphysics-solver",
+          title: 'PANSOPHIA — In-House CFD &amp;amp; Multiphysics Solver',
+          description: "A from-scratch Julia CFD/multiphysics library, with a Python frontend and a cross-engine geometry kernel, aimed at closing the gap between commercial CFD and machine learning",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/cfdcore/";
+            },},{id: "projects-h-ch-co-injection-in-blast-furnace-tuyeres",
+          title: 'H₂/CH₄ Co-injection in Blast-Furnace Tuyeres',
+          description: "A reacting-flow CFD and design-of-experiments study of hydrogen and methane co-injection with pulverised coal — how far tuyere CO₂ intensity can fall before the material limit stops you",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/decarbonisation-tuyeres/";
+            },},{id: "projects-dokimazo-a-pido-optimization-workbench",
+          title: 'dokimazo — A PIDO Optimization Workbench',
+          description: "A dependency-light process-integration-and-design-optimization workbench with a plug-and-play graph IR, closed by a reinforcement-learning conformer search that tunes a long alkane chain&#39;s rotors one at a time",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dokimazo/";
+            },},{id: "projects-electromagnetics-and-maxwell",
+          title: 'Electromagnetics and Maxwell',
+          description: "From Maxwell&#39;s equations to waves, reflection and the skin effect - the physics under every antenna, waveguide and chip wire. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/electromagnetics-maxwell/";
+            },},{id: "projects-flamelab",
+          title: 'flamelab',
+          description: "A computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty — regime classification, cross-run ensemble statistics, and thirteen analysis methods",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/flamelab/";
+            },},{id: "projects-reaction-classification-aware-multi-stage-optimization",
+          title: 'Reaction-Classification-Aware Multi-Stage Optimization',
+          description: "Forthcoming",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/future-work-cnf-mso/";
+            },},{id: "projects-steam-catalytic-downdraft-gasification",
+          title: 'Steam-Catalytic Downdraft Gasification',
+          description: "M.Tech thesis — steam and catalyst effects on lignite gasification in a pilot-scale downdraft gasifier",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/gasification/";
+            },},{id: "projects-pansophia-geometry-kernel",
+          title: 'PANSOPHIA geometry kernel',
+          description: "A from-scratch signed-distance-field geometry kernel cross-checked against Gmsh and a PicoGK-compatible engine, with the GeoStudio GUI",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/geometry-kernel/";
+            },},{id: "projects-ic-fabrication-flow",
+          title: 'IC fabrication flow',
+          description: "How a chip is made, from a bare silicon wafer to a packaged die - oxidation, lithography, etching, doping, deposition, polishing and yield. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/ic-fabrication-flow/";
+            },},{id: "projects-power-mean-objective-japan-2026-symposium-paper",
+          title: 'Power-mean objective: Japan 2026 symposium paper',
+          description: "Figures from the full paper on a power-mean objective for multi-dataset combustion mechanism optimization",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/japan-2026-paper/";
+            },},{id: "projects-lasers-and-photodetectors",
+          title: 'Lasers and photodetectors',
+          description: "How semiconductors make light and detect it - LEDs, laser diodes, photodiodes and solar cells. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lasers-photodetectors/";
+            },},{id: "projects-lithography-and-euv-limits",
+          title: 'Lithography and EUV limits',
+          description: "Why printing smaller chips needs shorter light and bigger lenses - Rayleigh resolution, depth of focus, EUV and photon shot noise. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lithography-euv-limits/";
+            },},{id: "projects-math-visual-studio",
+          title: 'Math Visual Studio',
+          description: "A local web app for visualising multivariable calculus, transformations, ODEs and PDEs, mechanisms, deformation and molecules",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/math-studio-course/";
+            },},{id: "projects-pansophia-microfluidics-solver",
+          title: 'PANSOPHIA microfluidics solver',
+          description: "In-house 2D/3D finite-element flow solver and Maxey-Riley particle tracer for inertial-microfluidics separation studies, with a validation dossier",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/microfluidics/";
+            },},{id: "projects-mosfet-and-cmos-scaling",
+          title: 'MOSFET and CMOS scaling',
+          description: "How the transistor works and why shrinking it helped, then stopped helping - square-law operation, subthreshold leakage and Dennard scaling. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mosfet-cmos-scaling/";
+            },},{id: "projects-mosiac",
+          title: 'MOSIAC',
+          description: "An open-source, uncertainty-quantified workbench for combustion kinetic mechanism optimization",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mosiac/";
+            },},{id: "projects-mso-objective-functions-amp-multi-stage-optimization",
+          title: 'MSO Objective Functions &amp;amp; Multi-Stage Optimization',
+          description: "Multi-stage optimization and a power-mean objective for multi-dataset combustion mechanism calibration",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/mso-objectives/";
+            },},{id: "projects-muq-sac-joint-arrhenius-uncertainty-quantification",
+          title: 'MUQ-SAC — Joint Arrhenius Uncertainty Quantification',
+          description: "A fast uncertainty-quantification methodology and sampling technique for the joint probability distribution of the Arrhenius rate expression",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/muq-sac/";
+            },},{id: "projects-muqsac",
+          title: 'MUQSAC++',
+          description: "Software engineering: fourteen copies of a kinetics pipeline merged into one tested code base",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/muqsac-plus-plus/";
+            },},{id: "projects-neural-odes-and-transformations-a-self-built-course",
+          title: 'Neural ODEs and Transformations — A Self-Built Course',
+          description: "A multi-month, derivation-first course on Neural ODEs, coordinate transformations and stiff chemical kinetics, with a verified animation for every session",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/neural-ode-course/";
+            },},{id: "projects-vzero-a-neural-ode-research-playground",
+          title: 'vZero — A Neural ODE Research Playground',
+          description: "An interactive Neural ODE research environment unifying 44 hand-cloned training-script versions, with a live FastAPI+React GUI, a widened optimizer zoo, RL-as-a-trainer, symbolic regression, PINN benchmarks, and an executed d2l-style curriculum",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/neural-ode-playground/";
+            },},{id: "projects-phd-thesis-a-fast-robust-kinetics-based-optimization-framework",
+          title: 'PhD thesis: a fast, robust, kinetics-based optimization framework',
+          description: "IIT Madras doctoral thesis on optimization of combustion kinetic models; Chapter 3 and Chapter 4 figures",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/phd-thesis/";
+            },},{id: "projects-plasma-sludge-pyrolysis",
+          title: 'Plasma sludge pyrolysis',
+          description: "A zero-dimensional thermal-plasma sludge model: direction only",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/plasma-sludge-pyrolysis/";
+            },},{id: "projects-power-electronics-converters",
+          title: 'Power electronics converters',
+          description: "How switching converters change voltage efficiently - buck, boost and buck-boost, inductor ripple, losses and wide-bandgap devices. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/power-electronics-converters/";
+            },},{id: "projects-symbolic-regression-for-universal-rate-rules",
+          title: 'Symbolic Regression for Universal Rate Rules',
+          description: "Using symbolic regression to discover interpretable rate rules for unimolecular decomposition reactions",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/pysr-rate-rules/";
+            },},{id: "projects-quantum-chemistry",
+          title: 'Quantum chemistry',
+          description: "A differentiable electronic-structure engine in early development, and a self-study course in quantum chemistry",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/quantum-chemistry/";
+            },},{id: "projects-rf-antennas-and-microwaves",
+          title: 'RF, antennas and microwaves',
+          description: "Transmission lines, reflection and matching, antennas and the Friis link budget - how radio signals travel and how circuits hand them over. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/rf-antennas-microwaves/";
+            },},{id: "projects-scientific-ml-for-stiff-kinetics",
+          title: 'Scientific ML for Stiff Kinetics',
+          description: "A documented research journey toward neural surrogates for stiff H2/O2 autoignition — including a statistical audit of my own results",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sciml/";
+            },},{id: "projects-sensors-mems-and-control",
+          title: 'Sensors, MEMS and control',
+          description: "How tiny mechanical sensors work and how feedback makes systems behave - MEMS resonators, capacitive sensing and PID control. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/sensors-mems-control/";
+            },},{id: "projects-silicon-photonics-waveguides",
+          title: 'Silicon photonics waveguides',
+          description: "How light is guided on a chip - slab and wire waveguides, ring resonators and optical interconnects. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/silicon-photonics-waveguides/";
+            },},{id: "projects-turbulence-closures-from-mixing-length-to-data-driven-rans",
+          title: 'Turbulence Closures — From Mixing Length to Data-Driven RANS',
+          description: "A from-scratch, chronologically-built turbulence-closure curriculum in Python — classical RANS through LES, hybrid RANS-LES, and a first data-driven correction, every claim backed by a mechanically-enforced disclosure registry",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/turbulence-closures/";
+            },},{id: "projects-vaporizer-amp-combustion-rig-design",
+          title: 'Vaporizer &amp;amp; Combustion Rig Design',
+          description: "An induction-heated tube vaporizer for MtG/ethanol surrogate fuel, sized against boiling glide, critical heat flux and flow instability, plus a fabrication-grade combustion-rig drawing package",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vaporizer-rigs/";
+            },},{id: "projects-vlsi-circuit-design",
+          title: 'VLSI circuit design',
+          description: "From a single CMOS inverter to a chip - logic levels, noise margin, dynamic power, the energy-delay trade-off and the digital design flow. A first-principles learning page.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vlsi-circuit-design/";
+            },},{id: "projects-vzero-explainer",
+          title: 'vZero explainer',
+          description: "Charts, diagrams and a slide deck explaining Neural ODEs for stiff chemistry, with toy experiments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/vzero-explainer/";
+            },},{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%6B%72%75%6E%61%6C%70%61%6E%63%68%61%6C%31%39%39%35@%67%6D%61%69%6C.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0003-2595-8824", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/KrunalPanchal1995", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/Krunal-panchal-phd", "_blank");
+        },
+      },{
+        id: 'social-custom_social',
+        title: 'Custom_social',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Krunal-Panchal", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> <script defer src="/assets/al_email_protect/js/email-protect.js"></script> </body> </html>
