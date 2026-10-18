@@ -11,7 +11,7 @@ category:
 - education
 ---
 
-An interactive learning app, built with a short course on how the periodic table was made. Instead of memorizing the table, the student repeats the steps that produced it. [Open the app](/periodic-table/) or [open it full screen](/assets/apps/periodic-table/index.html).
+An interactive learning app, built with a short course on how the periodic table was made. Instead of memorizing the table, the student repeats the steps that produced it. [Open the app](/periodic-table/) or [open it full screen](https://krunalpanchal1995.github.io/openperiodictable/app/). The app, the course notes and the code live in their own repository and site: [openperiodictable](https://krunalpanchal1995.github.io/openperiodictable/) ([source](https://github.com/KrunalPanchal1995/openperiodictable)).
 
 ## The five steps
 

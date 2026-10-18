@@ -5,5 +5,5 @@ accent_word: Lab
 eyebrow: Interactive
 permalink: /electronics-lab/
 nav: false
-embed: assets/apps/electronics-lab/index.html
+embed: https://krunalpanchal1995.github.io/openelectronics/app/
 ---

@@ -14,10 +14,12 @@ A course for a student who wants to understand the periodic table instead of mem
 
 ## Sessions so far
 
-1. **Moseley's law and the atomic number (1913).** Why the square root of the X-ray frequency is a straight line in the atomic number Z, how it fixed the order of argon and potassium, cobalt and nickel, tellurium and iodine, and where the small deviations come from. [Download the notes (.docx)]({{ '/assets/course/periodic-table/001-moseley-atomic-number.docx' | relative_url }}).
-2. **What counts as an element: Lavoisier (1789).** An element as a substance not yet decomposed, conservation of mass in a closed vessel, and what became of the 33 substances on Lavoisier's list: 23 elements, 3 radicals, 5 earths and 2 imponderables. [Download the notes (.docx)]({{ '/assets/course/periodic-table/002-lavoisier-element.docx' | relative_url }}).
+1. **Moseley's law and the atomic number (1913).** Why the square root of the X-ray frequency is a straight line in the atomic number Z, how it fixed the order of argon and potassium, cobalt and nickel, tellurium and iodine, and where the small deviations come from. [Download the notes (.docx)](https://krunalpanchal1995.github.io/openperiodictable/course/001-moseley-atomic-number/001-moseley-atomic-number.docx).
+2. **What counts as an element: Lavoisier (1789).** An element as a substance not yet decomposed, conservation of mass in a closed vessel, and what became of the 33 substances on Lavoisier's list: 23 elements, 3 radicals, 5 earths and 2 imponderables. [Download the notes (.docx)](https://krunalpanchal1995.github.io/openperiodictable/course/002-lavoisier-element/002-lavoisier-element.docx).
 
 Next in the course: atomic weights from Dalton to Cannizzaro (1860), then Newlands and Mendeleev, then electron shells.
+
+The course has its own site and repository: [openperiodictable](https://krunalpanchal1995.github.io/openperiodictable/) ([source](https://github.com/KrunalPanchal1995/openperiodictable)), with the notes, the figure scripts and the tested Python modules.
 
 ## Figures
 

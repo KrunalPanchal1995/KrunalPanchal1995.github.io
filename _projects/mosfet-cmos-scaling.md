@@ -10,7 +10,7 @@ category:
 
 A learning page: standard device physics from the textbooks listed at the bottom, with figures computed from the formulas shown. It makes no claim of new research results, and the device parameters are illustrative.
 
-**Try it:** the [diode and MOSFET curve instrument](/electronics-lab/#dev) in Circuit Lab runs the formulas on this page.
+**Try it:** the [diode and MOSFET curve instrument](https://krunalpanchal1995.github.io/openelectronics/app/#dev) in Circuit Lab runs the formulas on this page.
 
 ## Intuition
 
