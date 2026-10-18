@@ -4033,3 +4033,133 @@ vzero-explainer:
   description: ''
   src_800: assets/img/projects/vzero-explainer/34_diagram_slide_35-800.png
   subject: playground
+silicon-photonics-waveguides:
+- index: 1
+  caption: 'Through-port dip of an all-pass ring: the depth depends on how the coupling r compares with the round-trip loss a; resonances repeat every FSR.'
+  topic: rings
+  description: ''
+  src_800: assets/img/projects/silicon-photonics-waveguides/01_ring_resonator_transmission-800.png
+  src_1600: assets/img/projects/silicon-photonics-waveguides/01_ring_resonator_transmission-1600.png
+- index: 2
+  caption: 'TE modes of a symmetric slab: mode m exists only above its cutoff V = m pi, so V < pi gives a single-mode guide.'
+  topic: waveguides
+  description: ''
+  src_800: assets/img/projects/silicon-photonics-waveguides/02_slab_waveguide_modes-800.png
+  src_1600: assets/img/projects/silicon-photonics-waveguides/02_slab_waveguide_modes-1600.png
+lasers-photodetectors:
+- index: 1
+  caption: 'Responsivity rises with wavelength (more photons per watt) until the band gap sets a hard long-wavelength cutoff; illustrative eta = 0.8.'
+  topic: detectors
+  description: ''
+  src_800: assets/img/projects/lasers-photodetectors/01_photodiode_responsivity-800.png
+  src_1600: assets/img/projects/lasers-photodetectors/01_photodiode_responsivity-1600.png
+- index: 2
+  caption: 'Below threshold the diode is a weak LED; above I_th stimulated emission dominates and power rises linearly with current.'
+  topic: lasers
+  description: ''
+  src_800: assets/img/projects/lasers-photodetectors/02_laser_li_curve-800.png
+  src_1600: assets/img/projects/lasers-photodetectors/02_laser_li_curve-1600.png
+electromagnetics-maxwell:
+- index: 1
+  caption: 'Fresnel equations from Maxwell''s boundary conditions: p-polarised light is not reflected at the Brewster angle.'
+  topic: waves
+  description: ''
+  src_800: assets/img/projects/electromagnetics-maxwell/01_fresnel_reflectance-800.png
+  src_1600: assets/img/projects/electromagnetics-maxwell/01_fresnel_reflectance-1600.png
+- index: 2
+  caption: 'At high frequency the field decays inside a conductor over the skin depth, so only a thin surface layer carries current.'
+  topic: conductors
+  description: ''
+  src_800: assets/img/projects/electromagnetics-maxwell/02_skin_depth-800.png
+  src_1600: assets/img/projects/electromagnetics-maxwell/02_skin_depth-1600.png
+ic-fabrication-flow:
+- index: 1
+  caption: 'Deal-Grove: growth is linear at first (reaction-limited) and slows to parabolic (diffusion-limited) as the oxide thickens.'
+  topic: oxidation
+  description: ''
+  src_800: assets/img/projects/ic-fabrication-flow/01_oxide_growth_deal_grove-800.png
+  src_1600: assets/img/projects/ic-fabrication-flow/01_oxide_growth_deal_grove-1600.png
+- index: 2
+  caption: 'Why big dies are expensive: with random defects, yield falls exponentially with die area, so smaller chiplets help.'
+  topic: yield
+  description: ''
+  src_800: assets/img/projects/ic-fabrication-flow/02_yield_vs_die_area-800.png
+  src_1600: assets/img/projects/ic-fabrication-flow/02_yield_vs_die_area-1600.png
+lithography-euv-limits:
+- index: 1
+  caption: 'Resolution improves with shorter wavelength and larger NA; the dots mark typical tool settings (idealised, single exposure).'
+  topic: resolution
+  description: ''
+  src_800: assets/img/projects/lithography-euv-limits/01_rayleigh_resolution-800.png
+  src_1600: assets/img/projects/lithography-euv-limits/01_rayleigh_resolution-1600.png
+- index: 2
+  caption: 'EUV photons carry ~14x more energy, so the same dose delivers far fewer photons per pixel, which makes edges noisier (stochastics).'
+  topic: stochastics
+  description: ''
+  src_800: assets/img/projects/lithography-euv-limits/02_photon_shot_noise-800.png
+  src_1600: assets/img/projects/lithography-euv-limits/02_photon_shot_noise-1600.png
+mosfet-cmos-scaling:
+- index: 1
+  caption: 'Square-law model: a resistor-like triode region below V_GS - V_T, then a flat saturation current.'
+  topic: device
+  description: ''
+  src_800: assets/img/projects/mosfet-cmos-scaling/01_mosfet_output_characteristics-800.png
+  src_1600: assets/img/projects/mosfet-cmos-scaling/01_mosfet_output_characteristics-1600.png
+- index: 2
+  caption: 'Below threshold the current is exponential in V_GS; the thermal voltage kT/q fixes a ~60 mV/decade floor at room temperature.'
+  topic: leakage
+  description: ''
+  src_800: assets/img/projects/mosfet-cmos-scaling/02_subthreshold_swing-800.png
+  src_1600: assets/img/projects/mosfet-cmos-scaling/02_subthreshold_swing-1600.png
+vlsi-circuit-design:
+- index: 1
+  caption: 'A CMOS inverter flips sharply near V_DD/2, restoring logic levels, and draws current only while switching.'
+  topic: digital
+  description: ''
+  src_800: assets/img/projects/vlsi-circuit-design/01_cmos_inverter_vtc-800.png
+  src_1600: assets/img/projects/vlsi-circuit-design/01_cmos_inverter_vtc-1600.png
+- index: 2
+  caption: 'Lowering the supply voltage cuts energy quadratically but slows the gates, which is the core dynamic-voltage-scaling trade-off.'
+  topic: power
+  description: ''
+  src_800: assets/img/projects/vlsi-circuit-design/02_energy_delay_tradeoff-800.png
+  src_1600: assets/img/projects/vlsi-circuit-design/02_energy_delay_tradeoff-1600.png
+power-electronics-converters:
+- index: 1
+  caption: 'The inductor ramps up while the switch is on and down while it is off; the ripple is set by L and the switching frequency.'
+  topic: buck
+  description: ''
+  src_800: assets/img/projects/power-electronics-converters/01_buck_inductor_current-800.png
+  src_1600: assets/img/projects/power-electronics-converters/01_buck_inductor_current-1600.png
+- index: 2
+  caption: 'Duty cycle sets the output: a buck steps down, a boost steps up (with the gain blowing up as D tends to 1), a buck-boost inverts.'
+  topic: topologies
+  description: ''
+  src_800: assets/img/projects/power-electronics-converters/02_conversion_ratio-800.png
+  src_1600: assets/img/projects/power-electronics-converters/02_conversion_ratio-1600.png
+rf-antennas-microwaves:
+- index: 1
+  caption: 'Friis free-space loss grows 20 dB per decade of distance and with frequency, which is why mmWave needs high-gain antennas.'
+  topic: links
+  description: ''
+  src_800: assets/img/projects/rf-antennas-microwaves/01_free_space_path_loss-800.png
+  src_1600: assets/img/projects/rf-antennas-microwaves/01_free_space_path_loss-1600.png
+- index: 2
+  caption: 'Reflection coefficient, return loss and VSWR for a resistive load on a 50 ohm line: only Z_L = Z_0 absorbs everything.'
+  topic: matching
+  description: ''
+  src_800: assets/img/projects/rf-antennas-microwaves/02_reflection_vswr-800.png
+  src_1600: assets/img/projects/rf-antennas-microwaves/02_reflection_vswr-1600.png
+sensors-mems-control:
+- index: 1
+  caption: 'A mass-spring-damper is the model for most MEMS: a high Q gives a tall, narrow resonance, ideal for sensing small shifts.'
+  topic: mems
+  description: ''
+  src_800: assets/img/projects/sensors-mems-control/01_mems_resonator_response-800.png
+  src_1600: assets/img/projects/sensors-mems-control/01_mems_resonator_response-1600.png
+- index: 2
+  caption: 'Proportional control leaves an offset, integral action removes it at the cost of overshoot, and derivative action damps it.'
+  topic: control
+  description: ''
+  src_800: assets/img/projects/sensors-mems-control/02_pid_step_response-800.png
+  src_1600: assets/img/projects/sensors-mems-control/02_pid_step_response-1600.png
