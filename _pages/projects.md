@@ -18,7 +18,7 @@ nav_order: 3
 {%- assign tot_img = tot_img | plus: ni -%}
 {%- assign tot_vid = tot_vid | plus: nv -%}
 {%- endfor -%}
-{%- assign all_cats = 'combustion,optimization,uq,sciml,cfd,experimental,software,quantum-chemistry,visualization,education,photonics,electronics' | split: ',' -%}
+{%- assign all_cats = 'combustion,optimization,uq,sciml,cfd,experimental,software,quantum-chemistry,visualization,education,photonics,electronics,apps' | split: ',' -%}
 
 <section class="pi" data-pi data-view="lab">
   <header class="pi-head">

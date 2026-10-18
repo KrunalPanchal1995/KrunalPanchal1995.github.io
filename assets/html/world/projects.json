@@ -18,6 +18,7 @@
     "category": {{ cats[0] | default: 'software' | jsonify }},
     "img": {{ img | default: '' | jsonify }},
     "url": {{ p.url | relative_url | jsonify }},
+    "app": {% if p.app %}{{ p.app | relative_url | jsonify }}{% else %}""{% endif %},
     "studio": {% if route %}{{ '/studio/' | relative_url | append: '#' | append: route | jsonify }}{% else %}""{% endif %}
   }{% unless forloop.last %},{% endunless %}
 {%- endfor %}

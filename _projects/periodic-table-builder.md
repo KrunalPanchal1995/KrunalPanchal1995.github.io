@@ -4,7 +4,9 @@ title: Periodic Table Builder
 description: An interactive app that rebuilds the periodic table in five historical steps, from Lavoisier's 33 simple substances to quantum shells
 img: assets/img/projects/periodic-table-builder/table-800.png
 importance: 33
+app: /periodic-table/
 category:
+- apps
 - visualization
 - education
 ---

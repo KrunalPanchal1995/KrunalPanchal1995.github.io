@@ -14,6 +14,8 @@ const EMBEDDED = (() => {
 })();
 
 const CATS = {
+  apps: { key: "teal", label: "Apps" },
+  education: { key: "rose", label: "Education" },
   combustion: { key: "amber", label: "Combustion" },
   optimization: { key: "teal", label: "Optimization" },
   uq: { key: "sky", label: "Uncertainty" },
@@ -812,6 +814,7 @@ function start() {
       const idx = stations.indexOf(s) + 1;
       $("#pnum").textContent = `${String(idx).padStart(2, "0")} / ${String(stations.length).padStart(2, "0")}`;
       $("#studio").hidden = !s.studio;
+      $("#app").hidden = !s.app;
     }
   }
   const openNear = () => {
@@ -822,6 +825,10 @@ function start() {
   };
   $("#open").addEventListener("click", openNear);
   $("#studio").addEventListener("click", studioNear);
+  const appNear = () => {
+    if (S.near && S.near.app && !list.classList.contains("open")) navigate(S.near.app);
+  };
+  $("#app").addEventListener("click", appNear);
 
   // ---- input
   const KEYMAP = { ArrowUp: "up", KeyW: "up", ArrowDown: "down", KeyS: "down", ArrowLeft: "left", KeyA: "left", ArrowRight: "right", KeyD: "right" };

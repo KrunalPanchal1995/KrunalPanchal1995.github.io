@@ -4,7 +4,9 @@ title: Circuit Lab
 description: Five interactive instruments for electrical and electronics engineering - RLC and phasors, Bode filters, a Smith chart, diode and MOSFET curves, and buck and boost converters
 img: assets/img/projects/electronics-lab/lab-800.png
 importance: 34
+app: /electronics-lab/
 category:
+- apps
 - electronics
 - visualization
 ---
