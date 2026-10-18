@@ -40,3 +40,6 @@ assets/html/world/index.html
 # Test/demo harnesses (generated or hand-copied markup)
 assets/html/fx_demo.html
 assets/html/hero_preview.html
+
+# Self-contained generated page (course repo: codes/app_data/make_app_data.py)
+assets/apps/periodic-table/
