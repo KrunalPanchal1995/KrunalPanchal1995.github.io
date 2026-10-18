@@ -10,7 +10,7 @@ category:
 
 A learning page: standard theory from the textbooks listed at the bottom, with figures computed from the formulas shown. It makes no claim of new research results, and the parameters are illustrative.
 
-**Try it:** the [Bode filter instrument](/electronics-lab/#bode) in Circuit Lab runs the formulas on this page.
+**Try it:** the [Bode filter instrument](https://krunalpanchal1995.github.io/openelectronics/app/#bode) in Circuit Lab runs the formulas on this page.
 
 ## Intuition
 

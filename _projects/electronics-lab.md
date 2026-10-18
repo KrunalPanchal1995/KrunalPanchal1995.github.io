@@ -4,12 +4,14 @@ title: Circuit Lab
 description: Five interactive instruments for electrical and electronics engineering - RLC and phasors, Bode filters, a Smith chart, diode and MOSFET curves, and buck and boost converters
 img: assets/img/projects/electronics-lab/lab-800.png
 importance: 34
+app: /electronics-lab/
 category:
+- apps
 - electronics
 - visualization
 ---
 
-An interactive companion to the electronics learning pages on this site. Move a slider and watch the textbook formula's answer move, with the key numbers read out under each plot. [Open the lab](/electronics-lab/) or [open it full screen](/assets/apps/electronics-lab/index.html).
+An interactive companion to the electronics learning pages on this site. Move a slider and watch the textbook formula's answer move, with the key numbers read out under each plot. [Open the lab](/electronics-lab/) or [open it full screen](https://krunalpanchal1995.github.io/openelectronics/app/). The lab, the ten learning pages' notes and the figure code live in their own repository and site: [openelectronics](https://krunalpanchal1995.github.io/openelectronics/) ([source](https://github.com/KrunalPanchal1995/openelectronics)).
 
 ## The five instruments
 

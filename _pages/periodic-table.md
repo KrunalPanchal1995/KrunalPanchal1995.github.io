@@ -5,5 +5,5 @@ accent_word: Builder
 eyebrow: Interactive
 permalink: /periodic-table/
 nav: false
-embed: assets/apps/periodic-table/index.html
+embed: https://krunalpanchal1995.github.io/openperiodictable/app/
 ---

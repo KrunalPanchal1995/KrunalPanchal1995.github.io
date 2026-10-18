@@ -4,12 +4,14 @@ title: Periodic Table Builder
 description: An interactive app that rebuilds the periodic table in five historical steps, from Lavoisier's 33 simple substances to quantum shells
 img: assets/img/projects/periodic-table-builder/table-800.png
 importance: 33
+app: /periodic-table/
 category:
+- apps
 - visualization
 - education
 ---
 
-An interactive learning app, built with a short course on how the periodic table was made. Instead of memorizing the table, the student repeats the steps that produced it. [Open the app](/periodic-table/) or [open it full screen](/assets/apps/periodic-table/index.html).
+An interactive learning app, built with a short course on how the periodic table was made. Instead of memorizing the table, the student repeats the steps that produced it. [Open the app](/periodic-table/) or [open it full screen](https://krunalpanchal1995.github.io/openperiodictable/app/). The app, the course notes and the code live in their own repository and site: [openperiodictable](https://krunalpanchal1995.github.io/openperiodictable/) ([source](https://github.com/KrunalPanchal1995/openperiodictable)).
 
 ## The five steps
 

@@ -10,7 +10,7 @@ category:
 
 A learning page: standard circuit theory from the textbooks listed at the bottom, with figures computed from the formulas shown. It makes no claim of new research results, and the component values are illustrative.
 
-**Try it:** the [buck and boost converter](/electronics-lab/#dcdc) in Circuit Lab runs the formulas on this page.
+**Try it:** the [buck and boost converter](https://krunalpanchal1995.github.io/openelectronics/app/#dcdc) in Circuit Lab runs the formulas on this page.
 
 ## Intuition
 
