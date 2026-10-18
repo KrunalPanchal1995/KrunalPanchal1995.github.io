@@ -10,6 +10,8 @@ category:
 
 A learning page: standard circuit theory from the textbooks listed at the bottom, with figures computed from the formulas shown. It makes no claim of new research results, and the component values are illustrative.
 
+**Try it:** the [buck and boost converter](/electronics-lab/#dcdc) in Circuit Lab runs the formulas on this page.
+
 ## Intuition
 
 To turn 12 V into 6 V you could drop the extra voltage across a resistor, but that burns half the power as heat. A switching converter instead chops the supply on and off very fast and smooths the result with an inductor and capacitor. The switch is either fully on (no voltage across it) or fully off (no current through it), so it wastes almost nothing.

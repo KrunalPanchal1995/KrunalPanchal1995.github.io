@@ -10,6 +10,8 @@ category:
 
 A learning page: standard device physics from the textbooks listed at the bottom, with figures computed from the formulas shown. It makes no claim of new research results, and the device parameters are illustrative.
 
+**Try it:** the [diode and MOSFET curve instrument](/electronics-lab/#dev) in Circuit Lab runs the formulas on this page.
+
 ## Intuition
 
 A MOSFET is a voltage-controlled valve. A thin insulator separates a metal gate from the silicon below it. Put a voltage on the gate and the electric field pulls electrons into a channel under the insulator, opening a path between the source and the drain. No gate voltage, no channel, no current. Billions of these valves switching on and off are a processor.
