@@ -23,6 +23,8 @@ const CATS = {
   visualization: { key: "muted", label: "Visualization" },
   software: { key: "muted", label: "Software" },
   "quantum-chemistry": { key: "muted", label: "Quantum chemistry" },
+  photonics: { key: "sky", label: "Photonics" },
+  electronics: { key: "amber", label: "Electronics" },
 };
 const catOf = (c) => CATS[c] || { key: "sky", label: c };
 

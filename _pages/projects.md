@@ -2,7 +2,7 @@
 layout: default
 title: Research Projects
 permalink: /projects/
-description: Research projects in combustion, optimization, uncertainty quantification, scientific ML and CFD.
+description: Research projects in combustion, optimization, uncertainty quantification, scientific ML and CFD, plus learning pages on photonics and electronics.
 nav: true
 nav_order: 3
 ---

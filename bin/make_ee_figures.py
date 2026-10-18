@@ -334,10 +334,10 @@ def return_loss():
     G = np.abs((ZL - Z0) / (ZL + Z0))
     fig, ax = new("Mismatch of a real load on a 50 ohm line")
     ax.semilogx(ZL, -20 * np.log10(np.clip(G, 1e-4, None)), color=ACCENT, label="return loss (dB)")
-    ax.set_xlabel("load resistance Z_L (ohm)"), ax.set_ylabel("return loss (dB)", color=ACCENT), ax.set_ylim(0, 40)
+    ax.set_ylabel("return loss (dB)", color=ACCENT), ax.set_ylim(0, 40)
     ax2 = ax.twinx()
     ax2.semilogx(ZL, (1 + G) / (1 - np.clip(G, 0, 0.999)), color=ACCENT2, label="VSWR")
-    ax2.set_ylim(1, 10), ax2.set_ylabel("VSWR", color=ACCENT2), ax2.grid(False), ax2.spines["right"].set_visible(True)
+    ax2.set_ylim(1, 20), ax2.set_ylabel("VSWR", color=ACCENT2), ax2.grid(False), ax2.spines["right"].set_visible(True)
     ax.set_xlabel("load resistance Z_L (ohm)"+chr(10)+"Gamma = (Z_L - Z_0)/(Z_L + Z_0);  perfect match at Z_L = Z_0 = 50 ohm")
     save(fig, "rf-antennas-microwaves", 2, "reflection_vswr",
          "Reflection coefficient, return loss and VSWR for a resistive load on a 50 ohm line: only Z_L = Z_0 absorbs everything.", "matching")
