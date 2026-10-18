@@ -43,3 +43,6 @@ assets/html/hero_preview.html
 
 # Self-contained generated page (course repo: codes/app_data/make_app_data.py)
 assets/apps/periodic-table/
+
+# Hand-written self-contained page, copied unchanged by Jekyll
+assets/apps/electronics-lab/

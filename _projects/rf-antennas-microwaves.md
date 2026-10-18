@@ -10,6 +10,8 @@ category:
 
 A learning page: standard theory from the textbooks listed at the bottom, with figures computed from the formulas shown. It makes no claim of new research results.
 
+**Try it:** the [Smith chart and VSWR instrument](/electronics-lab/#smith) in Circuit Lab runs the formulas on this page.
+
 ## Intuition
 
 At high frequency a wire is no longer just a wire. The signal is a wave that travels along it, and whenever the wave meets a change in the line (a connector, a different cable, an antenna) part of it bounces back. Radio engineering is the art of passing the wave from one place to the next without bouncing it, and then launching it into the air with an antenna.

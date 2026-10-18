@@ -10,6 +10,8 @@ category:
 
 A learning page: standard theory from the textbooks listed at the bottom, with figures computed from the formulas shown. It makes no claim of new research results, and the parameters are illustrative.
 
+**Try it:** the [Bode filter instrument](/electronics-lab/#bode) in Circuit Lab runs the formulas on this page.
+
 ## Intuition
 
 A MEMS sensor is a microscopic mechanical part, usually a small mass on springs etched into silicon, whose motion is read out electrically. Shake the chip and the mass lags behind; measure how far it lags and you have measured the acceleration. Control is the other half of the story: use the measurement to push the system back towards where you want it.
