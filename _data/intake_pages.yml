@@ -243,15 +243,64 @@ research:
     restored_from: main@5fe9141
 playground:
   title: Playground
-  subtitle: A public, server-free Neural ODE playground -- pick a dataset, edit the network, and watch a real model train live in your browser.
+  subtitle: A public, server-free playground -- train a Neural ODE or a classifier live in your browser and watch it learn.
   tags: []
   hero: ''
   order: 2
   status: live
-  body_md: "\nThis is a trimmed, public build of **vZero**, a TensorFlow-Playground-class research environment for\nNeural ODEs built around a chemical-kinetics problem (H2/O2 combustion). Everything below runs\n**entirely in your browser** -- no server, no data leaves this tab, and it works even if you're\noffline. Pick a dataset, edit the network's width and depth, choose an activation, and watch a real\ngradient-descent loop train live.\n\n> This is intentionally a SMALL slice of the full project: the classification/regression toy-dataset\n> playground only, with a from-scratch multi-layer perceptron (own weight init, own hand-derived\n> backprop -- see the project write-up for what that means and why). The full local research\n> environment adds Cantera chemical-kinetics trajectories, a continuous-depth Neural-ODE classifier\n> peer, hyperparameter search, reinforcement learning, exportable notebooks, and multi-language code\n> export (Python/JAX/Julia) -- none of which can run without a real backend, so none of it is here.\n> Read the full story on the [project page](/projects/neural-ode-playground/) or browse the\n> [source](https://github.com/KrunalPanchal1995) for the complete environment.\n> \n\n## What you're actually looking at\n\n- **9 datasets.** The original 6 (circle, XOR, two-Gaussian, spiral, plane regression,\n  Gaussian-mixture regression) are a faithful re-implementation of the exact formulas TensorFlow\n  Playground's own `dataset.ts` uses (Apache-2.0 licensed; re-derived a second time in this browser\n  build from the main project's own Python port, not copied from the JS original -- see the\n  project's `ACKNOWLEDGEMENTS.md`/`CITATIONS.bib`). 3 more are written directly for this playground,\n  not ported from anywhere: **moons** (two interleaving crescents), **checkerboard** (a 4x4\n  alternating grid, a harder multi-region generalization of XOR), and **rings** (three nested\n  alternating bands, a harder generalization of circle).\n- **Bring your own data.** A CSV upload (3 columns: `x, y, label`, label -1/0/1) trains the same\n  network on whatever you provide -- parsed and kept entirely in your browser (FileReader, nothing\n  ever leaves the tab), capped at 2,000 rows.\n- **Your personal best**, per dataset, saved in this browser's own local storage -- never shared,\n  never a public leaderboard (that would need a real server this static build deliberately doesn't\n  have). Beat your own last run and it tells you.\n- **The network** is a real multi-layer perceptron -- Linear-then-activation, repeated per hidden\n  layer, trained with Adam, mini-batches, and (optionally) L1/L2 regularization -- with its own\n  independent weight initialization and hand-derived backpropagation. It is verified to reach\n  comparable accuracy to the main project's PyTorch implementation on the same datasets (roughly\n  75%+ test accuracy within 200 epochs on circle/gauss/xor), not to reproduce it bit-for-bit --\n  different languages, different random-number streams, same architecture and same problem.\n- **The decision surface, loss chart, and network diagram** are the exact same visualization\n  components the full local playground uses -- this build only swaps out where the training data\n  comes from (a live WebSocket from a real server, vs. a training loop running on your own CPU right\n  now), not what renders it.\n- **Two things TensorFlow Playground doesn't have.** Every hidden (and readout) neuron in the\n  network diagram carries its own small activation-heatmap preview -- what that one neuron alone has\n  learned, not just the combined output surface. And the loss function is a real picker, not fixed:\n  squared error (TF Playground's own only option) or cross-entropy, so the textbook accuracy-vs-loss\n  distinction is something you can actually toggle and watch change, not just read about.\n\nBuilt with Claude Code across an 11-session multi-week collaboration. Full continuity log, design\ndecisions, and the complete (non-public) research environment live in the project's own repository.\n"
+  body_md: |
+    This is the public build of **vZero**, a research playground for Neural ODEs built around a
+    chemical-kinetics problem (H2/O2 autoignition). Everything below runs **entirely in your browser**:
+    no server, no data leaves this tab, and it works offline. It has two tabs.
+
+    ## Neural ODE tab: watch a network learn the physics
+
+    A neural network `f` is trained so that integrating `dy/dt = f(y)` reproduces trajectories sampled from a
+    known system. You see the true trajectories (grey, dashed), the network's own trajectories from the same
+    starting points (blue), a start the network never trained on (orange), the learned vector field as small
+    arrows, and the training loss falling live.
+
+    - **How it trains.** A small tanh network is the right-hand side; a fixed-step Runge-Kutta (RK4)
+      integrator turns it into trajectories; and the gradient is back-propagated by hand through every RK4
+      stage. It is checked against finite differences, not trusted by eye.
+    - **Two systems.** A damped spiral and a predator-prey (Lotka-Volterra) orbit. Change the network width
+      or learning rate and press Reset; if the loss blows up, the page tells you.
+    - **An honest limit.** These are smooth, non-stiff systems. Stiff H2/O2 autoignition did **not** pass the
+      same test in the browser: the loss fell about a hundred-fold, but the radical species peaks stayed
+      wrong, so that case is trained with the Python version and shown as figures on the
+      [project page](/projects/neural-ode-playground/), not faked here.
+
+    ## Classifier tab: the toy-dataset playground
+
+    Pick a dataset, edit the network's width and depth, choose an activation, and watch a real
+    gradient-descent loop train live.
+
+    - **9 datasets.** The original 6 (circle, XOR, two-Gaussian, spiral, plane regression, Gaussian-mixture
+      regression) re-implement the formulas TensorFlow Playground's `dataset.ts` uses (Apache-2.0; re-derived
+      from the main project's Python port, not copied). Three are written for this playground: **moons**,
+      **checkerboard**, and **rings**.
+    - **Bring your own data.** A CSV upload (`x, y, label`, label -1/0/1) trains the same network on your
+      data, parsed and kept entirely in your browser (capped at 2,000 rows).
+    - **Your personal best**, per dataset, saved in this browser's local storage only; never shared.
+    - **The network** is a from-scratch multi-layer perceptron (own initialization, hand-derived
+      backpropagation, Adam, mini-batches, optional L1/L2). It is verified to reach comparable accuracy to
+      the main project's PyTorch version, not to match it bit-for-bit.
+    - **Two things TensorFlow Playground doesn't have:** a small activation heatmap for every neuron, and a
+      loss-function picker (squared error or cross-entropy).
+
+    ## What the full vZero trains
+
+    The full local environment trains the H2/O2 autoignition Neural ODE with the real chemistry: Cantera
+    `h2o2.yaml`, a constant-pressure reactor at a range of starting temperatures, an 11-value state (ten
+    species fractions plus temperature), an adaptive stiff-capable ODE solver, and a loss that can be plain
+    squared error or a power mean. Its best-known finding is a plain one: scaling temperature is what makes
+    the training work (about an order of magnitude lower error), because otherwise temperature's raw size
+    dominates the gradient. The environment is not public yet; the project page tells the full story.
+
+    Built with Claude Code across a multi-week collaboration.
   media: []
   extra:
-    description: A public, server-free Neural ODE playground -- pick a dataset, edit the network, and watch a real model train live in your browser.
+    description: A public, server-free playground -- train a Neural ODE or a classifier live in your browser and watch it learn.
     restored_from: main@5fe9141
 writing:
   title: Writing

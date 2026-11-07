@@ -35,9 +35,20 @@ Building a trustworthy chemical kinetic mechanism means calibrating hundreds of 
 
 A mechanism that fits data without honest uncertainty bounds is a mechanism nobody can trust outside the exact conditions it was tuned on. Treating a rate constant as a _range_, not a value, and propagating that range forward through every simulation, is what makes an optimized mechanism usable for prediction rather than just curve-fitting.
 
-## Approach
+## Approach: one loop, from building the model to using it
 
-MOSIAC (formerly named RMIP, now retired) unifies the full workflow behind one configuration file: mechanism conversion and health-checking, sensitivity analysis, response-surface-based optimization, forward uncertainty propagation, and reporting — all with uncertainty treated as a first-class citizen rather than bolted on at the end.
+MOSIAC (formerly named RMIP, now retired) unifies the full workflow behind one configuration file, with uncertainty treated as a first-class citizen rather than bolted on at the end. The stages follow Bloom's revised taxonomy, the same ladder from recalling a fact to creating something new:
+
+| Stage | Bloom's level | What happens | Status |
+|---|---|---|---|
+| 1. Construct | Remember | Gather the chemistry: generate a candidate reaction mechanism (RMG-Py adapter), convert and health-check existing ones | Working |
+| 2. Explain | Understand | Sensitivity analysis: which reactions control which measurements, and why | Working |
+| 3. Simulate | Apply | Run the mechanism in reactors and flames, cross-checked across independent solvers | Working |
+| 4. Quantify and reduce | Analyze | Propagate parameter uncertainty forward (MUQ-SAC); strip the mechanism down to the chemistry that matters | Working |
+| 5. Calibrate | Evaluate | Multi-stage optimization against experiments with cheap response surfaces, judged against independent solvers and honest error bars | Working |
+| 6. Use | Create | Run the reduced, calibrated mechanism inside CFD, and train Neural-ODE surrogates that mimic it for use in CFD | **Current research** |
+
+Stage 6 is honest work in progress. A CFD solver ([PANSOPHIA](/projects/cfdcore/)) and a Neural-ODE playground ([vZero](/playground/)) exist, but today the surrogates are trained on a standard Cantera H<sub>2</sub>/O<sub>2</sub> mechanism, not yet on a MOSIAC-calibrated one, and are not yet running inside a flow solver.
 
 ## Implementation
 
@@ -83,8 +94,8 @@ The MOSIAC software paper is in preparation, targeting the _Journal of Open Sour
 
 ## Code
 
-Repository: [github.com/KrunalPanchal1995](https://github.com/KrunalPanchal1995) _(currently under review before public release — link will go live at that point)_.
+Repository: [github.com/KrunalPanchal1995/MOSIAC](https://github.com/KrunalPanchal1995/MOSIAC) (public, open source).
 
 ## Where this is going
 
-A researcher can go from a raw CHEMKIN mechanism and a folder of digitized experimental plots to a calibrated, uncertainty-bounded mechanism with a publication-ready report — without hand-writing the glue between each step, and without losing track of how sure they should be about the result.
+A researcher can go from a raw CHEMKIN mechanism and a folder of digitized experimental plots to a calibrated, uncertainty-bounded mechanism with a publication-ready report, without hand-writing the glue between each step and without losing track of how sure they should be about the result. The next step is to close the loop into CFD. The same loop (chemistry, reactor model, designed experiments, process window) is how any reacting process is developed, whether a flame or a plasma-etch recipe.
