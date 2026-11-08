@@ -1,36 +1,38 @@
 home:
   title: Home
-  subtitle: Computational methods for complex physical systems — combustion kinetics, optimization & uncertainty quantification, reduced-order & scientific ML.
+  subtitle: 'Computational process engineering: kinetics, CFD and finite elements, uncertainty quantification, and AI surrogates for reacting and plasma processes.'
   tags: []
   hero: ''
   order: 0
   status: live
   body_md: '
 
-    I build computational methods that connect detailed chemical models with practical combustion applications — kinetics, mechanism reduction, fair multi-objective optimization, uncertainty quantification, and scientific ML, treated as one connected problem rather than separate tools. Every figure on this site is backed by real runs — pool-flame experiments measured with instruments I built, stiff autoignition chemistry validated against 426 experimental targets, an open-source optimization workbench, and a live Neural ODE research playground — with the honest failures on record next to the results. [The full story →](/about/)
+    I am a process computational engineer. I turn the chemistry and physics inside a reactor into models an engineer can trust and use: what controls the result, how sure we are, and how to get an answer faster and cheaper. My tools are chemical kinetics, CFD and finite-element solvers, designed experiments and uncertainty quantification, and fast AI surrogates. I have applied them to flames and gasifiers, and I am now taking the same method to plasma processes. Every figure here comes from a real run, and the failures are on record next to the results. [The full story →](/about/)
+
 
 
     ### Research at a glance
 
 
-    - **Combustion Kinetics & Mechanism Reduction** — mechanism development, validation, and reduction of detailed kinetic models to tractable, simulation-ready form
 
-    - **Experimental & Numerical Combustion** — [pool-flame characterization](/projects/flamelab/) and downdraft gasification alongside CFD and chemical-kinetics simulation of the same systems
+    - **Kinetics to a usable process model** — build a reaction mechanism, find what controls the result, and shrink it to a model fast enough to use, in [MOSIAC](/projects/mosiac/), my open-source workbench
 
-    - **Fair Multi-Objective Optimization & Uncertainty Quantification** — multi-stage, multi-dataset calibration of Arrhenius parameters with correlated-parameter Bayesian UQ, built around [MOSIAC](/projects/mosiac/), my open-source optimization framework
+    - **Designed experiments and measurement** — rigs built and run, a [flame measured with an ordinary camera](/projects/flamelab/) and honest error bars, and [gasification](/projects/gasification/) from rig commissioning to product-gas analysis
 
-    - **Reduced-Order Modelling & Scientific ML** — neural and response-surface surrogates that stand in for expensive stiff simulations
+    - **Uncertainty and calibration** — knowing how sure you are, and tuning a model fairly against several datasets at once ([MUQ-SAC](/projects/muq-sac/))
 
-    - **[Gasification](/projects/gasification/)** — steam/catalyst-assisted downdraft fixed-bed gasification, from rig commissioning to syngas analysis
+    - **CFD and finite elements** — [PANSOPHIA](/projects/cfdcore/), a clean-room multiphysics solver, and what a process engineer needs to know to trust one: [how CFD and FEM work, for a process engineer](/process/)
 
-    - **CFD** — [PANSOPHIA](/projects/cfdcore/), an in-house CFD/multiphysics solver, and reacting-flow and rig-design studies built on top of it
+    - **AI surrogates** — a neural network that stands in for expensive chemistry, which you can [train live in your browser](/playground/)
 
-    - **Optimization & Reinforcement Learning** — [dokimazo](/projects/dokimazo/), an open-source, dependency-light optimization/RL workbench with a plug-and-play graph IR — closed with an RL agent that tunes a real molecule''s rotatable bonds to find its lowest-energy 3D shape
+    - **Optimization workbench** — [dokimazo](/projects/dokimazo/): wire a model to an optimiser as a graph, swap any solver, and check every algorithm against a reference
+
+    - **Plasma and semiconductor processes (current work and self-study)** — plasma-assisted pyrolysis, and the [chip fabrication flow](/projects/ic-fabrication-flow/) from the process engineer''s side
 
 
-    The full research overview — themes, methods, experiments, and publications — is on the [Research page](/research/).
 
-    '
+    The full research overview is on the [Research page](/research/).
+'
   media:
   - src_800: assets/img/site/home/01_MVI8036-zonal-four-regimes-quadrant-800.png
     src_1600: assets/img/site/home/01_MVI8036-zonal-four-regimes-quadrant-1600.png
@@ -92,7 +94,6 @@ home:
       02_four_classes_live.mp4: /projects/muq-sac/
       03_02b_ignitability_3d_map.png: /projects/mosiac/
       04_wmre_vs_powermean.png: /projects/mso-objectives/
-      05_01_collinearity.png: /projects/pysr-rate-rules/
       06_fig1_noise_floor.png: /projects/sciml/
       07_optimizer_race.png: /projects/neural-ode-playground/
       08_rf_ignition_transient.png: /projects/cfdcore/
@@ -168,7 +169,6 @@ research:
 
     - **[Scientific ML for Stiff Kinetics](/projects/sciml/)** — a documented, 50-generation journey from an untrainable neural ODE to a working surrogate, closing with a 115-run statistical audit of my own results.
 
-    - **[Symbolic Regression for Rate Rules](/projects/pysr-rate-rules/)** — using SR to rediscover the Evans–Polanyi relation from data, with a leave-one-class-out generalization check.
 
     - **[flamelab](/projects/flamelab/)** — a computer-vision instrument that measures flame length, width and flicker from pool-fire video in physical units with propagated uncertainty: eight-run ensemble campaign, regime classification, thirteen analysis methods, honest limitations included.
 

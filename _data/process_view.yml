@@ -1,0 +1,113 @@
+# "Process engineer's view" shown at the top of each project page (layout project.liquid).
+# question = the process question the work answers; decide = what it lets an engineer control or decide;
+# check = how the result is checked; status = honest scope. Qualitative on purpose: no numbers.
+mosiac:
+  question: How do I get from a reaction mechanism to a model I can trust for a process, and know how sure I am?
+  decide: Which reactions to spend experiments and effort on, and how far the model can be trusted at a new operating condition.
+  check: Predictions are compared with measurements, and every prediction carries an uncertainty range.
+  status: Built and used for combustion chemistry. The step that runs it inside CFD with an AI surrogate is current research, shown only as a first demonstration.
+muq-sac:
+  question: If the rate constants of a reaction are uncertain, how uncertain is the process result?
+  decide: How much margin a recipe needs, and which parameters to tighten first.
+  check: Sampling respects how the Arrhenius parameters are physically correlated, rather than treating them as independent.
+  status: Published (Combustion Theory and Modelling, 2024).
+mso-objectives:
+  question: When several datasets disagree in size and scatter, how do I tune a model without one dataset dominating?
+  decide: How to weight evidence when calibrating a process model against mixed measurements.
+  check: Results are compared across optimisers on the same budget.
+  status: Accepted work; summarised here in plain language only.
+dokimazo:
+  question: How do I wire a process model to an optimiser, and swap either without rewriting everything?
+  decide: Which solver, objective and constraints to use for a tuning or design problem.
+  check: Each algorithm is checked against an independent reference before it is trusted.
+  status: Open-source workbench, in active development.
+flamelab:
+  question: Can a flame be measured with an ordinary camera, with honest error bars?
+  decide: Whether a burner or fuel change really changed the flame, or the change is within measurement noise.
+  check: The tool is validated on a synthetic flame whose true answer is known.
+  status: Used on real pool-flame video at IIT Madras.
+cfdcore:
+  question: What does it take to build the solver that sits behind a process simulation, and not only run one?
+  decide: How a mesh, the balance equations and the numerical scheme shape a result, and when a solver can be trusted.
+  check: The solver is verified against known analytical and benchmark solutions.
+  status: Clean-room, COMSOL-style multiphysics FEM/CFD solver, still growing. It has no general reaction-mechanism importer yet.
+cfd-multiphysics:
+  question: Does the solver reproduce flows, heat transfer and reactions whose answers are known?
+  decide: Which physics the solver can be used for today, and where it cannot yet.
+  check: Test cases compare solver output with reference solutions.
+  status: Test-case gallery for the PANSOPHIA solver.
+microfluidics:
+  question: How does fluid flow decide where small particles end up in a channel?
+  decide: Channel geometry and flow rate for a separation step.
+  check: A validation dossier compares the finite-element solver with reference results.
+  status: In-house solver with a validation dossier.
+sciml:
+  question: Can a fast AI model stand in for stiff chemistry, and how do I know if it can be trusted?
+  decide: Whether a surrogate is good enough to put inside a process simulation.
+  check: Results are audited statistically, including against my own earlier claims.
+  status: A documented research journey, with the failures recorded next to the successes.
+neural-ode-playground:
+  question: How is a neural network actually trained, and what changes when the network learns a rate of change?
+  decide: How to scale data and choose an optimiser so a surrogate trains at all.
+  check: Training runs live in the browser; the held-out starting point shows whether the model generalises.
+  status: Browser version handles smooth systems; the stiff chemistry case is reported from the Python code.
+neural-ode-course:
+  question: What mathematics sits underneath a surrogate for process chemistry?
+  decide: When a surrogate is the right tool and what it needs (scaling, stiffness handling).
+  check: Every session carries a figure or animation that was run and checked.
+  status: Self-built course, in progress.
+plasma-sludge-pyrolysis:
+  question: How does a thermal plasma turn waste sludge into useful products?
+  decide: Which power and gas conditions to explore for plasma-assisted pyrolysis.
+  check: A zero-dimensional energy and species balance frames the experiments.
+  status: Current work and a stated direction, not a result. This is my route into plasma process modelling.
+decarbonisation-tuyeres:
+  question: How far can hydrogen replace carbon in a blast-furnace injection before a material limit stops it?
+  decide: The experiments to run and the operating limit to respect.
+  check: A designed set of CFD runs, compared against the base case.
+  status: Team study; I owned the experiment design and base case.
+vaporizer-rigs:
+  question: How do I size a rig so a liquid fuel blend evaporates steadily and safely?
+  decide: Tube dimensions, heating and safe operating limits before anything is built.
+  check: Design margins against boiling and flow-instability limits.
+  status: Design stage for a Shell-sponsored project.
+gasification:
+  question: How do steam and a catalyst change the gas a gasifier makes?
+  decide: Operating conditions for a hydrogen-rich product gas.
+  check: Product gas composition measured on a gasifier I built and ran.
+  status: M.Tech work, published in peer-reviewed journals.
+phd-thesis:
+  question: How can a reaction model be calibrated quickly and robustly, with uncertainty?
+  decide: How to organise calibration so more experiments are matched with the same computing budget.
+  check: Calibrated models are compared against experimental targets.
+  status: Doctoral thesis, IIT Madras.
+math-studio-course:
+  question: How do you build intuition for the mathematics behind a process model?
+  decide: Which concept to show live so a reader sees why it matters.
+  check: Every concept is interactive and every claim cites a source.
+  status: Local teaching app for visualising the mathematics.
+pan-iit-oss:
+  question: How do you teach a method so a newcomer can use it, not only follow it?
+  decide: What to show finished and what to leave for the learner to build.
+  check: Each short course ends with a pass or fail checkpoint.
+  status: Open teaching repositories for a FOSS programme.
+ic-fabrication-flow:
+  question: Where do deposition, lithography and etch sit in the steps that make a chip?
+  decide: What each step has to deliver for the next one to work.
+  check: A first-principles reading of the process flow; not hands-on fab work.
+  status: Self-study. I have not worked in a fab.
+lithography-euv-limits:
+  question: Why does printing smaller features need shorter light and more care?
+  decide: The trade-off between resolution and depth of focus.
+  check: First-principles resolution and noise estimates.
+  status: Self-study learning page.
+mosfet-cmos-scaling:
+  question: Why did shrinking the transistor help, and why did it stop helping?
+  decide: What limits a device as it scales, which is what process engineering works against.
+  check: Square-law and leakage models.
+  status: Self-study learning page.
+vzero-explainer:
+  question: How do you explain stiff process chemistry and its surrogate to someone new?
+  decide: Which pictures make the key ideas, such as scaling, stiffness and a learned rate of change, visible.
+  check: Charts, diagrams and toy experiments that were run.
+  status: Companion explainer for the playground.

@@ -1039,3 +1039,9 @@ html.lb-lock body {
 .pg-tab i {
   color: inherit;
 }
+
+/* Process engineer's view (data: _data/process_view.yml) */
+.pj-pv { margin: 1.2rem 0 1.6rem; padding: 1rem 1.2rem; border: 1px solid var(--border); border-radius: 12px; max-width: var(--measure); }
+.pj-pv__list { display: grid; gap: 0.7rem; margin: 0.4rem 0 0; }
+.pj-pv__list dt { font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.pj-pv__list dd { margin: 0.1rem 0 0; }

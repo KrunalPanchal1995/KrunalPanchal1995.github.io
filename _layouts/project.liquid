@@ -72,6 +72,19 @@ layout: default
     </div>
   </header>
 
+  {%- assign pv = site.data.process_view[slug] -%}
+  {%- if pv -%}
+  <section class="pj-pv raised" aria-labelledby="pj-pv-h">
+    <h2 id="pj-pv-h" class="eyebrow">Process engineer's view</h2>
+    <dl class="pj-pv__list">
+      <div><dt>The process question</dt><dd>{{ pv.question | escape }}</dd></div>
+      <div><dt>What it lets you decide</dt><dd>{{ pv.decide | escape }}</dd></div>
+      <div><dt>How it is checked</dt><dd>{{ pv.check | escape }}</dd></div>
+      <div><dt>Status, honestly</dt><dd>{{ pv.status | escape }}</dd></div>
+    </dl>
+  </section>
+  {%- endif -%}
+
   <div class="pj-intro{% unless hero %} pj-intro--solo{% endunless %}">
     {%- if hero -%}
       <figure class="pj-hero raised">

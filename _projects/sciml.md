@@ -31,7 +31,7 @@ H<sub>2</sub>/O<sub>2</sub> autoignition is a deceptively small test case for a 
 
 ## Approach
 
-This is an ongoing, unpublished research effort — two NeurIPS 2027 submissions are in preparation from it, so the specific architecture and its exact results are withheld here pending submission. What I can share is the _shape_ of the investigation: a long, honestly-documented sequence of architectural generations, moving from naive direct-time neural ODEs, through reparameterized time coordinates and physics-constrained formulations, to representation-level fixes for the underlying stiffness — each generation motivated by a specific, diagnosed failure of the one before it, with negative results kept in the record rather than discarded. The gallery includes both the current best result (labeled "champion" — architecture and exact numbers withheld) and an earlier intermediate checkpoint (labeled "journey"), shown alongside each other deliberately rather than only publishing the winner.
+This is an ongoing, unpublished research effort — manuscripts are in preparation from it, so the specific architecture and its exact results are withheld here pending submission. What I can share is the _shape_ of the investigation: a long, honestly-documented sequence of architectural generations, moving from naive direct-time neural ODEs, through reparameterized time coordinates and physics-constrained formulations, to representation-level fixes for the underlying stiffness — each generation motivated by a specific, diagnosed failure of the one before it, with negative results kept in the record rather than discarded. The gallery includes both the current best result (labeled "champion" — architecture and exact numbers withheld) and an earlier intermediate checkpoint (labeled "journey"), shown alongside each other deliberately rather than only publishing the winner.
 
 ## Diagnosing training pathologies, not just watching the loss curve
 
@@ -66,4 +66,4 @@ Sole researcher on this line of work; developed from scratch, including the cust
 
 ## Where this is going
 
-Two forthcoming NeurIPS 2027 submissions, and — more durably — a working discipline for telling a real improvement apart from noise before publishing it.
+Forthcoming manuscripts, and — more durably — a working discipline for telling a real improvement apart from noise before publishing it.

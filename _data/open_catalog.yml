@@ -1,10 +1,3 @@
-# Open-science catalogue (WP-J). Read by /open/, the request-access component and the Studio (open_ids.json).
-# access: open  -> code + PDF are downloadable now (files: must exist under assets/open/<id>/)
-# access: request -> shared by email after the owner approves (requestable: [code, pdf])
-# OWNER: change `access`, `requestable`, `files`, `title`, `notes` freely. scripts/build_open_catalog.py --apply never overwrites them.
-# The script refreshes only: kind, project, studio, explainers. Comments in this file are not kept: use `notes:`.
-# promo-* items (WP-M) are the Math Studio clips on #promos (Beyond the projects): code + PDF on request, free of cost.
-# explainers may hold a glob such as concept.flow.*: the Studio shows code for those explainers when the item is open.
 items:
 - id: home-fluid
   title: Home page fluid simulation (stable-fluids solver)
@@ -21,17 +14,6 @@ items:
   - code
   - pdf
   notes: ''
-- id: project-bangalore-2026-conference
-  title: Enhanced Multi-Stage Optimization Technique for Fuel Combustion Kinetic Mechanisms
-  kind: page
-  access: request
-  project: bangalore-2026-conference
-  studio: atlas?ch=S13&ex=4
-  explainers: []
-  requestable:
-  - code
-  - pdf
-  notes: ''
 - id: project-cfd-multiphysics
   title: PANSOPHIA multiphysics test cases
   kind: plot
@@ -44,20 +26,6 @@ items:
   - figure.cfd-multiphysics.sde-schemes-and-fokker-planck
   - figure.cfd-multiphysics.stochastic-mixing-and-closure-models
   - figure.cfd-multiphysics.structured-mesh-and-smoke-tests
-  requestable:
-  - code
-  - pdf
-  notes: ''
-- id: project-cfd-numerics-teaching
-  title: PANSOPHIA numerics teaching figures
-  kind: plot
-  access: request
-  project: cfd-numerics-teaching
-  studio: atlas?ch=S34&ex=1
-  explainers:
-  - figure.cfd-numerics-teaching.comparison
-  - figure.cfd-numerics-teaching.history
-  - figure.cfd-numerics-teaching.neumann
   requestable:
   - code
   - pdf
@@ -135,17 +103,6 @@ items:
   - code
   - pdf
   notes: ''
-- id: project-future-work-cnf-mso
-  title: Reaction-Classification-Aware Multi-Stage Optimization
-  kind: page
-  access: request
-  project: future-work-cnf-mso
-  studio: atlas?ch=S13&ex=4
-  explainers: []
-  requestable:
-  - code
-  - pdf
-  notes: ''
 - id: project-gasification
   title: Steam-Catalytic Downdraft Gasification
   kind: plot
@@ -156,40 +113,6 @@ items:
   - figure.gasification.h2-vs-steam-ratio
   - figure.gasification.mass-balance-and-operating-envelope
   - figure.gasification.rig-and-lab-photographs
-  requestable:
-  - code
-  - pdf
-  notes: ''
-- id: project-geometry-kernel
-  title: PANSOPHIA geometry kernel
-  kind: plot
-  access: request
-  project: geometry-kernel
-  studio: intersect?preset=0
-  explainers:
-  - figure.geometry-kernel.feature-checks
-  - figure.geometry-kernel.geostudio-booleans
-  - figure.geometry-kernel.geostudio-features
-  - figure.geometry-kernel.geostudio-primitives
-  - figure.geometry-kernel.geostudio-profiles-and-patterns
-  - figure.geometry-kernel.geostudio-transforms
-  - figure.geometry-kernel.sdf-revolved-nozzle
-  requestable:
-  - code
-  - pdf
-  notes: ''
-- id: project-japan-2026-paper
-  title: 'Power-mean objective: Japan 2026 symposium paper'
-  kind: plot
-  access: request
-  project: japan-2026-paper
-  studio: atlas?ch=S13&ex=4
-  explainers:
-  - figure.japan-2026-paper.dominance
-  - figure.japan-2026-paper.hyperparameter-heatmaps
-  - figure.japan-2026-paper.ignition-delay-profiles
-  - figure.japan-2026-paper.toy-landscapes
-  - figure.japan-2026-paper.toy-optimizer-grid
   requestable:
   - code
   - pdf
@@ -279,17 +202,6 @@ items:
   - code
   - pdf
   notes: ''
-- id: project-muqsac-plus-plus
-  title: MUQSAC++
-  kind: page
-  access: request
-  project: muqsac-plus-plus
-  studio: ''
-  explainers: []
-  requestable:
-  - code
-  - pdf
-  notes: ''
 - id: project-neural-ode-course
   title: Neural ODEs and Transformations — A Self-Built Course
   kind: plot
@@ -360,32 +272,6 @@ items:
   - code
   - pdf
   notes: ''
-- id: project-pysr-rate-rules
-  title: Symbolic Regression for Universal Rate Rules
-  kind: plot
-  access: request
-  project: pysr-rate-rules
-  studio: solver?tab=sr&preset=0
-  explainers:
-  - figure.pysr-rate-rules.collinearity
-  requestable:
-  - code
-  - pdf
-  notes: ''
-- id: project-quantum-chemistry
-  title: Quantum chemistry
-  kind: plot
-  access: request
-  project: quantum-chemistry
-  studio: ''
-  explainers:
-  - figure.quantum-chemistry.h2-curve-orbital-shapes-and-two-electron-integrals
-  - figure.quantum-chemistry.overlap-matrix-and-molecular-geometry
-  - figure.quantum-chemistry.potential-energy-surface-barrier-and-rate
-  requestable:
-  - code
-  - pdf
-  notes: ''
 - id: project-sciml
   title: Scientific ML for Stiff Kinetics
   kind: plot
@@ -397,24 +283,6 @@ items:
   - figure.sciml.learned-stiffness-and-ignition-timing
   - figure.sciml.noise-floor-and-error-scaling
   - figure.sciml.trajectory-grids-training-curves-and-drift
-  requestable:
-  - code
-  - pdf
-  notes: ''
-- id: project-turbulence-closures
-  title: Turbulence Closures — From Mixing Length to Data-Driven RANS
-  kind: plot
-  access: request
-  project: turbulence-closures
-  studio: atlas?ch=S82&ex=3
-  explainers:
-  - figure.turbulence-closures.energy-spectrum
-  - figure.turbulence-closures.fig01-vorticity-okubo-weiss
-  - figure.turbulence-closures.fig02-re100-force-timeseries
-  - figure.turbulence-closures.fig04-karman-vortex-street
-  - figure.turbulence-closures.rsm-vs-dns
-  - figure.turbulence-closures.tke-budget-order-of-magnitude
-  - figure.turbulence-closures.vorticity-snapshots
   requestable:
   - code
   - pdf
