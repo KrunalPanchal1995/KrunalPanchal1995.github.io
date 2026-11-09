@@ -1,13 +1,13 @@
 home:
   title: Home
-  subtitle: 'Computational process engineering: kinetics, CFD and finite elements, uncertainty quantification, and AI surrogates for reacting and plasma processes.'
+  subtitle: 'Computational process engineering: kinetics, CFD and finite elements, uncertainty quantification, and AI surrogates for reacting-flow processes.'
   tags: []
   hero: ''
   order: 0
   status: live
   body_md: '
 
-    I am a process computational engineer. I turn the chemistry and physics inside a reactor into models an engineer can trust and use: what controls the result, how sure we are, and how to get an answer faster and cheaper. My tools are chemical kinetics, CFD and finite-element solvers, designed experiments and uncertainty quantification, and fast AI surrogates. I have applied them to flames and gasifiers, and I am now taking the same method to plasma processes. Every figure here comes from a real run, and the failures are on record next to the results. [The full story →](/about/)
+    I am a computational process engineer. I turn the chemistry and physics inside a reactor into models an engineer can trust and use: what controls the result, how sure we are, and how to get an answer faster and cheaper. My tools are chemical kinetics, CFD and finite-element solvers, designed experiments and uncertainty quantification, and fast AI surrogates. I have applied them to flames and gasifiers, and the same method transfers to any reacting process. The endpoint is always a process an engineer can run, with its operating window, its limits and its error bars. Every figure here comes from a real run, and the failures are on record next to the results. [The full story →](/about/)
 
 
 
@@ -26,8 +26,6 @@ home:
     - **AI surrogates** — a neural network that stands in for expensive chemistry, which you can [train live in your browser](/playground/)
 
     - **Optimization workbench** — [dokimazo](/projects/dokimazo/): wire a model to an optimiser as a graph, swap any solver, and check every algorithm against a reference
-
-    - **Plasma and semiconductor processes (current work and self-study)** — plasma-assisted pyrolysis, and the [chip fabrication flow](/projects/ic-fabrication-flow/) from the process engineer''s side
 
 
 
@@ -465,7 +463,7 @@ about:
     ## One loop, from the chemistry to the process
 
 
-    Developing a reacting process, whether a flame or a plasma-etch recipe, is one loop: know the chemistry, simulate it, find out what controls the result and how sure you are, tune it against measurements, then build something faster and better from what you learned. MOSIAC is that loop for combustion chemistry. My current research runs the reduced model inside a CFD solver and lets a Neural-ODE surrogate stand in for the chemistry; a first demonstration works in a one-dimensional reacting-flow solver, and its accuracy is still being improved. A focused research profile, with only this work, is at [krunalpanchalphd.github.io](https://krunalpanchal1995.github.io/krunalpanchalphd.github.io/).
+    Developing a reacting process, whether a flame or any other reacting process, is one loop: know the chemistry, simulate it, find out what controls the result and how sure you are, tune it against measurements, then build something faster and better from what you learned. MOSIAC is that loop for combustion chemistry. My current research runs the reduced model inside a CFD solver and lets a Neural-ODE surrogate stand in for the chemistry; a first demonstration works in a one-dimensional reacting-flow solver, and its accuracy is still being improved. A focused research profile, with only this work, is at [krunalpanchalphd.github.io](https://krunalpanchal1995.github.io/krunalpanchalphd.github.io/).
 
 
     ## Background

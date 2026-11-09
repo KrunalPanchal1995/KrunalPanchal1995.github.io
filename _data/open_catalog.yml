@@ -261,17 +261,6 @@ items:
   - code
   - pdf
   notes: ''
-- id: project-plasma-sludge-pyrolysis
-  title: Plasma sludge pyrolysis
-  kind: page
-  access: request
-  project: plasma-sludge-pyrolysis
-  studio: ''
-  explainers: []
-  requestable:
-  - code
-  - pdf
-  notes: ''
 - id: project-sciml
   title: Scientific ML for Stiff Kinetics
   kind: plot

@@ -4072,45 +4072,6 @@ electromagnetics-maxwell:
   description: ''
   src_800: assets/img/projects/electromagnetics-maxwell/02_skin_depth-800.png
   src_1600: assets/img/projects/electromagnetics-maxwell/02_skin_depth-1600.png
-ic-fabrication-flow:
-- index: 1
-  caption: 'Deal-Grove: growth is linear at first (reaction-limited) and slows to parabolic (diffusion-limited) as the oxide thickens.'
-  topic: oxidation
-  description: ''
-  src_800: assets/img/projects/ic-fabrication-flow/01_oxide_growth_deal_grove-800.png
-  src_1600: assets/img/projects/ic-fabrication-flow/01_oxide_growth_deal_grove-1600.png
-- index: 2
-  caption: 'Why big dies are expensive: with random defects, yield falls exponentially with die area, so smaller chiplets help.'
-  topic: yield
-  description: ''
-  src_800: assets/img/projects/ic-fabrication-flow/02_yield_vs_die_area-800.png
-  src_1600: assets/img/projects/ic-fabrication-flow/02_yield_vs_die_area-1600.png
-lithography-euv-limits:
-- index: 1
-  caption: 'Resolution improves with shorter wavelength and larger NA; the dots mark typical tool settings (idealised, single exposure).'
-  topic: resolution
-  description: ''
-  src_800: assets/img/projects/lithography-euv-limits/01_rayleigh_resolution-800.png
-  src_1600: assets/img/projects/lithography-euv-limits/01_rayleigh_resolution-1600.png
-- index: 2
-  caption: 'EUV photons carry ~14x more energy, so the same dose delivers far fewer photons per pixel, which makes edges noisier (stochastics).'
-  topic: stochastics
-  description: ''
-  src_800: assets/img/projects/lithography-euv-limits/02_photon_shot_noise-800.png
-  src_1600: assets/img/projects/lithography-euv-limits/02_photon_shot_noise-1600.png
-mosfet-cmos-scaling:
-- index: 1
-  caption: 'Square-law model: a resistor-like triode region below V_GS - V_T, then a flat saturation current.'
-  topic: device
-  description: ''
-  src_800: assets/img/projects/mosfet-cmos-scaling/01_mosfet_output_characteristics-800.png
-  src_1600: assets/img/projects/mosfet-cmos-scaling/01_mosfet_output_characteristics-1600.png
-- index: 2
-  caption: 'Below threshold the current is exponential in V_GS; the thermal voltage kT/q fixes a ~60 mV/decade floor at room temperature.'
-  topic: leakage
-  description: ''
-  src_800: assets/img/projects/mosfet-cmos-scaling/02_subthreshold_swing-800.png
-  src_1600: assets/img/projects/mosfet-cmos-scaling/02_subthreshold_swing-1600.png
 vlsi-circuit-design:
 - index: 1
   caption: 'A CMOS inverter flips sharply near V_DD/2, restoring logic levels, and draws current only while switching.'

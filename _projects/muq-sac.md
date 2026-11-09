@@ -42,6 +42,9 @@ MUQ-SAC (_Method of Uncertainty Quantification and Sampling of Arrhenius Curves_
 
 ## Results
 
+The statistical analysis here is uncertainty propagation: accepted parameter samples are pushed through the model to give prediction bands, and the sampling methods are compared on the same footing.
+
+
 Published in _Combustion Theory and Modelling_ (2024), applied to the H<sub>2</sub>/CO kinetic mechanism: Panchal et al. (2024). The animated figure above shows all four sampling-method classes at once, real accepted Arrhenius curves building up their uncertainty bands in the same frame — with each panel's own timer reading out the *real* measured compute cost of getting there, not a decorative counter. That cost turns out to matter a great deal: generating 100 samples measures at **204.3 s under Class B**'s full 3-parameter SLSQP fit and **5.5 s under Class D**'s reduced 2-parameter SLSQP fit, against **0.018 s (Class A) and 0.02 s (Class C)** for the closed-form methods — roughly four to five orders of magnitude apart for statistically equivalent output on the same reaction family. That gap is the practical argument for the closed-form classes over the SLSQP-based ones at scale, not just a theoretical preference.
 
 ## Validation

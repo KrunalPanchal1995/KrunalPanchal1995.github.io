@@ -56,11 +56,6 @@ neural-ode-course:
   decide: When a surrogate is the right tool and what it needs (scaling, stiffness handling).
   check: Every session carries a figure or animation that was run and checked.
   status: Self-built course, in progress.
-plasma-sludge-pyrolysis:
-  question: How does a thermal plasma turn waste sludge into useful products?
-  decide: Which power and gas conditions to explore for plasma-assisted pyrolysis.
-  check: A zero-dimensional energy and species balance frames the experiments.
-  status: Current work and a stated direction, not a result. This is my route into plasma process modelling.
 decarbonisation-tuyeres:
   question: How far can hydrogen replace carbon in a blast-furnace injection before a material limit stops it?
   decide: The experiments to run and the operating limit to respect.
@@ -91,21 +86,6 @@ pan-iit-oss:
   decide: What to show finished and what to leave for the learner to build.
   check: Each short course ends with a pass or fail checkpoint.
   status: Open teaching repositories for a FOSS programme.
-ic-fabrication-flow:
-  question: Where do deposition, lithography and etch sit in the steps that make a chip?
-  decide: What each step has to deliver for the next one to work.
-  check: A first-principles reading of the process flow; not hands-on fab work.
-  status: Self-study. I have not worked in a fab.
-lithography-euv-limits:
-  question: Why does printing smaller features need shorter light and more care?
-  decide: The trade-off between resolution and depth of focus.
-  check: First-principles resolution and noise estimates.
-  status: Self-study learning page.
-mosfet-cmos-scaling:
-  question: Why did shrinking the transistor help, and why did it stop helping?
-  decide: What limits a device as it scales, which is what process engineering works against.
-  check: Square-law and leakage models.
-  status: Self-study learning page.
 vzero-explainer:
   question: How do you explain stiff process chemistry and its surrogate to someone new?
   decide: Which pictures make the key ideas, such as scaling, stiffness and a learned rate of change, visible.

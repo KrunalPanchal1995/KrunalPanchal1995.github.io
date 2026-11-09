@@ -210,6 +210,11 @@ cv:
         summary: "Conference paper. Author position 1 of 3."
 
     Skills:
+      - name: Experimental Rigs & Instrumentation
+        level: ""
+        icon: fa-solid fa-flask
+        keywords: "Rig design and commissioning, thermocouple instrumentation, gas chromatography and syngas analysis, computer-vision flame measurement (FlameLab), test-data analysis"
+
       - name: Fair Multi-Objective Optimization
         level: ""
         icon: fa-solid fa-arrows-to-dot

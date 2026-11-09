@@ -2,7 +2,7 @@
 layout: default
 title: Research Projects
 permalink: /projects/
-description: Research projects in combustion, optimization, uncertainty quantification, scientific ML and CFD, plus learning pages on photonics and electronics.
+description: Research projects in combustion, optimization, uncertainty quantification, scientific ML and CFD, plus learning pages on quantum chemistry and visualization.
 nav: true
 nav_order: 3
 ---
@@ -18,7 +18,7 @@ nav_order: 3
 {%- assign tot_img = tot_img | plus: ni -%}
 {%- assign tot_vid = tot_vid | plus: nv -%}
 {%- endfor -%}
-{%- assign all_cats = 'combustion,optimization,uq,sciml,cfd,experimental,software,quantum-chemistry,visualization,education,photonics,electronics,apps' | split: ',' -%}
+{%- assign all_cats = 'combustion,optimization,uq,sciml,cfd,experimental,software,quantum-chemistry,visualization,education,apps' | split: ',' -%}
 
 <section class="pi" data-pi data-view="lab">
   <header class="pi-head">
